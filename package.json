@@ -9,6 +9,7 @@
     "db:push": "drizzle-kit push:pg",
     "db:drop": "drizzle-kit drop",
     "db:studio": "drizzle-kit studio",
+    "db:seed": "bun ./src/server/db/seed.ts",
     "dev": "next dev",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
