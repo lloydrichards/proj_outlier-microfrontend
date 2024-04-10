@@ -56,8 +56,8 @@ const agendaBlocks: [string, NewBlock["type"]][] = [
   ["2024-06-14 13:30", "NETWORKING"],
   ["2024-06-14 15:30", "ANNOUNCEMENT"],
 ];
+
 const main = async () => {
-    
   await db.delete(blocks);
 
   const offsetDate = (date: Date, hours: number) => {

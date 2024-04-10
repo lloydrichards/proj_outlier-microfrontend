@@ -11,6 +11,7 @@ import {
   timestamp,
   varchar,
 } from "drizzle-orm/pg-core";
+import { createInsertSchema } from "drizzle-zod";
 
 export const blockEnum = pgEnum("block", [
   "SPEAKER",
@@ -82,6 +83,7 @@ export const blocks = pgTable(
 );
 
 export type NewBlock = typeof blocks.$inferInsert;
+export const insertBlockSchema = createInsertSchema(blocks);
 
 export const blockRelations = relations(blocks, ({ many }) => ({
   events: many(events),
@@ -101,6 +103,9 @@ export const events = pgTable("events", {
     .notNull(),
   updatedAt: timestamp("updated_at"),
 });
+
+export type NewEvent = typeof events.$inferInsert;
+export const insertEventSchema = createInsertSchema(events);
 
 export const eventRelations = relations(events, ({ one, many }) => ({
   block: one(blocks, {
@@ -125,6 +130,9 @@ export const speakers = pgTable("speakers", {
     .notNull(),
   updatedAt: timestamp("updated_at"),
 });
+
+export type NewSpeaker = typeof speakers.$inferInsert;
+export const insertSpeakerSchema = createInsertSchema(speakers);
 
 export const speakerRelations = relations(speakers, ({ one }) => ({
   event: one(events, {
