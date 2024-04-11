@@ -32,31 +32,31 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 /**
- * Use the `secondary` badge to call for less urgent information, blending
+ * Use the `turquoise` badge to call for less urgent information, blending
  * into the interface while still signaling minor updates or statuses.
  */
-export const Secondary: Story = {
+export const Turquoise: Story = {
   args: {
-    variant: "secondary",
+    variant: "turquoise",
   },
 };
 
 /**
- * Use the `destructive` badge to  indicate errors, alerts, or the need for
+ * Use the `plum` badge to  indicate errors, alerts, or the need for
  * immediate attention.
  */
-export const Destructive: Story = {
+export const Plum: Story = {
   args: {
-    variant: "destructive",
+    variant: "plum",
   },
 };
 
 /**
- * Use the `outline` badge for overlaying without obscuring interface details,
- * emphasizing clarity and subtlety..
+ * Use the `mustard` badge to  indicate errors, alerts, or the need for
+ * immediate attention.
  */
-export const Outline: Story = {
+export const Mustard: Story = {
   args: {
-    variant: "outline",
+    variant: "mustard",
   },
 };

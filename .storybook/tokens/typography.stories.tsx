@@ -44,7 +44,7 @@ const meta: Meta<{
             : value;
 
           return (
-            <tr key={name} className="border-b bg-card">
+            <tr key={name} className="bg-card border-b">
               <td className="px-6 py-4">{name}</td>
               <td className="hidden px-6 py-4 sm:table-cell">
                 {resolvedValue}

@@ -1,5 +1,5 @@
 import { db } from ".";
-import { blocks, NewBlock } from "./schema";
+import { blocks, type NewBlock } from "./schema";
 
 const agendaBlocks: [string, NewBlock["type"]][] = [
   // Day 1
@@ -58,6 +58,7 @@ const agendaBlocks: [string, NewBlock["type"]][] = [
 ];
 
 const main = async () => {
+  // eslint-disable-next-line
   await db.delete(blocks);
 
   const offsetDate = (date: Date, hours: number) => {
@@ -67,7 +68,7 @@ const main = async () => {
   const calculatedBlocks = agendaBlocks.map(([time, type], idx) => ({
     type,
     start: offsetDate(new Date(time), 5),
-    end: offsetDate(new Date(agendaBlocks[idx + 1]?.[0] || time), 5),
+    end: offsetDate(new Date(agendaBlocks[idx + 1]?.[0] ?? time), 5),
   }));
 
   for (const block of calculatedBlocks) {
@@ -83,4 +84,10 @@ const main = async () => {
   process.exit(0);
 };
 
-main();
+main()
+  .then(() => {
+    console.log("Seeded database with agenda blocks");
+  })
+  .catch((err) => {
+    console.error("Failed to seed database with agenda blocks", err);
+  });

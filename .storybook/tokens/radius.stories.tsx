@@ -1,16 +1,16 @@
-import React from "react"
-import type { Meta, StoryObj } from "@storybook/react"
-import resolveConfig from "tailwindcss/resolveConfig"
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
+import resolveConfig from "tailwindcss/resolveConfig";
 
-import tailwindConfig from "../../tailwind.config.ts"
+import tailwindConfig from "../../tailwind.config.ts";
 
-const fullConfig = resolveConfig(tailwindConfig)
+const fullConfig = resolveConfig(tailwindConfig);
 
 const meta: Meta<{
   radius: {
-    name: string
-    value: string
-  }[]
+    name: string;
+    value: string;
+  }[];
 }> = {
   title: "design/Radius",
   argTypes: {},
@@ -19,11 +19,11 @@ const meta: Meta<{
       const value =
         fullConfig.theme.borderRadius[
           name as keyof typeof fullConfig.theme.borderRadius
-        ]
+        ];
       return {
         name,
         value,
-      }
+      };
     }),
   },
   render: (args) => (
@@ -43,12 +43,12 @@ const meta: Meta<{
       </thead>
       <tbody>
         {args.radius.map(({ name, value }) => {
-          const style = window.getComputedStyle(document.body)
-          const variable = value.match(/var\(([^)]+)\)/)?.[1] ?? ""
-          const resolved = style.getPropertyValue(variable)
-          const resolvedValue = value.replace(/var\(--(.*?)\)/, resolved)
+          const style = window.getComputedStyle(document.body);
+          const variable = value.match(/var\(([^)]+)\)/)?.[1] ?? "";
+          const resolved = style.getPropertyValue(variable);
+          const resolvedValue = value.replace(/var\(--(.*?)\)/, resolved);
           return (
-            <tr key={name} className="border-b bg-card">
+            <tr key={name} className="bg-card border-b">
               <td className="px-6 py-4">{name}</td>
               <td className="hidden px-6 py-4 sm:table-cell">
                 {resolvedValue}
@@ -60,15 +60,15 @@ const meta: Meta<{
                 />
               </td>
             </tr>
-          )
+          );
         })}
       </tbody>
     </table>
   ),
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
-export const Core: Story = {}
+export const Core: Story = {};

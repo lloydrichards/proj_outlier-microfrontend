@@ -1,17 +1,17 @@
-import React from "react"
-import type { Meta, StoryObj } from "@storybook/react"
-import resolveConfig from "tailwindcss/resolveConfig"
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
+import resolveConfig from "tailwindcss/resolveConfig";
 
-import tailwindConfig from "../../tailwind.config.ts"
+import tailwindConfig from "../../tailwind.config.ts";
 
-const fullConfig = resolveConfig(tailwindConfig)
+const fullConfig = resolveConfig(tailwindConfig);
 
 const meta: Meta<{
   scale: {
-    name: string
-    size: string
-    pixels: number
-  }[]
+    name: string;
+    size: string;
+    pixels: number;
+  }[];
 }> = {
   title: "design/Padding",
   argTypes: {
@@ -27,12 +27,12 @@ const meta: Meta<{
         const value =
           fullConfig.theme.spacing[
             name as keyof typeof fullConfig.theme.spacing
-          ]
+          ];
         return {
           name,
           size: value,
           pixels: parseFloat(value) * (String(value).endsWith("rem") ? 16 : 1),
-        }
+        };
       })
       .sort((a, b) => a.pixels - b.pixels),
   },
@@ -56,13 +56,13 @@ const meta: Meta<{
       </thead>
       <tbody>
         {args.scale.map(({ name, size, pixels }) => (
-          <tr key={name} className="border-b bg-card">
+          <tr key={name} className="bg-card border-b">
             <td className="px-6 py-4">{name}</td>
             <td className="hidden px-6 py-4 sm:table-cell">{size}</td>
             <td className="hidden px-6 py-4 sm:table-cell">{pixels}px</td>
             <td className="px-6 py-4">
-              <div className="border bg-muted">
-                <div className="h-4 bg-primary" style={{ width: size }} />
+              <div className="bg-muted border">
+                <div className="bg-primary h-4" style={{ width: size }} />
               </div>
             </td>
           </tr>
@@ -70,10 +70,10 @@ const meta: Meta<{
       </tbody>
     </table>
   ),
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
-export const Core: Story = {}
+export const Core: Story = {};

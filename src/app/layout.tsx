@@ -1,9 +1,7 @@
-import { sans } from "@/styles/font";
+import { silka } from "@/styles/font";
 import "@/styles/globals.css";
 
-
 import { TRPCReactProvider } from "@/trpc/react";
-
 
 export const metadata = {
   title: "Create T3 App",
@@ -18,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${sans.variable}`}>
+      <body className={`font-silka ${silka.variable}`}>
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>

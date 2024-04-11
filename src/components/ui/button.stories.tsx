@@ -35,12 +35,32 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 /**
- * Use the `outline` button to reduce emphasis on secondary actions, such as
+ * Use the `turquoise` button to reduce emphasis on secondary actions, such as
  * canceling or dismissing a dialog.
  */
-export const Outline: Story = {
+export const Turquoise: Story = {
   args: {
-    variant: "outline",
+    variant: "turquoise",
+  },
+};
+
+/**
+ * Use the `turquoise` button to reduce emphasis on secondary actions, such as
+ * canceling or dismissing a dialog.
+ */
+export const Plum: Story = {
+  args: {
+    variant: "plum",
+  },
+};
+
+/**
+ * Use the `turquoise` button to reduce emphasis on secondary actions, such as
+ * canceling or dismissing a dialog.
+ */
+export const Mustard: Story = {
+  args: {
+    variant: "mustard",
   },
 };
 
@@ -51,26 +71,6 @@ export const Outline: Story = {
 export const Ghost: Story = {
   args: {
     variant: "ghost",
-  },
-};
-
-/**
- * Use the `secondary` button to call for less emphasized actions, styled to
- * complement the primary button while being less conspicuous.
- */
-export const Secondary: Story = {
-  args: {
-    variant: "secondary",
-  },
-};
-
-/**
- * Use the `destructive` button to indicate errors, alerts, or the need for
- * immediate attention.
- */
-export const Destructive: Story = {
-  args: {
-    variant: "destructive",
   },
 };
 
@@ -91,12 +91,12 @@ export const Link: Story = {
 export const Loading: Story = {
   render: (args) => (
     <Button {...args}>
-      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+      <Loader2 className="mr-2 size-4 animate-spin" />
       Button
     </Button>
   ),
   args: {
-    ...Outline.args,
+    ...Plum.args,
     disabled: true,
   },
 };
@@ -108,11 +108,11 @@ export const Loading: Story = {
 export const WithIcon: Story = {
   render: (args) => (
     <Button {...args}>
-      <Mail className="mr-2 h-4 w-4" /> Login with Email Button
+      <Mail className="mr-2 size-4" /> Login with Email Button
     </Button>
   ),
   args: {
-    ...Secondary.args,
+    ...Plum.args,
   },
 };
 
@@ -141,7 +141,7 @@ export const Large: Story = {
  */
 export const Icon: Story = {
   args: {
-    ...Secondary.args,
+    ...Plum.args,
     size: "icon",
     children: <Mail />,
   },

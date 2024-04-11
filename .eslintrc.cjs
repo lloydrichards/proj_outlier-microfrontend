@@ -7,10 +7,19 @@ const config = {
   plugins: ["@typescript-eslint", "drizzle"],
   extends: [
     "next/core-web-vitals",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
+    "plugin:jsx-a11y/recommended",
     "plugin:storybook/recommended",
+    "plugin:tailwindcss/recommended",
   ],
+  settings: {
+    tailwindcss: {
+      callees: ["cn", "cva"],
+      config: "tailwind.config.ts",
+    },
+  },
   rules: {
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
@@ -36,6 +45,14 @@ const config = {
         },
       },
     ],
+    // Tailwind CSS
+    "tailwindcss/no-custom-classname": [
+      "warn",
+      {
+        callees: ["clsx", "cn"],
+      },
+    ],
+    // Drizzle
     "drizzle/enforce-delete-with-where": [
       "error",
       {
@@ -50,4 +67,5 @@ const config = {
     ],
   },
 };
+
 module.exports = config;

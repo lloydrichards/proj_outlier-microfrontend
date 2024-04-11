@@ -48,7 +48,7 @@ const meta = {
             <BellRing className="size-6" />
             <div>
               <p>{notification.title}</p>
-              <p className="text-foreground/50">{notification.description}</p>
+              <p className="opacity-50">{notification.description}</p>
             </div>
           </div>
         ))}
@@ -71,3 +71,21 @@ type Story = StoryObj<typeof meta>;
  * The default form of the card.
  */
 export const Default: Story = {};
+
+export const Turquoise: Story = {
+  args: {
+    variant: "turquoise",
+  },
+};
+
+export const Plum: Story = {
+  args: {
+    variant: "plum",
+  },
+};
+
+export const Mustard: Story = {
+  args: {
+    variant: "mustard",
+  },
+};

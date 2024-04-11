@@ -13,6 +13,8 @@ import {
   FormLabel,
   FormMessage,
 } from "./form";
+import { Input } from "./input";
+import { Button } from "./button";
 
 /**
  * Building forms with React Hook Form and Zod.
@@ -55,11 +57,7 @@ const ProfileForm = (args: Story["args"]) => {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <input
-                  className="w-full rounded-md border border-input bg-background px-3 py-2"
-                  placeholder="username"
-                  {...field}
-                />
+                <Input placeholder="username" {...field} />
               </FormControl>
               <FormDescription>
                 This is your public display name.
@@ -68,12 +66,9 @@ const ProfileForm = (args: Story["args"]) => {
             </FormItem>
           )}
         />
-        <button
-          className="rounded bg-primary px-4 py-2 text-primary-foreground"
-          type="submit"
-        >
+        <Button variant="plum" type="submit">
           Submit
-        </button>
+        </Button>
       </form>
     </Form>
   );
