@@ -5,6 +5,16 @@
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  trailingSlash: true,
+  async rewrites() {
+    return [
+      {
+        source: "/storybook/",
+        destination: "/storybook/index.html",
+      },
+    ];
+  },
+};
 
 export default config;

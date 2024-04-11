@@ -43,3 +43,7 @@ yarn-error.log*
 
 # database
 db-data
+
+# storybook
+*storybook.log
+public/storybook
