@@ -84,6 +84,7 @@ export const blocks = pgTable(
 );
 
 export type NewBlock = typeof blocks.$inferInsert;
+export type Block = typeof blocks.$inferSelect;
 export const insertBlockSchema = createInsertSchema(blocks);
 
 export const blockRelations = relations(blocks, ({ many }) => ({

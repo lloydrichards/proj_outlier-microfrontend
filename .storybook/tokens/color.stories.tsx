@@ -15,7 +15,7 @@ const meta: Meta<{
   argTypes: {},
   render: (args) => (
     <table className="w-full table-auto text-left text-sm text-foreground rtl:text-right">
-      <thead className="text-xs bg-muted uppercase">
+      <thead className="bg-background text-sm uppercase">
         <tr>
           <th scope="col" className="px-6 py-3">
             Name
@@ -27,10 +27,10 @@ const meta: Meta<{
       </thead>
       <tbody>
         {args.swatch.map(({ name, colors }) => (
-          <tr key={name} className="bg-card border-b">
+          <tr key={name} className="border-b bg-background">
             <td className="px-6 py-4">{name}</td>
             <td className="px-6 py-4">
-              <div className="rounded-md flex overflow-x-clip border shadow">
+              <div className="flex overflow-clip rounded border shadow">
                 {Object.entries(colors).map(([name, value], idx) => {
                   const isHex = value.startsWith("#");
                   const style = window.getComputedStyle(document.body);
@@ -48,13 +48,13 @@ const meta: Meta<{
                       <div
                         className="h-16 w-full"
                         style={{ backgroundColor: value }}
-                      ></div>
+                      />
                       <p className="text-center font-semibold">{name}</p>
-                      <p className="text-xs text-center opacity-70">
+                      <p className="text-center text-sm opacity-70">
                         {variable}
                       </p>
-                      <p className="text-xs text-center">{colorHex}</p>
-                      <p className="text-xs text-center">{colorHSL}</p>
+                      <p className="text-center text-sm">{colorHex}</p>
+                      <p className="text-center text-sm">{colorHSL}</p>
                     </div>
                   );
                 })}
@@ -77,13 +77,6 @@ type Story = StoryObj<typeof meta>;
 const functionalSwatch = [
   "foreground",
   "background",
-  "primary",
-  "secondary",
-  "card",
-  "accent",
-  "muted",
-  "popover",
-  "destructive",
   "input",
   "border",
   "ring",

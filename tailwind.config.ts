@@ -7,6 +7,7 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    ".storybook/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -21,8 +22,8 @@ const config = {
       silka: "var(--font-silka)",
     },
     fontSize: {
-      sm: ["0.75rem", "1.5em"], // 12px
-      md: ["1.5rem", "1.5em"], // 24px
+      sm: ["1rem", "1.5em"], // 16px
+      md: ["2rem", "1.5em"], // 32px
     },
     colors: {
       current: "currentColor",

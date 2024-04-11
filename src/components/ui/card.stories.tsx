@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./card";
+import { Button } from "./button";
 
 const notifications = [
   {
@@ -54,7 +55,9 @@ const meta = {
         ))}
       </CardContent>
       <CardFooter>
-        <button className="hover:underline">Close</button>
+        <Button variant="ghost" className="hover:underline">
+          Close
+        </Button>
       </CardFooter>
     </Card>
   ),
@@ -87,5 +90,11 @@ export const Plum: Story = {
 export const Mustard: Story = {
   args: {
     variant: "mustard",
+  },
+};
+
+export const Transparent: Story = {
+  args: {
+    variant: "transparent",
   },
 };

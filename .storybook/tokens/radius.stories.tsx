@@ -28,7 +28,7 @@ const meta: Meta<{
   },
   render: (args) => (
     <table className="w-full table-auto text-left text-sm text-foreground rtl:text-right">
-      <thead className="text-xs bg-muted uppercase">
+      <thead className="bg-background text-sm uppercase">
         <tr>
           <th scope="col" className="px-6 py-3">
             Name
@@ -48,7 +48,7 @@ const meta: Meta<{
           const resolved = style.getPropertyValue(variable);
           const resolvedValue = value.replace(/var\(--(.*?)\)/, resolved);
           return (
-            <tr key={name} className="bg-card border-b">
+            <tr key={name} className="border-b bg-background">
               <td className="px-6 py-4">{name}</td>
               <td className="hidden px-6 py-4 sm:table-cell">
                 {resolvedValue}

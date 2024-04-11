@@ -5,6 +5,7 @@ import * as SelectPrimitive from "@radix-ui/react-select";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { typefaceBody } from "../typeface";
 
 const Select = SelectPrimitive.Root;
 
@@ -19,7 +20,9 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "flex h-10 w-full items-center justify-between rounded border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+      typefaceBody(
+        "flex h-10 w-full items-center justify-between rounded border border-input bg-background px-3 py-2 ring-offset-background placeholder:text-foreground/50 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+      ),
       className,
     )}
     {...props}
@@ -105,7 +108,7 @@ const SelectLabel = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Label
     ref={ref}
-    className={cn("py-1.5 pl-8 pr-2 text-sm font-semibold", className)}
+    className={cn(typefaceBody("py-1.5 pl-8 pr-2"), className)}
     {...props}
   />
 ));
@@ -118,7 +121,9 @@ const SelectItem = React.forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full cursor-default select-none items-center rounded py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-background focus:text-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      typefaceBody(
+        "relative flex w-full cursor-default select-none items-center rounded py-1.5 pl-8 pr-2 outline-none focus:text-foreground focus:underline data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      ),
       className,
     )}
     {...props}

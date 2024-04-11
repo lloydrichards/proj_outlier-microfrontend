@@ -25,7 +25,7 @@ export const blockRouter = createTRPCRouter({
   getAll: publicProcedure.query(({ ctx }) => {
     return ctx.db.query.blocks.findMany({
       where: (b, { eq }) => eq(b.isActive, true),
-      orderBy: (blocks, { desc }) => [desc(blocks.start)],
+      orderBy: (blocks, { asc }) => [asc(blocks.start)],
       with: {
         events: {
           with: {

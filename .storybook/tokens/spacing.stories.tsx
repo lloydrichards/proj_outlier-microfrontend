@@ -38,7 +38,7 @@ const meta: Meta<{
   },
   render: (args) => (
     <table className="w-full table-auto text-left text-sm text-foreground rtl:text-right">
-      <thead className="text-xs bg-muted uppercase">
+      <thead className="bg-background text-sm uppercase">
         <tr>
           <th scope="col" className="px-6 py-3">
             Name
@@ -56,12 +56,12 @@ const meta: Meta<{
       </thead>
       <tbody>
         {args.scale.map(({ name, size, pixels }) => (
-          <tr key={name} className="bg-card border-b">
+          <tr key={name} className="border-b bg-background">
             <td className="px-6 py-4">{name}</td>
             <td className="hidden px-6 py-4 sm:table-cell">{size}</td>
             <td className="hidden px-6 py-4 sm:table-cell">{pixels}px</td>
             <td className="px-6 py-4">
-              <div className="bg-muted border">
+              <div className="border bg-background">
                 <div className="bg-primary h-4" style={{ width: size }} />
               </div>
             </td>
