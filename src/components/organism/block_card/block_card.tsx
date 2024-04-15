@@ -5,10 +5,10 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card";
+} from "../../ui/card";
 import type { Block } from "@/server/db/schema";
 import { cn } from "@/lib/utils";
-import { typefaceSubtitle } from "../typeface";
+import { typefaceSubtitle } from "../../typeface";
 
 type BlockCardProps = {
   type: Block["type"];

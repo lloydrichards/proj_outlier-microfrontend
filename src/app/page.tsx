@@ -1,4 +1,4 @@
-import { BlockCard } from "@/components/block_card/block_card";
+import { BlockCard } from "@/components/organism/block_card/block_card";
 import { api } from "@/trpc/server";
 
 export default async function Home() {

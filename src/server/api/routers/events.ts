@@ -15,6 +15,9 @@ export const eventRouter = createTRPCRouter({
       if (!input.id) {
         throw new Error("Event ID is required");
       }
-      await ctx.db.update(events).set(input).where(eq(events.id, input.id));
+      await ctx.db
+        .update(events)
+        .set({ ...input, updatedAt: new Date() })
+        .where(eq(events.id, input.id));
     }),
 });

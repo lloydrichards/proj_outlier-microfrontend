@@ -15,6 +15,9 @@ export const speakerRouter = createTRPCRouter({
       if (!input.id) {
         throw new Error("Speaker ID is required");
       }
-      await ctx.db.update(speakers).set(input).where(eq(speakers.id, input.id));
+      await ctx.db
+        .update(speakers)
+        .set({ ...input, updatedAt: new Date() })
+        .where(eq(speakers.id, input.id));
     }),
 });

@@ -5,5 +5,12 @@
     ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-  "conventionalCommits.scopes": ["db", "api", "auth", "storybook", "theme"]
+  "conventionalCommits.scopes": [
+    "db",
+    "api",
+    "auth",
+    "storybook",
+    "theme",
+    "components"
+  ]
 }

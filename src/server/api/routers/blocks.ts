@@ -7,7 +7,7 @@ import { blocks, insertBlockSchema } from "@/server/db/schema";
 import { eq } from "drizzle-orm";
 
 export const blockRouter = createTRPCRouter({
-  create: protectedProcedure
+  add: protectedProcedure
     .input(insertBlockSchema)
     .mutation(async ({ ctx, input }) => {
       await ctx.db.insert(blocks).values(input);
@@ -19,7 +19,10 @@ export const blockRouter = createTRPCRouter({
       if (!input.id) {
         throw new Error("Block ID is required");
       }
-      await ctx.db.update(blocks).set(input).where(eq(blocks.id, input.id));
+      await ctx.db
+        .update(blocks)
+        .set({ ...input, updatedAt: new Date() })
+        .where(eq(blocks.id, input.id));
     }),
 
   getAll: publicProcedure.query(({ ctx }) => {

@@ -13,6 +13,7 @@ import {
   varchar,
 } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
+import type * as z from "zod";
 
 export const blockEnum = pgEnum("block", [
   "SPEAKER",
@@ -86,6 +87,7 @@ export const blocks = pgTable(
 export type NewBlock = typeof blocks.$inferInsert;
 export type Block = typeof blocks.$inferSelect;
 export const insertBlockSchema = createInsertSchema(blocks);
+export type InsertBlockSchema = z.infer<typeof insertBlockSchema>;
 
 export const blockRelations = relations(blocks, ({ many }) => ({
   events: many(events),
