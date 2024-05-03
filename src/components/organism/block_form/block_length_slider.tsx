@@ -20,7 +20,12 @@ export const BlockLengthSlider: FC = () => {
         </p>
         <div className="grid w-full gap-2">
           <Slider
-            defaultValue={[60]}
+            defaultValue={[
+              (getValues("end")?.getTime() - getValues("start")?.getTime() ??
+                0) /
+                1000 /
+                60,
+            ]}
             min={0}
             max={120}
             step={10}

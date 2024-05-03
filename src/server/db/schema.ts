@@ -105,7 +105,9 @@ export const events = pgTable("events", {
 });
 
 export type NewEvent = typeof events.$inferInsert;
+export type Event = typeof events.$inferSelect;
 export const insertEventSchema = createInsertSchema(events);
+export type InsertEventSchema = z.infer<typeof insertEventSchema>;
 
 export const eventRelations = relations(events, ({ one, many }) => ({
   block: one(blocks, {
@@ -132,7 +134,9 @@ export const speakers = pgTable("speakers", {
 });
 
 export type NewSpeaker = typeof speakers.$inferInsert;
+export type Speaker = typeof speakers.$inferSelect;
 export const insertSpeakerSchema = createInsertSchema(speakers);
+export type InsertSpeakerSchema = z.infer<typeof insertSpeakerSchema>;
 
 export const speakerRelations = relations(speakers, ({ one }) => ({
   event: one(events, {
