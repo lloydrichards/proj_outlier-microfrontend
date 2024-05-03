@@ -1,8 +1,10 @@
 import AuthButton from "@/components/molecule/auth_button/auth_button.server";
 import { BlockCard } from "@/components/organism/block_card/block_card";
+import { BlockForm } from "@/components/organism/block_form/block_form";
 import { typefaceSubtitle } from "@/components/typeface";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { auth } from "@/server/auth";
 import { api } from "@/trpc/server";
 import Link from "next/link";
@@ -30,7 +32,7 @@ export default async function Home() {
         )}
       </header>
       {/* <BlockForm /> */}
-      <div className="container p-4 ">
+      <div className="p-4 ">
         <Agenda />
       </div>
     </main>
@@ -39,6 +41,7 @@ export default async function Home() {
 
 const Agenda = async () => {
   const agenda = await api.block.getAll();
+  const session = await auth();
 
   return (
     <div className="grid w-full gap-2">
@@ -47,6 +50,16 @@ const Agenda = async () => {
       ) : (
         <p>Agenda has not be posted yet.</p>
       )}
+      {session ? (
+        <Card className="border border-input">
+          <CardHeader>
+            <CardTitle>Add a new block</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <BlockForm start={agenda.at(-1)?.end ?? new Date()} />
+          </CardContent>
+        </Card>
+      ) : null}
     </div>
   );
 };

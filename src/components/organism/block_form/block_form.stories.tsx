@@ -10,6 +10,9 @@ const meta = {
   component: BlockForm,
   tags: ["autodocs"],
   argTypes: {},
+  args: {
+    start: new Date(),
+  },
   parameters: {
     layout: "padded",
   },

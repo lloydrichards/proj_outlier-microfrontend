@@ -1,15 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Select } from "@/components/ui/select";
+import { Form } from "@/components/ui/form";
 import {
   type Block,
   type InsertBlockSchema,
@@ -18,42 +9,48 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { type FC } from "react";
 import { useForm } from "react-hook-form";
+import { BlockTypeSelect } from "./block_type_select";
+import { BlockLengthSlider } from "./block_length_slider";
+import { api } from "@/trpc/react";
+import { useRouter } from "next/navigation";
 
 type BlockFormProps = {
+  start: Date;
   editBlock?: Block;
 };
-export const BlockForm: FC<BlockFormProps> = ({ editBlock }) => {
+export const BlockForm: FC<BlockFormProps> = ({ start, editBlock }) => {
   const form = useForm<InsertBlockSchema>({
     resolver: zodResolver(insertBlockSchema),
-    defaultValues: editBlock ?? {},
+    defaultValues: editBlock ?? {
+      start,
+    },
+  });
+  const router = useRouter();
+  const createBlock = api.block.add.useMutation({
+    onSuccess: () => {
+      router.refresh();
+      form.reset();
+    },
+  });
+  const updateBlock = api.block.update.useMutation({
+    onSuccess: () => {
+      router.refresh();
+      form.reset();
+    },
   });
 
-  const onSubmit = async (values: InsertBlockSchema) => {
-    // await api.block.add(values);
+  const onSubmit = (values: InsertBlockSchema) => {
     console.log(values);
+    if (editBlock) {
+      return updateBlock.mutate({ id: editBlock.id, ...values });
+    }
+    return createBlock.mutate(values);
   };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="type"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl>
-                <Select {...field}>
-                  <option value="text">Text</option>
-                  <option value="image">Image</option>
-                </Select>
-              </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <BlockLengthSlider />
+        <BlockTypeSelect />
         <Button variant="plum" type="submit">
           Submit
         </Button>
