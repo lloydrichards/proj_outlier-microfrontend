@@ -14,6 +14,7 @@ export const env = createEnv({
     AUTH_GITHUB_ID: z.string(),
     AUTH_GITHUB_SECRET: z.string(),
     AUTH_SECRET: z.string(),
+    AUTH_ADMIN_PASSWORD: z.string(),
   },
 
   /**
@@ -35,6 +36,7 @@ export const env = createEnv({
     AUTH_GITHUB_ID: process.env.AUTH_GITHUB_ID,
     AUTH_GITHUB_SECRET: process.env.AUTH_GITHUB_SECRET,
     AUTH_SECRET: process.env.AUTH_SECRET,
+    AUTH_ADMIN_PASSWORD: process.env.AUTH_ADMIN_PASSWORD,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

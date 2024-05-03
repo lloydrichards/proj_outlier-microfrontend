@@ -17,11 +17,10 @@ export const authConfig = {
       async authorize(credentials) {
         const users = [
           {
-            id: "test-user-1",
-            userName: "test1",
-            name: "Test 1",
-            password: "pass",
-            email: "test1@donotreply.com",
+            id: "sudo",
+            userName: "admin",
+            name: "Admin Mode",
+            password: env.AUTH_ADMIN_PASSWORD,
           },
         ];
         const user = users.find(
@@ -29,9 +28,7 @@ export const authConfig = {
             user.userName === credentials.username &&
             user.password === credentials.password,
         );
-        return user
-          ? { id: user.id, name: user.name, email: user.email }
-          : null;
+        return user ? { id: user.id, name: user.name } : null;
       },
     }),
   ],
