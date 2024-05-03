@@ -33,6 +33,7 @@ export const authConfig = {
   callbacks: {
     jwt({ token, user }) {
       if (user) token.role = user.role;
+
       return token;
     },
     session({ session, token }) {
@@ -44,8 +45,10 @@ export const authConfig = {
     GitHub({
       profile(profile) {
         return {
-          ...profile,
           id: profile.id.toString(),
+          image: profile.avatar_url,
+          name: profile.name,
+          email: profile.email,
           role: ROLE.USER,
         };
       },

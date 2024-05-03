@@ -1,4 +1,5 @@
 import {
+  adminProcedure,
   createTRPCRouter,
   protectedProcedure,
   publicProcedure,
@@ -7,10 +8,19 @@ import { blocks, insertBlockSchema } from "@/server/db/schema";
 import { eq } from "drizzle-orm";
 
 export const blockRouter = createTRPCRouter({
-  add: protectedProcedure
+  add: adminProcedure
     .input(insertBlockSchema)
     .mutation(async ({ ctx, input }) => {
       await ctx.db.insert(blocks).values(input);
+    }),
+
+  delete: adminProcedure
+    .input(insertBlockSchema)
+    .mutation(async ({ ctx, input }) => {
+      if (!input.id) {
+        throw new Error("Block ID is required");
+      }
+      await ctx.db.delete(blocks).where(eq(blocks.id, input.id));
     }),
 
   update: protectedProcedure

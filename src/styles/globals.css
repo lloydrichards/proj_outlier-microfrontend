@@ -29,6 +29,8 @@
     --mustard: var(--base-mustard);
     --mustard-foreground: var(--base-emerald_black);
 
+    --destructive: 0 100% 50%;
+
     --border: var(--mono-400);
     --input: var(--mono-100);
     --ring: var(--base-plum);
@@ -53,5 +55,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .prototype {
+    @apply ring-destructive ring-2;
   }
 }

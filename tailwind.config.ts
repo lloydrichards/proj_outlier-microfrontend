@@ -33,6 +33,7 @@ const config = {
       ring: "hsl(var(--ring))",
       background: "hsl(var(--background))",
       foreground: "hsl(var(--foreground))",
+      destructive: "hsl(var(--destructive))",
       turquoise: {
         DEFAULT: "hsl(var(--turquoise))",
         foreground: "hsl(var(--turquoise-foreground))",
