@@ -6,7 +6,7 @@ await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
 const config = {
-  trailingSlash: true,
+  trailingSlash: false,
   async rewrites() {
     return [
       {
