@@ -42,16 +42,22 @@ export const BlockForm: FC<BlockFormProps> = ({ start, editBlock }) => {
   const onSubmit = (values: InsertBlockSchema) => {
     console.log(values);
     if (editBlock) {
-      return updateBlock.mutate({ id: editBlock.id, ...values });
+      updateBlock.mutate({ id: editBlock.id, ...values });
+      return form.reset();
     }
-    return createBlock.mutate(values);
+    createBlock.mutate(values);
+    return form.reset();
   };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <BlockLengthSlider />
         <BlockTypeSelect />
-        <Button variant="plum" type="submit">
+        <Button
+          variant="plum"
+          disabled={form.formState.isSubmitting}
+          type="submit"
+        >
           Submit
         </Button>
       </form>

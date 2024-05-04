@@ -13,27 +13,27 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { type InsertBlockSchema, blockEnum } from "@/server/db/schema";
+import { locationEnum, type InsertEventSchema } from "@/server/db/schema";
 import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
 
-export const BlockTypeSelect: FC = () => {
-  const form = useFormContext<InsertBlockSchema>();
+export const EventLocationSelect: FC = () => {
+  const form = useFormContext<InsertEventSchema>();
   return (
     <FormField
       control={form.control}
-      name="type"
+      name="location"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Type</FormLabel>
+          <FormLabel>Location</FormLabel>
           <Select onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>
               <SelectTrigger>
-                <SelectValue placeholder="Select type of block" />
+                <SelectValue placeholder="Select category of event" />
               </SelectTrigger>
             </FormControl>
             <SelectContent>
-              {blockEnum.enumValues.map((value) => (
+              {locationEnum.enumValues.map((value) => (
                 <SelectItem key={value} value={value}>
                   {value}
                 </SelectItem>
