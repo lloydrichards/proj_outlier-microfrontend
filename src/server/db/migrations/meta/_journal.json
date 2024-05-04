@@ -43,6 +43,13 @@
       "when": 1714746558475,
       "tag": "0005_clumsy_shatterstar",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1714852031168,
+      "tag": "0006_cooing_starbolt",
+      "breakpoints": true
     }
   ]
 }

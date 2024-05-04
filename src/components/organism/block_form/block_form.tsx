@@ -16,12 +16,12 @@ import { useRouter } from "next/navigation";
 
 type BlockFormProps = {
   start: Date;
-  editBlock?: Block;
+  edit?: Block;
 };
-export const BlockForm: FC<BlockFormProps> = ({ start, editBlock }) => {
+export const BlockForm: FC<BlockFormProps> = ({ start, edit }) => {
   const form = useForm<InsertBlockSchema>({
     resolver: zodResolver(insertBlockSchema),
-    defaultValues: editBlock ?? {
+    defaultValues: edit ?? {
       start,
     },
   });
@@ -41,8 +41,8 @@ export const BlockForm: FC<BlockFormProps> = ({ start, editBlock }) => {
 
   const onSubmit = (values: InsertBlockSchema) => {
     console.log(values);
-    if (editBlock) {
-      updateBlock.mutate({ id: editBlock.id, ...values });
+    if (edit) {
+      updateBlock.mutate({ id: edit.id, ...values });
       return form.reset();
     }
     createBlock.mutate(values);

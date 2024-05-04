@@ -91,7 +91,9 @@ export const blockRelations = relations(blocks, ({ many }) => ({
 
 export const events = pgTable("events", {
   id: serial("id").primaryKey(),
-  block_id: serial("block_id").references(() => blocks.id),
+  block_id: serial("block_id").references(() => blocks.id, {
+    onDelete: "cascade",
+  }),
   title: varchar("title").notNull(),
   description: varchar("description"),
   location: locationEnum("location").notNull().default("UNASSIGNED"),
@@ -119,9 +121,11 @@ export const eventRelations = relations(events, ({ one, many }) => ({
 
 export const speakers = pgTable("speakers", {
   id: serial("id").primaryKey(),
-  event_id: serial("event_id").references(() => events.id),
-  firstName: varchar("first_name").notNull(),
-  lastName: varchar("last_name").notNull(),
+  event_id: serial("event_id").references(() => events.id, {
+    onDelete: "cascade",
+  }),
+  first_name: varchar("first_name").notNull(),
+  last_name: varchar("last_name").notNull(),
   title: varchar("title"),
   pronouns: varchar("pronouns"),
   email: varchar("email"),

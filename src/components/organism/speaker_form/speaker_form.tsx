@@ -9,7 +9,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import {
-  insertEventSchema,
+  insertSpeakerSchema,
   type InsertSpeakerSchema,
   type Speaker,
 } from "@/server/db/schema";
@@ -28,7 +28,7 @@ type SpeakerFormProps = {
 
 export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
   const form = useForm<InsertSpeakerSchema>({
-    resolver: zodResolver(insertEventSchema),
+    resolver: zodResolver(insertSpeakerSchema),
     defaultValues: edit ?? {
       event_id: eventId,
     },
@@ -48,6 +48,7 @@ export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
   });
 
   const onSubmit = (values: InsertSpeakerSchema) => {
+    console.log(values);
     if (edit) {
       update.mutate({ id: edit.id, ...values });
       return form.reset();
@@ -59,6 +60,7 @@ export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <NameInput />
+        <PronounsInput />
         <TitleInput />
         <EmailInput />
         <BioTextarea />
@@ -81,7 +83,7 @@ const NameInput = () => {
     <div className="grid grid-cols-2 gap-2">
       <FormField
         control={form.control}
-        name="firstName"
+        name="first_name"
         render={({ field }) => (
           <FormItem>
             <FormLabel>First Name</FormLabel>
@@ -94,7 +96,7 @@ const NameInput = () => {
       />
       <FormField
         control={form.control}
-        name="lastName"
+        name="last_name"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Last Name</FormLabel>
@@ -152,6 +154,25 @@ const TitleInput = () => {
   );
 };
 
+const PronounsInput = () => {
+  const form = useFormContext<InsertSpeakerSchema>();
+
+  return (
+    <FormField
+      control={form.control}
+      name="pronouns"
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel>Pronouns</FormLabel>
+          <FormControl>
+            <Input placeholder="he/him" {...field} value={field.value ?? ""} />
+          </FormControl>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  );
+};
 const EmailInput = () => {
   const form = useFormContext<InsertSpeakerSchema>();
 

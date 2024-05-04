@@ -15,8 +15,13 @@ import {
 import { auth } from "@/server/auth";
 import { api } from "@/trpc/server";
 import { type FC, type ReactNode } from "react";
-import { type Block, type Event } from "@/server/db/schema";
+import { type Speaker, type Block, type Event } from "@/server/db/schema";
 import { DialogTitle } from "@/components/ui/dialog";
+import { EventForm } from "../event_form/event_form";
+import { SpeakerForm } from "../speaker_form/speaker_form";
+import { DeleteSpeakerDialog } from "./delete_speaker_dialog";
+import { DeleteEventDialog } from "./delete_event_dialog";
+import { DeleteBlockDialog } from "./delete_block_dialog";
 
 export const Agenda = async () => {
   const agenda = await api.block.getAll();
@@ -27,7 +32,7 @@ export const Agenda = async () => {
       {agenda.length > 0 ? (
         agenda.map((block) => (
           <AgendaBlockMenu key={block.id} block={block}>
-            <BlockCard type={block.type} />
+            <BlockCard block={block} />
           </AgendaBlockMenu>
         ))
       ) : (
@@ -39,7 +44,7 @@ export const Agenda = async () => {
 };
 
 const AgendaBlockMenu: FC<{
-  block: Block & { events: Event[] };
+  block: Block & { events: Array<Event & { speakers: Speaker[] }> };
   children: ReactNode;
 }> = async ({ block, children }) => {
   const session = await auth();
@@ -49,65 +54,73 @@ const AgendaBlockMenu: FC<{
 
   return (
     <ContextMenu>
-      <ContextMenuTrigger disabled={!session}>{children}</ContextMenuTrigger>
+      <ContextMenuTrigger disabled={!isAdmin}>{children}</ContextMenuTrigger>
       <ContextMenuContent>
         <ContextMenuDialogItem triggerChildren="Edit">
           <DialogTitle>Edit Block</DialogTitle>
-          <BlockForm start={block.start} editBlock={block} />
+          <BlockForm start={block.start} edit={block} />
         </ContextMenuDialogItem>
         <ContextMenuSub>
           <ContextMenuSubTrigger>Event</ContextMenuSubTrigger>
           <ContextMenuSubContent className="w-48">
-            <ContextMenuDialogItem disabled={withEvents} triggerChildren="Add">
-              Adding...
-            </ContextMenuDialogItem>
+            {block.events.map((event) => (
+              <ContextMenuSub key={event.id}>
+                <ContextMenuSubTrigger>{event.title}</ContextMenuSubTrigger>
+                <ContextMenuSubContent className="w-48">
+                  <ContextMenuDialogItem triggerChildren="Edit">
+                    <EventForm blockId={block.id} edit={event} />
+                  </ContextMenuDialogItem>
+                  <ContextMenuSub>
+                    <ContextMenuSubTrigger>Speakers</ContextMenuSubTrigger>
+                    <ContextMenuSubContent className="w-48">
+                      {event.speakers.map((speaker) => (
+                        <ContextMenuSub key={speaker.id}>
+                          <ContextMenuSubTrigger>
+                            {speaker.first_name} {speaker.last_name}
+                          </ContextMenuSubTrigger>
+                          <ContextMenuSubContent className="w-48">
+                            <ContextMenuDialogItem triggerChildren="Edit">
+                              <SpeakerForm eventId={event.id} edit={speaker} />
+                            </ContextMenuDialogItem>
+                            <ContextMenuSeparator />
+                            <ContextMenuDialogItem
+                              className="text-destructive"
+                              triggerChildren="Delete"
+                            >
+                              <DeleteSpeakerDialog speaker={speaker} />
+                            </ContextMenuDialogItem>
+                          </ContextMenuSubContent>
+                        </ContextMenuSub>
+                      ))}
+                      <ContextMenuDialogItem triggerChildren="Add">
+                        <SpeakerForm eventId={event.id} />
+                      </ContextMenuDialogItem>
+                    </ContextMenuSubContent>
+                  </ContextMenuSub>
+                  <ContextMenuSeparator />
+                  <ContextMenuDialogItem
+                    className="text-destructive"
+                    triggerChildren="Delete"
+                  >
+                    <DeleteEventDialog event={event} />
+                  </ContextMenuDialogItem>
+                </ContextMenuSubContent>
+              </ContextMenuSub>
+            ))}
             <ContextMenuDialogItem
-              disabled={!withEvents}
-              triggerChildren="Edit"
+              disabled={block.type != "UNCONF" && withEvents}
+              triggerChildren="Add"
             >
-              Editing...
-            </ContextMenuDialogItem>
-            <ContextMenuSeparator />
-            <ContextMenuDialogItem
-              disabled={!isAdmin}
-              className="text-destructive"
-              triggerChildren="Delete"
-            >
-              Deleting...
-            </ContextMenuDialogItem>
-          </ContextMenuSubContent>
-        </ContextMenuSub>
-        <ContextMenuSub>
-          <ContextMenuSubTrigger disabled={!withEvents}>
-            Speaker
-          </ContextMenuSubTrigger>
-          <ContextMenuSubContent className="w-48">
-            <ContextMenuDialogItem disabled={withEvents} triggerChildren="Add">
-              Adding...
-            </ContextMenuDialogItem>
-            <ContextMenuDialogItem
-              disabled={!withEvents}
-              triggerChildren="Edit"
-            >
-              Editing...
-            </ContextMenuDialogItem>
-            <ContextMenuSeparator />
-            <ContextMenuDialogItem
-              disabled={!isAdmin}
-              className="text-destructive"
-              triggerChildren="Delete"
-            >
-              Deleting...
+              <EventForm blockId={block.id} />
             </ContextMenuDialogItem>
           </ContextMenuSubContent>
         </ContextMenuSub>
         <ContextMenuSeparator />
         <ContextMenuDialogItem
-          disabled={!isAdmin}
           className="text-destructive"
           triggerChildren="Delete"
         >
-          Deleting...
+          <DeleteBlockDialog block={block} />
         </ContextMenuDialogItem>
       </ContextMenuContent>
     </ContextMenu>

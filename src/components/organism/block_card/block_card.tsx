@@ -6,24 +6,32 @@ import {
   CardHeader,
   CardTitle,
 } from "../../ui/card";
-import type { Block } from "@/server/db/schema";
+import type { Block, Event, Speaker } from "@/server/db/schema";
 import { cn } from "@/lib/utils";
 import { typefaceSubtitle } from "../../typeface";
 
 type BlockCardProps = {
-  type: Block["type"];
+  block: Block & { events: Array<Event & { speakers: Speaker[] }> };
   className?: string;
 };
 
-export const BlockCard: FC<BlockCardProps> = ({ type, className }) => {
-  switch (type) {
+export const BlockCard: FC<BlockCardProps> = ({ block, className }) => {
+  switch (block.type) {
     case "ANNOUNCEMENT":
       return (
         <Card className={className}>
           <CardHeader>
             <span className={typefaceSubtitle()}>ANNOUNCEMENT</span>
-            <CardTitle>Welcome</CardTitle>
-            <CardDescription>Grab a coffee</CardDescription>
+            {block.events.length > 0 ? (
+              <>
+                <CardTitle>{block.events.at(0)?.title}</CardTitle>
+                <CardDescription>
+                  {block.events.at(0)?.description}
+                </CardDescription>
+              </>
+            ) : (
+              <CardTitle>Nothing scheduled</CardTitle>
+            )}
           </CardHeader>
         </Card>
       );
@@ -34,9 +42,18 @@ export const BlockCard: FC<BlockCardProps> = ({ type, className }) => {
             <span className={typefaceSubtitle()}>LIGHTENING</span>
           </CardHeader>
           <CardContent>
-            <p>Speaker - Title</p>
-            <p>Speaker - Title</p>
-            <p>Speaker - Title</p>
+            {block.events.length > 0 ? (
+              <>
+                {block.events.at(0)?.speakers.map((speaker) => (
+                  <p key={speaker.title}>
+                    {block.events.at(0)?.title} - {speaker.first_name}{" "}
+                    {speaker.last_name}
+                  </p>
+                ))}
+              </>
+            ) : (
+              <p>Nothing scheduled</p>
+            )}
           </CardContent>
         </Card>
       );
@@ -45,11 +62,17 @@ export const BlockCard: FC<BlockCardProps> = ({ type, className }) => {
         <Card className={className}>
           <CardHeader>
             <span className={typefaceSubtitle()}>NETWORKING</span>
-
-            <CardTitle></CardTitle>
-            <CardDescription></CardDescription>
+            {block.events.length > 0 ? (
+              <>
+                <CardTitle>{block.events.at(0)?.title}</CardTitle>
+                <CardDescription>
+                  {block.events.at(0)?.description}
+                </CardDescription>
+              </>
+            ) : (
+              <CardTitle>Nothing scheduled</CardTitle>
+            )}
           </CardHeader>
-          <CardContent></CardContent>
         </Card>
       );
     case "PAUSE":
@@ -67,13 +90,26 @@ export const BlockCard: FC<BlockCardProps> = ({ type, className }) => {
         <Card variant="plum" className={cn("", className)}>
           <CardHeader>
             <span className={typefaceSubtitle()}>SPEAKER</span>
-
-            <CardTitle>Title</CardTitle>
-            <CardDescription>Description</CardDescription>
+            {block.events.length > 0 ? (
+              <>
+                <CardTitle>{block.events.at(0)?.title}</CardTitle>
+                <CardDescription>
+                  {block.events.at(0)?.description}
+                </CardDescription>
+              </>
+            ) : (
+              <CardTitle>Nothing scheduled</CardTitle>
+            )}
           </CardHeader>
-          <CardContent>
-            <p>Speaker 1, Speaker 2</p>
-          </CardContent>
+          {block.events.length > 0 && (
+            <CardContent>
+              {block.events.at(0)?.speakers.map((speaker) => (
+                <p key={speaker.title}>
+                  {speaker.first_name} {speaker.last_name} ({speaker.pronouns})
+                </p>
+              ))}
+            </CardContent>
+          )}
         </Card>
       );
     case "UNCONF":

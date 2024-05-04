@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { BlockCard } from "./block_card";
+import type { Block, Event, Speaker as TSpeaker } from "@/server/db/schema";
 
 /**
  * An image element with a fallback for representing the user.
@@ -18,42 +19,89 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
+type MockBlock = Block & { events: Array<Event & { speakers: TSpeaker[] }> };
 
 /**
  * The default form of the BlockCard.
  */
 export const Announcement: Story = {
   args: {
-    type: "ANNOUNCEMENT",
+    block: {
+      type: "ANNOUNCEMENT",
+      events: [
+        {
+          title: "Title",
+          description: "Description",
+        },
+      ],
+    } as MockBlock,
   },
 };
 
 export const Speaker: Story = {
   args: {
-    type: "SPEAKER",
+    block: {
+      type: "SPEAKER",
+      events: [
+        {
+          title: "Title",
+          speakers: [
+            {
+              first_name: "First",
+              last_name: "Last",
+            },
+          ],
+        },
+      ],
+    } as MockBlock,
   },
 };
 
 export const Lightening: Story = {
   args: {
-    type: "LIGHTENING",
+    block: {
+      type: "LIGHTENING",
+      events: [
+        {
+          title: "Title",
+          speakers: [
+            {
+              first_name: "First",
+              last_name: "Last",
+            },
+          ],
+        },
+      ],
+    } as MockBlock,
   },
 };
 
 export const Networking: Story = {
   args: {
-    type: "NETWORKING",
+    block: {
+      type: "NETWORKING",
+      events: [
+        {
+          title: "Title",
+          description: "Description",
+        },
+      ],
+    } as MockBlock,
   },
 };
 
 export const Pause: Story = {
   args: {
-    type: "PAUSE",
+    block: {
+      type: "PAUSE",
+    } as MockBlock,
   },
 };
 
 export const Unconf: Story = {
   args: {
-    type: "UNCONF",
+    block: {
+      type: "UNCONF",
+    } as MockBlock,
   },
 };
