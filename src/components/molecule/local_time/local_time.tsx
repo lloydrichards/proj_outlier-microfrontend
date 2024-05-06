@@ -5,14 +5,13 @@ import { timeFormat } from "d3-time-format";
 import { Suspense } from "react";
 
 export function LocalTime({ date }: { date: Date | string | number }) {
-  const hydrated = useHydration();
+  const isHydrated = useHydration();
   const format = timeFormat("%I:%M %p");
 
   return (
     <Suspense>
       <time dateTime={new Date(date).toISOString()}>
-        {format(new Date(date))}
-        {hydrated ? "" : " (UTC)"}
+        {isHydrated && format(new Date(date))}
       </time>
     </Suspense>
   );
