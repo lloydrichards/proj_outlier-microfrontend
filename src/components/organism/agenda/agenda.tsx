@@ -4,7 +4,8 @@ import { api } from "@/trpc/server";
 import { AgendaBlockMenu } from "./agenda_block_menu";
 import { AddBlockDialog } from "../../molecule/add_block_dialog/add_block_dialog";
 import { type FC, Fragment } from "react";
-import { formatDate, formatTimeWithMeridiem } from "@/lib/utils";
+import { formatDate } from "@/lib/utils";
+import { LocalTime } from "@/components/molecule/local_time/local_time";
 
 export const Agenda: FC<{ edition?: string }> = async ({ edition = null }) => {
   const agenda = await api.block.getAgenda({ edition });
@@ -29,7 +30,7 @@ export const Agenda: FC<{ edition?: string }> = async ({ edition = null }) => {
               <AgendaBlockMenu block={block}>
                 <div className="grid grid-cols-[4rem_1fr] gap-2 sm:grid-cols-[8rem_1fr]">
                   <p className={typefaceTitle("text-sm sm:text-md")}>
-                    {formatTimeWithMeridiem(block.start)}
+                    <LocalTime date={block.start} />
                   </p>
                   <BlockCard block={block} />
                 </div>
