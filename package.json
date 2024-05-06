@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "bun build:storybook && next build",
+    "build": "next build",
     "build:storybook": "storybook build -o public/storybook",
     "db:generate": "drizzle-kit generate:pg",
     "db:push": "drizzle-kit push:pg",

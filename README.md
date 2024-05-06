@@ -54,3 +54,15 @@ To have a look in the database, run:
 # Start the database IDE
 bun db:studio
 ```
+
+## Authentication
+
+The authentication is handled by `next-auth`, and uses Role-Based Access Control (RBAC) to manage user permissions.  Currently, there are two roles: `ADMIN` and `USER`.  The `ADMIN` role has full access to the application and can add, edit and delete the schedule. The `USER` role has limited access, but is able to view the schedule, and add and edit Unconf sessions.
+
+Currently the `USER` role is authenticated by OAuth providers:
+
+| Provider | Setup | environment variable |
+| --- | --- | --- |
+| GitHub | [docs](https://authjs.dev/getting-started/providers/github) | `AUTH_GITHUB_ID`, `AUTH_GITHUB_SECRET` |
+
+For the `ADMIN` role, the user is authenticated by a username and password. The user name is `admin` and the password is set via the `AUTH_ADMIN_PASSWORD` environment variable.

@@ -19,7 +19,7 @@ import { DeleteEventDialog } from "./delete_event_dialog";
 import { DeleteBlockDialog } from "./delete_block_dialog";
 import type { RouterOutput } from "@/trpc/react";
 
-type BlockType = RouterOutput["block"]["getAll"][number];
+type BlockType = RouterOutput["block"]["getAgenda"][number];
 type EventType = BlockType["events"][number];
 type SpeakerType = EventType["speakers"][number];
 

@@ -19,7 +19,7 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-type MockBlock = RouterOutput["block"]["getAll"][number];
+type MockBlock = RouterOutput["block"]["getAgenda"][number];
 
 /**
  * The default form of the BlockCard.
