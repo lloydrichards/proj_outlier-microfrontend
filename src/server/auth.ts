@@ -1,6 +1,6 @@
 import { env } from "@/env";
 import NextAuth, { type NextAuthConfig, type DefaultSession } from "next-auth";
-import GitHub from "next-auth/providers/GitHub";
+import GitHub from "next-auth/providers/github";
 import Credentials from "next-auth/providers/credentials";
 
 export const BASE_PATH = "/api/auth";
