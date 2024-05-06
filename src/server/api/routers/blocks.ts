@@ -6,6 +6,7 @@ import {
 } from "@/server/api/trpc";
 import { blocks, insertBlockSchema, speakers } from "@/server/db/schema";
 import { eq, sql } from "drizzle-orm";
+import { z } from "zod";
 
 export const blockRouter = createTRPCRouter({
   add: adminProcedure
@@ -35,30 +36,37 @@ export const blockRouter = createTRPCRouter({
         .where(eq(blocks.id, input.id));
     }),
 
-  getAll: publicProcedure.query(({ ctx }) => {
-    return ctx.db.query.blocks.findMany({
-      where: (b, { eq }) => eq(b.isActive, true),
-      orderBy: (blocks, { asc }) => [asc(blocks.start)],
-      extras: {
-        duration:
-          sql<number>`ROUND(EXTRACT(EPOCH FROM (${blocks.end} - ${blocks.start}))/60)`.as(
-            "duration",
-          ),
-      },
-      with: {
-        events: {
-          with: {
-            speakers: {
-              extras: {
-                fullName:
-                  sql<string>`concat(${speakers.firstName},' ', ${speakers.lastName})`.as(
-                    "full_name",
-                  ),
+  getAgenda: publicProcedure
+    .input(
+      z.object({
+        edition: z.string().nullable(),
+      }),
+    )
+    .query(({ input, ctx }) => {
+      return ctx.db.query.blocks.findMany({
+        where: (b, { eq }) =>
+          input.edition ? eq(b.edition, input.edition) : eq(b.isActive, true),
+        orderBy: (blocks, { asc }) => [asc(blocks.start)],
+        extras: {
+          duration:
+            sql<number>`ROUND(EXTRACT(EPOCH FROM (${blocks.end} - ${blocks.start}))/60)`.as(
+              "duration",
+            ),
+        },
+        with: {
+          events: {
+            with: {
+              speakers: {
+                extras: {
+                  fullName:
+                    sql<string>`concat(${speakers.firstName},' ', ${speakers.lastName})`.as(
+                      "full_name",
+                    ),
+                },
               },
             },
           },
         },
-      },
-    });
-  }),
+      });
+    }),
 });

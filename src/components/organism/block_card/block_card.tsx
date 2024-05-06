@@ -31,7 +31,7 @@ const cardVariants = cva("", {
 type SizeType = VariantProps<typeof cardVariants>["size"];
 
 export type BlockCardProps = {
-  block: RouterOutput["block"]["getAll"][number];
+  block: RouterOutput["block"]["getAgenda"][number];
   className?: string;
 };
 

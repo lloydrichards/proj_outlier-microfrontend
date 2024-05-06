@@ -67,6 +67,7 @@ const main = async () => {
   };
   const calculatedBlocks = agendaBlocks.map(([time, type], idx) => ({
     type,
+    edition: "2024",
     start: offsetDate(new Date(time), 5),
     end: offsetDate(new Date(agendaBlocks[idx + 1]?.[0] ?? time), 5),
   }));

@@ -66,6 +66,9 @@ export const blocks = pgTable(
   "blocks",
   {
     id: serial("id").primaryKey(),
+    edition: varchar("edition")
+      .notNull()
+      .default(sql`date_part('year', CURRENT_DATE)`),
     type: blockEnum("type").notNull(),
     isActive: boolean("is_active").notNull().default(true),
     start: timestamp("start").unique().notNull(),

@@ -7,7 +7,7 @@ import { Fragment } from "react";
 import { formatDate, formatTimeWithMeridiem } from "@/lib/utils";
 
 export const Agenda = async () => {
-  const agenda = await api.block.getAll();
+  const agenda = await api.block.getAgenda();
   return (
     <div className="grid w-full gap-2">
       {agenda.length > 0 ? (

@@ -7,7 +7,7 @@ import { DialogClose } from "@/components/ui/dialog";
 import { typefaceBody } from "@/components/typeface";
 
 export const DeleteEventDialog: FC<{
-  event: RouterOutput["block"]["getAll"][number]["events"][number];
+  event: RouterOutput["block"]["getAgenda"][number]["events"][number];
 }> = ({ event }) => {
   const router = useRouter();
   const deleteEvent = api.event.delete.useMutation({
