@@ -13,7 +13,7 @@ export const PauseCard: FC<BlockCardProps> = ({ block, className }) => {
       <CardHeader>
         <CardTitle className="text-foreground/50">PAUSE</CardTitle>
       </CardHeader>
-      <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+      <p className={typefaceMeta("absolute bottom-2 right-2 opacity-40")}>
         {block.duration} min
       </p>
     </Card>

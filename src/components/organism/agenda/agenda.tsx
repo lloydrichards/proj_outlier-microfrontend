@@ -27,7 +27,7 @@ export const Agenda: FC<{ edition?: string }> = async ({ edition = null }) => {
                 </div>
               )}
               <AgendaBlockMenu block={block}>
-                <div className="grid grid-cols-[5rem_1fr] gap-2 sm:grid-cols-[10rem_1fr]">
+                <div className="grid grid-cols-[4rem_1fr] gap-2 sm:grid-cols-[8rem_1fr]">
                   <p className={typefaceTitle("text-sm sm:text-md")}>
                     {formatTimeWithMeridiem(block.start)}
                   </p>

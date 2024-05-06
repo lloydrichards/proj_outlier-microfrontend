@@ -11,7 +11,7 @@ export const UnconfCard: FC<BlockCardProps> = ({ block, className }) => {
         <CardTitle></CardTitle>
         <CardDescription></CardDescription>
       </CardHeader>
-      <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+      <p className={typefaceMeta("absolute bottom-2 right-2 opacity-40")}>
         {block.duration} min
       </p>
     </Card>

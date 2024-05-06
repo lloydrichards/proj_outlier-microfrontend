@@ -6,7 +6,10 @@ export const typefaceTitle = (className?: string) =>
   cn("text-md font-semibold leading-normal tracking-wide", className);
 
 export const typefaceSubtitle = (className?: string) =>
-  cn("text-sm font-semibold leading-normal", className);
+  cn(
+    "text-sm font-semibold capitalize leading-normal tracking-wider",
+    className,
+  );
 
 export const typefaceBody = (className?: string) =>
   cn("text-sm font-normal leading-normal", className);

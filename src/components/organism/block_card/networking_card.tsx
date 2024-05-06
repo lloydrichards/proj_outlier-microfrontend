@@ -11,7 +11,7 @@ export const NetworkingCard: FC<BlockCardProps> = ({ block, className }) => {
           <span className={typefaceSubtitle()}>NETWORKING</span>
           <CardDescription>Nothing scheduled</CardDescription>
         </CardHeader>
-        <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+        <p className={typefaceMeta("absolute bottom-2 right-2 opacity-40")}>
           {block.duration} min
         </p>
       </Card>
@@ -25,7 +25,7 @@ export const NetworkingCard: FC<BlockCardProps> = ({ block, className }) => {
         <CardTitle>{event?.title}</CardTitle>
         <CardDescription>{event?.description}</CardDescription>
       </CardHeader>
-      <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+      <p className={typefaceMeta("absolute bottom-2 right-2 opacity-40")}>
         {block.duration} min
       </p>
     </Card>

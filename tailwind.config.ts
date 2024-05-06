@@ -22,8 +22,8 @@ const config = {
       silka: "var(--font-silka)",
     },
     fontSize: {
-      sm: ["1rem", "1.5em"], // 16px
-      md: ["2rem", "1.5em"], // 32px
+      sm: ["0.75rem", "1.5em"], // 12px
+      md: ["1.5rem", "1.5em"], // 24px
     },
     colors: {
       current: "currentColor",
@@ -55,12 +55,20 @@ const config = {
     },
     extend: {
       height: {
+        35: "8.75rem",
         55: "13.75rem",
+        65: "16.25rem",
         70: "17.5rem",
+        75: "18.75rem",
+        85: "21.25rem",
         90: "22.5rem",
+        95: "23.75rem",
         100: "25rem",
+        105: "26.25rem",
         110: "27.5rem",
+        115: "28.75rem",
         120: "30rem",
+        125: "31.25rem",
         130: "32.5rem",
       },
       keyframes: {

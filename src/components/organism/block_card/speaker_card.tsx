@@ -18,7 +18,7 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
           <span className={typefaceSubtitle()}>SPEAKER</span>
           <CardDescription>Nothing scheduled</CardDescription>
         </CardHeader>
-        <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+        <p className={typefaceMeta("absolute bottom-2 right-2 opacity-40")}>
           {block.duration} min
         </p>
       </Card>
@@ -43,7 +43,7 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
           </CardDescription>
         ))}
       </CardContent>
-      <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+      <p className={typefaceMeta("absolute bottom-2 right-2 opacity-40")}>
         {block.duration} min
       </p>
     </Card>

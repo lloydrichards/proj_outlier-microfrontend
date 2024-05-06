@@ -13,10 +13,9 @@ const badgeVariants = cva(
       variant: {
         default: "bg-background text-foreground",
         turquoise:
-          "border-turquoise-foreground bg-turquoise text-turquoise-foreground hover:bg-turquoise/80",
-        plum: "border-plum-foreground bg-plum text-plum-foreground hover:bg-turquoise/80",
-        mustard:
-          "border-mustard-foreground bg-mustard text-mustard-foreground hover:bg-turquoise/80",
+          "border-turquoise-foreground bg-turquoise text-turquoise-foreground",
+        plum: "border-plum-foreground bg-plum text-plum-foreground",
+        mustard: "border-mustard-foreground bg-mustard text-mustard-foreground",
       },
     },
     defaultVariants: {
