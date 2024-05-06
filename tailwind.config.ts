@@ -56,6 +56,7 @@ const config = {
     extend: {
       height: {
         35: "8.75rem",
+        50: "12.5rem",
         55: "13.75rem",
         65: "16.25rem",
         70: "17.5rem",
