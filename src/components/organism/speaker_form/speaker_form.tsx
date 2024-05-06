@@ -30,7 +30,7 @@ export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
   const form = useForm<InsertSpeakerSchema>({
     resolver: zodResolver(insertSpeakerSchema),
     defaultValues: edit ?? {
-      event_id: eventId,
+      eventId,
     },
   });
   const router = useRouter();
@@ -83,7 +83,7 @@ const NameInput = () => {
     <div className="grid grid-cols-2 gap-2">
       <FormField
         control={form.control}
-        name="first_name"
+        name="firstName"
         render={({ field }) => (
           <FormItem>
             <FormLabel>First Name</FormLabel>
@@ -96,7 +96,7 @@ const NameInput = () => {
       />
       <FormField
         control={form.control}
-        name="last_name"
+        name="lastName"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Last Name</FormLabel>

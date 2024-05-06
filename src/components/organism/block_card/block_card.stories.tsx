@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { BlockCard } from "./block_card";
-import type { Block, Event, Speaker as TSpeaker } from "@/server/db/schema";
+import type { RouterOutput } from "@/trpc/react";
 
 /**
  * An image element with a fallback for representing the user.
@@ -19,7 +19,7 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-type MockBlock = Block & { events: Array<Event & { speakers: TSpeaker[] }> };
+type MockBlock = RouterOutput["block"]["getAll"][number];
 
 /**
  * The default form of the BlockCard.
@@ -47,8 +47,7 @@ export const Speaker: Story = {
           title: "Title",
           speakers: [
             {
-              first_name: "First",
-              last_name: "Last",
+              fullName: "First Last",
             },
           ],
         },
@@ -66,8 +65,7 @@ export const Lightening: Story = {
           title: "Title",
           speakers: [
             {
-              first_name: "First",
-              last_name: "Last",
+              fullName: "First Last",
             },
           ],
         },

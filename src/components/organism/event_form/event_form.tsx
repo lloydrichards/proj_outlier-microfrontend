@@ -32,7 +32,7 @@ export const EventForm: FC<EventFormProps> = ({ blockId, edit }) => {
   const form = useForm<InsertEventSchema>({
     resolver: zodResolver(insertEventSchema),
     defaultValues: edit ?? {
-      block_id: blockId,
+      blockId,
     },
   });
   const router = useRouter();

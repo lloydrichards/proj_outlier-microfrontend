@@ -1,127 +1,30 @@
 import type { FC } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../../ui/card";
-import type { Block, Event, Speaker } from "@/server/db/schema";
-import { cn } from "@/lib/utils";
-import { typefaceSubtitle } from "../../typeface";
+import type { RouterOutput } from "@/trpc/react";
+import { AnnouncementCard } from "./announcement_card";
+import { LighteningCard } from "./lightening_card";
+import { NetworkingCard } from "./networking_card";
+import { PauseCard } from "./pause_card";
+import { SpeakerCard } from "./speaker_card";
+import { UnconfCard } from "./unconf_card";
 
-type BlockCardProps = {
-  block: Block & { events: Array<Event & { speakers: Speaker[] }> };
+export type BlockCardProps = {
+  block: RouterOutput["block"]["getAll"][number];
   className?: string;
 };
 
 export const BlockCard: FC<BlockCardProps> = ({ block, className }) => {
   switch (block.type) {
     case "ANNOUNCEMENT":
-      return (
-        <Card className={className}>
-          <CardHeader>
-            <span className={typefaceSubtitle()}>ANNOUNCEMENT</span>
-            {block.events.length > 0 ? (
-              <>
-                <CardTitle>{block.events.at(0)?.title}</CardTitle>
-                <CardDescription>
-                  {block.events.at(0)?.description}
-                </CardDescription>
-              </>
-            ) : (
-              <CardTitle>Nothing scheduled</CardTitle>
-            )}
-          </CardHeader>
-        </Card>
-      );
+      return <AnnouncementCard block={block} className={className} />;
     case "LIGHTENING":
-      return (
-        <Card variant="turquoise" className={cn("", className)}>
-          <CardHeader>
-            <span className={typefaceSubtitle()}>LIGHTENING</span>
-          </CardHeader>
-          <CardContent>
-            {block.events.length > 0 ? (
-              <>
-                {block.events.at(0)?.speakers.map((speaker) => (
-                  <p key={speaker.title}>
-                    {block.events.at(0)?.title} - {speaker.first_name}{" "}
-                    {speaker.last_name}
-                  </p>
-                ))}
-              </>
-            ) : (
-              <p>Nothing scheduled</p>
-            )}
-          </CardContent>
-        </Card>
-      );
+      return <LighteningCard block={block} className={className} />;
     case "NETWORKING":
-      return (
-        <Card className={className}>
-          <CardHeader>
-            <span className={typefaceSubtitle()}>NETWORKING</span>
-            {block.events.length > 0 ? (
-              <>
-                <CardTitle>{block.events.at(0)?.title}</CardTitle>
-                <CardDescription>
-                  {block.events.at(0)?.description}
-                </CardDescription>
-              </>
-            ) : (
-              <CardTitle>Nothing scheduled</CardTitle>
-            )}
-          </CardHeader>
-        </Card>
-      );
+      return <NetworkingCard block={block} className={className} />;
     case "PAUSE":
-      return (
-        <Card variant="transparent" className={cn("", className)}>
-          <CardHeader>
-            <CardTitle className="text-center text-foreground/50">
-              PAUSE
-            </CardTitle>
-          </CardHeader>
-        </Card>
-      );
+      return <PauseCard className={className} />;
     case "SPEAKER":
-      return (
-        <Card variant="plum" className={cn("", className)}>
-          <CardHeader>
-            <span className={typefaceSubtitle()}>SPEAKER</span>
-            {block.events.length > 0 ? (
-              <>
-                <CardTitle>{block.events.at(0)?.title}</CardTitle>
-                <CardDescription>
-                  {block.events.at(0)?.description}
-                </CardDescription>
-              </>
-            ) : (
-              <CardTitle>Nothing scheduled</CardTitle>
-            )}
-          </CardHeader>
-          {block.events.length > 0 && (
-            <CardContent>
-              {block.events.at(0)?.speakers.map((speaker) => (
-                <p key={speaker.title}>
-                  {speaker.first_name} {speaker.last_name} ({speaker.pronouns})
-                </p>
-              ))}
-            </CardContent>
-          )}
-        </Card>
-      );
+      return <SpeakerCard block={block} className={className} />;
     case "UNCONF":
-      return (
-        <Card variant="mustard" className={cn("", className)}>
-          <CardHeader>
-            <span className={typefaceSubtitle()}>UNCONF</span>
-            <CardTitle></CardTitle>
-            <CardDescription></CardDescription>
-          </CardHeader>
-          <CardContent></CardContent>
-        </Card>
-      );
+      return <UnconfCard block={block} className={className} />;
   }
 };

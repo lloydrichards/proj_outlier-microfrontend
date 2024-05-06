@@ -11,16 +11,20 @@ import {
 } from "@/components/ui/context-menu";
 import { auth } from "@/server/auth";
 import { type FC, type ReactNode } from "react";
-import { type Speaker, type Block, type Event } from "@/server/db/schema";
 import { DialogTitle } from "@/components/ui/dialog";
 import { EventForm } from "../event_form/event_form";
 import { SpeakerForm } from "../speaker_form/speaker_form";
 import { DeleteSpeakerDialog } from "./delete_speaker_dialog";
 import { DeleteEventDialog } from "./delete_event_dialog";
 import { DeleteBlockDialog } from "./delete_block_dialog";
+import type { RouterOutput } from "@/trpc/react";
+
+type BlockType = RouterOutput["block"]["getAll"][number];
+type EventType = BlockType["events"][number];
+type SpeakerType = EventType["speakers"][number];
 
 export const AgendaBlockMenu: FC<{
-  block: Block & { events: Array<Event & { speakers: Speaker[] }> };
+  block: BlockType;
   children: ReactNode;
 }> = async ({ block, children }) => {
   const session = await auth();
@@ -49,8 +53,8 @@ export const AgendaBlockMenu: FC<{
 };
 
 const EventsContextSubMenu: FC<{
-  block: Block;
-  events: Array<Event & { speakers: Speaker[] }>;
+  block: BlockType;
+  events: EventType[];
 }> = ({ block, events }) => {
   const withEvents = events.length > 0;
   return (
@@ -87,8 +91,8 @@ const EventsContextSubMenu: FC<{
 };
 
 const SpeakersContextSubMenu: FC<{
-  event: Event;
-  speakers: Speaker[];
+  event: EventType;
+  speakers: SpeakerType[];
 }> = ({ event, speakers }) => {
   return (
     <ContextMenuSub>
@@ -96,9 +100,7 @@ const SpeakersContextSubMenu: FC<{
       <ContextMenuSubContent className="w-48">
         {speakers.map((speaker) => (
           <ContextMenuSub key={speaker.id}>
-            <ContextMenuSubTrigger>
-              {speaker.first_name} {speaker.last_name}
-            </ContextMenuSubTrigger>
+            <ContextMenuSubTrigger>{speaker.fullName}</ContextMenuSubTrigger>
             <ContextMenuSubContent className="w-48">
               <ContextMenuDialogItem triggerChildren="Edit">
                 <SpeakerForm eventId={event.id} edit={speaker} />

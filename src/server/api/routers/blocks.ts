@@ -4,8 +4,8 @@ import {
   protectedProcedure,
   publicProcedure,
 } from "@/server/api/trpc";
-import { blocks, insertBlockSchema } from "@/server/db/schema";
-import { eq } from "drizzle-orm";
+import { blocks, insertBlockSchema, speakers } from "@/server/db/schema";
+import { eq, min, sql } from "drizzle-orm";
 
 export const blockRouter = createTRPCRouter({
   add: adminProcedure
@@ -39,10 +39,23 @@ export const blockRouter = createTRPCRouter({
     return ctx.db.query.blocks.findMany({
       where: (b, { eq }) => eq(b.isActive, true),
       orderBy: (blocks, { asc }) => [asc(blocks.start)],
+      extras: {
+        duration:
+          sql<number>`ROUND(EXTRACT(EPOCH FROM (${blocks.end} - ${blocks.start}))/60)`.as(
+            "duration",
+          ),
+      },
       with: {
         events: {
           with: {
-            speakers: true,
+            speakers: {
+              extras: {
+                fullName:
+                  sql<string>`concat(${speakers.firstName},' ', ${speakers.lastName})`.as(
+                    "full_name",
+                  ),
+              },
+            },
           },
         },
       },

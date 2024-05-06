@@ -60,6 +60,6 @@
 
 @layer utilities {
   .prototype {
-    @apply ring-destructive ring-2;
+    @apply ring-2 ring-destructive;
   }
 }
