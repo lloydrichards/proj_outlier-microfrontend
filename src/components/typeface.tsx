@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 // Core Typefaces
 
 export const typefaceTitle = (className?: string) =>
-  cn("text-md font-semibold leading-normal tracking-wide", className);
+  cn("text-md font-semibold leading-tight tracking-wide", className);
 
 export const typefaceSubtitle = (className?: string) =>
   cn(
