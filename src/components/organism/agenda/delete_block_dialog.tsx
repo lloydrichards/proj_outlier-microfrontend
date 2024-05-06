@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { DialogClose } from "@/components/ui/dialog";
 import { typefaceBody } from "@/components/typeface";
-import { formatTimeWithMeridiem } from "@/lib/utils";
+import { timeFormat } from "d3-time-format";
 
 export const DeleteBlockDialog: FC<{ block: Block }> = ({ block }) => {
   const router = useRouter();
@@ -15,12 +15,12 @@ export const DeleteBlockDialog: FC<{ block: Block }> = ({ block }) => {
       router.refresh();
     },
   });
-
+  const format = timeFormat("%I:%M %p");
   return (
     <div className="grid gap-4">
       <p className={typefaceBody()}>
         Are you sure you want to delete {block.type} block at{" "}
-        {formatTimeWithMeridiem(block.start)}?
+        {format(block.start)}?
       </p>
       <div className="flex justify-between">
         <DialogClose asChild>
