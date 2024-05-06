@@ -3,12 +3,12 @@ import { Card, CardDescription, CardHeader } from "../../ui/card";
 import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "./block_card";
 
-export const LighteningCard: FC<BlockCardProps> = ({ block, className }) => {
+export const LightningCard: FC<BlockCardProps> = ({ block, className }) => {
   if (block.events.length == 0) {
     return (
       <Card variant="turquoise" className={className}>
         <CardHeader>
-          <span className={typefaceSubtitle()}>LIGHTENING</span>
+          <span className={typefaceSubtitle()}>LIGHTNING</span>
           <CardDescription>Nothing scheduled</CardDescription>
         </CardHeader>
         <p className={typefaceMeta("absolute bottom-2 right-2 opacity-40")}>
@@ -24,7 +24,7 @@ export const LighteningCard: FC<BlockCardProps> = ({ block, className }) => {
   return (
     <Card variant="turquoise" className={className}>
       <CardHeader>
-        <span className={typefaceSubtitle()}>LIGHTENING</span>
+        <span className={typefaceSubtitle()}>LIGHTNING</span>
         <CardDescription className="line-clamp-1">
           {event?.title} - {speaker?.fullName}
         </CardDescription>

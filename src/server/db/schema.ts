@@ -13,7 +13,7 @@ import type * as z from "zod";
 
 export const blockEnum = pgEnum("block", [
   "SPEAKER",
-  "LIGHTENING",
+  "LIGHTNING",
   "PAUSE",
   "ANNOUNCEMENT",
   "NETWORKING",

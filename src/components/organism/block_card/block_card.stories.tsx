@@ -56,10 +56,10 @@ export const Speaker: Story = {
   },
 };
 
-export const Lightening: Story = {
+export const Lightning: Story = {
   args: {
     block: {
-      type: "LIGHTENING",
+      type: "LIGHTNING",
       events: [
         {
           title: "Title",

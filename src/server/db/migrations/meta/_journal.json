@@ -64,6 +64,13 @@
       "when": 1715005222796,
       "tag": "0008_chemical_king_bedlam",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1715021903328,
+      "tag": "0009_windy_valkyrie",
+      "breakpoints": true
     }
   ]
 }

@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import type { RouterOutput } from "@/trpc/react";
 import { AnnouncementCard } from "./announcement_card";
-import { LighteningCard } from "./lightening_card";
+import { LightningCard } from "./lightning_card";
 import { NetworkingCard } from "./networking_card";
 import { PauseCard } from "./pause_card";
 import { SpeakerCard } from "./speaker_card";
@@ -57,9 +57,9 @@ export const BlockCard: FC<BlockCardProps> = ({ block, className }) => {
           })}
         />
       );
-    case "LIGHTENING":
+    case "LIGHTNING":
       return (
-        <LighteningCard
+        <LightningCard
           block={block}
           className={cardVariants({
             size: block.duration as SizeType,
