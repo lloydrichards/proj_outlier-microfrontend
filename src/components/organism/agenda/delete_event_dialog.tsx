@@ -1,13 +1,14 @@
 "use client";
 import { type FC } from "react";
-import type { Event } from "@/server/db/schema";
-import { api } from "@/trpc/react";
+import { type RouterOutput, api } from "@/trpc/react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { DialogClose } from "@/components/ui/dialog";
 import { typefaceBody } from "@/components/typeface";
 
-export const DeleteEventDialog: FC<{ event: Event }> = ({ event }) => {
+export const DeleteEventDialog: FC<{
+  event: RouterOutput["block"]["getAll"][number]["events"][number];
+}> = ({ event }) => {
   const router = useRouter();
   const deleteEvent = api.event.delete.useMutation({
     onSuccess: () => {

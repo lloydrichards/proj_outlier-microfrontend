@@ -1,15 +1,9 @@
 import type { FC } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../../ui/card";
-import { typefaceSubtitle } from "../../typeface";
+import { Card, CardDescription, CardHeader, CardTitle } from "../../ui/card";
+import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "./block_card";
 
-export const UnconfCard: FC<BlockCardProps> = ({ className }) => {
+export const UnconfCard: FC<BlockCardProps> = ({ block, className }) => {
   return (
     <Card variant="mustard" className={className}>
       <CardHeader>
@@ -17,7 +11,9 @@ export const UnconfCard: FC<BlockCardProps> = ({ className }) => {
         <CardTitle></CardTitle>
         <CardDescription></CardDescription>
       </CardHeader>
-      <CardContent></CardContent>
+      <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+        {block.duration} min
+      </p>
     </Card>
   );
 };

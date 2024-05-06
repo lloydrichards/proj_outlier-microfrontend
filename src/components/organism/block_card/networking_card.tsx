@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { Card, CardDescription, CardHeader, CardTitle } from "../../ui/card";
-import { typefaceSubtitle } from "../../typeface";
+import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "./block_card";
 
 export const NetworkingCard: FC<BlockCardProps> = ({ block, className }) => {
@@ -9,8 +9,11 @@ export const NetworkingCard: FC<BlockCardProps> = ({ block, className }) => {
       <Card className={className}>
         <CardHeader>
           <span className={typefaceSubtitle()}>NETWORKING</span>
-          <CardTitle>Nothing scheduled</CardTitle>
+          <CardDescription>Nothing scheduled</CardDescription>
         </CardHeader>
+        <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+          {block.duration} min
+        </p>
       </Card>
     );
   }
@@ -22,6 +25,9 @@ export const NetworkingCard: FC<BlockCardProps> = ({ block, className }) => {
         <CardTitle>{event?.title}</CardTitle>
         <CardDescription>{event?.description}</CardDescription>
       </CardHeader>
+      <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+        {block.duration} min
+      </p>
     </Card>
   );
 };

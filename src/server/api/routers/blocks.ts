@@ -5,7 +5,7 @@ import {
   publicProcedure,
 } from "@/server/api/trpc";
 import { blocks, insertBlockSchema, speakers } from "@/server/db/schema";
-import { eq, min, sql } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 
 export const blockRouter = createTRPCRouter({
   add: adminProcedure

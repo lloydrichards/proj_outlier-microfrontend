@@ -40,7 +40,6 @@ export const BlockForm: FC<BlockFormProps> = ({ start, edit }) => {
   });
 
   const onSubmit = (values: InsertBlockSchema) => {
-    console.log(values);
     if (edit) {
       updateBlock.mutate({ id: edit.id, ...values });
       return form.reset();

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { DialogClose } from "@/components/ui/dialog";
 import { typefaceBody } from "@/components/typeface";
+import { formatTimeWithMeridiem } from "@/lib/utils";
 
 export const DeleteBlockDialog: FC<{ block: Block }> = ({ block }) => {
   const router = useRouter();
@@ -18,7 +19,8 @@ export const DeleteBlockDialog: FC<{ block: Block }> = ({ block }) => {
   return (
     <div className="grid gap-4">
       <p className={typefaceBody()}>
-        Are you sure you want to delete {block.type} block?
+        Are you sure you want to delete {block.type} block at{" "}
+        {formatTimeWithMeridiem(block.start)}?
       </p>
       <div className="flex justify-between">
         <DialogClose asChild>

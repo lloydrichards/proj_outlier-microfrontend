@@ -10,11 +10,11 @@ export default async function Home() {
   const session = await auth();
   return (
     <main className="container">
-      <header className="sticky top-0 flex w-full items-center justify-end gap-4 bg-background px-2 py-6">
+      <header className="sticky top-0 z-10 flex w-full items-center justify-end gap-4 bg-background px-2 py-6">
         {session ? (
           <>
             <Avatar>
-              <AvatarImage src={session.user.image ?? ""} />
+              <AvatarImage src={session.user.image ?? undefined} />
               <AvatarFallback>{session.user.name?.[0] ?? "?"}</AvatarFallback>
             </Avatar>
             <p className={typefaceSubtitle("grow")}>
@@ -29,7 +29,7 @@ export default async function Home() {
         )}
       </header>
       {/* <BlockForm /> */}
-      <div className="p-4 ">
+      <div className="p-2 md:p-4 ">
         <Agenda />
       </div>
     </main>

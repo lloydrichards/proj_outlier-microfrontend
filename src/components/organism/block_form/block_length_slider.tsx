@@ -4,19 +4,18 @@ import { Slider } from "@/components/ui/slider";
 import { type InsertBlockSchema } from "@/server/db/schema";
 import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
-import { utcFormat } from "d3-time-format";
 import { Clock } from "lucide-react";
+import { formatTime } from "@/lib/utils";
 
 export const BlockLengthSlider: FC = () => {
   const { setValue, getValues, watch } = useFormContext<InsertBlockSchema>();
-  const timeFormat = utcFormat("%I:%M");
   return (
     <div className="grid gap-2">
       <FormLabel>Block Length</FormLabel>
       <div className="flex gap-2">
         <p className="flex w-24 items-center gap-1 rounded border border-input bg-background px-2">
           <Clock size={12} />
-          {timeFormat(watch("start") ?? "")}
+          {formatTime(watch("start") ?? "")}
         </p>
         <div className="grid w-full gap-2">
           <Slider
@@ -47,7 +46,7 @@ export const BlockLengthSlider: FC = () => {
         </div>
         <p className="flex w-24 items-center gap-1 rounded border border-input bg-background px-2">
           <Clock size={12} />
-          {timeFormat(watch("end") ?? "")}
+          {formatTime(watch("end") ?? "")}
         </p>
       </div>
     </div>

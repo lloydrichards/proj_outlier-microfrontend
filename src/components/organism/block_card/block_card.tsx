@@ -6,6 +6,29 @@ import { NetworkingCard } from "./networking_card";
 import { PauseCard } from "./pause_card";
 import { SpeakerCard } from "./speaker_card";
 import { UnconfCard } from "./unconf_card";
+import { cva, type VariantProps } from "class-variance-authority";
+
+const cardVariants = cva("", {
+  variants: {
+    size: {
+      10: "h-20",
+      20: "h-30",
+      30: "h-40",
+      40: "h-50",
+      45: "h-55",
+      50: "h-60",
+      60: "h-70",
+      70: "h-80",
+      80: "h-90",
+      90: "h-100",
+      100: "h-110",
+      110: "h-120",
+      120: "h-130",
+    },
+  },
+});
+
+type SizeType = VariantProps<typeof cardVariants>["size"];
 
 export type BlockCardProps = {
   block: RouterOutput["block"]["getAll"][number];
@@ -15,16 +38,64 @@ export type BlockCardProps = {
 export const BlockCard: FC<BlockCardProps> = ({ block, className }) => {
   switch (block.type) {
     case "ANNOUNCEMENT":
-      return <AnnouncementCard block={block} className={className} />;
+      return (
+        <AnnouncementCard
+          block={block}
+          className={cardVariants({
+            size: block.duration as VariantProps<typeof cardVariants>["size"],
+            className,
+          })}
+        />
+      );
     case "LIGHTENING":
-      return <LighteningCard block={block} className={className} />;
+      return (
+        <LighteningCard
+          block={block}
+          className={cardVariants({
+            size: block.duration as SizeType,
+            className,
+          })}
+        />
+      );
     case "NETWORKING":
-      return <NetworkingCard block={block} className={className} />;
+      return (
+        <NetworkingCard
+          block={block}
+          className={cardVariants({
+            size: block.duration as SizeType,
+            className,
+          })}
+        />
+      );
     case "PAUSE":
-      return <PauseCard className={className} />;
+      return (
+        <PauseCard
+          block={block}
+          className={cardVariants({
+            size: block.duration as SizeType,
+            className,
+          })}
+        />
+      );
     case "SPEAKER":
-      return <SpeakerCard block={block} className={className} />;
+      return (
+        <SpeakerCard
+          block={block}
+          className={cardVariants({
+            size: block.duration as SizeType,
+            className,
+          })}
+        />
+      );
     case "UNCONF":
-      return <UnconfCard block={block} className={className} />;
+      return (
+        <UnconfCard
+          block={block}
+          className={cardVariants({
+            size: block.duration as SizeType,
+            className,
+          })}
+        />
+      );
   }
 };

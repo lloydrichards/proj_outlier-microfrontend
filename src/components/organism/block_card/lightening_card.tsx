@@ -1,6 +1,6 @@
 import type { FC } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
-import { typefaceSubtitle } from "../../typeface";
+import { Card, CardDescription, CardHeader } from "../../ui/card";
+import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "./block_card";
 
 export const LighteningCard: FC<BlockCardProps> = ({ block, className }) => {
@@ -9,8 +9,11 @@ export const LighteningCard: FC<BlockCardProps> = ({ block, className }) => {
       <Card variant="turquoise" className={className}>
         <CardHeader>
           <span className={typefaceSubtitle()}>LIGHTENING</span>
-          <CardTitle>Nothing scheduled</CardTitle>
+          <CardDescription>Nothing scheduled</CardDescription>
         </CardHeader>
+        <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+          {block.duration} min
+        </p>
       </Card>
     );
   }
@@ -22,12 +25,14 @@ export const LighteningCard: FC<BlockCardProps> = ({ block, className }) => {
     <Card variant="turquoise" className={className}>
       <CardHeader>
         <span className={typefaceSubtitle()}>LIGHTENING</span>
-        <CardContent>
-          <p>
-            {event?.title} - {speaker?.fullName}
-          </p>
-        </CardContent>
+        <CardDescription>
+          {event?.title} - {speaker?.fullName}
+        </CardDescription>
       </CardHeader>
+
+      <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+        {block.duration} min
+      </p>
     </Card>
   );
 };

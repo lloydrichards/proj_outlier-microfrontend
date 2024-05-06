@@ -6,8 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "../../ui/card";
-import { typefaceSubtitle } from "../../typeface";
+import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "./block_card";
+import { Badge } from "@/components/ui/badge";
 
 export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
   if (block.events.length == 0) {
@@ -15,8 +16,11 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
       <Card variant="plum" className={className}>
         <CardHeader>
           <span className={typefaceSubtitle()}>SPEAKER</span>
-          <CardTitle>Nothing scheduled</CardTitle>
+          <CardDescription>Nothing scheduled</CardDescription>
         </CardHeader>
+        <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+          {block.duration} min
+        </p>
       </Card>
     );
   }
@@ -29,6 +33,9 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
         <CardTitle>{event?.title}</CardTitle>
         <CardDescription>{event?.description}</CardDescription>
       </CardHeader>
+      <Badge variant="plum" className={"absolute right-2 top-2"}>
+        {event?.category}
+      </Badge>
       <CardContent>
         {event?.speakers.map((speaker) => (
           <p key={speaker.title}>
@@ -36,6 +43,9 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
           </p>
         ))}
       </CardContent>
+      <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>
+        {block.duration} min
+      </p>
     </Card>
   );
 };

@@ -54,6 +54,15 @@ const config = {
       full: "9999px",
     },
     extend: {
+      height: {
+        55: "13.75rem",
+        70: "17.5rem",
+        90: "22.5rem",
+        100: "25rem",
+        110: "27.5rem",
+        120: "30rem",
+        130: "32.5rem",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
