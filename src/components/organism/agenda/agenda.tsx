@@ -3,11 +3,11 @@ import { typefaceTitle } from "@/components/typeface";
 import { api } from "@/trpc/server";
 import { AgendaBlockMenu } from "./agenda_block_menu";
 import { AddBlockDialog } from "../../molecule/add_block_dialog/add_block_dialog";
-import { Fragment } from "react";
+import { type FC, Fragment } from "react";
 import { formatDate, formatTimeWithMeridiem } from "@/lib/utils";
 
-export const Agenda = async () => {
-  const agenda = await api.block.getAgenda();
+export const Agenda: FC<{ edition?: string }> = async ({ edition = null }) => {
+  const agenda = await api.block.getAgenda({ edition });
   return (
     <div className="grid w-full gap-2">
       {agenda.length > 0 ? (
