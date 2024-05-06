@@ -1,6 +1,6 @@
 import { env } from "@/env";
 import NextAuth, { type NextAuthConfig, type DefaultSession } from "next-auth";
-// import GitHub from "next-auth/providers/GitHub";
+import GitHub from "next-auth/providers/GitHub";
 import Credentials from "next-auth/providers/credentials";
 
 export const BASE_PATH = "/api/auth";
@@ -42,17 +42,17 @@ export const authConfig = {
     },
   },
   providers: [
-    // GitHub({
-    //   profile(profile) {
-    //     return {
-    //       id: profile.id.toString(),
-    //       image: profile.avatar_url,
-    //       name: profile.name,
-    //       email: profile.email,
-    //       role: ROLE.USER,
-    //     };
-    //   },
-    // }),
+    GitHub({
+      profile(profile) {
+        return {
+          id: profile.id.toString(),
+          image: profile.avatar_url,
+          name: profile.name,
+          email: profile.email,
+          role: ROLE.USER,
+        };
+      },
+    }),
     Credentials({
       name: "Credentials",
       credentials: {
