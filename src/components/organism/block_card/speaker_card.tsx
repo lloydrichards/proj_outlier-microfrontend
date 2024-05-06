@@ -28,7 +28,7 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
   const event = block.events.at(0);
   return (
     <Card variant="plum" className={className}>
-      <CardHeader>
+      <CardHeader className="grow">
         <span className={typefaceSubtitle()}>SPEAKER</span>
         <CardTitle>{event?.title}</CardTitle>
         <CardDescription>{event?.description}</CardDescription>
@@ -36,11 +36,11 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
       <Badge variant="plum" className={"absolute right-2 top-2"}>
         {event?.category}
       </Badge>
-      <CardContent>
+      <CardContent className="flex gap-2 after:*:[content:','] last:after:*:[content:'']">
         {event?.speakers.map((speaker) => (
-          <p key={speaker.title}>
-            {speaker.firstName} {speaker.pronouns && `(${speaker.pronouns})`}
-          </p>
+          <CardDescription key={speaker.title}>
+            {speaker.fullName} {speaker.pronouns && `(${speaker.pronouns})`}
+          </CardDescription>
         ))}
       </CardContent>
       <p className={typefaceMeta("absolute bottom-0 right-2 opacity-40")}>

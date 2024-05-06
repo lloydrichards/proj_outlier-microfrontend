@@ -25,7 +25,7 @@ export const LighteningCard: FC<BlockCardProps> = ({ block, className }) => {
     <Card variant="turquoise" className={className}>
       <CardHeader>
         <span className={typefaceSubtitle()}>LIGHTENING</span>
-        <CardDescription>
+        <CardDescription className="line-clamp-1">
           {event?.title} - {speaker?.fullName}
         </CardDescription>
       </CardHeader>

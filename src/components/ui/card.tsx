@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { type VariantProps, cva } from "class-variance-authority";
 import { typefaceBody, typefaceTitle } from "../typeface";
 
-const cardVariants = cva("relative rounded-lg", {
+const cardVariants = cva("relative flex flex-col rounded-lg", {
   variants: {
     variant: {
       default: "bg-background text-foreground",
