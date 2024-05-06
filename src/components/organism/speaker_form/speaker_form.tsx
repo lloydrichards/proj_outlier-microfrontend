@@ -20,6 +20,7 @@ import { api } from "@/trpc/react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { ImgInput } from "@/components/molecule/img_input/img_input";
 
 type SpeakerFormProps = {
   eventId: number;
@@ -61,6 +62,7 @@ export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <NameInput />
         <PronounsInput />
+        <ImgInput />
         <TitleInput />
         <EmailInput />
         <BioTextarea />

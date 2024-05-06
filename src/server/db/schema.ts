@@ -48,6 +48,7 @@ export const categoryEnum = pgEnum("category", [
   "UNUSUAL",
   "OTHER",
   "KEYNOTE",
+  "DVS",
 ]);
 
 export const locationEnum = pgEnum("location", [
@@ -100,6 +101,7 @@ export const events = pgTable("events", {
   title: varchar("title").notNull(),
   description: varchar("description"),
   location: locationEnum("location").notNull().default("UNASSIGNED"),
+  imageUrl: varchar("image_url"),
   linkUrl: varchar("link_url"),
   linkLabel: varchar("link_label"),
   category: categoryEnum("category").notNull().default("OTHER"),
@@ -133,6 +135,7 @@ export const speakers = pgTable("speakers", {
   pronouns: varchar("pronouns"),
   email: varchar("email"),
   organization: varchar("organization"),
+  imageUrl: varchar("image_url"),
   bio: varchar("bio"),
   createdAt: timestamp("created_at")
     .default(sql`CURRENT_TIMESTAMP`)

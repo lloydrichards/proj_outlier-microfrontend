@@ -22,6 +22,7 @@ import { EventCategorySelect } from "./event_category_select";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { EventLocationSelect } from "./event_location_select";
+import { ImgInput } from "../../molecule/img_input/img_input";
 
 type EventFormProps = {
   blockId: number;
@@ -62,6 +63,7 @@ export const EventForm: FC<EventFormProps> = ({ blockId, edit }) => {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <TitleInput />
         <DescriptionTextarea />
+        <ImgInput />
         <EventLocationSelect />
         <EventCategorySelect />
         <LinkInput />

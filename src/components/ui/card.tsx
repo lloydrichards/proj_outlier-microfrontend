@@ -50,7 +50,11 @@ const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, children, ...props }, ref) => (
-  <h3 ref={ref} className={cn(typefaceTitle(), className)} {...props}>
+  <h3
+    ref={ref}
+    className={cn(typefaceTitle("line-clamp-2"), className)}
+    {...props}
+  >
     {children}
   </h3>
 ));

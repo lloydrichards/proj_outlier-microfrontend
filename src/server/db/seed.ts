@@ -1,9 +1,9 @@
 import { db } from ".";
-import { blocks, type NewBlock } from "./schema";
+import { blocks, events, speakers, type NewBlock } from "./schema";
 
 const agendaBlocks: [string, NewBlock["type"]][] = [
   // Day 1
-  ["2024-06-12 08:30", "ANNOUNCEMENT"],
+  ["2024-06-12 08:00", "ANNOUNCEMENT"],
   ["2024-06-12 09:00", "ANNOUNCEMENT"],
   ["2024-06-12 09:10", "SPEAKER"],
   ["2024-06-12 09:30", "SPEAKER"],
@@ -21,27 +21,31 @@ const agendaBlocks: [string, NewBlock["type"]][] = [
   ["2024-06-12 16:30", "LIGHTENING"],
   ["2024-06-12 16:40", "LIGHTENING"],
   ["2024-06-12 16:50", "LIGHTENING"],
-  ["2024-06-12 17:00", "UNCONF"],
-  ["2024-06-12 17:45", "NETWORKING"],
-  ["2024-06-12 19:15", "ANNOUNCEMENT"],
+  ["2024-06-12 17:05", "UNCONF"],
+  ["2024-06-12 17:50", "NETWORKING"],
+  ["2024-06-12 19:20", "ANNOUNCEMENT"],
   // Day 2
-  ["2024-06-13 09:00", "ANNOUNCEMENT"],
+  ["2024-06-13 08:30", "ANNOUNCEMENT"],
+  ["2024-06-13 09:00", "SPEAKER"],
   ["2024-06-13 09:10", "SPEAKER"],
-  ["2024-06-13 10:10", "SPEAKER"],
-  ["2024-06-13 10:40", "PAUSE"],
-  ["2024-06-13 11:00", "LIGHTENING"],
-  ["2024-06-13 11:10", "LIGHTENING"],
-  ["2024-06-13 11:20", "LIGHTENING"],
-  ["2024-06-13 11:30", "SPEAKER"],
-  ["2024-06-13 12:00", "SPEAKER"],
-  ["2024-06-13 12:30", "PAUSE"],
-  ["2024-06-13 14:00", "SPEAKER"],
-  ["2024-06-13 15:00", "SPEAKER"],
-  ["2024-06-13 15:30", "PAUSE"],
-  ["2024-06-13 15:50", "UNCONF"],
-  ["2024-06-13 16:50", "SPEAKER"],
-  ["2024-06-13 17:00", "ANNOUNCEMENT"],
+  ["2024-06-13 10:10", "LIGHTENING"],
+  ["2024-06-13 10:20", "LIGHTENING"],
+  ["2024-06-13 10:30", "PAUSE"],
+  ["2024-06-13 11:00", "SPEAKER"],
+  ["2024-06-13 11:30", "LIGHTENING"],
+  ["2024-06-13 11:40", "SPEAKER"],
+  ["2024-06-13 12:10", "SPEAKER"],
+  ["2024-06-13 12:40", "PAUSE"],
+  ["2024-06-13 14:10", "SPEAKER"],
+  ["2024-06-13 15:10", "SPEAKER"],
+  ["2024-06-13 15:40", "PAUSE"],
+  ["2024-06-13 15:55", "SPEAKER"],
+  ["2024-06-13 16:25", "SPEAKER"],
+  ["2024-06-13 17:05", "UNCONF"],
+  ["2024-06-13 17:50", "ANNOUNCEMENT"],
+  ["2024-06-13 18:00", "ANNOUNCEMENT"],
   // Day 3
+  ["2024-06-14 08:30", "ANNOUNCEMENT"],
   ["2024-06-14 09:00", "ANNOUNCEMENT"],
   ["2024-06-14 09:10", "SPEAKER"],
   ["2024-06-14 09:50", "LIGHTENING"],
@@ -50,16 +54,20 @@ const agendaBlocks: [string, NewBlock["type"]][] = [
   ["2024-06-14 10:50", "LIGHTENING"],
   ["2024-06-14 11:00", "SPEAKER"],
   ["2024-06-14 11:30", "SPEAKER"],
-  ["2024-06-14 12:00", "LIGHTENING"],
-  ["2024-06-14 12:10", "ANNOUNCEMENT"],
+  ["2024-06-14 12:00", "SPEAKER"],
   ["2024-06-14 12:30", "PAUSE"],
-  ["2024-06-14 13:30", "NETWORKING"],
-  ["2024-06-14 15:30", "ANNOUNCEMENT"],
+  ["2024-06-14 14:00", "NETWORKING"],
+  ["2024-06-14 16:00", "ANNOUNCEMENT"],
+  ["2024-06-14 16:10", "ANNOUNCEMENT"],
 ];
 
 const main = async () => {
   // eslint-disable-next-line
   await db.delete(blocks);
+  // eslint-disable-next-line
+  await db.delete(events);
+  // eslint-disable-next-line
+  await db.delete(speakers);
 
   const offsetDate = (date: Date, hours: number) => {
     const newDate = new Date(date.getTime() + hours * 60 * 60 * 1000);
