@@ -1,6 +1,11 @@
 import { env } from "@/env";
-import NextAuth, { type NextAuthConfig, type DefaultSession } from "next-auth";
+import NextAuth, {
+  type NextAuthConfig,
+  type DefaultSession,
+  type User,
+} from "next-auth";
 import GitHub from "next-auth/providers/github";
+import Slack from "next-auth/providers/slack";
 import Credentials from "next-auth/providers/credentials";
 
 export const BASE_PATH = "/api/auth";
@@ -51,6 +56,14 @@ export const authConfig = {
           email: profile.email,
           role: ROLE.USER,
         };
+      },
+    }),
+    Slack({
+      profile(profile) {
+        return {
+          ...profile,
+          role: ROLE.USER,
+        } as User;
       },
     }),
     Credentials({
