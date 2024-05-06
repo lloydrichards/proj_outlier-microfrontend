@@ -11,7 +11,8 @@
     "auth",
     "storybook",
     "theme",
-    "components"
+    "components",
+    "routing"
   ],
   "cSpell.words": ["Unconf"]
 }
