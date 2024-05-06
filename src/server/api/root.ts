@@ -2,6 +2,7 @@ import { blockRouter } from "@/server/api/routers/blocks";
 import { createCallerFactory, createTRPCRouter } from "@/server/api/trpc";
 import { speakerRouter } from "./routers/speaker";
 import { eventRouter } from "./routers/events";
+import { unconfRouter } from "./routers/unconf";
 
 /**
  * This is the primary router for your server.
@@ -12,6 +13,7 @@ export const appRouter = createTRPCRouter({
   block: blockRouter,
   event: eventRouter,
   speaker: speakerRouter,
+  unconf: unconfRouter,
 });
 
 // export type definition of API

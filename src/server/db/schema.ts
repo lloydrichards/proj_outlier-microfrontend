@@ -63,6 +63,8 @@ export const locationEnum = pgEnum("location", [
   "SLACK",
 ]);
 
+export const statusEnum = pgEnum("status", ["PENDING", "ACCEPTED", "REJECTED"]);
+
 export const blocks = pgTable(
   "blocks",
   {
@@ -105,6 +107,7 @@ export const events = pgTable("events", {
   linkUrl: varchar("link_url"),
   linkLabel: varchar("link_label"),
   category: categoryEnum("category").notNull().default("OTHER"),
+  status: statusEnum("status").notNull().default("PENDING"),
   createdAt: timestamp("created_at")
     .default(sql`CURRENT_TIMESTAMP`)
     .notNull(),
