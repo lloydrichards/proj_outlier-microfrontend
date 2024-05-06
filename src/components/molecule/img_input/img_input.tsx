@@ -18,7 +18,7 @@ export const ImgInput = () => {
       name="imageUrl"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Title</FormLabel>
+          <FormLabel>Image URL</FormLabel>
           <FormControl>
             <Input
               placeholder="https://"
