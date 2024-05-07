@@ -26,7 +26,8 @@ export const LightningCard: FC<BlockCardProps> = ({ block, className }) => {
       <CardHeader>
         <span className={typefaceSubtitle()}>LIGHTNING</span>
         <CardDescription className="line-clamp-1">
-          {event?.title} - {speaker?.fullName}
+          <strong>{event?.title} -</strong> {speaker?.fullName}{" "}
+          {speaker?.pronouns ? `(${speaker.pronouns})` : ""}
         </CardDescription>
       </CardHeader>
 
