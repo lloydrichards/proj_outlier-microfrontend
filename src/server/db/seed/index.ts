@@ -1,5 +1,5 @@
-import { db } from ".";
-import { blocks, events, speakers, type NewBlock } from "./schema";
+import { db } from "..";
+import { blocks, events, speakers, type NewBlock } from "../schema";
 
 const agendaBlocks: [string, NewBlock["type"]][] = [
   // Day 1
