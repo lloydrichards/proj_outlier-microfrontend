@@ -3,14 +3,37 @@ import {
   protectedProcedure,
   publicProcedure,
 } from "@/server/api/trpc";
-import { events, insertEventSchema } from "@/server/db/schema";
+import {
+  events,
+  insertEventSchema,
+  insertSpeakerSchema,
+  speakers,
+} from "@/server/db/schema";
 import { eq } from "drizzle-orm";
+import { z } from "zod";
 
 export const unconfRouter = createTRPCRouter({
   create: publicProcedure
-    .input(insertEventSchema)
+    .input(
+      z.object({
+        event: insertEventSchema,
+        organizer: insertSpeakerSchema,
+      }),
+    )
     .mutation(async ({ ctx, input }) => {
-      await ctx.db.insert(events).values(input);
+      const user = ctx.session?.user;
+      if (!user) {
+        throw new Error("Unauthorized");
+      }
+      const eventResult = await ctx.db
+        .insert(events)
+        .values(input.event)
+        .returning();
+
+      await ctx.db.insert(speakers).values({
+        ...input.organizer,
+        eventId: eventResult[0]?.id,
+      });
     }),
 
   accept: protectedProcedure

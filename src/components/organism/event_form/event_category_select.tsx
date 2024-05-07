@@ -17,7 +17,9 @@ import { categoryEnum, type InsertEventSchema } from "@/server/db/schema";
 import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
 
-export const EventCategorySelect: FC = () => {
+export const EventCategorySelect: FC<{
+  exclude?: string[];
+}> = ({ exclude }) => {
   const form = useFormContext<InsertEventSchema>();
   return (
     <FormField
@@ -33,11 +35,13 @@ export const EventCategorySelect: FC = () => {
               </SelectTrigger>
             </FormControl>
             <SelectContent>
-              {categoryEnum.enumValues.map((value) => (
-                <SelectItem key={value} value={value}>
-                  {value}
-                </SelectItem>
-              ))}
+              {categoryEnum.enumValues
+                .filter((e) => (exclude ? !exclude.includes(e) : true))
+                .map((value) => (
+                  <SelectItem key={value} value={value}>
+                    {value}
+                  </SelectItem>
+                ))}
             </SelectContent>
           </Select>
           <FormMessage />

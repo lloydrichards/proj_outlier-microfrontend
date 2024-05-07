@@ -59,7 +59,7 @@ export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
   };
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-2">
         <NameInput />
         <PronounsInput />
         <ImgInput />
@@ -69,6 +69,7 @@ export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
         <Button
           variant="plum"
           disabled={form.formState.isSubmitting}
+          className="mt-2"
           type="submit"
         >
           Submit
