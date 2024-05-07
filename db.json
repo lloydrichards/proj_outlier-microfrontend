@@ -1,0 +1,1806 @@
+[
+  {
+    "id": 51,
+    "edition": "2024",
+    "type": "ANNOUNCEMENT",
+    "isActive": true,
+    "start": "2024-06-12T13:00:00.000Z",
+    "end": "2024-06-12T14:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:45.341Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 19,
+        "blockId": 51,
+        "title": "Registration",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:55:59.274Z",
+        "updatedAt": null,
+        "speakers": []
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "edition": "2024",
+    "type": "ANNOUNCEMENT",
+    "isActive": true,
+    "start": "2024-06-12T14:00:00.000Z",
+    "end": "2024-06-12T14:10:00.000Z",
+    "createdAt": "2024-05-06T14:20:45.568Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 20,
+        "blockId": 52,
+        "title": "Opening remarks",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:56:07.363Z",
+        "updatedAt": null,
+        "speakers": []
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-12T14:10:00.000Z",
+    "end": "2024-06-12T14:30:00.000Z",
+    "createdAt": "2024-05-06T14:20:45.795Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 21,
+        "blockId": 53,
+        "title": "Message by DVS Executive Director",
+        "description": null,
+        "location": "MAIN",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "DVS",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:56:36.063Z",
+        "updatedAt": null,
+        "speakers": []
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-12T14:30:00.000Z",
+    "end": "2024-06-12T15:30:00.000Z",
+    "createdAt": "2024-05-06T14:20:46.023Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 22,
+        "blockId": 54,
+        "title": "Visual Villainy: How to Undermine Humanity With Dataviz",
+        "description": null,
+        "location": "MAIN",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "KEYNOTE",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:56:54.367Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 3,
+            "eventId": 22,
+            "firstName": "Eli",
+            "lastName": "Holder",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:07:06.153Z",
+            "updatedAt": null
+          },
+          {
+            "id": 4,
+            "eventId": 22,
+            "firstName": "Gabrielle",
+            "lastName": "Merite",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:07:24.700Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "edition": "2024",
+    "type": "PAUSE",
+    "isActive": true,
+    "start": "2024-06-12T15:30:00.000Z",
+    "end": "2024-06-12T16:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:46.250Z",
+    "updatedAt": null,
+    "events": []
+  },
+  {
+    "id": 56,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-12T16:00:00.000Z",
+    "end": "2024-06-12T16:30:00.000Z",
+    "createdAt": "2024-05-06T14:20:46.473Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 23,
+        "blockId": 56,
+        "title": "Accessibility: the key to unlock your best data visualization",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:57:08.688Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 5,
+            "eventId": 23,
+            "firstName": "Joshua",
+            "lastName": "Smith",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:07:42.732Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-12T16:30:00.000Z",
+    "end": "2024-06-12T17:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:46.703Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 24,
+        "blockId": 57,
+        "title": "Making arguments with data visualization",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:57:14.732Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 6,
+            "eventId": 24,
+            "firstName": "Youyou",
+            "lastName": "Zhou",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:08:00.305Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "edition": "2024",
+    "type": "LIGHTNING",
+    "isActive": true,
+    "start": "2024-06-12T17:00:00.000Z",
+    "end": "2024-06-12T17:10:00.000Z",
+    "createdAt": "2024-05-06T14:20:46.928Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 25,
+        "blockId": 58,
+        "title": "Practical Tactics for Gender Inclusivity in Data Reporting",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:57:25.060Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 7,
+            "eventId": 25,
+            "firstName": "Emilia",
+            "lastName": "Ruzicka",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:08:13.697Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "edition": "2024",
+    "type": "LIGHTNING",
+    "isActive": true,
+    "start": "2024-06-12T17:10:00.000Z",
+    "end": "2024-06-12T17:20:00.000Z",
+    "createdAt": "2024-05-06T14:20:47.154Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 26,
+        "blockId": 59,
+        "title": "Forget About Dashboards and Solve the Business Problem",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:57:31.853Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 8,
+            "eventId": 26,
+            "firstName": "Kevin",
+            "lastName": "Ford",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:08:26.968Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "edition": "2024",
+    "type": "LIGHTNING",
+    "isActive": true,
+    "start": "2024-06-12T17:20:00.000Z",
+    "end": "2024-06-12T17:30:00.000Z",
+    "createdAt": "2024-05-06T14:20:47.378Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 27,
+        "blockId": 60,
+        "title": "This is not Havana, Cuba",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:57:41.990Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 9,
+            "eventId": 27,
+            "firstName": "Sam",
+            "lastName": "Hart",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:08:38.092Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "edition": "2024",
+    "type": "PAUSE",
+    "isActive": true,
+    "start": "2024-06-12T17:30:00.000Z",
+    "end": "2024-06-12T19:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:47.603Z",
+    "updatedAt": null,
+    "events": []
+  },
+  {
+    "id": 62,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-12T19:00:00.000Z",
+    "end": "2024-06-12T20:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:47.831Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 28,
+        "blockId": 62,
+        "title": "Positive Disruption Panel: Data Physicalisation",
+        "description": "moderated by Jason Forrest\"\n\n",
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:58:21.024Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 10,
+            "eventId": 28,
+            "firstName": "Regine",
+            "lastName": "Abos",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:08:57.979Z",
+            "updatedAt": null
+          },
+          {
+            "id": 11,
+            "eventId": 28,
+            "firstName": "Gulrez",
+            "lastName": "Khan",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:09:09.913Z",
+            "updatedAt": null
+          },
+          {
+            "id": 12,
+            "eventId": 28,
+            "firstName": "Tatiana Laher",
+            "lastName": "Kalainoff",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:09:19.685Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-12T20:00:00.000Z",
+    "end": "2024-06-12T20:30:00.000Z",
+    "createdAt": "2024-05-06T14:20:48.059Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 29,
+        "blockId": 63,
+        "title": "From Viz to Victory Lane: Building a Data Product From the Ground Up",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:58:32.716Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 13,
+            "eventId": 29,
+            "firstName": "Michael",
+            "lastName": "Gethers",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:09:35.253Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "edition": "2024",
+    "type": "PAUSE",
+    "isActive": true,
+    "start": "2024-06-12T20:30:00.000Z",
+    "end": "2024-06-12T21:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:48.285Z",
+    "updatedAt": null,
+    "events": []
+  },
+  {
+    "id": 65,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-12T21:00:00.000Z",
+    "end": "2024-06-12T21:30:00.000Z",
+    "createdAt": "2024-05-06T14:20:48.513Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 30,
+        "blockId": 65,
+        "title": "How to choose a chart type (it's trickier than you think)",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:58:40.780Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 14,
+            "eventId": 30,
+            "firstName": "Nick",
+            "lastName": "Desbarats",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:09:47.834Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "edition": "2024",
+    "type": "LIGHTNING",
+    "isActive": true,
+    "start": "2024-06-12T21:30:00.000Z",
+    "end": "2024-06-12T21:40:00.000Z",
+    "createdAt": "2024-05-06T14:20:48.738Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 31,
+        "blockId": 66,
+        "title": "Show Your Data with Sound using Erie",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:58:48.129Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 15,
+            "eventId": 31,
+            "firstName": "Hyeok",
+            "lastName": "Kim",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:09:59.599Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "edition": "2024",
+    "type": "LIGHTNING",
+    "isActive": true,
+    "start": "2024-06-12T21:40:00.000Z",
+    "end": "2024-06-12T21:50:00.000Z",
+    "createdAt": "2024-05-06T14:20:48.968Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 32,
+        "blockId": 67,
+        "title": "Uncover the power of combining data & hand-drawn art! This talk explores contrasting approaches used by Taha & Sophie to visualize ecological data.",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:58:53.706Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 16,
+            "eventId": 32,
+            "firstName": "Sophie",
+            "lastName": "Sparks",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:10:18.256Z",
+            "updatedAt": null
+          },
+          {
+            "id": 17,
+            "eventId": 32,
+            "firstName": "Taha",
+            "lastName": "Ebrahimi",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:10:29.566Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "edition": "2024",
+    "type": "LIGHTNING",
+    "isActive": true,
+    "start": "2024-06-12T21:50:00.000Z",
+    "end": "2024-06-12T22:05:00.000Z",
+    "createdAt": "2024-05-06T14:20:49.196Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 33,
+        "blockId": 68,
+        "title": "Communicating Actionable Earth Science at the Earth Information Center",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:59:00.645Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 18,
+            "eventId": 33,
+            "firstName": "Alex",
+            "lastName": "Gurvich",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:10:49.249Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "edition": "2024",
+    "type": "UNCONF",
+    "isActive": true,
+    "start": "2024-06-12T22:05:00.000Z",
+    "end": "2024-06-12T22:50:00.000Z",
+    "createdAt": "2024-05-06T14:20:49.418Z",
+    "updatedAt": null,
+    "events": []
+  },
+  {
+    "id": 70,
+    "edition": "2024",
+    "type": "NETWORKING",
+    "isActive": true,
+    "start": "2024-06-12T22:50:00.000Z",
+    "end": "2024-06-13T00:20:00.000Z",
+    "createdAt": "2024-05-06T14:20:49.643Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 35,
+        "blockId": 70,
+        "title": "Cocktail Hour",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:59:17.974Z",
+        "updatedAt": null,
+        "speakers": []
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "edition": "2024",
+    "type": "ANNOUNCEMENT",
+    "isActive": true,
+    "start": "2024-06-13T13:30:00.000Z",
+    "end": "2024-06-13T14:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:50.116Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 36,
+        "blockId": 72,
+        "title": "Registration & Breakfast",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T14:59:55.503Z",
+        "updatedAt": null,
+        "speakers": []
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "edition": "2024",
+    "type": "ANNOUNCEMENT",
+    "isActive": true,
+    "start": "2024-06-13T14:00:00.000Z",
+    "end": "2024-06-13T14:10:00.000Z",
+    "createdAt": "2024-05-06T14:20:50.342Z",
+    "updatedAt": "2024-05-06T15:00:07.400Z",
+    "events": [
+      {
+        "id": 37,
+        "blockId": 73,
+        "title": "Opening remarks",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:00:15.732Z",
+        "updatedAt": null,
+        "speakers": []
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-13T14:10:00.000Z",
+    "end": "2024-06-13T15:10:00.000Z",
+    "createdAt": "2024-05-06T14:20:50.567Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 38,
+        "blockId": 74,
+        "title": "Thinking with Data Visualizations, Fast and Slow",
+        "description": null,
+        "location": "MAIN",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "KEYNOTE",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:00:29.952Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 19,
+            "eventId": 38,
+            "firstName": "Steve",
+            "lastName": "Franconeri",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:11:04.290Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "edition": "2024",
+    "type": "LIGHTNING",
+    "isActive": true,
+    "start": "2024-06-13T15:10:00.000Z",
+    "end": "2024-06-13T15:20:00.000Z",
+    "createdAt": "2024-05-06T14:20:50.793Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 39,
+        "blockId": 75,
+        "title": "Tiny Titans of Data: The Mighty Impact of Micro Visualization",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:00:38.663Z",
+        "updatedAt": "2024-05-06T15:00:58.681Z",
+        "speakers": [
+          {
+            "id": 20,
+            "eventId": 39,
+            "firstName": "Kuhu",
+            "lastName": "Gupta",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:11:15.701Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "edition": "2024",
+    "type": "LIGHTNING",
+    "isActive": true,
+    "start": "2024-06-13T15:20:00.000Z",
+    "end": "2024-06-13T15:30:00.000Z",
+    "createdAt": "2024-05-06T14:20:51.020Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 40,
+        "blockId": 76,
+        "title": "Sometimes less is just less",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:00:51.725Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 21,
+            "eventId": 40,
+            "firstName": "Martynas",
+            "lastName": "Jočys",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:11:26.913Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "edition": "2024",
+    "type": "PAUSE",
+    "isActive": true,
+    "start": "2024-06-13T15:30:00.000Z",
+    "end": "2024-06-13T16:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:51.249Z",
+    "updatedAt": null,
+    "events": []
+  },
+  {
+    "id": 78,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-13T16:00:00.000Z",
+    "end": "2024-06-13T16:30:00.000Z",
+    "createdAt": "2024-05-06T14:20:51.472Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 41,
+        "blockId": 78,
+        "title": "Visualizing Climate Action: Designing Intuitive Dashboards for Decarbonization",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:01:06.377Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 22,
+            "eventId": 41,
+            "firstName": "Saloni",
+            "lastName": "Shah",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:11:40.242Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "edition": "2024",
+    "type": "LIGHTNING",
+    "isActive": true,
+    "start": "2024-06-13T16:30:00.000Z",
+    "end": "2024-06-13T16:40:00.000Z",
+    "createdAt": "2024-05-06T14:20:51.698Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 42,
+        "blockId": 79,
+        "title": "Mapbusters: Breaking the rules in cartography",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:01:12.317Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 23,
+            "eventId": 42,
+            "firstName": "Kenneth",
+            "lastName": "Field",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:11:52.579Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-13T16:40:00.000Z",
+    "end": "2024-06-13T17:10:00.000Z",
+    "createdAt": "2024-05-06T14:20:51.924Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 43,
+        "blockId": 80,
+        "title": "Britannica's Encyclopedia Infographica”: Lessons from designing over 200 infographics",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:01:18.748Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 24,
+            "eventId": 43,
+            "firstName": "Valentina",
+            "lastName": "D'Efilippo",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:12:02.675Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-13T17:10:00.000Z",
+    "end": "2024-06-13T17:40:00.000Z",
+    "createdAt": "2024-05-06T14:20:52.149Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 44,
+        "blockId": 81,
+        "title": "Running feminist data studios",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "PENDING",
+        "createdAt": "2024-05-06T15:01:26.217Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 25,
+            "eventId": 44,
+            "firstName": "Leticia",
+            "lastName": "Pozza",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:12:22.500Z",
+            "updatedAt": null
+          },
+          {
+            "id": 26,
+            "eventId": 44,
+            "firstName": "Pei Ying",
+            "lastName": "Loh",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:12:34.681Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "edition": "2024",
+    "type": "PAUSE",
+    "isActive": true,
+    "start": "2024-06-13T17:40:00.000Z",
+    "end": "2024-06-13T19:10:00.000Z",
+    "createdAt": "2024-05-06T14:20:52.375Z",
+    "updatedAt": null,
+    "events": []
+  },
+  {
+    "id": 83,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-13T19:10:00.000Z",
+    "end": "2024-06-13T20:10:00.000Z",
+    "createdAt": "2024-05-06T14:20:52.601Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 45,
+        "blockId": 83,
+        "title": "Positive Disruption Panel: GenAI",
+        "description": "moderated by Amanda Makulec",
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:01:46.110Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 27,
+            "eventId": 45,
+            "firstName": "Rutuja",
+            "lastName": "Pawar",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:12:49.409Z",
+            "updatedAt": null
+          },
+          {
+            "id": 28,
+            "eventId": 45,
+            "firstName": "Nikita",
+            "lastName": "Rokotyan",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:12:57.284Z",
+            "updatedAt": null
+          },
+          {
+            "id": 29,
+            "eventId": 45,
+            "firstName": "Tiange",
+            "lastName": "Wang",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:13:05.849Z",
+            "updatedAt": null
+          },
+          {
+            "id": 30,
+            "eventId": 45,
+            "firstName": "I-yang",
+            "lastName": "Huang",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:13:15.368Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-13T20:10:00.000Z",
+    "end": "2024-06-13T20:40:00.000Z",
+    "createdAt": "2024-05-06T14:20:52.828Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 46,
+        "blockId": 84,
+        "title": "Inclusive Segmentations: Bridging the Gap Without Bias",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:01:59.900Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 31,
+            "eventId": 46,
+            "firstName": "Lisa",
+            "lastName": "Vissichelli",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:13:35.886Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "edition": "2024",
+    "type": "PAUSE",
+    "isActive": true,
+    "start": "2024-06-13T20:40:00.000Z",
+    "end": "2024-06-13T20:55:00.000Z",
+    "createdAt": "2024-05-06T14:20:53.053Z",
+    "updatedAt": null,
+    "events": []
+  },
+  {
+    "id": 86,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-13T20:55:00.000Z",
+    "end": "2024-06-13T21:25:00.000Z",
+    "createdAt": "2024-05-06T14:20:53.278Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 47,
+        "blockId": 86,
+        "title": "Visualizing Health: Bridging the Gap Between Scientific and Mainstream Knowledge",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:02:10.243Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 32,
+            "eventId": 47,
+            "firstName": "Catalina",
+            "lastName": "Perez",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:13:46.805Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-13T21:25:00.000Z",
+    "end": "2024-06-13T21:55:00.000Z",
+    "createdAt": "2024-05-06T14:20:53.498Z",
+    "updatedAt": "2024-05-06T19:30:26.041Z",
+    "events": [
+      {
+        "id": 48,
+        "blockId": 87,
+        "title": "Exploring Transformation? You need a map!",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:02:15.444Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 33,
+            "eventId": 48,
+            "firstName": "Gaelan",
+            "lastName": "Smith",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:13:55.959Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "edition": "2024",
+    "type": "UNCONF",
+    "isActive": true,
+    "start": "2024-06-13T22:05:00.000Z",
+    "end": "2024-06-13T22:50:00.000Z",
+    "createdAt": "2024-05-06T14:20:53.728Z",
+    "updatedAt": null,
+    "events": []
+  },
+  {
+    "id": 89,
+    "edition": "2024",
+    "type": "ANNOUNCEMENT",
+    "isActive": true,
+    "start": "2024-06-13T22:50:00.000Z",
+    "end": "2024-06-13T23:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:53.955Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 49,
+        "blockId": 89,
+        "title": "Day 2 Closing",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:02:50.293Z",
+        "updatedAt": null,
+        "speakers": []
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "edition": "2024",
+    "type": "ANNOUNCEMENT",
+    "isActive": true,
+    "start": "2024-06-14T13:30:00.000Z",
+    "end": "2024-06-14T14:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:54.411Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 50,
+        "blockId": 91,
+        "title": "Registration & Breakfast",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:03:10.024Z",
+        "updatedAt": null,
+        "speakers": []
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "edition": "2024",
+    "type": "ANNOUNCEMENT",
+    "isActive": true,
+    "start": "2024-06-14T14:00:00.000Z",
+    "end": "2024-06-14T14:10:00.000Z",
+    "createdAt": "2024-05-06T14:20:54.643Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 51,
+        "blockId": 92,
+        "title": "Announcements",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:03:20.703Z",
+        "updatedAt": null,
+        "speakers": []
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-14T14:10:00.000Z",
+    "end": "2024-06-14T14:50:00.000Z",
+    "createdAt": "2024-05-06T14:20:54.875Z",
+    "updatedAt": null,
+    "events": []
+  },
+  {
+    "id": 94,
+    "edition": "2024",
+    "type": "LIGHTNING",
+    "isActive": true,
+    "start": "2024-06-14T14:50:00.000Z",
+    "end": "2024-06-14T15:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:55.103Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 52,
+        "blockId": 94,
+        "title": "User-friendly Visual of Future Hospital Volume for Staff Optimization",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:03:40.871Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 34,
+            "eventId": 52,
+            "firstName": "Janina",
+            "lastName": "Madoff",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:14:42.857Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-14T15:00:00.000Z",
+    "end": "2024-06-14T15:30:00.000Z",
+    "createdAt": "2024-05-06T14:20:55.359Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 53,
+        "blockId": 95,
+        "title": "Open Sonifications: Bringing Sound and Data to Everyone",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:03:51.903Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 35,
+            "eventId": 53,
+            "firstName": "Jamie",
+            "lastName": "Perera",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:15:02.406Z",
+            "updatedAt": null
+          },
+          {
+            "id": 36,
+            "eventId": 53,
+            "firstName": "Jordan",
+            "lastName": "Wirfs-Brock",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:15:20.850Z",
+            "updatedAt": null
+          },
+          {
+            "id": 37,
+            "eventId": 53,
+            "firstName": "Duncan",
+            "lastName": "Geere",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:15:29.464Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "edition": "2024",
+    "type": "PAUSE",
+    "isActive": true,
+    "start": "2024-06-14T15:30:00.000Z",
+    "end": "2024-06-14T15:50:00.000Z",
+    "createdAt": "2024-05-06T14:20:55.584Z",
+    "updatedAt": null,
+    "events": []
+  },
+  {
+    "id": 97,
+    "edition": "2024",
+    "type": "LIGHTNING",
+    "isActive": true,
+    "start": "2024-06-14T15:50:00.000Z",
+    "end": "2024-06-14T16:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:55.809Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 54,
+        "blockId": 97,
+        "title": "Fragmented Memory – Explaining the Inexplicable",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:04:17.819Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 38,
+            "eventId": 54,
+            "firstName": "Hermann",
+            "lastName": "Zschiegner",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:15:39.650Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-14T16:00:00.000Z",
+    "end": "2024-06-14T16:30:00.000Z",
+    "createdAt": "2024-05-06T14:20:56.035Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 55,
+        "blockId": 98,
+        "title": "Visual Narratives: Sexual Stigma in Physician Notes from American Eugenics Records",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:04:22.814Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 39,
+            "eventId": 55,
+            "firstName": "Jane",
+            "lastName": "Huang",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:16:04.183Z",
+            "updatedAt": null
+          },
+          {
+            "id": 40,
+            "eventId": 55,
+            "firstName": "Carly",
+            "lastName": "Bobak",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:16:19.269Z",
+            "updatedAt": null
+          },
+          {
+            "id": 41,
+            "eventId": 55,
+            "firstName": "Jacqueline",
+            "lastName": "Wernimont",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:16:34.253Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-14T16:30:00.000Z",
+    "end": "2024-06-14T17:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:56.263Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 56,
+        "blockId": 99,
+        "title": "How I Built A Data Visualization Team From Scratch",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:04:27.581Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 42,
+            "eventId": 56,
+            "firstName": "Aleszu",
+            "lastName": "Bajak",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:16:51.533Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "edition": "2024",
+    "type": "SPEAKER",
+    "isActive": true,
+    "start": "2024-06-14T17:00:00.000Z",
+    "end": "2024-06-14T17:30:00.000Z",
+    "createdAt": "2024-05-06T14:20:56.487Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 57,
+        "blockId": 100,
+        "title": "Data Viz for All: Leveraging Social Media and Reachable Workshops for Increased Access",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:04:33.122Z",
+        "updatedAt": null,
+        "speakers": [
+          {
+            "id": 43,
+            "eventId": 57,
+            "firstName": "Mikael",
+            "lastName": "Dewabrata",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null,
+            "createdAt": "2024-05-06T15:17:00.963Z",
+            "updatedAt": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "edition": "2024",
+    "type": "PAUSE",
+    "isActive": true,
+    "start": "2024-06-14T17:30:00.000Z",
+    "end": "2024-06-14T19:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:56.711Z",
+    "updatedAt": null,
+    "events": []
+  },
+  {
+    "id": 102,
+    "edition": "2024",
+    "type": "NETWORKING",
+    "isActive": true,
+    "start": "2024-06-14T19:00:00.000Z",
+    "end": "2024-06-14T21:00:00.000Z",
+    "createdAt": "2024-05-06T14:20:56.936Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 58,
+        "blockId": 102,
+        "title": "Future Fridays",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:04:45.221Z",
+        "updatedAt": null,
+        "speakers": []
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "edition": "2024",
+    "type": "ANNOUNCEMENT",
+    "isActive": true,
+    "start": "2024-06-14T21:00:00.000Z",
+    "end": "2024-06-14T21:10:00.000Z",
+    "createdAt": "2024-05-06T14:20:57.162Z",
+    "updatedAt": null,
+    "events": [
+      {
+        "id": 59,
+        "blockId": 103,
+        "title": "Closing remarks",
+        "description": null,
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkUrl": null,
+        "linkLabel": null,
+        "category": "OTHER",
+        "status": "ACCEPTED",
+        "createdAt": "2024-05-06T15:04:51.762Z",
+        "updatedAt": null,
+        "speakers": []
+      }
+    ]
+  }
+]
