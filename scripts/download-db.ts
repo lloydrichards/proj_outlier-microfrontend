@@ -51,7 +51,7 @@ const main = async () => {
   }));
 
   await Bun.write(
-    "./src/server/db/seed/2024-edition.json",
+    "./src/server/db/seed/data/2024-edition.json",
     JSON.stringify(parsed, null, 2),
   );
   process.exit(0);
