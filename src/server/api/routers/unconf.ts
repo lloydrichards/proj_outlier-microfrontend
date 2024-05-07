@@ -59,4 +59,20 @@ export const unconfRouter = createTRPCRouter({
         .set({ ...input, updatedAt: new Date(), status: "REJECTED" })
         .where(eq(events.id, input.id));
     }),
+
+  getUnconfEvents: protectedProcedure.query(async ({ ctx }) => {
+    return ctx.db.query.blocks
+      .findMany({
+        where: (e, { eq }) => eq(e.type, "UNCONF"),
+        with: {
+          events: {
+            with: {
+              speakers: true,
+              block: true,
+            },
+          },
+        },
+      })
+      .then((blocks) => blocks.flatMap((b) => b.events));
+  }),
 });

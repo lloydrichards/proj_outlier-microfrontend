@@ -10,7 +10,7 @@ export const eventRouter = createTRPCRouter({
   add: adminProcedure
     .input(insertEventSchema)
     .mutation(async ({ ctx, input }) => {
-      await ctx.db.insert(events).values(input);
+      await ctx.db.insert(events).values({ ...input, status: "ACCEPTED" });
     }),
 
   delete: adminProcedure
