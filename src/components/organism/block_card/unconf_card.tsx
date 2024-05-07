@@ -52,7 +52,7 @@ export const UnconfCard: FC<BlockCardProps> = ({ block, className }) => {
                 variant="mustard"
                 className={"absolute bottom-2 left-2 opacity-50"}
               >
-                {event.location}
+                {event.status == "PENDING" ? event.status : event.location}
               </Badge>
             </CardHeader>
           </Card>
