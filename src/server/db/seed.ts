@@ -13,7 +13,7 @@ const main = async () => {
   for (const table of [speakers, events, blocks]) {
     await resetTable(db, table);
   }
-  await seed2024Edition();
+  await seed2024Edition(db);
 
   process.exit(0);
 };

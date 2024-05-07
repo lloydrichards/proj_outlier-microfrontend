@@ -1,4 +1,4 @@
-import { db } from "..";
+import type { db } from "..";
 import {
   type InsertBlockSchema,
   type InsertEventSchema,
@@ -9,16 +9,18 @@ import {
 } from "../schema";
 import data from "./data/2024-edition.json";
 
-export const seed2024Edition = async () => {
+export const seed2024Edition = async (db: db) => {
   await Promise.all(
     data.map(async (block) => {
       const [insertedBlock] = await db
         .insert(blocks)
         .values({
           ...block,
+          start: new Date(block.start),
+          end: new Date(block.end),
           edition: "2024",
           isActive: true,
-        } as unknown as InsertBlockSchema)
+        } as InsertBlockSchema)
         .returning();
 
       await Promise.all(
