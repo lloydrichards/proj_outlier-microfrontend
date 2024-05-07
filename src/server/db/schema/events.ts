@@ -63,6 +63,7 @@ export const events = pgTable("events", {
   }),
   title: varchar("title").notNull(),
   description: varchar("description"),
+  summary: varchar("summary"),
   location: locationEnum("location").notNull().default("UNASSIGNED"),
   imageUrl: varchar("image_url"),
   linkUrl: varchar("link_url"),

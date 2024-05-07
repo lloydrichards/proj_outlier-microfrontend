@@ -52,7 +52,7 @@ const CardTitle = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <h3
     ref={ref}
-    className={cn(typefaceTitle("line-clamp-2"), className)}
+    className={cn(typefaceTitle("line-clamp-1"), className)}
     {...props}
   >
     {children}

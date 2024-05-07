@@ -25,7 +25,7 @@ export const AnnouncementCard: FC<BlockCardProps> = ({ block, className }) => {
         <span className={typefaceSubtitle()}>ANNOUNCEMENT</span>
         <CardTitle>{event?.title}</CardTitle>
         {block.duration > 10 && (
-          <CardDescription>{event?.description}</CardDescription>
+          <CardDescription>{event?.summary}</CardDescription>
         )}
       </CardHeader>
       <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>

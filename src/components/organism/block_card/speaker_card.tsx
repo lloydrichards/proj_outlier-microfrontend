@@ -31,7 +31,9 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
       <CardHeader className="grow">
         <span className={typefaceSubtitle()}>SPEAKER</span>
         <CardTitle>{event?.title}</CardTitle>
-        <CardDescription>{event?.description}</CardDescription>
+        <CardDescription className="line-clamp-2">
+          {event?.summary}
+        </CardDescription>
       </CardHeader>
       <Badge variant="plum" className={"absolute right-2 top-2"}>
         {event?.category}

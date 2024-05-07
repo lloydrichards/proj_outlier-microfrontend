@@ -62,6 +62,7 @@ export const EventForm: FC<EventFormProps> = ({ blockId, edit }) => {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-2">
         <TitleInput />
+        <SummaryTextarea />
         <DescriptionTextarea />
         <ImgInput />
         <EventLocationSelect />
@@ -100,6 +101,31 @@ const TitleInput = () => {
   );
 };
 
+const SummaryTextarea = () => {
+  const form = useFormContext<InsertEventSchema>();
+
+  return (
+    <FormField
+      control={form.control}
+      name="summary"
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel>Summary (short)</FormLabel>
+          <FormControl>
+            <Textarea
+              placeholder="Please provide a short description (2-3 sentences about the talk)"
+              className="resize-y"
+              {...field}
+              value={field.value ?? ""}
+            />
+          </FormControl>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  );
+};
+
 const DescriptionTextarea = () => {
   const form = useFormContext<InsertEventSchema>();
 
@@ -109,10 +135,10 @@ const DescriptionTextarea = () => {
       name="description"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Description</FormLabel>
+          <FormLabel>Description (Long)</FormLabel>
           <FormControl>
             <Textarea
-              placeholder="description"
+              placeholder="Please provide a long description (5-8 sentences about the talk)"
               className="resize-y"
               {...field}
               value={field.value ?? ""}
