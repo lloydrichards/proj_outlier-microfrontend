@@ -63,9 +63,7 @@
       "indexes": {
         "start_idx": {
           "name": "start_idx",
-          "columns": [
-            "start"
-          ],
+          "columns": ["start"],
           "isUnique": false
         }
       },
@@ -75,9 +73,7 @@
         "blocks_start_unique": {
           "name": "blocks_start_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "start"
-          ]
+          "columns": ["start"]
         }
       }
     },
@@ -168,12 +164,8 @@
           "name": "events_block_id_blocks_id_fk",
           "tableFrom": "events",
           "tableTo": "blocks",
-          "columnsFrom": [
-            "block_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["block_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -265,12 +257,8 @@
           "name": "speakers_event_id_events_id_fk",
           "tableFrom": "speakers",
           "tableTo": "events",
-          "columnsFrom": [
-            "event_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["event_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }

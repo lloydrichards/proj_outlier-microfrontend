@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -21,6 +20,7 @@ import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ImgInput } from "@/components/molecule/img_input/img_input";
+import { SubmitButton } from "@/components/molecule/submit_button/submit_button";
 
 type SpeakerFormProps = {
   eventId: number;
@@ -38,13 +38,11 @@ export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
   const create = api.speaker.add.useMutation({
     onSuccess: () => {
       router.refresh();
-      form.reset();
     },
   });
   const update = api.speaker.update.useMutation({
     onSuccess: () => {
       router.refresh();
-      form.reset();
     },
   });
 
@@ -66,14 +64,7 @@ export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
         <TitleInput />
         <EmailInput />
         <BioTextarea />
-        <Button
-          variant="plum"
-          disabled={form.formState.isSubmitting}
-          className="mt-2"
-          type="submit"
-        >
-          Submit
-        </Button>
+        <SubmitButton />
       </form>
     </Form>
   );

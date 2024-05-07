@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -23,6 +22,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { EventLocationSelect } from "./event_location_select";
 import { ImgInput } from "../../molecule/img_input/img_input";
+import { SubmitButton } from "@/components/molecule/submit_button/submit_button";
 
 type EventFormProps = {
   blockId: number;
@@ -40,13 +40,11 @@ export const EventForm: FC<EventFormProps> = ({ blockId, edit }) => {
   const create = api.event.add.useMutation({
     onSuccess: () => {
       router.refresh();
-      form.reset();
     },
   });
   const update = api.event.update.useMutation({
     onSuccess: () => {
       router.refresh();
-      form.reset();
     },
   });
 
@@ -68,14 +66,7 @@ export const EventForm: FC<EventFormProps> = ({ blockId, edit }) => {
         <EventLocationSelect />
         <EventCategorySelect />
         <LinkInput />
-        <Button
-          variant="plum"
-          disabled={form.formState.isSubmitting}
-          className="mt-2"
-          type="submit"
-        >
-          Submit
-        </Button>
+        <SubmitButton />
       </form>
     </Form>
   );
