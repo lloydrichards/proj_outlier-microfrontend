@@ -55,6 +55,10 @@ export const blockRouter = createTRPCRouter({
         },
         with: {
           events: {
+            where: (events, { eq, inArray }) =>
+              ctx.session?.user
+                ? inArray(events.status, ["ACCEPTED", "PENDING"])
+                : eq(events.status, "ACCEPTED"),
             with: {
               speakers: {
                 extras: {

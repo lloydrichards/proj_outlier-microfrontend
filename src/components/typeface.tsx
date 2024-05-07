@@ -7,7 +7,7 @@ export const typefaceTitle = (className?: string) =>
 
 export const typefaceSubtitle = (className?: string) =>
   cn(
-    "text-sm font-semibold capitalize leading-normal tracking-wider",
+    "text-sm font-semibold uppercase leading-normal tracking-wider",
     className,
   );
 
