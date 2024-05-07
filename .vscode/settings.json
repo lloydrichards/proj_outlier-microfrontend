@@ -12,7 +12,8 @@
     "storybook",
     "theme",
     "components",
-    "routing"
+    "routing",
+    "scripts"
   ],
   "cSpell.words": ["Unconf"]
 }
