@@ -14,9 +14,10 @@ const buttonVariants = cva(
       variant: {
         default: "bg-background text-foreground hover:text-foreground/80",
         turquoise:
-          "bg-turquoise text-turquoise-foreground hover:bg-turquoise/90",
-        plum: "bg-plum text-plum-foreground hover:bg-plum/90",
-        mustard: "bg-mustard text-mustard-foreground hover:bg-mustard/90",
+          "border border-turquoise-foreground bg-turquoise text-turquoise-foreground hover:bg-turquoise/90",
+        plum: "border border-plum-foreground bg-plum text-plum-foreground hover:bg-plum/90",
+        mustard:
+          "border border-mustard-foreground bg-mustard text-mustard-foreground hover:bg-mustard/90",
         ghost: "hover:bg-foreground/10 hover:text-foreground",
         link: "text-foreground underline-offset-4 hover:underline",
       },

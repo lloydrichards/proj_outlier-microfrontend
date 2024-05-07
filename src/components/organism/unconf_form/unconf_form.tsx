@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/form";
 import { insertEventSchema, categoryEnum } from "@/server/db/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { type FC } from "react";
+import { useState, type FC } from "react";
 import { useForm, useFormContext } from "react-hook-form";
 import { api } from "@/trpc/react";
 import { useRouter } from "next/navigation";
@@ -26,7 +26,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
-import { typefaceTitle } from "@/components/typeface";
+import { typefaceBody, typefaceTitle } from "@/components/typeface";
 
 const unconfSchema = z.object({
   event: z.object({
@@ -50,6 +50,7 @@ type UnconfFormProps = {
 };
 
 export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
+  const [finished, setFinished] = useState(false);
   const form = useForm<UnconfSchema>({
     resolver: zodResolver(unconfSchema),
     defaultValues: {
@@ -61,6 +62,7 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
     onSuccess: () => {
       router.refresh();
       form.reset();
+      setFinished(true);
     },
   });
 
@@ -68,6 +70,20 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
     create.mutate(values);
     return form.reset();
   };
+
+  if (finished) {
+    return (
+      <div className="grid gap-2">
+        <h2 className={typefaceTitle("text-center")}>
+          Thank you for your submission!
+        </h2>
+        <p className={typefaceBody("text-balance text-center")}>
+          Your event has been submitted and is pending approval. Check the
+          schedule to see if your event has been accepted.
+        </p>
+      </div>
+    );
+  }
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-2">
