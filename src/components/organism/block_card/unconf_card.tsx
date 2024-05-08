@@ -40,10 +40,17 @@ export const UnconfCard: FC<BlockCardProps> = ({ block, className }) => {
             <CardHeader>
               <CardTitle className="line-clamp-1">{event.title}</CardTitle>
               <CardDescription className="line-clamp-3">
-                {event.description}
+                {event.summary}
               </CardDescription>
               <CardDescription>
-                Organized by:{event.speakers.at(0)?.speaker.fullName}
+                Organized by:
+                {event.speakers
+                  .map(({ speaker }) =>
+                    speaker.fullName + speaker.pronouns
+                      ? ` (${speaker.pronouns})`
+                      : "",
+                  )
+                  .join(", ")}
               </CardDescription>
               <Badge variant="mustard" className={"absolute right-2 top-2"}>
                 {event.category}

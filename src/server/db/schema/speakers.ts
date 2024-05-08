@@ -45,8 +45,12 @@ export const speakerRelations = relations(speakers, ({ many }) => ({
 export const speakersToEvents = pgTable(
   "speakers_to_events",
   {
-    eventId: serial("event_id").references(() => events.id, {}),
-    speakerId: serial("speaker_id").references(() => speakers.id, {}),
+    eventId: serial("event_id").references(() => events.id, {
+      onDelete: "cascade",
+    }),
+    speakerId: serial("speaker_id").references(() => speakers.id, {
+      onDelete: "cascade",
+    }),
   },
   (t) => ({
     pk: primaryKey({ columns: [t.eventId, t.speakerId] }),
