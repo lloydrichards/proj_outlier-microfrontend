@@ -4,6 +4,8 @@ This project is a microfrontend for the Outlier Conference.
 
 ## Architecture
 
+![Figure 1](./docs/FIG01_architecture.drawio.png)
+
 This project is built with the following technologies:
 
 | Technology                              | Description                          | Quality Attribute                |
@@ -68,7 +70,26 @@ Currently the `USER` role is authenticated by OAuth providers:
 | Provider | Setup                                                       | environment variable                   |
 | -------- | ----------------------------------------------------------- | -------------------------------------- |
 | GitHub   | [docs](https://authjs.dev/getting-started/providers/github) | `AUTH_GITHUB_ID`, `AUTH_GITHUB_SECRET` |
+| Slack    | [docs](https://authjs.dev/getting-started/providers/slack)  | `AUTH_SLACK_ID`, `AUTH_SLACK_SECRET`   |
 
 For the `ADMIN` role, the user is authenticated by a username and password. The
 user name is `admin` and the password is set via the `AUTH_ADMIN_PASSWORD`
 environment variable.
+
+## Database
+
+The database is a PostgreSQL database, and is managed by `Drizzle`. The schema
+is defined code-first, and is located in the `src/db/schema` folder.
+
+![Figure 2](./docs/FIG02_database.drawio.png)
+
+The three entities are:
+
+- `Blocks`: The blocks are the time slots for the schedule. They have a start and end time, and a type.
+- `Events`: The events are the talks and workshops that are scheduled. They have a title, description, and various metadata around whats happens.
+- `Speakers`: The speakers are the people who are giving the talks and workshops. They have a name, bio, and a picture.
+
+The relationships between the entities are:
+
+- `Blocks` have __one__ `Event`
+- `Events` have __many__ `Speaker`
