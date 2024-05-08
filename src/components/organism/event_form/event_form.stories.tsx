@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { EventForm } from "./event_form";
+import { Dialog } from "@/components/ui/dialog";
 
 /**
  * An image element with a fallback for representing the user.
@@ -16,6 +17,11 @@ const meta = {
   parameters: {
     layout: "padded",
   },
+  render: (args) => (
+    <Dialog>
+      <EventForm {...args} />
+    </Dialog>
+  ),
 } satisfies Meta<typeof EventForm>;
 
 export default meta;
