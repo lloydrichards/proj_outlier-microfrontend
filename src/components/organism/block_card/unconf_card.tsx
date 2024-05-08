@@ -43,7 +43,7 @@ export const UnconfCard: FC<BlockCardProps> = ({ block, className }) => {
                 {event.description}
               </CardDescription>
               <CardDescription>
-                Organized by:{event.speakers.at(0)?.fullName}
+                Organized by:{event.speakers.at(0)?.speaker.fullName}
               </CardDescription>
               <Badge variant="mustard" className={"absolute right-2 top-2"}>
                 {event.category}

@@ -9,7 +9,7 @@ import {
 import { createInsertSchema } from "drizzle-zod";
 import type * as z from "zod";
 import { blocks } from "./blocks";
-import { speakers } from "./speakers";
+import { speakersToEvents } from "./speakers";
 
 export const categoryEnum = pgEnum("category", [
   "ACADEMIA",
@@ -86,5 +86,5 @@ export const eventRelations = relations(events, ({ one, many }) => ({
     fields: [events.blockId],
     references: [blocks.id],
   }),
-  speakers: many(speakers),
+  speakers: many(speakersToEvents),
 }));

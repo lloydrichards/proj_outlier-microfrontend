@@ -19,7 +19,7 @@ export const LightningCard: FC<BlockCardProps> = ({ block, className }) => {
   }
 
   const event = block.events.at(0);
-  const speaker = event?.speakers.at(0);
+  const speaker = event?.speakers.at(0)?.speaker;
 
   return (
     <Card variant="turquoise" className={className}>

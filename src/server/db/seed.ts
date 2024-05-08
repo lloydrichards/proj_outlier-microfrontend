@@ -1,6 +1,6 @@
 import { type Table, getTableName, sql } from "drizzle-orm";
 import { db } from ".";
-import { blocks, events, speakers } from "./schema";
+import { blocks, events, speakers, speakersToEvents } from "./schema";
 import { seed2024Edition } from "./seed/2024-edition";
 
 async function resetTable(db: db, table: Table) {
@@ -10,7 +10,7 @@ async function resetTable(db: db, table: Table) {
 }
 
 const main = async () => {
-  for (const table of [speakers, events, blocks]) {
+  for (const table of [speakers, events, blocks, speakersToEvents]) {
     await resetTable(db, table);
   }
   await seed2024Edition(db);

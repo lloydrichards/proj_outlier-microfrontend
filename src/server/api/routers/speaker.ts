@@ -3,14 +3,31 @@ import {
   createTRPCRouter,
   protectedProcedure,
 } from "@/server/api/trpc";
-import { speakers, insertSpeakerSchema } from "@/server/db/schema";
+import {
+  speakers,
+  insertSpeakerSchema,
+  speakersToEvents,
+} from "@/server/db/schema";
 import { eq } from "drizzle-orm";
+import { z } from "zod";
 
 export const speakerRouter = createTRPCRouter({
   add: adminProcedure
-    .input(insertSpeakerSchema)
+    .input(
+      z.object({
+        speaker: insertSpeakerSchema,
+        eventId: z.number(),
+      }),
+    )
     .mutation(async ({ ctx, input }) => {
-      await ctx.db.insert(speakers).values(input);
+      const [insertedSpeaker] = await ctx.db
+        .insert(speakers)
+        .values(input.speaker)
+        .returning();
+      await ctx.db.insert(speakersToEvents).values({
+        eventId: input.eventId,
+        speakerId: insertedSpeaker?.id,
+      });
     }),
 
   delete: adminProcedure
@@ -20,6 +37,9 @@ export const speakerRouter = createTRPCRouter({
         throw new Error("Speaker ID is required");
       }
       await ctx.db.delete(speakers).where(eq(speakers.id, input.id));
+      await ctx.db
+        .delete(speakersToEvents)
+        .where(eq(speakersToEvents.speakerId, input.id));
     }),
 
   update: protectedProcedure

@@ -54,7 +54,7 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
   const form = useForm<UnconfSchema>({
     resolver: zodResolver(unconfSchema),
     defaultValues: {
-      event: { blockId },
+      event: { blockId, description: "" },
     },
   });
   const router = useRouter();

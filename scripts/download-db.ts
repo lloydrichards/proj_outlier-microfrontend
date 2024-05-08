@@ -19,7 +19,11 @@ const main = async () => {
     with: {
       events: {
         with: {
-          speakers: true,
+          speakers: {
+            with: {
+              speaker: true,
+            },
+          },
         },
       },
     },
@@ -37,7 +41,7 @@ const main = async () => {
       linkLabel: event.linkLabel,
       linkUrl: event.linkUrl,
       category: event.category,
-      speakers: event.speakers.map((speaker) => ({
+      speakers: event.speakers.map(({ speaker }) => ({
         firstName: speaker.firstName,
         lastName: speaker.lastName,
         title: speaker.title,

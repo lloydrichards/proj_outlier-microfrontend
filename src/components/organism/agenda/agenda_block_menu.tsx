@@ -98,7 +98,7 @@ const SpeakersContextSubMenu: FC<{
     <ContextMenuSub>
       <ContextMenuSubTrigger>Speakers</ContextMenuSubTrigger>
       <ContextMenuSubContent className="w-48">
-        {speakers.map((speaker) => (
+        {speakers.map(({ speaker }) => (
           <ContextMenuSub key={speaker.id}>
             <ContextMenuSubTrigger>{speaker.fullName}</ContextMenuSubTrigger>
             <ContextMenuSubContent className="w-48">

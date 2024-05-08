@@ -6,7 +6,13 @@ export {
   insertEventSchema,
   eventRelations,
 } from "./events";
-export { speakers, insertSpeakerSchema, speakerRelations } from "./speakers";
+export {
+  speakers,
+  insertSpeakerSchema,
+  speakerRelations,
+  speakersToEvents,
+  speakersToEventsRelations,
+} from "./speakers";
 export { blocks, blockEnum, insertBlockSchema, blockRelations } from "./blocks";
 
 export type { NewBlock, Block, InsertBlockSchema } from "./blocks";

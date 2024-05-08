@@ -39,7 +39,7 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
         {event?.category}
       </Badge>
       <CardContent className="flex gap-2 after:*:[content:','] last:after:*:[content:'']">
-        {event?.speakers.map((speaker) => (
+        {event?.speakers.map(({ speaker }) => (
           <CardDescription key={speaker.title}>
             {speaker.fullName} {speaker.pronouns ? `(${speaker.pronouns})` : ""}
           </CardDescription>

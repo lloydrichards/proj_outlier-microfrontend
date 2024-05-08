@@ -61,11 +61,15 @@ export const blockRouter = createTRPCRouter({
                 : eq(events.status, "ACCEPTED"),
             with: {
               speakers: {
-                extras: {
-                  fullName:
-                    sql<string>`concat(${speakers.firstName},' ', ${speakers.lastName})`.as(
-                      "full_name",
-                    ),
+                with: {
+                  speaker: {
+                    extras: {
+                      fullName:
+                        sql<string>`concat(${speakers.firstName},' ', ${speakers.lastName})`.as(
+                          "full_name",
+                        ),
+                    },
+                  },
                 },
               },
             },

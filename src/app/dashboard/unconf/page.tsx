@@ -79,8 +79,14 @@ export default async function Home() {
                     >
                       {event.description}
                     </TableCell>
-                    <TableCell>{event.speakers.at(0)?.firstName}</TableCell>
-                    <TableCell>{event.speakers.at(0)?.email}</TableCell>
+                    <TableCell>
+                      {event.speakers.map(({ speaker }) => (
+                        <p key={speaker.id}>{speaker.fullName}</p>
+                      ))}
+                    </TableCell>
+                    <TableCell>
+                      {event.speakers.at(0)?.speaker?.email}
+                    </TableCell>
                     <TableCell>
                       <Badge
                         variant={

@@ -8,8 +8,9 @@ import {
   insertEventSchema,
   insertSpeakerSchema,
   speakers,
+  speakersToEvents,
 } from "@/server/db/schema";
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 import { z } from "zod";
 
 export const unconfRouter = createTRPCRouter({
@@ -25,14 +26,19 @@ export const unconfRouter = createTRPCRouter({
       if (!user) {
         throw new Error("Unauthorized");
       }
-      const eventResult = await ctx.db
+      const [insertedEvent] = await ctx.db
         .insert(events)
         .values(input.event)
         .returning();
 
-      await ctx.db.insert(speakers).values({
-        ...input.organizer,
-        eventId: eventResult[0]?.id,
+      const [insertedOrganizer] = await ctx.db
+        .insert(speakers)
+        .values(input.organizer)
+        .returning();
+
+      await ctx.db.insert(speakersToEvents).values({
+        speakerId: insertedOrganizer?.id,
+        eventId: insertedEvent?.id,
       });
     }),
 
@@ -67,7 +73,18 @@ export const unconfRouter = createTRPCRouter({
         with: {
           events: {
             with: {
-              speakers: true,
+              speakers: {
+                with: {
+                  speaker: {
+                    extras: {
+                      fullName:
+                        sql<string>`concat(${speakers.firstName},' ', ${speakers.lastName})`.as(
+                          "full_name",
+                        ),
+                    },
+                  },
+                },
+              },
               block: true,
             },
           },

@@ -30,9 +30,7 @@ type SpeakerFormProps = {
 export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
   const form = useForm<InsertSpeakerSchema>({
     resolver: zodResolver(insertSpeakerSchema),
-    defaultValues: edit ?? {
-      eventId,
-    },
+    defaultValues: edit,
   });
   const router = useRouter();
   const create = api.speaker.add.useMutation({
@@ -52,7 +50,10 @@ export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
       update.mutate({ id: edit.id, ...values });
       return form.reset();
     }
-    create.mutate(values);
+    create.mutate({
+      speaker: values,
+      eventId,
+    });
     return form.reset();
   };
   return (

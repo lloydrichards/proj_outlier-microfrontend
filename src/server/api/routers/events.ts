@@ -3,7 +3,11 @@ import {
   createTRPCRouter,
   protectedProcedure,
 } from "@/server/api/trpc";
-import { events, insertEventSchema } from "@/server/db/schema";
+import {
+  events,
+  insertEventSchema,
+  speakersToEvents,
+} from "@/server/db/schema";
 import { eq } from "drizzle-orm";
 
 export const eventRouter = createTRPCRouter({
@@ -20,6 +24,9 @@ export const eventRouter = createTRPCRouter({
         throw new Error("Event ID is required");
       }
       await ctx.db.delete(events).where(eq(events.id, input.id));
+      await ctx.db
+        .delete(speakersToEvents)
+        .where(eq(speakersToEvents.eventId, input.id));
     }),
 
   update: protectedProcedure

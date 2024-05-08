@@ -47,7 +47,9 @@ export const Speaker: Story = {
           title: "Title",
           speakers: [
             {
-              fullName: "First Last",
+              speaker: {
+                fullName: "First Last",
+              },
             },
           ],
         },
@@ -65,7 +67,9 @@ export const Lightning: Story = {
           title: "Title",
           speakers: [
             {
-              fullName: "First Last",
+              speaker: {
+                fullName: "First Last",
+              },
             },
           ],
         },
