@@ -35,6 +35,7 @@ const main = async () => {
     end: block.end,
     events: block.events.map((event) => ({
       title: event.title,
+      summary: event.summary,
       description: event.description,
       location: event.location,
       imageUrl: event.imageUrl,
