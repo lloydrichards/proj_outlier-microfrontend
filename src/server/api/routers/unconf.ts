@@ -22,10 +22,6 @@ export const unconfRouter = createTRPCRouter({
       }),
     )
     .mutation(async ({ ctx, input }) => {
-      const user = ctx.session?.user;
-      if (!user) {
-        throw new Error("Unauthorized");
-      }
       const [insertedEvent] = await ctx.db
         .insert(events)
         .values(input.event)

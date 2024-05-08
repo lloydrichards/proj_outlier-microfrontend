@@ -73,7 +73,6 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
   const create = api.unconf.create.useMutation({
     onSuccess: () => {
       router.refresh();
-      form.reset();
       setFinished(true);
     },
   });
