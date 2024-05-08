@@ -1,1 +1,0 @@
-ALTER TABLE "blocks" ALTER COLUMN "created_at" SET DEFAULT now();

@@ -85,11 +85,14 @@ is defined code-first, and is located in the `src/db/schema` folder.
 
 The three entities are:
 
-- `Blocks`: The blocks are the time slots for the schedule. They have a start and end time, and a type.
-- `Events`: The events are the talks and workshops that are scheduled. They have a title, description, and various metadata around whats happens.
-- `Speakers`: The speakers are the people who are giving the talks and workshops. They have a name, bio, and a picture.
+- `Blocks`: The blocks are the time slots for the schedule. They have a start
+  and end time, and a type.
+- `Events`: The events are the talks and workshops that are scheduled. They have
+  a title, description, and various metadata around whats happens.
+- `Speakers`: The speakers are the people who are giving the talks and
+  workshops. They have a name, bio, and a picture.
 
 The relationships between the entities are:
 
-- `Blocks` have __one__ `Event`
-- `Events` have __many__ `Speaker`
+- `Blocks` have **one** `Event`
+- `Events` have **many** `Speaker`

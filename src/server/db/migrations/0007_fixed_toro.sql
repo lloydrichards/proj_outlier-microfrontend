@@ -1,1 +1,0 @@
-ALTER TABLE "blocks" ADD COLUMN "edition" varchar DEFAULT date_part('year', CURRENT_DATE) NOT NULL;
