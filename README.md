@@ -40,7 +40,7 @@ To start the development server, run:
 # Set up the database
 docker compose up
 bun db:generate
-bun db:push
+bun db:migrate
 ```
 
 In a separate terminal, run:
