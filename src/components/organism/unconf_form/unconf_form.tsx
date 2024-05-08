@@ -12,7 +12,7 @@ import {
 import { insertEventSchema, categoryEnum } from "@/server/db/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, type FC } from "react";
-import { useForm, useFormContext } from "react-hook-form";
+import { useFieldArray, useForm, useFormContext } from "react-hook-form";
 import { api } from "@/trpc/react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
@@ -26,21 +26,29 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
-import { typefaceBody, typefaceTitle } from "@/components/typeface";
+import {
+  typefaceBody,
+  typefaceSubtitle,
+  typefaceTitle,
+} from "@/components/typeface";
+import { CirclePlus, Trash } from "lucide-react";
 
 const unconfSchema = z.object({
   event: z.object({
     blockId: z.number(),
     title: z.string(),
     category: insertEventSchema.shape.category,
+    summary: z.string(),
     description: z.string(),
   }),
-  organizer: z.object({
-    firstName: z.string(),
-    lastName: z.string(),
-    pronouns: z.string(),
-    email: z.string().email(),
-  }),
+  organizers: z.array(
+    z.object({
+      firstName: z.string(),
+      lastName: z.string(),
+      pronouns: z.string(),
+      email: z.string().email(),
+    }),
+  ),
 });
 
 type UnconfSchema = z.infer<typeof unconfSchema>;
@@ -54,7 +62,11 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
   const form = useForm<UnconfSchema>({
     resolver: zodResolver(unconfSchema),
     defaultValues: {
-      event: { blockId, description: "" },
+      event: {
+        blockId,
+        description:
+          "1. Best way to reach you during the conference\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\n\n3. Supplies or equipment needed (e.g., projector)\n\n",
+      },
     },
   });
   const router = useRouter();
@@ -70,6 +82,11 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
     create.mutate(values);
     return form.reset();
   };
+
+  const { fields, append, remove } = useFieldArray({
+    control: form.control,
+    name: "organizers",
+  });
 
   if (finished) {
     return (
@@ -88,13 +105,59 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-2">
         <h2 className={typefaceTitle()}>Organizer</h2>
-        <OrganizerInput />
-        <PronounsInput />
-        <EmailInput />
+        <OrganizerInput index={0} />
+        <PronounsInput index={0} />
+        <EmailInput index={0} />
+        <div className="grid w-full gap-2 p-4">
+          {fields.map((_, i) => {
+            if (i === 0) return null;
+            return (
+              <div
+                key={i}
+                className="grid w-full gap-2 rounded border-2 border-input p-2"
+              >
+                <h3
+                  className={typefaceSubtitle(
+                    "flex items-center justify-between",
+                  )}
+                >
+                  Co-Organizer #{i}
+                  <Button
+                    className="text-destructive hover:text-destructive/50"
+                    size="icon"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      return remove(i);
+                    }}
+                  >
+                    <Trash />
+                  </Button>
+                </h3>
+                <OrganizerInput index={i} />
+                <PronounsInput index={i} />
+                <EmailInput index={i} />
+              </div>
+            );
+          })}
+          <Button
+            onClick={(e) => {
+              e.preventDefault();
+              return append({
+                firstName: "",
+                lastName: "",
+                pronouns: "",
+                email: "",
+              });
+            }}
+          >
+            <CirclePlus /> Add Co-Speaker
+          </Button>
+        </div>
         <Separator className="my-4" />
         <h2 className={typefaceTitle()}>Unconf Event</h2>
         <TitleInput />
         <EventCategorySelect exclude={["KEYNOTE", "DVS"]} />
+        <SummaryTextarea />
         <DescriptionTextarea />
         <Button
           variant="mustard"
@@ -109,14 +172,14 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
   );
 };
 
-const OrganizerInput = () => {
+const OrganizerInput: FC<{ index: number }> = ({ index }) => {
   const form = useFormContext<UnconfSchema>();
 
   return (
     <div className="grid grid-cols-2 gap-2">
       <FormField
         control={form.control}
-        name="organizer.firstName"
+        name={`organizers.${index}.firstName`}
         render={({ field }) => (
           <FormItem>
             <FormLabel>First Name</FormLabel>
@@ -133,7 +196,7 @@ const OrganizerInput = () => {
       />
       <FormField
         control={form.control}
-        name="organizer.lastName"
+        name={`organizers.${index}.lastName`}
         render={({ field }) => (
           <FormItem>
             <FormLabel>Last Name</FormLabel>
@@ -148,13 +211,13 @@ const OrganizerInput = () => {
   );
 };
 
-const PronounsInput = () => {
+const PronounsInput: FC<{ index: number }> = ({ index }) => {
   const form = useFormContext<UnconfSchema>();
 
   return (
     <FormField
       control={form.control}
-      name="organizer.pronouns"
+      name={`organizers.${index}.pronouns`}
       render={({ field }) => (
         <FormItem>
           <FormLabel>Pronouns</FormLabel>
@@ -181,13 +244,13 @@ const PronounsInput = () => {
     />
   );
 };
-const EmailInput = () => {
+const EmailInput: FC<{ index: number }> = ({ index }) => {
   const form = useFormContext<UnconfSchema>();
 
   return (
     <FormField
       control={form.control}
-      name="organizer.email"
+      name={`organizers.${index}.email`}
       render={({ field }) => (
         <FormItem>
           <FormLabel>Email</FormLabel>
@@ -229,6 +292,34 @@ const TitleInput = () => {
   );
 };
 
+const SummaryTextarea = () => {
+  const form = useFormContext<UnconfSchema>();
+
+  return (
+    <FormField
+      control={form.control}
+      name="event.summary"
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel>Summary</FormLabel>
+          <FormControl>
+            <Textarea
+              placeholder="description"
+              className="resize-y"
+              {...field}
+              value={field.value ?? ""}
+            />
+          </FormControl>
+          <FormMessage />
+          <FormDescription>
+            A short summary of your event. This will be displayed in the
+            schedule.
+          </FormDescription>
+        </FormItem>
+      )}
+    />
+  );
+};
 const DescriptionTextarea = () => {
   const form = useFormContext<UnconfSchema>();
 
@@ -242,12 +333,16 @@ const DescriptionTextarea = () => {
           <FormControl>
             <Textarea
               placeholder="description"
-              className="resize-y"
+              className="h-40 resize-y"
               {...field}
               value={field.value ?? ""}
             />
           </FormControl>
           <FormMessage />
+          <FormDescription>
+            Please provide a detailed description of your event. This will be
+            used to evaluate your submission.
+          </FormDescription>
         </FormItem>
       )}
     />

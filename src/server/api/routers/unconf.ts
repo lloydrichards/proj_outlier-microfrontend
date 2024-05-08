@@ -18,7 +18,7 @@ export const unconfRouter = createTRPCRouter({
     .input(
       z.object({
         event: insertEventSchema,
-        organizer: insertSpeakerSchema,
+        organizers: z.array(insertSpeakerSchema),
       }),
     )
     .mutation(async ({ ctx, input }) => {
@@ -31,15 +31,17 @@ export const unconfRouter = createTRPCRouter({
         .values(input.event)
         .returning();
 
-      const [insertedOrganizer] = await ctx.db
-        .insert(speakers)
-        .values(input.organizer)
-        .returning();
+      for (const organizer of input.organizers) {
+        const [insertedOrganizer] = await ctx.db
+          .insert(speakers)
+          .values(organizer)
+          .returning();
 
-      await ctx.db.insert(speakersToEvents).values({
-        speakerId: insertedOrganizer?.id,
-        eventId: insertedEvent?.id,
-      });
+        await ctx.db.insert(speakersToEvents).values({
+          speakerId: insertedOrganizer?.id,
+          eventId: insertedEvent?.id,
+        });
+      }
     }),
 
   accept: protectedProcedure

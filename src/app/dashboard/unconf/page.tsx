@@ -41,6 +41,7 @@ export default async function Home() {
               <TableRow>
                 <TableHead>Block Time</TableHead>
                 <TableHead>Title</TableHead>
+                <TableHead>Summary</TableHead>
                 <TableHead>Description</TableHead>
                 <TableHead>Organizer</TableHead>
                 <TableHead>Email</TableHead>
@@ -73,7 +74,15 @@ export default async function Home() {
                     <TableCell className="w-40">{event.title}</TableCell>
                     <TableCell
                       className={cn(
-                        "w-80",
+                        "w-80 whitespace-pre-wrap",
+                        event.status == "REJECTED" ? "line-clamp-1" : "",
+                      )}
+                    >
+                      {event.summary}
+                    </TableCell>
+                    <TableCell
+                      className={cn(
+                        "w-80 whitespace-pre-wrap",
                         event.status == "REJECTED" ? "line-clamp-1" : "",
                       )}
                     >
