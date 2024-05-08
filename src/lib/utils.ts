@@ -6,5 +6,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const formatTime = timeFormat("%I:%M");
+export const formatTimeWithMeridiem = timeFormat("%I:%M %p");
+export const formatTime = timeFormat("%H:%M");
 export const formatDate = timeFormat("%a %b %d");

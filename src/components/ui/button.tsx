@@ -13,6 +13,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-background text-foreground hover:text-foreground/80",
+        outline: "border border-input text-foreground hover:bg-background/90",
         turquoise:
           "border border-turquoise-foreground bg-turquoise text-turquoise-foreground hover:bg-turquoise/90",
         plum: "border border-plum-foreground bg-plum text-plum-foreground hover:bg-plum/90",

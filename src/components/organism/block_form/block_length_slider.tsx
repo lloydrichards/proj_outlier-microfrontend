@@ -1,23 +1,36 @@
 "use client";
-import { FormLabel } from "@/components/ui/form";
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Slider } from "@/components/ui/slider";
 import { type InsertBlockSchema } from "@/server/db/schema";
 import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
-import { Clock } from "lucide-react";
-import { formatTime } from "@/lib/utils";
+import { CalendarIcon, Clock } from "lucide-react";
+import { cn, formatDate, formatTime } from "@/lib/utils";
+import { Calendar } from "@/components/ui/calendar";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+
+import { PopoverClose } from "@radix-ui/react-popover";
 
 export const BlockLengthSlider: FC = () => {
-  const { setValue, getValues, watch } = useFormContext<InsertBlockSchema>();
+  const { setValue, getValues } = useFormContext<InsertBlockSchema>();
   return (
     <div className="grid gap-2">
+      <CalendarInput />
       <FormLabel>Block Length</FormLabel>
-      <div className="flex gap-2">
-        <p className="flex w-24 items-center gap-1 rounded border border-input bg-background px-2">
-          <Clock size={12} />
-          {formatTime(watch("start") ?? "")}
-        </p>
-        <div className="grid w-full gap-2">
+      <div className="flex items-start gap-4">
+        <TimeInput name="start" />
+        <div className="grid w-full gap-2 pt-2">
           <Slider
             defaultValue={[
               (getValues("end")?.getTime() - getValues("start")?.getTime() ??
@@ -44,11 +57,116 @@ export const BlockLengthSlider: FC = () => {
             ))}
           </div>
         </div>
-        <p className="flex w-24 items-center gap-1 rounded border border-input bg-background px-2">
-          <Clock size={12} />
-          {formatTime(watch("end") ?? "")}
-        </p>
+        <TimeInput name="end" />
       </div>
     </div>
+  );
+};
+
+const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
+  const form = useFormContext<InsertBlockSchema>();
+  return (
+    <FormField
+      control={form.control}
+      name={name}
+      render={({ field }) => (
+        <FormItem className="flex flex-col">
+          <FormControl>
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button className="flex h-fit w-24 items-center gap-1 rounded border border-input bg-background p-2">
+                  <Clock size={12} />
+                  {field.value ? formatTime(field.value) : "--:--"}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="flex h-96 w-40 overflow-scroll p-0">
+                <div className="flex w-1/2 flex-col overflow-scroll">
+                  {Array.from({ length: 24 }).map((_, i) => (
+                    <PopoverClose key={i}>
+                      <Button
+                        key={i}
+                        className="px-2 hover:bg-foreground/10"
+                        disabled={!field.value}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const value = field.value;
+                          value.setHours(i);
+                          field.onChange(value);
+                        }}
+                      >
+                        {i.toString().padStart(2, "0")} H
+                      </Button>
+                    </PopoverClose>
+                  ))}
+                </div>
+                <div className="flex w-1/2 flex-col overflow-scroll">
+                  {Array.from({ length: 6 }).map((_, i) => (
+                    <PopoverClose key={i}>
+                      <Button
+                        key={i}
+                        className="px-2 hover:bg-foreground/10"
+                        disabled={!field.value}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const value = field.value;
+                          value.setMinutes(i * 10);
+                          field.onChange(value);
+                        }}
+                      >
+                        {i * 10} M
+                      </Button>
+                    </PopoverClose>
+                  ))}
+                </div>
+              </PopoverContent>
+            </Popover>
+          </FormControl>
+        </FormItem>
+      )}
+    />
+  );
+};
+
+const CalendarInput: FC = () => {
+  const form = useFormContext<InsertBlockSchema>();
+  return (
+    <FormField
+      control={form.control}
+      name="start"
+      render={({ field }) => (
+        <FormItem className="flex flex-col">
+          <FormLabel>Block Date</FormLabel>
+          <Popover>
+            <PopoverTrigger asChild>
+              <FormControl>
+                <Button
+                  variant="outline"
+                  className={cn(
+                    "w-1/2 pl-3 text-left font-normal",
+                    !field.value && "text-foreground/80",
+                  )}
+                >
+                  {field.value ? (
+                    formatDate(field.value)
+                  ) : (
+                    <span>Pick a date</span>
+                  )}
+                  <CalendarIcon className="ml-auto size-4 opacity-50" />
+                </Button>
+              </FormControl>
+            </PopoverTrigger>
+            <PopoverContent className="w-auto p-0" align="start">
+              <Calendar
+                mode="single"
+                selected={field.value}
+                onSelect={field.onChange}
+                initialFocus
+              />
+            </PopoverContent>
+          </Popover>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
   );
 };

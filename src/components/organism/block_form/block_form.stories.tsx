@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { BlockForm } from "./block_form";
+import { Dialog } from "@/components/ui/dialog";
 
 /**
  * An image element with a fallback for representing the user.
@@ -16,6 +17,11 @@ const meta = {
   parameters: {
     layout: "padded",
   },
+  render: (args) => (
+    <Dialog>
+      <BlockForm {...args} />
+    </Dialog>
+  ),
 } satisfies Meta<typeof BlockForm>;
 
 export default meta;
