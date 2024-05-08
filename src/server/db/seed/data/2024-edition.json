@@ -6,6 +6,7 @@
     "events": [
       {
         "title": "Registration",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -23,6 +24,7 @@
     "events": [
       {
         "title": "Opening remarks",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -40,6 +42,7 @@
     "events": [
       {
         "title": "Message by DVS Executive Director",
+        "summary": null,
         "description": null,
         "location": "MAIN",
         "imageUrl": null,
@@ -57,6 +60,7 @@
     "events": [
       {
         "title": "Visual Villainy: How to Undermine Humanity With Dataviz",
+        "summary": "Together, they are leading a transformative movement in data visualization, particularly focusing on social justice and ethical communication, with their presentation titled \"Visual Villainy: How to Undermine Humanity With Dataviz\"",
         "description": "“Positive disruption” is for suckers. You’ve heard “how charts lie.” Maybe you’ve fibbed with statistics. Perhaps you’ve even dabbled with truncated y-axes. But in this talk, Gabby ‘Malevolence’ Mérite and Evil Eli Holder will encourage you to be more ambitious with your evil data deeds. Instead of just misleading audiences, why not unravel the social fabric of society? Or sabotage an election? Or spread misinformation? Maybe you think pandemics are fun, and you’d like to see more of them? In this talk, we’ll explore three design techniques that are scientifically proven to promote the three P’s of evil dataviz: Plagues, Prejudice, and Polarization. ",
         "location": "MAIN",
         "imageUrl": null,
@@ -101,6 +105,7 @@
     "events": [
       {
         "title": "## Accessibility: the key to unlock your best data visualization",
+        "summary": "Accessibility is the source of our most life- and society-changing products we use every day: keyboards, touch screens, virtual assistants, and more. Accessibility is often seen as a constraint, but if data visualization designers can tap into accessibility they’ll be tapping into one of the most creatively disruptive forces in the history of technology.",
         "description": "Accessibility is the source of some of our most disruptive technology. Keyboards. Touch screens. Virtual assistants. Life- and society-changing products we use every day are built on technology that originally aimed to support people with disabilities. Accessibility is often seen as a costly constraint, when it should be seen as a source of innovation — particularly in data experiences. This talk isn’t here to provide answers, but rather inspiration: how has accessibility disrupted the technological landscape? How can designers tap into one of the most creatively disruptive forces in the history of technology? And what accessibility innovations might disrupt the field of data visualization?",
         "location": "MAIN",
         "imageUrl": null,
@@ -129,6 +134,7 @@
     "events": [
       {
         "title": "Making arguments with data visualization",
+        "summary": "Data visualization can be used as a powerful tool for persuasion. How's that done and what do we need to watch out for? The talk will share with the audience a few simple techniques I learned through work to achieve that. ",
         "description": "Analysts are great at identifying trends. Designers are great at coming up with creative ways to convey information in an understandable way. But oftentimes we stop there and do not think about the message. For my job as a graphic reporter at The Washington Post Opinion desk, I use data visualization as a tool for persuasion. I will share with the audience a few techniques I learned through work that everyone can use to make arguments with data visualization.",
         "location": "MAIN",
         "imageUrl": null,
@@ -157,6 +163,7 @@
     "events": [
       {
         "title": "Practical Tactics for Gender Inclusivity in Data Reporting",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -185,6 +192,7 @@
     "events": [
       {
         "title": "Forget About Dashboards and Solve the Business Problem",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -213,6 +221,7 @@
     "events": [
       {
         "title": "This is not Havana, Cuba",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -247,6 +256,7 @@
     "events": [
       {
         "title": "Positive Disruption Panel: Data Physicalisation",
+        "summary": "Join us for an enlightening panel featuring three lightning talks that delve into the transformative power of data visualization in diverse contexts, followed by a moderated discussion and an audience Q&A session. Moderated by Jason Forrest\n",
         "description": "\n\n",
         "location": "MAIN",
         "imageUrl": null,
@@ -295,6 +305,7 @@
     "events": [
       {
         "title": "From Viz to Victory Lane: Building a Data Product From the Ground Up",
+        "summary": "At McLaren Racing, we are building intuitive, interactive data visualizations to help us make decisions at the race track faster and more effectively.  This talk will discuss this iterative process of collaboration with our engineers, drivers, and team leaders, including the technical decision-making process and the lessons learned around the importance of stakeholder buy-in when introducing disruptive changes to established industry practices.",
         "description": "In my role at McLaren Racing, I'm spearheading the development of innovative tools to transform the way our race engineers interact with data.  This initiative aims to replace cumbersome Excel-based tools with intuitive web applications featuring interactive D3 visualizations, backed by SQL databases and Python data analysis.  This talk will discuss this ongoing, iterative process of collaboration with our engineers, drivers, and team leaders, and the lessons we have learned around the importance of stakeholder buy-in when introducing disruptive changes to established industry practices.  We are using data visualization to help us make better decisions faster in a domain where every second counts, and we’re learning a great deal about what it means to build an effective data product along the way.",
         "location": "MAIN",
         "imageUrl": null,
@@ -329,6 +340,7 @@
     "events": [
       {
         "title": "How to choose a chart type (it's trickier than you think)",
+        "summary": "When designing a data visualization, one of the trickiest—and yet most consequential—design choices is choosing which chart type to use. While less experienced chart designers tend to believe that this is a simple decision, more experienced chart creators know that it can be quite tricky, and may even believe that it’s a skill that can only be developed through years of experience. In this talk, educator and author Nick Desbarats shows examples of decision trees from his new book, Practical Charts, that allow chart creators to reliably make expert-level chart type choices.",
         "description": "\"When it comes to choosing a chart type, most chart creators fall into one of three groups:\nThe first group consists of those with relatively little chart-making experience, who tend to believe that choosing a chart type is an easy decision that can be made based on simple rules of thumb, such as, “To show data over time, use a line chart.” or “To show the breakdown of a total, use a pie chart.”\nThe second group consists of those who believe that chart type selection is a bit more complex but can be accomplished using relatively simple “chart-chooser” decision trees, diagrams, or chart type catalogues.\nThe third group consists of those who have more chart-making experience, who tend to believe that choosing a chart type is too complex, nuanced, or subjective to be codified into simple rules of thumb or decision trees, and that it’s an intuitive skill that can only be developed with experience over time.\nIn this talk, educator and best-selling author Nick Desbarats proposes that chart types can be chosen based on decision trees, but that the decision trees that are available online are problematically over-simplistic and often point to obviously questionable chart type choices. He’ll then show examples of more “robust” decision trees from his new book, Practical Charts, that allow chart creators of any experience level to reliably make expert-level chart type choices.\n\"",
         "location": "MAIN",
         "imageUrl": null,
@@ -357,6 +369,7 @@
     "events": [
       {
         "title": "Show Your Data with Sound using Erie",
+        "summary": "While data sonification has been put to powerful use for immersive storytelling and data accessibility, creating sonifications with existing tools is challenging for many authors with limited audio engineering knowledge. To ease the creation of sonification, I introduce Erie, a JavaScript library for declaratively programming data sonifications that supports exploring the rich design space of audio graphs via customizable and extensible auditory instruments and channels. ",
         "description": "By mapping data to sound, data sonifications (or audio graphs) have a wide range of applications, including immersive storytelling, ambient data observation, and data accessibility. However, creating data sonifications with existing tools is difficult as authors have to figure out how to use music or raw audio software and switch between them. To make it easier to create sonifications and related applications, I introduce Erie, a JavaScript library for declaratively programming data sonifications. Erie supports encoding various auditory channels like time, pitch, tapping, and volume, and instruments like sine-wave oscillator, synth, and piano, which are customizable and extensible via audio filters and audio sampling. I show how Erie can support exploration of novel audio graph designs and development of customizable sonification applications.",
         "location": "MAIN",
         "imageUrl": null,
@@ -385,6 +398,7 @@
     "events": [
       {
         "title": "Machine Meets Illustration: Our Medium Is Data",
+        "summary": "Uncover the power of combining data & hand-drawn art! This talk explores contrasting approaches used by Taha & Sophie to visualize ecological data.",
         "description": "\"Uncover the power of combining data & hand-drawn art! This talk explores contrasting approaches used by Taha & Sophie to visualize ecological data: \n- Taha: Transformed city data into an illustrated \"\"street tree guide,\"\" revealing lived experience beyond the numbers.  \n- Sophie: Brought wildflowers back to life with art, before diving into data to understand their loss.\"",
         "location": "MAIN",
         "imageUrl": null,
@@ -423,6 +437,7 @@
     "events": [
       {
         "title": "Communicating Actionable Earth Science at the Earth Information Center",
+        "summary": "NASA's Earth Information Center (EIC) is a new partnership between 7 federal agencies to communicate how we observe a changing Earth. NASA has built two physical exhibits to communicate these insights: the first located at NASA Headquarters in Washington, D.C. and the second in the Smithsonian National Museum of Natural History. This presentation will highlight how data storytelling and data visualization with dashboards and \"beauty pieces\" are used in these physical exhibits.",
         "description": "NASA's Earth Information Center (EIC) is a new partnership between 7 federal agencies combining remote sensing data, ground sensor data, and demographic data to communicate how we observe a changing Earth and to provide actionable Earth data to the public. As part of the EIC, NASA has built two physical exhibits to communicate the insights these data products can provide: the first in the lobby of NASA Headquarters and the second in the Smithsonian National Museum of Natural History. This presentation will highlight how data storytelling and data visualization with dashboards and \"beauty pieces\" are used in these physical exhibits.",
         "location": "MAIN",
         "imageUrl": null,
@@ -457,6 +472,7 @@
     "events": [
       {
         "title": "Cocktail Hour",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -474,6 +490,7 @@
     "events": [
       {
         "title": "Registration & Breakfast",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -491,6 +508,7 @@
     "events": [
       {
         "title": "Opening remarks",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -508,6 +526,7 @@
     "events": [
       {
         "title": "Thinking with Data Visualizations, Fast and Slow",
+        "summary": "Meet Steven Franconeri, The founder of ExperCeption and Professor of Psychology at Northwestern University. He leads a cutting-edge research lab focusing on cognitive science of data visualization, science communication, and persuasive presentation of data-backed arguments. Steve is a leading teacher and speaker on data storytelling, dashboard design, and persuasive presentation.",
         "description": null,
         "location": "MAIN",
         "imageUrl": null,
@@ -536,6 +555,7 @@
     "events": [
       {
         "title": "Tiny Titans of Data: The Mighty Impact of Micro Visualization",
+        "summary": "Discover the transformative power of micro visualization, where small-scale visuals deliver major insights. Learn to craft tiny, powerful visualizations into spreadsheets, reports, and text, transforming complex data into clear, compelling stories in various fields like finance, sports, and healthcare",
         "description": "Dive into the world of micro visualization with my whirlwind tour, where less is more and small is mighty! Tired of wading through a sea of oversized charts? Discover how tiny, integrated visual gems can revolutionize your data storytelling. We'll explore the art of embedding compact, impactful visualizations right where you need them – in spreadsheets, reports, and even inline with text. I’ll show you how to master minimalist design techniques, highlight pivotal data trends effortlessly, and bring life to your data narratives. See real-life examples from finance, sports, and healthcare that illustrate the power of 'thinking small' in data. Get ready to turn your data into captivating, bite-sized visual stories!",
         "location": "MAIN",
         "imageUrl": null,
@@ -564,6 +584,7 @@
     "events": [
       {
         "title": "Sometimes less is just less",
+        "summary": "There is a trend in the data visualization and other design fields described as \"less is more\". Literal application of this slogan often leads to sub-optimal designs and experiences. In the talk I will quickly explain why, and provide an approach to counteract this trend in a healthy way.",
         "description": "There is a trend in the data visualization and other design fields described as \"less is more\". Literal application of this slogan often leads to sub-optimal visualisations and user experience, destroys the individuality of the creator and finally leads towards \"digital sameness\" – the greatest digital epidemic happening right now. In the talk I will quickly explain why this is happening, and provide an approach to counteract this trend in a healthy way.",
         "location": "MAIN",
         "imageUrl": null,
@@ -598,6 +619,7 @@
     "events": [
       {
         "title": "Visualizing Climate Action: Designing Intuitive Dashboards for Decarbonization",
+        "summary": "This talk delves into the design and UX process behind creating complex yet intuitive data dashboards, using the example of NZero's decarbonization platform. Explore how data visualization can empower climate action and drive customer interaction in climate-tech, leading to informed decision-making and impactful outcomes.",
         "description": "Join me as I take a deep dive into the intricate world of designing complex yet intuitive data dashboards, leveraging my experience with NZero, a carbon accounting platform. Throughout the talk, I'll showcase the design and UX process behind creating these dashboards, highlighting their crucial role in driving climate action. We'll explore how data visualization can provide visibility into decarbonization scopes, empowering users to make informed decisions that contribute to a cleaner, more sustainable future. From discussing the importance of roadmapping and clean grids to demonstrating how visibility can change perspectives and drive impactful actions, this talk aims to inspire and educate on the transformative power of intuitive data dashboards in climate-tech.",
         "location": "MAIN",
         "imageUrl": null,
@@ -626,6 +648,7 @@
     "events": [
       {
         "title": "Mapbusters: Breaking the rules in cartography",
+        "summary": "Map design requires a good understanding of the map’s purpose and its audience’s needs, as well as at least some understanding of how to design a map that works. This talk presents initial results of research that tests common, and assumed cartographic practice, and explores how, and to what extent you can defy well-understood advice with solutions that work. It encourages positive disruption in map design through an appreciation of what are loosely called cartographic rules (best practices), and how they can be broken with success.",
         "description": "It’s easy to make a map, and to follow the defaults you’re often presented with. It’s easy to make changes to those defaults. But that’s often where people go wrong because they do so in isolation of understanding the design task at hand. More than that, it’s just as easy to go beyond best practice and conventional advice. But to do so successfully requires a good understanding of the map’s purpose and its audience’s needs, as well as at least some understanding of how to design a map that works. It requires logic, careful choices, and a human touch. It demands a coherent strategy to help achieve a great map design whether you adhere to best practice or choose to make justifiable decisions and ignore it. This talk presents initial results of research that test common, and assumed cartographic practice, and explores how, and to what extent you can defy well-understood advice with solutions that work. It encourages positive disruption in map design through an appreciation of what are loosely called cartographic rules (best practices), and how they can be broken with success. It also introduces 'map doctor'; a new AI developed to help students and non-cartographers to get a critique on their maps. It helps identify what elements are working on the map, and can offer some options for solutions that might improve it.",
         "location": "MAIN",
         "imageUrl": null,
@@ -654,6 +677,7 @@
     "events": [
       {
         "title": "“Britannica's Encyclopedia Infographica”: Lessons from designing over 200 infographics",
+        "summary": "Valentina D’Efilippo, designer and co-author of “Britannica’s Encyclopedia Infographica”, will take the audience on the journey of transforming the iconic Britannica Encyclopedia through infographic storytelling – outlining challenges, solutions, and valuable lessons. Attendees will leave with an appreciation of the complexities of researching, designing, and editing over 200 unique infographics, along with practical insights applicable to their own projects.",
         "description": "\"“Britannica’s Encyclopedia Infographica” is a children's encyclopedia filled with facts and infographics about the universe, wildlife, and human anatomy. Valentina D’Efilippo, designer and co-author, will take the audience on the journey of transforming the iconic Britannica Encyclopedia through infographic storytelling – outlining challenges, solutions, and valuable lessons.\n\nThe genesis of this project was as daunting as it was exhilarating. Valentina will discuss how she conquered the fear associated with the monumental task of creating over 200 infographics and the strategies she employed to effectively manage the workload. She will delve into the significance of data research in informing design decisions, the establishment of design boundaries to ensure consistency, and the inevitable compromises required to distill vast amounts of data into engaging, educational graphics tailored for a younger audience.\n\nA key focus of the talk will be on the psychological dimensions of creative work. Valentina will share stories that shed light on the fears and triumphs experienced, underlining the importance of flexibility, openness, and the value of a unique perspective in navigating the creative process with optimism.\n\nAttendees will leave with an appreciation of the complexities of researching, designing, and editing the encyclopedia, along with practical insights applicable to their own projects.\n\"",
         "location": "MAIN",
         "imageUrl": null,
@@ -682,6 +706,7 @@
     "events": [
       {
         "title": "Running feminist data studios",
+        "summary": "Is there room for feminist data studios to effectively change our industry? Despite starting Odd Studio and Kontinentalist from opposite sides of the globe, Leticia and Pei Ying, a Latina and an Asian studio co-founders bring their perspectives, beliefs and attempt to answer that question.",
         "description": "Despite starting Odd.Studio and Kontinentalist 17 thousand km apart, it is uncanny how similar the journey of two women-led studios have been. These include navigating what is a white and male-dominated industry, but finding solidarity in one another in overcoming challenges, recognizing mistakes, and offering something different in an industry that can be especially harsh on women and underrepresented designers, developers, and thinkers. We will share our experiences, challenges, and solutions in having the power to create a diverse team for change. We’ve built studios that challenge the status quo and myth-bust imposter syndrome, leading with empathy to foster inclusivity and empower ownership. Although a bumpy ride, we believe there is room to disrupt how studios work today.",
         "location": "MAIN",
         "imageUrl": null,
@@ -726,6 +751,7 @@
     "events": [
       {
         "title": "Positive Disruption Panel: GenAI",
+        "summary": "Join us for an enlightening panel featuring three lightning talks at the intersection of AI, data, and design, followed by a moderated discussion and an audience Q&A session. Moderated by Amanda Makulec",
         "description": "",
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -784,6 +810,7 @@
     "events": [
       {
         "title": "Inclusive Segmentations: Bridging the Gap Without Bias",
+        "summary": "Say goodbye to large data sheets with a photo or icon of John Doe and Jane Smith. Personas are polarizing and can overemphasize physical traits over deep mental models that inform businesses on how to really connect with leads.  This talk will reframe the persona narrative to focus on what really matters in strategic customer storytelling with custom crafted persona experiences.",
         "description": "\"Gone are the days where a “stock photo profile” is an acceptable representation of a segmentation profile. When we look at representing target audiences with visual representations such as personas, we often focus so much on digging into data of how to serve audiences that we forget the most important parts:  \n\n● Who are our customers?  \n\n● What do we identify with them visually?  \n\n● How are we sharing that information with clients to inform business decisions?  \n\nSay goodbye to large data sheets with a photo or icon of John Doe and Jane Smith. Personas are polarizing and can overemphasize physical traits over deep mental models that inform businesses on how to really connect with leads.  \n\nOver the past 10 years, I have developed a roadmap to uncovering inclusive archetypal profiles and infographics to avoid \"\"profiling by demographics\"\". Building personality-based segmentation archetypes is a more memorable and inclusive way to bridge the gap between focusing on customer behaviors that drive business value. \n\nThis talk will reframe the persona narrative to focus on what really matters in strategic customer storytelling with custom crafted persona experiences. I will share recent examples from my market research portfolio and step by step share my design process.\"",
         "location": "MAIN",
         "imageUrl": null,
@@ -818,6 +845,7 @@
     "events": [
       {
         "title": "Visualizing Health: Bridging the Gap Between Scientific and Mainstream Knowledge",
+        "summary": "This talk explores translating complex healthcare data into accessible infographics, balancing scientific accuracy with audience comprehension. It covers crafting visuals, adapting corporate branding, and infusing relatable metaphors for empathy and emotional appeal.",
         "description": "\"This talk uncovers the journey of translating complex healthcare data into human friendly infographics. We explore the iterative process behind crafting medical visuals, addressing challenges in balancing scientific accuracy with the wider public in mind. \nWe'll dissect the entire process, from the initial brief to the final publication. Along the way, we'll discuss the challenges of transforming corporate branding guidelines and design systems into effective information design assets.\nThroughout our exploration, we dive into the complexities of transforming classic visualization models into relatable metaphors, infusing day to day analogies to enhance empathy and emotional appeal.\"",
         "location": "MAIN",
         "imageUrl": null,
@@ -846,6 +874,7 @@
     "events": [
       {
         "title": "Exploring Transformation? You need a map!",
+        "summary": "Presenting the right metrics at the right time at the right level of granularity for the right audience is a nuanced endeavor. Which metrics and visuals lead to the outcomes you want versus useless – or even harmful – gamification? Through the lens of software development, we’ll explore how to choose visuals to positively disrupt behaviors, especially if you aren’t a developer yourself. Not just for the dev world, this is valuable to anyone looking to choose visuals that lead to better conversations with stakeholders and both reflect and drive transformation. ",
         "description": "Presenting the right metrics at the right time at the right level of granularity for the right audience is a nuanced endeavor. Which metrics lead to the outcomes you want versus useless – or even harmful – gamification? How do you display those metrics to promote the intended actions? Through the lens of DORA (DevOps Research and Assessment) software development transformation, we’ll explore how to choose and display visuals that show the developer experience – especially if you aren’t a developer yourself – and support organizational improvement. Not just for the dev world, this is valuable to anyone looking for how to choose visuals that lead to better conversations with stakeholders, positively disrupt behaviors, and both reflect and drive transformation. ",
         "location": "MAIN",
         "imageUrl": null,
@@ -880,6 +909,7 @@
     "events": [
       {
         "title": "Day 2 Closing",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -897,6 +927,7 @@
     "events": [
       {
         "title": "Registration & Breakfast",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -914,6 +945,7 @@
     "events": [
       {
         "title": "Announcements",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -937,6 +969,7 @@
     "events": [
       {
         "title": "User-friendly Visual of Future Hospital Volume for Staff Optimization",
+        "summary": "To provide patients in an emergency room the care they need, staffing and workflow changes need to occur before volume surges.  We developed a detailed, easy to read dashboard that presents volume forecasts ahead of throughput challenges. The view is delivered into emergency team communication loops at the start of each day, when the insight is most actionable.",
         "description": "Hospital bed capacity is an important resource that should be carefully managed. Foreseeing a potential surge in patient volume can prevent delays in providing care. We developed a dashboard for administrators to see when a potential change in workflow is needed ahead of time to minimize bottlenecks in hospital throughput. We will discuss the strategies we used to optimize accessibility and relevance of this tool to our clinical staff. The visual tool is shared through daily notifications to guide appropriate workflow adjustments across our hospital teams.",
         "location": "MAIN",
         "imageUrl": null,
@@ -965,6 +998,7 @@
     "events": [
       {
         "title": "Open Sonifications: Bringing Sound and Data to Everyone",
+        "summary": "In this talk, we share a manifesto for a new approach to sonification that centres community, real issues, and danceability. Attendees will learn DIY techniques for exploring objects and data through sound -- no special software or musical background required.",
         "description": "\"Open Sonifications is a manifesto for a more inclusive approach to data sonification. \n\nThe practice of turning data into sound is dominated by approaches that prioritise analysis and algorithmic sound synthesis. This talk proposes expanding the boundaries of what is considered sonification, and how it can be done.\n\nIt does this by challenging existing conventions around what we can do with sonification, who gets to use sonification, why we sonify, what counts as valid data or valid sound, and the tools used to make sonifications. Alongside conventional sonification values such as insight and accuracy, we also value raw energy, expressiveness, polyphony, participation, decentralisation, performance, accessibility, approachability, community, and plurality of perspectives. \n\nThe approaches we describe do not seek to replace established methods, but to enrich them. We contribute a set of values, examples and instructions for joining this movement, and reflections on how people working beyond sonification might benefit from these ideas.\"",
         "location": "MAIN",
         "imageUrl": null,
@@ -1019,6 +1053,7 @@
     "events": [
       {
         "title": "Fragmented Memory – Explaining the Inexplicable",
+        "summary": "This talk will examine the role of data visualization in the design of modern memorials as a strategy to help explaining the horrible events we try to remember. We will look at projects such as Peter Eisenman’s “Memorial to the Murdered Jews of Europe”, Jer Thorp’s work on the “9/11 Memorial”, MASS Design Group’s “National Lynching Memorial”, as well as my own design for “Gedenkort Reichenau” – a memorial for a forced labor camp in my hometown of Innsbruck, Austria. ",
         "description": "This talk will examine the role of data visualization in the design of modern memorials as a strategy to help explaining the horrible events we try to remember. We will look at projects such as Peter Eisenman’s “Memorial to the Murdered Jews of Europe”, Jer Thorp’s work on the “9/11 Memorial”, MASS Design Group’s “National Lynching Memorial”, as well as my own design for “Gedenkort Reichenau” – a memorial for a forced labor camp in my hometown of Innsbruck, Austria. One of the biggest challenges we faced with this project was the absence of a complete dataset to fully understand the crimes committed at the camp. Most administrative documents were destroyed just days before allied forces freed the camp, so we were left with incomplete data. I will talk about our approach we took to design the memorial that dealt with this fragmented memory.",
         "location": "MAIN",
         "imageUrl": null,
@@ -1047,6 +1082,7 @@
     "events": [
       {
         "title": "Visual Narratives: Sexual Stigma in Physician Notes from American Eugenics Records",
+        "summary": "This talk offers a unique approach to data visualization by integrating insights from natural language processing (NLP) techniques to analyze linguistic choices within doctor's notes justifying recommended sterilization procedures. By uncovering gender and sex biases embedded in these records and highlighting individual narratives alongside broader trends, the project aims to foster empathy, understanding, and awareness of historical injustices.",
         "description": "This talk offers a unique approach to data visualization by integrating insights from natural language processing (NLP) techniques to analyze linguistic choices within doctor's notes justifying recommended sterilization procedures. By uncovering gender and sex biases embedded in these records and highlighting individual narratives alongside broader trends, the project aims to foster empathy, understanding, and awareness of historical injustices. Through this innovative approach, the presentation seeks to inspire action and advocacy for social justice, challenging traditional data visualization methods and promoting a more empathetic and inclusive understanding of complex societal issues. By challenging conventional data visualization methods and emphasizing the importance of storytelling, the talk advocates for a more compassionate and inclusive approach to data analysis. Ultimately, it seeks to inspire action and advocacy for social change, empowering viewers to confront and address issues of gender bias and discrimination in healthcare practices.",
         "location": "MAIN",
         "imageUrl": null,
@@ -1095,6 +1131,7 @@
     "events": [
       {
         "title": "How I Built A Data Visualization Team From Scratch",
+        "summary": "Disruption is easy to talk about but true organizational change is elusive. What this talk will communicate is what I've learned through building a new data visualization team: Reimagining the way we conceptualize, scope, build and launch our data visualization projects will not be successful or joyful without considering the incentives and motivations of your team and going concentrically outwards from there, always socializing the vision, providing guidance and technical assistance, and being patient and empathetic.",
         "description": "\"This talk will provide a blueprint for organizations looking to build out or build on their data visualization expertise. It will lay out the importance of acclimating your organization to changes that are coming and happening while building the team.\n\nKey takeaways of the talk: How to set a vision for a data visualization team that will reshape norms and why it’s crucial to socialize that vision and your process around the organization; How to construct a team with complementary and shared skill sets; How to consider professional growth trajectories and internal equity when assessing and hiring candidates; Why building a technically proficient team with an ethos of replicable, open source code, rapid prototyping sensibilities, and exquisite documentation practices pays off in the short and long term. \"",
         "location": "MAIN",
         "imageUrl": null,
@@ -1123,6 +1160,7 @@
     "events": [
       {
         "title": "Data Viz for All: Leveraging Social Media and Reachable Workshops for Increased Access",
+        "summary": " In this talk, I will share my experience mentoring diverse backgrounds and using #SabtuTableau, a free data storytelling workshop focused on Indonesian issues. Discover how participants gain valuable knowledge, utilizing X to share their locally-driven data stories and give a different perspective through Data Visualization.",
         "description": "\"Many individuals lack access to mentorship and opportunities to learn data visualization skills. In this talk, I'll share my experience guiding individuals from diverse backgrounds. We'll explore how initiatives like #SabtuTableau can empower underrepresented communities.\n\nThis initiative is a free Tableau workshop with a focus on data storytelling using local Indonesian datasets and issues. It aims to create a more inclusive space for data exploration. And, we can tell those stories through X, using Tableau Data Visualization made by some of the participants.\n\nBy empowering participants to tell their own stories through data, #SabtuTableau elevates local challenges to a global audience. This approach also diversifies the conversation around data trends and case studies, ensuring Indonesia's unique perspective is included.\"",
         "location": "MAIN",
         "imageUrl": null,
@@ -1157,6 +1195,7 @@
     "events": [
       {
         "title": "Future Fridays",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -1174,6 +1213,7 @@
     "events": [
       {
         "title": "Closing remarks",
+        "summary": null,
         "description": null,
         "location": "UNASSIGNED",
         "imageUrl": null,
