@@ -9,6 +9,7 @@ import {
 import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "./block_card";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
   if (block.events.length == 0) {
@@ -31,7 +32,12 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
       <CardHeader className="grow">
         <span className={typefaceSubtitle()}>SPEAKER</span>
         <CardTitle>{event?.title}</CardTitle>
-        <CardDescription className="line-clamp-2">
+        <CardDescription
+          className={cn(
+            block.duration > 30 ? "" : "line-clamp-2",
+            "whitespace-pre-wrap",
+          )}
+        >
           {event?.summary}
         </CardDescription>
       </CardHeader>

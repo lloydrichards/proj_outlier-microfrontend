@@ -2,6 +2,7 @@ import type { FC } from "react";
 import { Card, CardDescription, CardHeader, CardTitle } from "../../ui/card";
 import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "./block_card";
+import { cn } from "@/lib/utils";
 
 export const AnnouncementCard: FC<BlockCardProps> = ({ block, className }) => {
   if (block.events.length == 0) {
@@ -25,7 +26,14 @@ export const AnnouncementCard: FC<BlockCardProps> = ({ block, className }) => {
         <span className={typefaceSubtitle()}>ANNOUNCEMENT</span>
         <CardTitle>{event?.title}</CardTitle>
         {block.duration > 10 && (
-          <CardDescription>{event?.summary}</CardDescription>
+          <CardDescription
+            className={cn(
+              block.duration > 30 ? "" : "line-clamp-2",
+              "whitespace-pre-wrap",
+            )}
+          >
+            {event?.summary}
+          </CardDescription>
         )}
       </CardHeader>
       <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>
