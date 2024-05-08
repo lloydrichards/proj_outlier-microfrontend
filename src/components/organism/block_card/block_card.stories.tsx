@@ -28,6 +28,7 @@ export const Announcement: Story = {
   args: {
     block: {
       type: "ANNOUNCEMENT",
+      duration: 30,
       events: [
         {
           title: "Title",
@@ -42,6 +43,7 @@ export const Speaker: Story = {
   args: {
     block: {
       type: "SPEAKER",
+      duration: 30,
       events: [
         {
           title: "Title",
@@ -62,6 +64,7 @@ export const Lightning: Story = {
   args: {
     block: {
       type: "LIGHTNING",
+      duration: 10,
       events: [
         {
           title: "Title",
@@ -82,6 +85,7 @@ export const Networking: Story = {
   args: {
     block: {
       type: "NETWORKING",
+      duration: 45,
       events: [
         {
           title: "Title",
@@ -96,6 +100,7 @@ export const Pause: Story = {
   args: {
     block: {
       type: "PAUSE",
+      duration: 45,
     } as MockBlock,
   },
 };
@@ -104,6 +109,22 @@ export const Unconf: Story = {
   args: {
     block: {
       type: "UNCONF",
+      duration: 45,
+      events: [
+        {
+          title: "Title",
+          description: "Description",
+          category: "CAREER",
+          location: "MAIN",
+          speakers: [
+            {
+              speaker: {
+                fullName: "First Last",
+              },
+            },
+          ],
+        },
+      ],
     } as MockBlock,
   },
 };
