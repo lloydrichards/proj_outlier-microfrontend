@@ -1,37 +1,27 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { insertEventSchema, categoryEnum } from "@/server/db/schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useState, type FC } from "react";
-import { useFieldArray, useForm, useFormContext } from "react-hook-form";
-import { api } from "@/trpc/react";
-import { useRouter } from "next/navigation";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { z } from "zod";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Separator } from "@/components/ui/separator";
 import {
   typefaceBody,
   typefaceSubtitle,
   typefaceTitle,
 } from "@/components/typeface";
+import { Button } from "@/components/ui/button";
+import { Form } from "@/components/ui/form";
+import { Separator } from "@/components/ui/separator";
+import { insertEventSchema } from "@/server/db/schema";
+import { api } from "@/trpc/react";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { CirclePlus, Trash } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useState, type FC, type MouseEventHandler } from "react";
+import { useFieldArray, useForm } from "react-hook-form";
+import { z } from "zod";
+import { AdditionalInfoTextarea } from "./additiona_iInfo_textarea";
+import { DescriptionTextarea } from "./description_textarea";
+import { EmailInput } from "./email_input";
+import { EventCategorySelect } from "./event_category_select";
+import { OrganizerInput } from "./organizer_input";
+import { PronounsInput } from "./pronouns_input";
+import { TitleInput } from "./title_input";
 
 const unconfSchema = z.object({
   event: z.object({
@@ -51,7 +41,7 @@ const unconfSchema = z.object({
   ),
 });
 
-type UnconfSchema = z.infer<typeof unconfSchema>;
+export type UnconfSchema = z.infer<typeof unconfSchema>;
 
 type UnconfFormProps = {
   blockId: number;
@@ -111,31 +101,14 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
           {fields.map((_, i) => {
             if (i === 0) return null;
             return (
-              <div
+              <CoOrganizerSection
                 key={i}
-                className="grid w-full gap-2 rounded border-2 border-input p-2"
-              >
-                <h3
-                  className={typefaceSubtitle(
-                    "flex items-center justify-between",
-                  )}
-                >
-                  Co-Organizer #{i}
-                  <Button
-                    className="text-destructive hover:text-destructive/50"
-                    size="icon"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      return remove(i);
-                    }}
-                  >
-                    <Trash />
-                  </Button>
-                </h3>
-                <OrganizerInput index={i} />
-                <PronounsInput index={i} />
-                <EmailInput index={i} />
-              </div>
+                index={i}
+                onRemove={(e) => {
+                  e.preventDefault();
+                  return remove(i);
+                }}
+              />
             );
           })}
           <Button
@@ -156,8 +129,8 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
         <h2 className={typefaceTitle()}>Unconf Event</h2>
         <TitleInput />
         <EventCategorySelect exclude={["KEYNOTE", "DVS"]} />
-        <SummaryTextarea />
         <DescriptionTextarea />
+        <AdditionalInfoTextarea />
         <Button
           variant="mustard"
           disabled={form.formState.isSubmitting}
@@ -171,213 +144,25 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
   );
 };
 
-const OrganizerInput: FC<{ index: number }> = ({ index }) => {
-  const form = useFormContext<UnconfSchema>();
-
+const CoOrganizerSection: FC<{
+  index: number;
+  onRemove: MouseEventHandler;
+}> = ({ index, onRemove }) => {
   return (
-    <div className="grid grid-cols-2 gap-2">
-      <FormField
-        control={form.control}
-        name={`organizers.${index}.firstName`}
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>First Name</FormLabel>
-            <FormControl>
-              <Input
-                placeholder="Giorgia"
-                {...field}
-                value={field.value ?? ""}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={form.control}
-        name={`organizers.${index}.lastName`}
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Last Name</FormLabel>
-            <FormControl>
-              <Input placeholder="Lupi" {...field} value={field.value ?? ""} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
+    <div className="grid w-full gap-2 rounded border-2 border-input p-2">
+      <h3 className={typefaceSubtitle("flex items-center justify-between")}>
+        Co-Organizer #{index}
+        <Button
+          className="text-destructive hover:text-destructive/50"
+          size="icon"
+          onClick={onRemove}
+        >
+          <Trash />
+        </Button>
+      </h3>
+      <OrganizerInput index={index} />
+      <PronounsInput index={index} />
+      <EmailInput index={index} />
     </div>
-  );
-};
-
-const PronounsInput: FC<{ index: number }> = ({ index }) => {
-  const form = useFormContext<UnconfSchema>();
-
-  return (
-    <FormField
-      control={form.control}
-      name={`organizers.${index}.pronouns`}
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>Pronouns</FormLabel>
-
-          <Select
-            onValueChange={field.onChange}
-            defaultValue={field.value ?? ""}
-          >
-            <FormControl>
-              <SelectTrigger>
-                <SelectValue placeholder="Select preferred pronouns" />
-              </SelectTrigger>
-            </FormControl>
-            <SelectContent>
-              <SelectItem value="she/her">she/her</SelectItem>
-              <SelectItem value="he/him">he/him</SelectItem>
-              <SelectItem value="they/them">they/them</SelectItem>
-              <SelectItem value="other">other</SelectItem>
-            </SelectContent>
-          </Select>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-  );
-};
-const EmailInput: FC<{ index: number }> = ({ index }) => {
-  const form = useFormContext<UnconfSchema>();
-
-  return (
-    <FormField
-      control={form.control}
-      name={`organizers.${index}.email`}
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>Email</FormLabel>
-          <FormControl>
-            <Input
-              placeholder="data@dvs.com"
-              {...field}
-              value={field.value ?? ""}
-            />
-          </FormControl>
-          <FormMessage />
-          <FormDescription>
-            Make sure to use the email address you used to register for the
-            conference.
-          </FormDescription>
-        </FormItem>
-      )}
-    />
-  );
-};
-
-const TitleInput = () => {
-  const form = useFormContext<UnconfSchema>();
-
-  return (
-    <FormField
-      control={form.control}
-      name="event.title"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>Title</FormLabel>
-          <FormControl>
-            <Input placeholder="title" {...field} />
-          </FormControl>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-  );
-};
-
-const SummaryTextarea = () => {
-  const form = useFormContext<UnconfSchema>();
-
-  return (
-    <FormField
-      control={form.control}
-      name="event.summary"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>Summary</FormLabel>
-          <FormControl>
-            <Textarea
-              placeholder="description"
-              className="resize-y"
-              {...field}
-              value={field.value ?? ""}
-            />
-          </FormControl>
-          <FormMessage />
-          <FormDescription>
-            A short summary of your event. This will be displayed in the
-            schedule.
-          </FormDescription>
-        </FormItem>
-      )}
-    />
-  );
-};
-const DescriptionTextarea = () => {
-  const form = useFormContext<UnconfSchema>();
-
-  return (
-    <FormField
-      control={form.control}
-      name="event.description"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>Description</FormLabel>
-          <FormControl>
-            <Textarea
-              placeholder="description"
-              className="h-40 resize-y"
-              {...field}
-              value={field.value ?? ""}
-            />
-          </FormControl>
-          <FormMessage />
-          <FormDescription>
-            Please provide a detailed description of your event. This will be
-            used to evaluate your submission.
-          </FormDescription>
-        </FormItem>
-      )}
-    />
-  );
-};
-
-const EventCategorySelect: FC<{
-  exclude?: string[];
-}> = ({ exclude }) => {
-  const form = useFormContext<UnconfSchema>();
-  return (
-    <FormField
-      control={form.control}
-      name="event.category"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>Category</FormLabel>
-          <Select onValueChange={field.onChange} defaultValue={field.value}>
-            <FormControl>
-              <SelectTrigger>
-                <SelectValue placeholder="Select category of event" />
-              </SelectTrigger>
-            </FormControl>
-            <SelectContent>
-              {categoryEnum.enumValues
-                .filter((e) => (exclude ? !exclude.includes(e) : true))
-                .map((value) => (
-                  <SelectItem key={value} value={value}>
-                    {value}
-                  </SelectItem>
-                ))}
-            </SelectContent>
-          </Select>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
   );
 };
