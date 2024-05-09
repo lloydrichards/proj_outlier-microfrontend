@@ -75,7 +75,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Eli%20Holder.png",
             "bio": null
           },
           {
@@ -85,7 +85,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Gabrielle%20Merite.png",
             "bio": null
           }
         ]
@@ -120,7 +120,7 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Jashua%20Smith.png",
             "bio": null
           }
         ]
@@ -149,7 +149,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Youyou%20Zhou.png",
             "bio": null
           }
         ]
@@ -178,7 +178,7 @@
             "pronouns": "they/them",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Emilia%20Ruzicka.png",
             "bio": null
           }
         ]
@@ -207,7 +207,7 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Kevin%20Ford.png",
             "bio": null
           }
         ]
@@ -236,7 +236,7 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Sam%20Hart.png",
             "bio": null
           }
         ]
@@ -256,7 +256,7 @@
     "events": [
       {
         "title": "Positive Disruption Panel: Data Physicalisation",
-        "summary": "Join us for an enlightening panel featuring three lightning talks that delve into the transformative power of data visualization in diverse contexts, followed by a moderated discussion and an audience Q&A session. Moderated by Jason Forrest\n",
+        "summary": "Join us for an enlightening panel featuring three lightning talks that delve into the transformative power of data visualization in diverse contexts, followed by a moderated discussion and an audience Q&A session. \n\nModerated by Jason Forrest\n",
         "description": "\n\n",
         "location": "MAIN",
         "imageUrl": null,
@@ -271,7 +271,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Regine%20Abos.png",
             "bio": null
           },
           {
@@ -281,7 +281,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Gulrez%20khan.png",
             "bio": null
           },
           {
@@ -291,7 +291,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Tatiana%20Kalainoff.png",
             "bio": null
           }
         ]
@@ -320,7 +320,7 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Michael%20Gethers.png",
             "bio": null
           }
         ]
@@ -355,7 +355,7 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Nick%20Desbarats.png",
             "bio": null
           }
         ]
@@ -384,7 +384,7 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Hyeok%20Kim.png",
             "bio": null
           }
         ]
@@ -413,7 +413,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Sophie%20Sparkes.png",
             "bio": null
           },
           {
@@ -423,7 +423,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Taha%20Ebrahimi.png",
             "bio": null
           }
         ]
@@ -452,7 +452,7 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Alex%20Gurvich.png",
             "bio": null
           }
         ]
@@ -541,7 +541,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Steven%20Franconeri.png",
             "bio": null
           }
         ]
@@ -570,7 +570,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Kuhu%20Gupta.png",
             "bio": null
           }
         ]
@@ -599,7 +599,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Martynas%20Jocys.png",
             "bio": null
           }
         ]
@@ -634,7 +634,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Saloni%20Shah.png",
             "bio": null
           }
         ]
@@ -663,7 +663,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Ken%20Field.png",
             "bio": null
           }
         ]
@@ -692,7 +692,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Valentina%20D_Efilippo.png",
             "bio": null
           }
         ]
@@ -721,7 +721,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Pei%20Ying%20Loh.png",
             "bio": null
           },
           {
@@ -731,7 +731,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Leticia%20Pozza.png",
             "bio": null
           }
         ]
@@ -751,7 +751,7 @@
     "events": [
       {
         "title": "Positive Disruption Panel: GenAI",
-        "summary": "Join us for an enlightening panel featuring three lightning talks at the intersection of AI, data, and design, followed by a moderated discussion and an audience Q&A session. Moderated by Amanda Makulec",
+        "summary": "Join us for an enlightening panel featuring three lightning talks at the intersection of AI, data, and design, followed by a moderated discussion and an audience Q&A session. \n\nModerated by Amanda Makulec",
         "description": "",
         "location": "UNASSIGNED",
         "imageUrl": null,
@@ -766,27 +766,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
-            "bio": null
-          },
-          {
-            "firstName": "Rutuja",
-            "lastName": "Pawar",
-            "title": null,
-            "pronouns": "she/her",
-            "email": null,
-            "organization": null,
-            "imageUrl": null,
-            "bio": null
-          },
-          {
-            "firstName": "Tiange",
-            "lastName": "Wang",
-            "title": null,
-            "pronouns": "she/her",
-            "email": null,
-            "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Nikita%20Rokotyan.png",
             "bio": null
           },
           {
@@ -796,7 +776,27 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/huang%20i-yang.png",
+            "bio": null
+          },
+          {
+            "firstName": "Rutuja",
+            "lastName": "Pawar",
+            "title": null,
+            "pronouns": "she/her",
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Rutuja%20Pawar.png",
+            "bio": null
+          },
+          {
+            "firstName": "Tiange",
+            "lastName": "Wang",
+            "title": null,
+            "pronouns": "she/her",
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Wang_Tiange.png",
             "bio": null
           }
         ]
@@ -825,7 +825,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Lisa%20Vissichelli.png",
             "bio": null
           }
         ]
@@ -860,7 +860,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Catalina%20Perez%20Lopez.png",
             "bio": null
           }
         ]
@@ -889,7 +889,7 @@
             "pronouns": "he/they",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Gaelan%20Smith.png",
             "bio": null
           }
         ]
@@ -984,7 +984,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Janina%20Madoff.png",
             "bio": null
           }
         ]
@@ -1013,7 +1013,7 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Jamie%20Perera.png",
             "bio": null
           },
           {
@@ -1023,7 +1023,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Jordan%20Wirfs-Brock.png",
             "bio": null
           },
           {
@@ -1033,7 +1033,7 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Duncan%20Geere.png",
             "bio": null
           }
         ]
@@ -1068,7 +1068,7 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Hermann%20Zschiegner.png",
             "bio": null
           }
         ]
@@ -1097,7 +1097,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/jane%20huang.png",
             "bio": null
           },
           {
@@ -1107,7 +1107,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Carly-Bobak.png",
             "bio": null
           },
           {
@@ -1117,7 +1117,7 @@
             "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Jacqueline%20Wernimont.png",
             "bio": null
           }
         ]
@@ -1146,7 +1146,7 @@
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Aleszu%20Bajak.png",
             "bio": null
           }
         ]
@@ -1175,7 +1175,7 @@
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/mikael%20dewabrata.png",
             "bio": null
           }
         ]
