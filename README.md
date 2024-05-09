@@ -96,3 +96,4 @@ The relationships between the entities are:
 
 - `Blocks` have **one** `Event`
 - `Events` have **many** `Speaker`
+- `Speakers` have **many** `Event`
