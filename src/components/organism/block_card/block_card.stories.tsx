@@ -47,10 +47,17 @@ export const Speaker: Story = {
       events: [
         {
           title: "Title",
+          description: "Description",
+          summary: "Summary",
+          category: "CAREER",
+          location: "MAIN",
           speakers: [
             {
               speaker: {
                 fullName: "First Last",
+                firstName: "First",
+                pronouns: "they/them",
+                lastName: "Last",
               },
             },
           ],
@@ -72,6 +79,9 @@ export const Lightning: Story = {
             {
               speaker: {
                 fullName: "First Last",
+                firstName: "First",
+                pronouns: "they/them",
+                lastName: "Last",
               },
             },
           ],
@@ -120,6 +130,9 @@ export const Unconf: Story = {
             {
               speaker: {
                 fullName: "First Last",
+                firstName: "First",
+                pronouns: "they/them",
+                lastName: "Last",
               },
             },
           ],
