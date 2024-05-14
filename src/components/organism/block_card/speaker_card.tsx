@@ -9,14 +9,14 @@ import {
 import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "./block_card";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import { cn, formatDate, formatTimeWithMeridiem } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
   if (block.events.length == 0) {
@@ -35,9 +35,9 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
 
   const event = block.events.at(0);
   return (
-    <HoverCard>
-      <HoverCardTrigger>
-        <Card variant="plum" className={className}>
+    <Popover>
+      <PopoverTrigger>
+        <Card variant="plum" className={cn("text-left", className)}>
           <CardHeader className="z-10 grow">
             <span className={typefaceSubtitle()}>SPEAKER</span>
             <CardTitle>{event?.title}</CardTitle>
@@ -68,7 +68,7 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
                 className="size-20 opacity-20 saturate-0 md:size-32"
               >
                 <AvatarImage src={speaker.imageUrl ?? undefined} />
-                <AvatarFallback>
+                <AvatarFallback className="bg-transparent text-plum-foreground">
                   {speaker.firstName[0]}
                   {speaker.lastName[0]}
                 </AvatarFallback>
@@ -79,10 +79,41 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
             {block.duration} min
           </p>
         </Card>
-      </HoverCardTrigger>
-      <HoverCardContent className="bg-plum text-plum-foreground">
+      </PopoverTrigger>
+      <PopoverContent className="w-[var(--radix-popover-trigger-width)] border-none bg-plum text-plum-foreground shadow-2xl">
         <Table>
-          <TableBody className="[&_tr]:border-plum-foreground [&_tr]:hover:bg-plum">
+          <TableBody className="[&_tr]:border-plum-foreground [&_tr]:hover:bg-plum [&_tr_td]:px-2 [&_tr_td]:py-3">
+            {event?.speakers && event.speakers.length > 0 ? (
+              <>
+                <TableRow>
+                  <TableCell className="flex flex-col gap-2">
+                    <h2 className={typefaceSubtitle()}>Speakers</h2>
+                    {event.speakers.map(({ speaker }) => (
+                      <div key={speaker.id} className="flex flex-col gap-1">
+                        <div className="flex items-center gap-2">
+                          <Avatar className="size-10 border-2 border-plum-foreground bg-plum-foreground md:size-16">
+                            <AvatarImage src={speaker.imageUrl ?? undefined} />
+                            <AvatarFallback>
+                              {speaker.firstName[0]}
+                              {speaker.lastName[0]}
+                            </AvatarFallback>
+                          </Avatar>
+                          <div className="flex flex-col justify-center gap-1">
+                            <CardDescription className="opacity-60">
+                              {speaker.fullName}{" "}
+                              {speaker.pronouns ? `(${speaker.pronouns})` : ""}
+                            </CardDescription>
+                            <CardDescription>
+                              {speaker.title} - {speaker.organization}
+                            </CardDescription>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </TableCell>
+                </TableRow>
+              </>
+            ) : null}
             <TableRow>
               <TableCell className="flex flex-col gap-2">
                 <h2 className={typefaceSubtitle()}>Description</h2>
@@ -107,39 +138,24 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
                 </TableCell>
               </TableRow>
             ) : null}
-            {event?.speakers && event.speakers.length > 0 ? (
-              <>
-                <TableRow>
-                  <TableCell className="flex flex-col gap-2">
-                    <h2 className={typefaceSubtitle()}>Speakers</h2>
-                    {event.speakers.map(({ speaker }) => (
-                      <div key={speaker.id} className="flex flex-col gap-1">
-                        <div className="flex items-center gap-2">
-                          <Avatar className="size-8 bg-background">
-                            <AvatarImage src={speaker.imageUrl ?? undefined} />
-                            <AvatarFallback>
-                              {speaker.firstName[0]}
-                              {speaker.lastName[0]}
-                            </AvatarFallback>
-                          </Avatar>
-                          {speaker.fullName}{" "}
-                          {speaker.pronouns ? `(${speaker.pronouns})` : ""}
-                        </div>
-                        <CardDescription className="ml-10 opacity-60">
-                          {speaker.title} - {speaker.organization}
-                        </CardDescription>
-                        <CardDescription className="ml-10">
-                          {speaker.bio}
-                        </CardDescription>
-                      </div>
-                    ))}
-                  </TableCell>
-                </TableRow>
-              </>
-            ) : null}
+            <TableRow>
+              <TableCell className="flex items-center gap-2">
+                <h2 className={typefaceSubtitle()}>Date</h2>
+                <CardDescription>{formatDate(block.start)}</CardDescription>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className="flex items-center gap-2">
+                <h2 className={typefaceSubtitle()}>Time</h2>
+                <CardDescription>
+                  {formatTimeWithMeridiem(block.start)} &#8594;{" "}
+                  {formatTimeWithMeridiem(block.end)} ({block.duration} min)
+                </CardDescription>
+              </TableCell>
+            </TableRow>
           </TableBody>
         </Table>
-      </HoverCardContent>
-    </HoverCard>
+      </PopoverContent>
+    </Popover>
   );
 };
