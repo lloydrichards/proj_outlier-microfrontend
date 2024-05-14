@@ -56,7 +56,7 @@ export const LightningCard: FC<BlockCardProps> = ({ block, className }) => {
                   <TableCell className="flex flex-col gap-2">
                     <h2 className={typefaceSubtitle()}>Speaker</h2>
                     <div className="flex flex-col gap-1">
-                      <div className="flex items-center gap-2">
+                      <div className="flex gap-2">
                         <Avatar className="size-10 border-2 border-turquoise-foreground bg-turquoise-foreground/90 md:size-16">
                           <AvatarImage src={speaker?.imageUrl ?? undefined} />
                           <AvatarFallback className="bg-turquoise-foreground text-turquoise">
@@ -66,11 +66,14 @@ export const LightningCard: FC<BlockCardProps> = ({ block, className }) => {
                         </Avatar>
                         <div className="flex flex-col justify-center gap-1">
                           <CardDescription>
-                            {speaker?.fullName}{" "}
-                            {speaker?.pronouns ? `(${speaker?.pronouns})` : ""}
+                            <strong>
+                              {speaker?.title ? `${speaker.title} ` : ""}
+                              {speaker?.fullName}
+                            </strong>
+                            {speaker?.pronouns ? ` (${speaker.pronouns})` : ""}
                           </CardDescription>
                           <CardDescription className="opacity-60">
-                            {speaker?.title} - {speaker?.organization}
+                            {speaker?.bio}
                           </CardDescription>
                         </div>
                       </div>
@@ -83,6 +86,12 @@ export const LightningCard: FC<BlockCardProps> = ({ block, className }) => {
               <TableCell className="flex flex-col gap-2">
                 <h2 className={typefaceSubtitle()}>Description</h2>
                 <CardDescription>{event?.description}</CardDescription>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className="flex items-center gap-2">
+                <h2 className={typefaceSubtitle()}>Category</h2>
+                <Badge variant="turquoise">{event?.category}</Badge>
               </TableCell>
             </TableRow>
             <TableRow>

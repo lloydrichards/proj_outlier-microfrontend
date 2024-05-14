@@ -90,7 +90,7 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
                     <h2 className={typefaceSubtitle()}>Speakers</h2>
                     {event.speakers.map(({ speaker }) => (
                       <div key={speaker.id} className="flex flex-col gap-1">
-                        <div className="flex items-center gap-2">
+                        <div className="flex gap-2">
                           <Avatar className="size-10 border-2 border-plum-foreground bg-plum-foreground md:size-16">
                             <AvatarImage src={speaker.imageUrl ?? undefined} />
                             <AvatarFallback>
@@ -100,11 +100,14 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
                           </Avatar>
                           <div className="flex flex-col justify-center gap-1">
                             <CardDescription>
-                              {speaker.fullName}{" "}
-                              {speaker.pronouns ? `(${speaker.pronouns})` : ""}
+                              <strong>
+                                {speaker.title ? `${speaker.title} ` : ""}
+                                {speaker.fullName}
+                              </strong>
+                              {speaker.pronouns ? ` (${speaker.pronouns})` : ""}
                             </CardDescription>
                             <CardDescription className="opacity-60">
-                              {speaker.title} - {speaker.organization}
+                              {speaker.bio}
                             </CardDescription>
                           </div>
                         </div>
