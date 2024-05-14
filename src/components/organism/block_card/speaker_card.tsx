@@ -99,11 +99,11 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
                             </AvatarFallback>
                           </Avatar>
                           <div className="flex flex-col justify-center gap-1">
-                            <CardDescription className="opacity-60">
+                            <CardDescription>
                               {speaker.fullName}{" "}
                               {speaker.pronouns ? `(${speaker.pronouns})` : ""}
                             </CardDescription>
-                            <CardDescription>
+                            <CardDescription className="opacity-60">
                               {speaker.title} - {speaker.organization}
                             </CardDescription>
                           </div>
