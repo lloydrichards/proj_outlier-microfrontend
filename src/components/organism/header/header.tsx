@@ -9,7 +9,7 @@ export const Header = async () => {
   const session = await auth();
 
   return (
-    <header className="sticky top-0 z-10 flex w-full items-center justify-end gap-4 bg-background px-2 py-6">
+    <header className="sticky top-0 z-20 flex w-full items-center justify-end gap-4 bg-background px-2 py-6">
       {session ? (
         <>
           <Avatar>

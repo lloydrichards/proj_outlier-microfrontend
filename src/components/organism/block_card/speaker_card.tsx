@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../../ui/card";
-import { typefaceBody, typefaceMeta, typefaceSubtitle } from "../../typeface";
+import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "./block_card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -16,12 +16,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableRow,
-} from "@/components/ui/table";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
 export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
   if (block.events.length == 0) {
@@ -70,7 +65,7 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
             {event?.speakers.map(({ speaker }) => (
               <Avatar
                 key={speaker.title}
-                className="size-32 opacity-20 saturate-0"
+                className="size-20 opacity-20 saturate-0 md:size-32"
               >
                 <AvatarImage src={speaker.imageUrl ?? undefined} />
                 <AvatarFallback>
@@ -87,53 +82,61 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
       </HoverCardTrigger>
       <HoverCardContent className="bg-plum text-plum-foreground">
         <Table>
-          <TableBody className="[&_tr]:border-plum-foreground [&_tr]:hover:bg-plum [&_tr_td:first-child]:w-20">
+          <TableBody className="[&_tr]:border-plum-foreground [&_tr]:hover:bg-plum">
             <TableRow>
-              <TableCell className={typefaceSubtitle()}>Description</TableCell>
-              <TableCell className={typefaceBody()}>
-                {event?.description}
+              <TableCell className="flex flex-col gap-2">
+                <h2 className={typefaceSubtitle()}>Description</h2>
+                <CardDescription>{event?.description}</CardDescription>
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className={typefaceSubtitle()}>Location</TableCell>
-              <TableCell className={typefaceBody()}>
-                {event?.location}
+              <TableCell className="flex items-center gap-2">
+                <h2 className={typefaceSubtitle()}>Location</h2>
+                <Badge variant="plum">{event?.location}</Badge>
               </TableCell>
             </TableRow>
             {event?.linkLabel && event.linkUrl ? (
               <TableRow>
-                <TableCell className={typefaceSubtitle()}>Link</TableCell>
-                <TableCell className={typefaceBody()}>
-                  <a href={event.linkUrl} target="_blank">
-                    {event.linkLabel}
-                  </a>
+                <TableCell className="flex flex-col gap-2">
+                  <h2 className={typefaceSubtitle()}>Link</h2>
+                  <CardDescription>
+                    <a href={event.linkUrl} target="_blank">
+                      {event.linkLabel}
+                    </a>
+                  </CardDescription>
                 </TableCell>
               </TableRow>
             ) : null}
-            {event?.speakers && event.speakers.length > 0
-              ? event.speakers.map(({ speaker }) => (
-                  <TableRow key={speaker.id}>
-                    <TableCell className="w-fit"></TableCell>
-                    <TableCell className={typefaceBody()}>
-                      <div className="flex items-center gap-2">
-                        <Avatar className="size-8 border border-plum-foreground">
-                          <AvatarImage src={speaker.imageUrl ?? undefined} />
-                          <AvatarFallback>
-                            {speaker.firstName[0]}
-                            {speaker.lastName[0]}
-                          </AvatarFallback>
-                        </Avatar>
-                        {speaker.fullName}{" "}
-                        {speaker.pronouns ? `(${speaker.pronouns})` : ""}
+            {event?.speakers && event.speakers.length > 0 ? (
+              <>
+                <TableRow>
+                  <TableCell className="flex flex-col gap-2">
+                    <h2 className={typefaceSubtitle()}>Speakers</h2>
+                    {event.speakers.map(({ speaker }) => (
+                      <div key={speaker.id} className="flex flex-col gap-1">
+                        <div className="flex items-center gap-2">
+                          <Avatar className="size-8 bg-background">
+                            <AvatarImage src={speaker.imageUrl ?? undefined} />
+                            <AvatarFallback>
+                              {speaker.firstName[0]}
+                              {speaker.lastName[0]}
+                            </AvatarFallback>
+                          </Avatar>
+                          {speaker.fullName}{" "}
+                          {speaker.pronouns ? `(${speaker.pronouns})` : ""}
+                        </div>
+                        <CardDescription className="ml-10 opacity-60">
+                          {speaker.title} - {speaker.organization}
+                        </CardDescription>
+                        <CardDescription className="ml-10">
+                          {speaker.bio}
+                        </CardDescription>
                       </div>
-                      <CardDescription>
-                        {speaker.title} - {speaker.organization}
-                      </CardDescription>
-                      <CardDescription>{speaker.bio}</CardDescription>
-                    </TableCell>
-                  </TableRow>
-                ))
-              : null}
+                    ))}
+                  </TableCell>
+                </TableRow>
+              </>
+            ) : null}
           </TableBody>
         </Table>
       </HoverCardContent>
