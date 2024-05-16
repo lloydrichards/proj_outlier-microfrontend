@@ -2,6 +2,7 @@ import { type Table, getTableName, sql } from "drizzle-orm";
 import { db } from ".";
 import { blocks, events, speakers, speakersToEvents } from "./schema";
 import { seed2024Edition } from "./seed/2024-edition";
+import { seed2023Edition } from "./seed/2023-edition";
 
 async function resetTable(db: db, table: Table) {
   return db.execute(
@@ -14,6 +15,7 @@ const main = async () => {
     await resetTable(db, table);
   }
   await seed2024Edition(db);
+  await seed2023Edition(db);
 
   process.exit(0);
 };

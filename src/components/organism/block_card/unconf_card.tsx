@@ -10,7 +10,7 @@ export const UnconfCard: FC<BlockCardProps> = ({ block, className }) => {
     return (
       <Card variant="mustard" className={className}>
         <CardHeader>
-          <span className={typefaceSubtitle()}>SPEAKER</span>
+          <span className={typefaceSubtitle()}>UNCONF</span>
           <CardDescription>Nothing scheduled</CardDescription>
         </CardHeader>
         <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>

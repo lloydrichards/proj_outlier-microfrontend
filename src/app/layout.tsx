@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-silka ${silka.variable}`}>
+      <body className={`font-silka ${silka.variable} grid justify-center`}>
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
