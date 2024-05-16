@@ -7,8 +7,11 @@ import { type FC, Fragment } from "react";
 import { formatDate } from "@/lib/utils";
 import { LocalTime } from "@/components/molecule/local_time/local_time";
 
-export const Agenda: FC<{ edition?: string }> = async ({ edition = null }) => {
-  const agenda = await api.block.getAgenda({ edition });
+export const Agenda: FC<{ edition?: string; date?: Date }> = async ({
+  edition = null,
+  date = null,
+}) => {
+  const agenda = await api.block.getAgenda({ edition, date });
   return (
     <div className="grid w-full gap-2">
       {agenda.length > 0 ? (

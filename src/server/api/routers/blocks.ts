@@ -5,6 +5,7 @@ import {
   publicProcedure,
 } from "@/server/api/trpc";
 import { blocks, insertBlockSchema, speakers } from "@/server/db/schema";
+import { getDayOfYear, getYear } from "date-fns";
 import { eq, sql } from "drizzle-orm";
 import { z } from "zod";
 
@@ -40,12 +41,22 @@ export const blockRouter = createTRPCRouter({
     .input(
       z.object({
         edition: z.string().nullable(),
+        date: z.date().nullable(),
       }),
     )
     .query(({ input, ctx }) => {
       return ctx.db.query.blocks.findMany({
-        where: (b, { eq }) =>
-          input.edition ? eq(b.edition, input.edition) : eq(b.isActive, true),
+        where: (b, { eq, and, sql }) => {
+          if (input.date) {
+            return and(
+              eq(sql`EXTRACT(DOY FROM ${b.start})`, getDayOfYear(input.date)),
+              eq(sql`EXTRACT(YEAR FROM ${b.start})`, getYear(input.date)),
+            );
+          }
+          return input.edition
+            ? eq(b.edition, input.edition)
+            : eq(b.isActive, true);
+        },
         orderBy: (blocks, { asc }) => [asc(blocks.start)],
         extras: {
           duration:

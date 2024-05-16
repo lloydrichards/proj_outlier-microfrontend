@@ -1,5 +1,12 @@
-import { Agenda } from "../../components/organism/agenda/agenda";
+import { Agenda } from "@/components/organism/agenda/agenda";
 
-export default async function Home() {
-  return <Agenda />;
-}
+const DateEmbedded = async ({
+  searchParams,
+}: {
+  searchParams: { date?: string };
+}) => {
+  const queryDate = searchParams.date ? new Date(searchParams.date) : undefined;
+  return <Agenda date={queryDate} />;
+};
+
+export default DateEmbedded;
