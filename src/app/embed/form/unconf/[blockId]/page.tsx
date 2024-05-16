@@ -7,7 +7,7 @@ export default async function UnconfFormPage({
 }: {
   params: { blockId: number };
 }) {
-  const agenda = await api.block.getAgenda({ edition: null });
+  const agenda = await api.block.getAgenda({ edition: null, date: null });
   const unconfBlocks = agenda.filter((block) => block.type === "UNCONF");
   const block = unconfBlocks.find((block) => block.id === +params.blockId);
   if (!block) {
