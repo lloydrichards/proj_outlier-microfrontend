@@ -1,5 +1,5 @@
 import { BlockCard } from "@/components/organism/block_card/block_card";
-import { typefaceTitle } from "@/components/typeface";
+import { typefaceSubtitle, typefaceTitle } from "@/components/typeface";
 import { api } from "@/trpc/server";
 import { AgendaBlockMenu } from "./agenda_block_menu";
 import { AddBlockDialog } from "../../molecule/add_block_dialog/add_block_dialog";
@@ -29,6 +29,11 @@ export const Agenda: FC<{ edition?: string; date?: Date }> = async ({
                   </p>
                   <div className="h-3 grow bg-foreground sm:h-6" />
                 </div>
+              )}
+              {idx === 0 && (
+                <p className={typefaceSubtitle()}>
+                  {Intl.DateTimeFormat().resolvedOptions().timeZone}
+                </p>
               )}
               <AgendaBlockMenu block={block}>
                 <div className="grid grid-cols-[4rem_1fr] gap-2 sm:grid-cols-[8rem_1fr]">
