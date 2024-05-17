@@ -22,6 +22,11 @@ import { UnconfDropdownMenu } from "./unconf_dropdown_menu";
 import { cn, formatDate } from "@/lib/utils";
 import { Header } from "@/components/organism/header/header";
 
+export const metadata = {
+  title: "Unconf Dashboard",
+  description: "Manage unconf events and view their status",
+};
+
 export default async function Home() {
   const session = await auth();
   const unconfEvents = await api.unconf.getUnconfEvents();
