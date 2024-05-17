@@ -4,15 +4,16 @@ import { api } from "@/trpc/server";
 import { AgendaBlockMenu } from "./agenda_block_menu";
 import { AddBlockDialog } from "../../molecule/add_block_dialog/add_block_dialog";
 import { type FC, Fragment } from "react";
-import { formatDate } from "@/lib/utils";
 import { LocalTime } from "@/components/molecule/local_time/local_time";
-import { TimeZone } from "@/components/molecule/time_zome/time_zome";
+import { TimeZone } from "@/components/molecule/time_zone/time_zone";
+import { DateLine } from "@/components/molecule/date_line/date_line";
 
 export const Agenda: FC<{ edition?: string; date?: Date }> = async ({
   edition = null,
   date = null,
 }) => {
   const agenda = await api.block.getAgenda({ edition, date });
+
   return (
     <div className="grid w-full gap-2">
       {agenda.length > 0 ? (
@@ -22,15 +23,7 @@ export const Agenda: FC<{ edition?: string; date?: Date }> = async ({
             block.start.getDay() !== lastBlock?.start.getDay();
           return (
             <Fragment key={block.id}>
-              {isStartOfDay && (
-                <div className="flex items-center gap-4">
-                  <div className="h-3 grow bg-foreground sm:h-6" />
-                  <p className={typefaceTitle("text-sm sm:text-md")}>
-                    {formatDate(block.start)}
-                  </p>
-                  <div className="h-3 grow bg-foreground sm:h-6" />
-                </div>
-              )}
+              {isStartOfDay && <DateLine date={block.start} />}
               {idx === 0 && <TimeZone />}
               <AgendaBlockMenu block={block}>
                 <div className="grid grid-cols-[4rem_1fr] gap-2 sm:grid-cols-[8rem_1fr]">
