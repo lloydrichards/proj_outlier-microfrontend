@@ -5,7 +5,7 @@ import { LightningCard } from "../lightning_card/lightning_card";
 import { NetworkingCard } from "./networking_card";
 import { PauseCard } from "./pause_card";
 import { SpeakerCard } from "../speaker_card/speaker_card";
-import { UnconfCard } from "../unconf_card/unconf_card";
+import { UnconfCarousel } from "../unconf_carousel/unconf_carousel";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const cardVariants = cva("", {
@@ -103,7 +103,7 @@ export const BlockCard: FC<BlockCardProps> = ({ block, className }) => {
       );
     case "UNCONF":
       return (
-        <UnconfCard
+        <UnconfCarousel
           block={block}
           className={cardVariants({
             size: block.duration as SizeType,

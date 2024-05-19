@@ -6,13 +6,20 @@ import { TableCell, TableRow } from "@/components/ui/table";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { type VariantProps, cva } from "class-variance-authority";
 
-const avatarVariants = cva("size-10 border-2 md:size-16", {
+const avatarVariants = cva("border-2", {
   variants: {
     variant: {
       turquoise: "border-turquoise-foreground bg-turquoise-foreground/90",
       plum: "border-plum-foreground bg-plum-foreground/90",
       mustard: "border-mustard-foreground bg-mustard-foreground/90",
     },
+    size: {
+      sm: "size-8",
+      md: "size-10 md:size-16",
+    },
+  },
+  defaultVariants: {
+    size: "md",
   },
 });
 
@@ -31,13 +38,13 @@ type SpeakerRowProps = {
 } & VariantProps<typeof avatarVariants> &
   VariantProps<typeof avatarFallbackVariants>;
 
-export const SpeakerRow: FC<SpeakerRowProps> = ({ speaker, variant }) => {
+export const SpeakerRow: FC<SpeakerRowProps> = ({ speaker, variant, size }) => {
   return (
     <TableRow>
       <TableCell className="flex flex-col gap-2">
         <h2 className={typefaceSubtitle()}>Speaker</h2>
         <div className="flex gap-2">
-          <Avatar className={avatarVariants({ variant })}>
+          <Avatar className={avatarVariants({ variant, size })}>
             <AvatarImage src={speaker?.imageUrl ?? undefined} />
             <AvatarFallback className={avatarFallbackVariants({ variant })}>
               {speaker?.firstName[0]}
