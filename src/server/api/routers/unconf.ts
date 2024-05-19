@@ -64,30 +64,39 @@ export const unconfRouter = createTRPCRouter({
         .where(eq(events.id, input.id));
     }),
 
-  getUnconfEvents: protectedProcedure.query(async ({ ctx }) => {
-    return ctx.db.query.blocks
-      .findMany({
-        where: (e, { eq }) => eq(e.type, "UNCONF"),
-        with: {
-          events: {
-            with: {
-              speakers: {
-                with: {
-                  speaker: {
-                    extras: {
-                      fullName:
-                        sql<string>`concat(${speakers.firstName},' ', ${speakers.lastName})`.as(
-                          "full_name",
-                        ),
+  getUnconfEvents: protectedProcedure
+    .input(
+      z.object({
+        edition: z.string().optional(),
+      }),
+    )
+    .query(async ({ ctx, input }) => {
+      return ctx.db.query.blocks
+        .findMany({
+          where: (e, { eq, and }) =>
+            input.edition
+              ? and(eq(e.edition, input.edition), eq(e.type, "UNCONF"))
+              : eq(e.type, "UNCONF"),
+          with: {
+            events: {
+              with: {
+                speakers: {
+                  with: {
+                    speaker: {
+                      extras: {
+                        fullName:
+                          sql<string>`concat(${speakers.firstName},' ', ${speakers.lastName})`.as(
+                            "full_name",
+                          ),
+                      },
                     },
                   },
                 },
+                block: true,
               },
-              block: true,
             },
           },
-        },
-      })
-      .then((blocks) => blocks.flatMap((b) => b.events));
-  }),
+        })
+        .then((blocks) => blocks.flatMap((b) => b.events));
+    }),
 });

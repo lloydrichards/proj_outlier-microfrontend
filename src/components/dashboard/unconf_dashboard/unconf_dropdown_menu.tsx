@@ -1,6 +1,6 @@
 "use client";
 import { MoreHorizontal } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/atom/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,7 +9,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/atom/dropdown-menu";
 import { type FC } from "react";
 import { type RouterOutput, api } from "@/trpc/react";
 import { useRouter } from "next/navigation";
