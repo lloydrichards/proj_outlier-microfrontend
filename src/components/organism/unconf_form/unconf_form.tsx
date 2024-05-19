@@ -15,7 +15,7 @@ import { useRouter } from "next/navigation";
 import { useState, type FC, type MouseEventHandler } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
 import { z } from "zod";
-import { AdditionalInfoTextarea } from "./additiona_iInfo_textarea";
+import { AdditionalInfoTextarea } from "./additional_info_textarea";
 import { DescriptionTextarea } from "./description_textarea";
 import { EmailInput } from "./email_input";
 import { EventCategorySelect } from "./event_category_select";

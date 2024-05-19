@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { type VariantProps, cva } from "class-variance-authority";
 import { typefaceBody, typefaceTitle } from "../typeface";
 
-const cardVariants = cva("relative flex flex-col rounded-lg", {
+const cardVariants = cva("relative flex rounded-lg", {
   variants: {
     variant: {
       default: "bg-background text-foreground",
@@ -13,9 +13,14 @@ const cardVariants = cva("relative flex flex-col rounded-lg", {
       mustard: "bg-mustard text-mustard-foreground",
       transparent: "bg-transparent text-foreground",
     },
+    direction: {
+      row: "flex-row",
+      column: "flex-col justify-center",
+    },
   },
   defaultVariants: {
     variant: "default",
+    direction: "column",
   },
 });
 
@@ -24,10 +29,10 @@ export interface CardProps
     VariantProps<typeof cardVariants> {}
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, variant, ...props }, ref) => (
+  ({ className, direction, variant, ...props }, ref) => (
     <div
       ref={ref}
-      className={cardVariants({ variant, className })}
+      className={cardVariants({ variant, direction, className })}
       {...props}
     />
   ),
