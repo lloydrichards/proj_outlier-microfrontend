@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { Card, CardDescription, CardHeader, CardTitle } from "../../ui/card";
 import { typefaceMeta, typefaceSubtitle } from "../../typeface";
-import type { BlockCardProps } from "./block_card";
+import type { BlockCardProps } from "../block_card/block_card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
