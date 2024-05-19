@@ -6,7 +6,7 @@ import { Label } from "./label";
  * Renders an accessible label associated with controls.
  */
 const meta = {
-  title: "ui/Label",
+  title: "atom/Label",
   component: Label,
   tags: ["autodocs"],
   argTypes: {

@@ -8,10 +8,10 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/components/ui/context-menu";
+} from "@/components/atom/context-menu";
 import { auth } from "@/server/auth";
 import { type FC, type ReactNode } from "react";
-import { DialogTitle } from "@/components/ui/dialog";
+import { DialogTitle } from "@/components/atom/dialog";
 import { EventForm } from "../event_form/event_form";
 import { SpeakerForm } from "../speaker_form/speaker_form";
 import { DeleteSpeakerDialog } from "./delete_speaker_dialog";

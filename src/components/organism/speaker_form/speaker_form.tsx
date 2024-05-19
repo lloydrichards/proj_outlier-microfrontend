@@ -6,7 +6,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/components/atom/form";
 import {
   insertSpeakerSchema,
   type InsertSpeakerSchema,
@@ -17,8 +17,8 @@ import { type FC } from "react";
 import { useForm, useFormContext } from "react-hook-form";
 import { api } from "@/trpc/react";
 import { useRouter } from "next/navigation";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/atom/input";
+import { Textarea } from "@/components/atom/textarea";
 import { ImgInput } from "@/components/molecule/img_input/img_input";
 import { SubmitButton } from "@/components/molecule/submit_button/submit_button";
 

@@ -1,10 +1,10 @@
 import type { FC } from "react";
-import { CardDescription } from "../../ui/card";
+import { CardDescription } from "@/components/atom/card";
 import { typefaceSubtitle } from "../../typeface";
 import type { AgendaEvent } from "../block_card/block_card";
-import { Badge } from "@/components/ui/badge";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { PopoverContent } from "@/components/ui/popover";
+import { Badge } from "@/components/atom/badge";
+import { Table, TableBody, TableCell, TableRow } from "@/components/atom/table";
+import { PopoverContent } from "@/components/atom/popover";
 import { SpeakerRow } from "@/components/molecule/speaker_row/speaker_row";
 
 export const UnconfPopoverContent: FC<{

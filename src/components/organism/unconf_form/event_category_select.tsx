@@ -5,7 +5,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/components/atom/form";
 import { categoryEnum } from "@/server/db/schema";
 import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
@@ -15,7 +15,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components/atom/select";
 import { type UnconfSchema } from "./unconf_form";
 
 export const EventCategorySelect: FC<{

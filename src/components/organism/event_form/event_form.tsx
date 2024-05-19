@@ -6,7 +6,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/components/atom/form";
 import {
   type Event,
   type InsertEventSchema,
@@ -18,8 +18,8 @@ import { useForm, useFormContext } from "react-hook-form";
 import { api } from "@/trpc/react";
 import { useRouter } from "next/navigation";
 import { EventCategorySelect } from "./event_category_select";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/atom/input";
+import { Textarea } from "@/components/atom/textarea";
 import { EventLocationSelect } from "./event_location_select";
 import { ImgInput } from "../../molecule/img_input/img_input";
 import { SubmitButton } from "@/components/molecule/submit_button/submit_button";

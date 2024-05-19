@@ -8,7 +8,7 @@ import { Button } from "./button";
  * Displays a form input field or a component that looks like an input field.
  */
 const meta = {
-  title: "ui/Input",
+  title: "atom/Input",
   component: Input,
   tags: ["autodocs"],
   argTypes: {},

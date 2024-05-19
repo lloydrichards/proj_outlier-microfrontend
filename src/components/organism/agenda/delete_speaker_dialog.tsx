@@ -1,9 +1,9 @@
 "use client";
 import { type FC } from "react";
 import { type RouterOutput, api } from "@/trpc/react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/atom/button";
 import { useRouter } from "next/navigation";
-import { DialogClose } from "@/components/ui/dialog";
+import { DialogClose } from "@/components/atom/dialog";
 import { typefaceBody } from "@/components/typeface";
 
 export const DeleteSpeakerDialog: FC<{

@@ -1,7 +1,7 @@
 "use client";
 import { useSession } from "next-auth/react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/atom/button";
 
 import { signIn, signOut } from "@/server/actions/auth";
 

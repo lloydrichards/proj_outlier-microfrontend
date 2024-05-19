@@ -2,14 +2,14 @@ import { typefaceSubtitle } from "@/components/typeface";
 import { auth } from "@/server/auth";
 import { api } from "@/trpc/server";
 
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/atom/badge";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/atom/card";
 import {
   Table,
   TableBody,
@@ -17,7 +17,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/components/atom/table";
 import { UnconfDropdownMenu } from "./unconf_dropdown_menu";
 import { cn, formatDate } from "@/lib/utils";
 import { Header } from "@/components/organism/header/header";

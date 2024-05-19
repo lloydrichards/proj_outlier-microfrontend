@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import { Card, CardDescription, CardHeader } from "../../ui/card";
+import { Card, CardDescription, CardHeader } from "@/components/atom/card";
 import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "../block_card/block_card";
-import { Popover, PopoverTrigger } from "@/components/ui/popover";
+import { Popover, PopoverTrigger } from "@/components/atom/popover";
 import { cn } from "@/lib/utils";
 import { LightningPopoverContent } from "./lightning_popover_content";
 

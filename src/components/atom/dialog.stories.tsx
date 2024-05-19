@@ -17,7 +17,7 @@ import { Button } from "./button";
  * rendering the content underneath inert.
  */
 const meta = {
-  title: "ui/Dialog",
+  title: "atom/Dialog",
   component: Dialog,
   tags: ["autodocs"],
   argTypes: {},

@@ -5,7 +5,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/components/atom/form";
 import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
 import {
@@ -14,7 +14,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components/atom/select";
 import { type UnconfSchema } from "./unconf_form";
 
 export const PronounsInput: FC<{ index: number }> = ({ index }) => {

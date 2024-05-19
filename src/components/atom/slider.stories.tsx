@@ -6,7 +6,7 @@ import { Slider } from "./slider";
  * An input where the user selects a value from within a given range.
  */
 const meta = {
-  title: "ui/Slider",
+  title: "atom/Slider",
   component: Slider,
   tags: ["autodocs"],
   argTypes: {},

@@ -8,7 +8,7 @@ import { Calendar } from "./calendar";
  * A date field component that allows users to enter and edit date.
  */
 const meta = {
-  title: "ui/Calendar",
+  title: "atom/Calendar",
   component: Calendar,
   tags: ["autodocs"],
   argTypes: {},

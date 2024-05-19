@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { BlockForm } from "./block_form";
-import { Dialog } from "@/components/ui/dialog";
+import { Dialog } from "@/components/atom/dialog";
 
 /**
  * An image element with a fallback for representing the user.

@@ -1,9 +1,9 @@
 import type { FC } from "react";
-import { CardDescription } from "../../ui/card";
-import { typefaceSubtitle } from "../../typeface";
-import type { AgendaSpeaker } from "../../organism/block_card/block_card";
-import { TableCell, TableRow } from "@/components/ui/table";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { CardDescription } from "@/components/atom/card";
+import { typefaceSubtitle } from "@/components/typeface";
+import type { AgendaSpeaker } from "@/components/organism/block_card/block_card";
+import { TableCell, TableRow } from "@/components/atom/table";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/atom/avatar";
 import { type VariantProps, cva } from "class-variance-authority";
 
 const avatarVariants = cva("border-2", {

@@ -1,5 +1,5 @@
 "use client";
-import { Form } from "@/components/ui/form";
+import { Form } from "@/components/atom/form";
 import {
   type Block,
   type InsertBlockSchema,

@@ -1,12 +1,12 @@
 import { BlockForm } from "@/components/organism/block_form/block_form";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/atom/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "@/components/atom/dialog";
 import { auth } from "@/server/auth";
 import { CirclePlus } from "lucide-react";
 import { type FC } from "react";

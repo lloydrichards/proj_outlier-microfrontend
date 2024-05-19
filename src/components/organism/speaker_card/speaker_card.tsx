@@ -5,13 +5,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../../ui/card";
+} from "@/components/atom/card";
 import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "../block_card/block_card";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/atom/badge";
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Popover, PopoverTrigger } from "@/components/ui/popover";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/atom/avatar";
+import { Popover, PopoverTrigger } from "@/components/atom/popover";
 import { SpeakerPopoverContent } from "./speaker_popover_content";
 
 export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {

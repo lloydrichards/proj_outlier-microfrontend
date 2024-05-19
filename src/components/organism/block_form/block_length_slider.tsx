@@ -5,20 +5,20 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Slider } from "@/components/ui/slider";
+} from "@/components/atom/form";
+import { Slider } from "@/components/atom/slider";
 import { type InsertBlockSchema } from "@/server/db/schema";
 import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
 import { CalendarIcon, Clock } from "lucide-react";
 import { cn, formatDate, formatTime } from "@/lib/utils";
-import { Calendar } from "@/components/ui/calendar";
-import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/atom/calendar";
+import { Button } from "@/components/atom/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "@/components/atom/popover";
 
 import { PopoverClose } from "@radix-ui/react-popover";
 

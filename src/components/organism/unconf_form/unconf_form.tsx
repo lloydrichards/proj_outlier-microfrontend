@@ -4,9 +4,9 @@ import {
   typefaceSubtitle,
   typefaceTitle,
 } from "@/components/typeface";
-import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
-import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/atom/button";
+import { Form } from "@/components/atom/form";
+import { Separator } from "@/components/atom/separator";
 import { insertEventSchema } from "@/server/db/schema";
 import { api } from "@/trpc/react";
 import { zodResolver } from "@hookform/resolvers/zod";

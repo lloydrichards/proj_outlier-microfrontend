@@ -2,9 +2,9 @@
 import { type FC } from "react";
 import { type Block } from "@/server/db/schema";
 import { api } from "@/trpc/react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/atom/button";
 import { useRouter } from "next/navigation";
-import { DialogClose } from "@/components/ui/dialog";
+import { DialogClose } from "@/components/atom/dialog";
 import { typefaceBody } from "@/components/typeface";
 import { timeFormat } from "d3-time-format";
 

@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { DialogClose } from "@/components/ui/dialog";
+import { Button } from "@/components/atom/button";
+import { DialogClose } from "@/components/atom/dialog";
 import { type FC } from "react";
 import { useFormState } from "react-hook-form";
 

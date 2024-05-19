@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Card, CardDescription, CardHeader } from "../../ui/card";
+import { Card, CardDescription, CardHeader } from "@/components/atom/card";
 import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "../block_card/block_card";
 import { cn } from "@/lib/utils";

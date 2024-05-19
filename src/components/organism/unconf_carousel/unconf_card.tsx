@@ -1,8 +1,13 @@
 import type { FC } from "react";
-import { Card, CardDescription, CardHeader, CardTitle } from "../../ui/card";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/atom/card";
 import type { AgendaEvent } from "../block_card/block_card";
-import { Badge } from "@/components/ui/badge";
-import { Popover, PopoverTrigger } from "@/components/ui/popover";
+import { Badge } from "@/components/atom/badge";
+import { Popover, PopoverTrigger } from "@/components/atom/popover";
 import { UnconfPopoverContent } from "./unconf_popover_content";
 
 export const UnconfCard: FC<{ event: AgendaEvent }> = ({ event }) => {

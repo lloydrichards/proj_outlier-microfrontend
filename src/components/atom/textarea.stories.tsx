@@ -8,7 +8,7 @@ import { Label } from "./label";
  * Displays a form textarea or a component that looks like a textarea.
  */
 const meta = {
-  title: "ui/Textarea",
+  title: "atom/Textarea",
   component: Textarea,
   tags: ["autodocs"],
   argTypes: {},

@@ -6,9 +6,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/components/atom/form";
 import { useFormContext } from "react-hook-form";
-import { Textarea } from "@/components/ui/textarea";
+import { Textarea } from "@/components/atom/textarea";
 import { type UnconfSchema } from "./unconf_form";
 
 export const DescriptionTextarea = () => {

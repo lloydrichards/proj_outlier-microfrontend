@@ -1,7 +1,7 @@
 import AuthButton from "@/components/molecule/auth_button/auth_button.server";
 import { typefaceSubtitle } from "@/components/typeface";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/atom/avatar";
+import { Button } from "@/components/atom/button";
 import { auth } from "@/server/auth";
 import Link from "next/link";
 
