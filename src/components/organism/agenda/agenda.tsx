@@ -7,15 +7,22 @@ import { type FC, Fragment } from "react";
 import { LocalTime } from "@/components/molecule/local_time/local_time";
 import { TimeZone } from "@/components/molecule/time_zone/time_zone";
 import { DateLine } from "@/components/molecule/date_line/date_line";
+import { cn } from "@/lib/utils";
 
-export const Agenda: FC<{ edition?: string; date?: Date }> = async ({
+type AgendaProps = {
+  edition?: string;
+  date?: Date;
+  className?: string;
+};
+export const Agenda: FC<AgendaProps> = async ({
   edition = null,
   date = null,
+  className,
 }) => {
   const agenda = await api.block.getAgenda({ edition, date });
 
   return (
-    <div className="grid w-full gap-2">
+    <article className={cn("grid w-full gap-2", className)}>
       {agenda.length > 0 ? (
         agenda.map((block, idx) => {
           const lastBlock = agenda.at(idx - 1);
@@ -27,9 +34,7 @@ export const Agenda: FC<{ edition?: string; date?: Date }> = async ({
               {idx === 0 && <TimeZone />}
               <AgendaBlockMenu block={block}>
                 <div className="grid grid-cols-[4rem_1fr] gap-2 sm:grid-cols-[8rem_1fr]">
-                  <p className={typefaceTitle("text-sm sm:text-md")}>
-                    <LocalTime date={block.start} />
-                  </p>
+                  <LocalTime date={block.start} />
                   <BlockCard block={block} />
                 </div>
               </AgendaBlockMenu>
@@ -40,6 +45,6 @@ export const Agenda: FC<{ edition?: string; date?: Date }> = async ({
         <p className={typefaceTitle()}>Agenda has not be posted yet.</p>
       )}
       <AddBlockDialog lastTime={agenda.at(-1)?.end} />
-    </div>
+    </article>
   );
 };

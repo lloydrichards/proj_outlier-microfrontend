@@ -7,13 +7,9 @@ export default async function Home({
   searchParams: { edition?: string };
 }) {
   return (
-    <main className="grid justify-center">
-      <div className="p-1 md:p-6 lg:max-w-screen-lg">
-        <Header />
-        <div className="p-0 md:p-4 ">
-          <Agenda edition={edition} />
-        </div>
-      </div>
+    <main className="grid justify-center p-1 md:p-6 ">
+      <Header />
+      <Agenda edition={edition} className="p-0 md:p-4 lg:max-w-screen-lg" />
     </main>
   );
 }
