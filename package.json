@@ -15,8 +15,10 @@
     "dev": "next dev",
     "lint": "next lint",
     "prettier": "prettier --write .",
+    "release": "semantic-release",
     "start": "next start",
     "storybook": "storybook dev -p 6006",
+    "storybook:test": "test-storybook",
     "type-check": "tsc --build"
   },
   "dependencies": {
@@ -61,6 +63,9 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.0.4",
     "@storybook/addon-essentials": "^8.1.1",
     "@storybook/addon-interactions": "^8.1.1",
     "@storybook/addon-links": "^8.1.1",
@@ -68,6 +73,7 @@
     "@storybook/nextjs": "^8.1.1",
     "@storybook/react": "^8.1.1",
     "@storybook/test": "^8.1.1",
+    "@storybook/test-runner": "^0.18.1",
     "@types/bun": "^1.1.2",
     "@types/d3-format": "^3.0.4",
     "@types/d3-time-format": "^4.0.3",
@@ -88,6 +94,7 @@
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
+    "semantic-release": "^23.1.1",
     "storybook": "^8.1.1",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
