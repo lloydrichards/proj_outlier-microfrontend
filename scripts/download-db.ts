@@ -33,6 +33,7 @@ const main = async () => {
     type: block.type,
     start: block.start,
     end: block.end,
+    edition: block.edition,
     events: block.events.map((event) => ({
       title: event.title,
       summary: event.summary,
@@ -55,11 +56,22 @@ const main = async () => {
     })),
   }));
 
-  await Bun.write(
-    "./src/server/db/seed/data/2024-edition.json",
-    JSON.stringify(parsed, null, 2),
+  const allEditions = new Set(parsed.map((block) => block.edition));
+
+  const groupedByEdition = Array.from(allEditions).map((edition) => ({
+    edition,
+    data: parsed.filter((block) => block.edition === edition),
+  }));
+
+  await Promise.all(
+    groupedByEdition.map(async ({ edition, data }) => {
+      await Bun.write(
+        `./src/server/db/seed/data/${edition}-edition.json`,
+        JSON.stringify(data, null, 2),
+      );
+      process.exit(0);
+    }),
   );
-  process.exit(0);
 };
 
 main()

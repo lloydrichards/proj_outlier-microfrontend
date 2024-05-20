@@ -3,29 +3,31 @@
     "type": "PAUSE",
     "start": "2023-05-03T08:00:00.000Z",
     "end": "2023-05-03T09:00:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "ANNOUNCEMENT",
     "start": "2023-05-03T09:00:00.000Z",
     "end": "2023-05-03T09:10:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "OTHER",
         "speakers": [
           {
             "firstName": "Marília",
             "lastName": "Cunha",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -38,23 +40,24 @@
     "type": "SPEAKER",
     "start": "2023-05-03T09:10:00.000Z",
     "end": "2023-05-03T09:30:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "OTHER",
         "speakers": [
           {
             "firstName": "Amanda",
             "lastName": "Makulec",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -67,23 +70,24 @@
     "type": "ANNOUNCEMENT",
     "start": "2023-05-03T09:30:00.000Z",
     "end": "2023-05-03T10:30:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Taking up space",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "KEYNOTE",
         "speakers": [
           {
             "firstName": "Shirley",
             "lastName": "Wu",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -96,23 +100,24 @@
     "type": "SPEAKER",
     "start": "2023-05-03T10:30:00.000Z",
     "end": "2023-05-03T11:00:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Evaluating narrative visualization: a survey of practitioners",
         "summary": null,
         "description": "How is narrative visualization evaluated? To find out we conducted a study where we surveyed and interviewed practitioners. Our study’s findings showed some interesting results, where practitioners shared their invaluable practical knowledge derived from years of experience.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
             "firstName": "Nina",
             "lastName": "Errey",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -125,23 +130,24 @@
     "type": "SPEAKER",
     "start": "2023-05-03T11:00:00.000Z",
     "end": "2023-05-03T11:30:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Subjective Objects: Data visceralisation and physicalisation practice on MA Design for Data Visualisation",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "LITERACY",
         "speakers": [
           {
             "firstName": "Henrietta",
             "lastName": "Ross",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -154,29 +160,31 @@
     "type": "PAUSE",
     "start": "2023-05-03T11:30:00.000Z",
     "end": "2023-05-03T13:00:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "SPEAKER",
     "start": "2023-05-03T13:00:00.000Z",
     "end": "2023-05-03T13:30:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Designing for Success: Overcoming the Adoption Challenge in Data Analytics Products",
         "summary": null,
         "description": "Discover how design can help businesses overcome the challenge of low adoption rates for AI/ML products. Learn how a user-centric approach, UX processes, and UI principles can redefine the way we build these products and communicate their value to stakeholders.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ANALYTICS",
         "speakers": [
           {
             "firstName": "Gomathy",
             "lastName": "Viswanathan",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -189,23 +197,24 @@
     "type": "SPEAKER",
     "start": "2023-05-03T13:30:00.000Z",
     "end": "2023-05-03T14:00:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Visualization: it’s natural!",
         "summary": null,
         "description": "Metaphors play a crucial role in visualizing data because they help to create a more intuitive and relatable understanding of information. In this talk I’ll explain how I use metaphors and systems from the natural world to build visualizations, organize data, and portray information.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ART",
         "speakers": [
           {
             "firstName": "Pedro",
             "lastName": "Cruz",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -218,23 +227,24 @@
     "type": "SPEAKER",
     "start": "2023-05-03T14:00:00.000Z",
     "end": "2023-05-03T14:30:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Purpose, Form, Insight, Trust – Reflections on How to Craft Dashboards that Don’t Fail",
         "summary": null,
         "description": "Dashboards are likely still the most prevalent and asked for application of data visualization in many business contexts. Yet, many (if not most) dashboards fail. Based on personal experiences, reflections and insights, this talk explores (i) why dashboards fail, (ii) how we can design them so they don’t as and – most importantly – (iii) what practical challenges we might face when actually trying to do so.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ANALYTICS",
         "speakers": [
           {
             "firstName": "Lukas",
             "lastName": "Lienhard",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -247,23 +257,24 @@
     "type": "SPEAKER",
     "start": "2023-05-03T14:30:00.000Z",
     "end": "2023-05-03T15:00:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Ruas do Género: visualising gender representation in the toponymy of Porto",
         "summary": null,
         "description": "Ruas do Género (Gender Avenues) is a visual essay on the representation of gender in the toponymy of the city of Porto. It was selected by The Pudding as one of the best visual and data-driven stories of 2022.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
             "firstName": "Cláudio Fischer",
             "lastName": "Lemos",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -271,9 +282,9 @@
           {
             "firstName": "João Bernardo",
             "lastName": "Narciso",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -286,29 +297,31 @@
     "type": "PAUSE",
     "start": "2023-05-03T15:00:00.000Z",
     "end": "2023-05-03T15:30:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "LIGHTNING",
     "start": "2023-05-03T15:30:00.000Z",
     "end": "2023-05-03T15:40:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Principles of data journalism applied to a personal dataviz project",
         "summary": null,
         "description": "Even if you are not a journalist, learning from data-driven journalism principles can heighten the quality of your datavisualisation projects. I will walk you through how I applied six lessons in a project which ended up in the Top 10 of Tableau’s competition Ironviz in 2021.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
             "firstName": "Anne-Sophie Pereira De",
             "lastName": "Sá",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -321,23 +334,24 @@
     "type": "LIGHTNING",
     "start": "2023-05-03T15:40:00.000Z",
     "end": "2023-05-03T15:50:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Intersections between Dataviz and Speculative&Critical Design",
         "summary": null,
         "description": "Speculative and Critical Design is an approach to design that explores alternative perspectives, possible futures, and the social, cultural, and ethical implications of emerging technologies and systems. It aims to provoke critical thinking, debate, and reflection on the role of design in shaping the future. How can dataviz be a part of this kind of projects?",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ART",
         "speakers": [
           {
             "firstName": "Bruno",
             "lastName": "Lorenz",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -350,23 +364,24 @@
     "type": "LIGHTNING",
     "start": "2023-05-03T15:50:00.000Z",
     "end": "2023-05-03T16:00:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Graphical reviews: Giving graphs and charts the attention they deserve in scientific publishing",
         "summary": null,
         "description": "Many scientific journals offer peer review, and sometimes editorial and statistical reviewing. However, specialist graphical reviews are less common. This talk introduces the opportunities and challenges of setting up a panel of experts in the visual display of data to review graphs and charts submitted with our papers, to improve the display of data.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "LITERACY",
         "speakers": [
           {
             "firstName": "Will Stahl",
             "lastName": "Timmins",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -379,26 +394,27 @@
     "type": "ANNOUNCEMENT",
     "start": "2023-05-03T16:00:00.000Z",
     "end": "2023-05-03T16:10:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "OTHER",
         "speakers": [
           {
-            "firstName": "Marília",
-            "lastName": "Cunha",
-            "pronouns": null,
-            "email": null,
+            "firstName": "Alex",
+            "lastName": "Gurvich",
             "title": null,
+            "pronouns": "he/him",
+            "email": null,
             "organization": null,
-            "imageUrl": null,
-            "bio": null
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Alex%20Gurvich.png",
+            "bio": "In his former life, Alex Gurvich studied the formation of distant galaxies like the Milky Way using supercomputer simulations of the universe and received a Ph.D. in Computational Astrophysics from Northwestern University. During his Ph.D., he had the opportunity as an NSF Graduate Fellow to develop an interactive browser-based point cloud visualization tool, Firefly, which led him to realize he was more interested in building software to visualize data than he was remaining in academia. Now he creates interactive web visualizations of climate data as a member of NASA Goddard's Scientific Visualization Studio and serves as the technical lead of Earth.gov, the virtual home of NASA's Earth Information Center."
           }
         ]
       }
@@ -408,47 +424,52 @@
     "type": "UNCONF",
     "start": "2023-05-03T16:10:00.000Z",
     "end": "2023-05-03T17:00:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "PAUSE",
     "start": "2023-05-03T17:00:00.000Z",
     "end": "2023-05-03T17:30:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "SPEAKER",
     "start": "2023-05-03T17:30:00.000Z",
     "end": "2023-05-03T17:40:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "SPEAKER",
     "start": "2023-05-03T18:00:00.000Z",
     "end": "2023-05-03T18:30:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "SPEAKER",
     "start": "2023-05-03T18:30:00.000Z",
     "end": "2023-05-03T19:00:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Happy speakers, Happy Planet: Behind the Scenes of an Award-Winning Infographic",
         "summary": null,
         "description": "Our talk explores the award-winning \"Happy speakers, Happy Planet\" poster's collaborative creation process for a global data visualization contest. Discover how geospatial visualization and the project's creative journey inspired us to make positive changes in our daily lives.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
             "firstName": "Qingyue",
             "lastName": "Li",
+            "title": null,
             "pronouns": "she/her",
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -456,9 +477,9 @@
           {
             "firstName": "Enrique",
             "lastName": "Mendoza",
+            "title": null,
             "pronouns": "he/him",
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -471,25 +492,26 @@
     "type": "SPEAKER",
     "start": "2023-05-03T19:00:00.000Z",
     "end": "2023-05-03T19:30:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Drawing Data with Kids",
         "summary": null,
         "description": "Incorporating data visualization into family activities can be a fun and engaging way to introduce children to the basics of data literacy. Drawing Data with Kids is an example of such an PAUSE that I have personally done with my own children. Through this talk, I hope to encourage other parents to explore creative ways to make their children data literate and empower the next generation with these essential skills.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "LITERACY",
         "speakers": [
           {
             "firstName": "Gulrez",
             "lastName": "Khan",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Gulrez%20khan.png",
             "bio": null
           }
         ]
@@ -500,23 +522,24 @@
     "type": "SPEAKER",
     "start": "2023-05-03T19:30:00.000Z",
     "end": "2023-05-03T20:00:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Exploring the Role of AI in Optimizing the Data Pipeline",
         "summary": null,
         "description": "This talk will explore the transformative power of generative AI in optimizing the data pipeline, highlighting key tools such as ChatGPT, Mid Journey, Stable Diffusion and Dalle 2. We'll discuss best practices and effective implementation strategies to revolutionize data collection, analysis and visualization in the era of artificial intelligence.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "LITERACY",
         "speakers": [
           {
             "firstName": "Danne",
             "lastName": "Woo",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -529,37 +552,40 @@
     "type": "UNCONF",
     "start": "2023-05-03T20:00:00.000Z",
     "end": "2023-05-03T22:00:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "PAUSE",
     "start": "2023-05-04T08:00:00.000Z",
     "end": "2023-05-04T09:00:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "ANNOUNCEMENT",
     "start": "2023-05-04T09:00:00.000Z",
     "end": "2023-05-04T09:10:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "OTHER",
         "speakers": [
           {
-            "firstName": "Marília",
-            "lastName": "Cunha",
+            "firstName": "Regine",
+            "lastName": "Abos",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Regine%20Abos.png",
             "bio": null
           }
         ]
@@ -570,23 +596,24 @@
     "type": "ANNOUNCEMENT",
     "start": "2023-05-04T09:15:00.000Z",
     "end": "2023-05-04T10:15:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Amidst the Visualization and Art of Data",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ART",
         "speakers": [
           {
             "firstName": "Nadieh",
             "lastName": "Bremer",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -599,23 +626,24 @@
     "type": "SPEAKER",
     "start": "2023-05-04T10:15:00.000Z",
     "end": "2023-05-04T10:45:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Building complex experiences without coding",
         "summary": null,
         "description": "In this talk, Kirell will present Cables.gl. A versatile platform for creating interactive graphics, animations, and visualizations. It is designed to be accessible to both beginners and experienced users, with a node-based visual programming interface that allows users to create complex visuals without writing any code.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ART",
         "speakers": [
           {
             "firstName": "Dr. Kirell",
             "lastName": "Benzi",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -628,23 +656,24 @@
     "type": "SPEAKER",
     "start": "2023-05-04T10:45:00.000Z",
     "end": "2023-05-04T11:15:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Formula for Success: The Power of the Side Hustle",
         "summary": null,
         "description": "Side hustles are on the up! In this talk I explore the ups and downs of the 6 year journey of my sports data viz side hustle, from first sale on Etsy to working on the recently launched Global Formula 1 Exhibition. Expect practical tips about getting a side hustle set up, managing a hustle alongside a day job, and plenty of sports related data viz!",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ART",
         "speakers": [
           {
             "firstName": "James",
             "lastName": "Smith",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -657,23 +686,24 @@
     "type": "SPEAKER",
     "start": "2023-05-04T11:15:00.000Z",
     "end": "2023-05-04T11:45:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Projecting into the Paris 2024 Games / How data representations can contribute to Olympic gold, or not",
         "summary": null,
         "description": "In summer 2024, Paris will host the Olympic and Paralympic Games. How do athletes, coaches and scientists work together to reach their objectives? Discover which roles do data representations play in this quest for gold and what could you learn from elite athletes. Ready for an adventure behind the Olympic performances? Set… Go!",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "LITERACY",
         "speakers": [
           {
             "firstName": "Jeremy",
             "lastName": "Wanner",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -686,39 +716,31 @@
     "type": "PAUSE",
     "start": "2023-05-04T11:45:00.000Z",
     "end": "2023-05-04T13:00:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "SPEAKER",
     "start": "2023-05-04T13:00:00.000Z",
     "end": "2023-05-04T14:00:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Explore, Explain, Live! - The making of a dataviz magazine",
         "summary": null,
         "description": "Panel",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "LITERACY",
         "speakers": [
           {
-            "firstName": "Andy",
-            "lastName": "Kirk",
+            "firstName": "Julie",
+            "lastName": "Brunet",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
-            "organization": null,
-            "imageUrl": null,
-            "bio": null
-          },
-          {
-            "firstName": "Jason",
-            "lastName": "Forrest",
-            "pronouns": null,
-            "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -726,9 +748,19 @@
           {
             "firstName": "Claire",
             "lastName": "Santoro",
+            "title": null,
             "pronouns": null,
             "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          },
+          {
+            "firstName": "Andy",
+            "lastName": "Kirk",
             "title": null,
+            "pronouns": null,
+            "email": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -736,19 +768,19 @@
           {
             "firstName": "Emily",
             "lastName": "Barone",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
           },
           {
-            "firstName": "Julie",
-            "lastName": "Brunet",
+            "firstName": "Jason",
+            "lastName": "Forrest",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -761,23 +793,24 @@
     "type": "SPEAKER",
     "start": "2023-05-04T14:00:00.000Z",
     "end": "2023-05-04T14:30:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "How to Build Your Creative Toolkit in Data Communication",
         "summary": null,
         "description": "The latest tools and tech help you create innovative dataviz, but creativity plays a huge role too. Pulling from my own experience and years of interviewing accomplished information designers, I'll share the essential elements of building a toolkit that will make you more \"creativity-prone.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
             "firstName": "Alli",
             "lastName": "Torban",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -790,33 +823,34 @@
     "type": "SPEAKER",
     "start": "2023-05-04T14:30:00.000Z",
     "end": "2023-05-04T15:00:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Designing the MSNBC Big Board",
         "summary": null,
         "description": "In 2018 the speakers worked with MSNBC to design and implement Steve Kornacki's \"big board\" for the midterm elections. The \"election map\" has been used in every election since then. This talk will cover the design journey from user research to on-air coverage.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
-            "firstName": "Hermann",
-            "lastName": "Zschiegner",
-            "pronouns": null,
-            "email": null,
+            "firstName": "Hyeok",
+            "lastName": "Kim",
             "title": null,
+            "pronouns": "he/him",
+            "email": null,
             "organization": null,
-            "imageUrl": null,
-            "bio": null
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Hyeok%20Kim.png",
+            "bio": "Hyeok Kim is a human-computer interaction and visualization researcher. His research aims to support visualization authors to produce data visualizations for multiple audiences with different characteristics. He completed his Ph.D. in Computer Science at Northwestern University and has published his work in ACM CHI, CSCW, IEEE VIS, and EuroVis."
           },
           {
             "firstName": "Natalie",
             "lastName": "Erdem",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -829,23 +863,24 @@
     "type": "SPEAKER",
     "start": "2023-05-04T15:00:00.000Z",
     "end": "2023-05-04T15:30:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Storytelling with Systems",
         "summary": null,
         "description": "Systems thinking – looking at the relationships between things and their resultant behaviour – is a powerful way of solving problems and is highly suited to the dynamic, complex challenges facing society today. Systems maps, however, can quickly become complicated! In this talk, I will talk about my experiments in blending data visualisation and storytelling to allow users to explore, understand and make interventions in complex systems.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
             "firstName": "Rudi O'Reilly",
             "lastName": "Meehan",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -858,25 +893,26 @@
     "type": "ANNOUNCEMENT",
     "start": "2023-05-04T15:30:00.000Z",
     "end": "2023-05-04T15:35:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "OTHER",
         "speakers": [
           {
-            "firstName": "Marília",
-            "lastName": "Cunha",
+            "firstName": "Eli",
+            "lastName": "Holder",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Eli%20Holder.png",
             "bio": null
           }
         ]
@@ -887,35 +923,36 @@
     "type": "PAUSE",
     "start": "2023-05-04T15:35:00.000Z",
     "end": "2023-05-04T16:35:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Data Sketches book signing",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ART",
         "speakers": [
           {
-            "firstName": "Nadieh",
-            "lastName": "Bremer",
-            "pronouns": null,
-            "email": null,
+            "firstName": "Michael",
+            "lastName": "Gethers",
             "title": null,
+            "pronouns": "he/him",
+            "email": null,
             "organization": null,
-            "imageUrl": null,
-            "bio": null
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Michael%20Gethers.png",
+            "bio": "Michael is a data scientist and data visualization designer currently based in Indianapolis, IN.  After working for nearly 10 years as a data scientist in tech and cybersecurity, he now leads data strategy for McLaren Racing’s IndyCar Team, Arrow McLaren, where he is working to transform the way the team stores, analyzes, presents, and understands the large volume of data that is produced every time one of its cars is on track.  Michael studied Statistics at UC Berkeley before working at Mercer and Salesforce in San Francisco, HUMAN Security in London, and now McLaren in Indianapolis."
           },
           {
-            "firstName": "Shirley",
-            "lastName": "Wu",
-            "pronouns": null,
-            "email": null,
+            "firstName": "Tatiana Laher",
+            "lastName": "Kalainoff",
             "title": null,
+            "pronouns": "she/her",
+            "email": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Tatiana%20Kalainoff.png",
             "bio": null
           }
         ]
@@ -926,53 +963,59 @@
     "type": "UNCONF",
     "start": "2023-05-04T16:35:00.000Z",
     "end": "2023-05-04T17:35:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "PAUSE",
     "start": "2023-05-04T17:35:00.000Z",
     "end": "2023-05-04T18:15:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "LIGHTNING",
     "start": "2023-05-04T18:15:00.000Z",
     "end": "2023-05-04T18:25:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "LIGHTNING",
     "start": "2023-05-04T18:25:00.000Z",
     "end": "2023-05-04T18:35:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "LIGHTNING",
     "start": "2023-05-04T18:35:00.000Z",
     "end": "2023-05-04T18:45:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "SPEAKER",
     "start": "2023-05-04T18:45:00.000Z",
     "end": "2023-05-04T19:15:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Stand Behind Your Data!",
         "summary": null,
         "description": "The physical gestures that a presenter makes when speaking about technical or abstract content can be critical to audience engagement and comprehension. Unfortunately, this communication channel is limited when presenting data to remote audiences via screen-sharing. In response, Matt will demonstrate a new way to present data powered by computer vision: interacting with visualization overlays by pointing at them in live webcam video.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
             "firstName": "Matt",
             "lastName": "Brehmer",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -985,23 +1028,24 @@
     "type": "SPEAKER",
     "start": "2023-05-04T19:15:00.000Z",
     "end": "2023-05-04T19:45:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "You don't need another dashboard",
         "summary": null,
         "description": "Dashboards are often chosen as the way to create a data driven culture, or as the ideal solution to make data available. But this idea comes from the habit of starting a data project from the available data, and not from the users and their community perspectives.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ANALYTICS",
         "speakers": [
           {
             "firstName": "Ana",
             "lastName": "Bertol",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -1014,35 +1058,38 @@
     "type": "SPEAKER",
     "start": "2023-05-04T19:45:00.000Z",
     "end": "2023-05-04T20:15:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "UNCONF",
     "start": "2023-05-04T20:15:00.000Z",
     "end": "2023-05-04T20:45:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "SPEAKER",
     "start": "2023-05-04T21:15:00.000Z",
     "end": "2023-05-04T21:45:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Lessons Learned From Our Accessibility-First Approach to Data Visualization",
         "summary": null,
         "description": "During this tale of two disciplines, I will outline key lessons learned as we aimed to make data accessible through Google’s charts, graphs and visualizations. Using real life examples, I will walk through our accessibility-first approach to design, why it matters, how it empowered our team, and how it led us to creating better data experiences for everyone.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ACCESSIBILITY",
         "speakers": [
           {
             "firstName": "Kent",
             "lastName": "Eisenhuth",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -1055,68 +1102,76 @@
     "type": "SPEAKER",
     "start": "2023-05-04T21:45:00.000Z",
     "end": "2023-05-04T22:15:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "LIGHTNING",
     "start": "2023-05-04T22:15:00.000Z",
     "end": "2023-05-04T22:25:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "LIGHTNING",
     "start": "2023-05-04T22:25:00.000Z",
     "end": "2023-05-04T22:35:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "LIGHTNING",
     "start": "2023-05-04T22:35:00.000Z",
     "end": "2023-05-04T22:45:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "LIGHTNING",
     "start": "2023-05-04T22:45:00.000Z",
     "end": "2023-05-04T23:15:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "LIGHTNING",
     "start": "2023-05-04T22:55:00.000Z",
     "end": "2023-05-04T23:05:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "PAUSE",
     "start": "2023-05-05T08:00:00.000Z",
     "end": "2023-05-05T09:00:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "ANNOUNCEMENT",
     "start": "2023-05-05T09:00:00.000Z",
     "end": "2023-05-05T09:10:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "OTHER",
         "speakers": [
           {
-            "firstName": "Marília",
-            "lastName": "Cunha",
-            "pronouns": null,
-            "email": null,
+            "firstName": "Taha",
+            "lastName": "Ebrahimi",
             "title": null,
+            "pronouns": "she/her",
+            "email": null,
             "organization": null,
-            "imageUrl": null,
-            "bio": null
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Taha%20Ebrahimi.png",
+            "bio": "Taha, author of \"Street Trees of Seattle: An Illustrated Walking Guide\" and Director of Tableau Public, explores data through hand-drawn narratives."
           }
         ]
       }
@@ -1126,23 +1181,24 @@
     "type": "ANNOUNCEMENT",
     "start": "2023-05-05T09:15:00.000Z",
     "end": "2023-05-05T10:15:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Beyond the dashboard: Creating a data culture using the IMPACT Teams approach",
         "summary": null,
         "description": "ANNOUNCEMENT speaker",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ANALYTICS",
         "speakers": [
           {
             "firstName": "Johnson",
             "lastName": "Anyona",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -1155,23 +1211,24 @@
     "type": "SPEAKER",
     "start": "2023-05-05T10:15:00.000Z",
     "end": "2023-05-05T10:45:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "",
         "summary": null,
         "description": "This presentation provides evidence-based research on how teams use sets of data visualisations in communication (or visualisation) boards to make decisions. These can be analogue i.e. paper/whiteboard based or digital. This presentation will outline the guidelines on how to design boards to best support team-based decision-making.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "LITERACY",
         "speakers": [
           {
             "firstName": "Dr. Nicola",
             "lastName": "Bateman",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -1184,23 +1241,24 @@
     "type": "SPEAKER",
     "start": "2023-05-05T10:45:00.000Z",
     "end": "2023-05-05T11:15:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "The role of Data Visualisation in African Investigative Journalism",
         "summary": null,
         "description": "An exploration of how data visualisations influence the consumption and dissemination of information in African countries and vice versa. I will showcase some of Code for Africa's successful initiatives, discuss challenges and demonstrate how we are able to engage a broader African audience and make a positive impact using various visualisation techniques.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
             "firstName": "Sakina",
             "lastName": "Salem",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -1213,23 +1271,24 @@
     "type": "SPEAKER",
     "start": "2023-05-05T11:15:00.000Z",
     "end": "2023-05-05T11:45:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "When data doesn't speak for itself: Integrating your research into a larger content strategy",
         "summary": null,
         "description": "Have you ever created a beautifully complex data visualization, only to find that it doesn't get the attention it deserves? In this talk, I will explore different ways to make your data speak by integrating your findings into a larger content strategy, from choosing the right topic and format for to “selling” your charts to traditional and social media.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
             "firstName": "Ksenia",
             "lastName": "Pogorelova",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -1242,29 +1301,31 @@
     "type": "PAUSE",
     "start": "2023-05-05T11:45:00.000Z",
     "end": "2023-05-05T13:00:00.000Z",
+    "edition": "2023",
     "events": []
   },
   {
     "type": "ANNOUNCEMENT",
     "start": "2023-05-05T13:00:00.000Z",
     "end": "2023-05-05T14:00:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Making charts that make an impact",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "OTHER",
         "speakers": [
           {
             "firstName": "John Burn",
             "lastName": "Murdoch",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -1277,23 +1338,24 @@
     "type": "SPEAKER",
     "start": "2023-05-05T14:00:00.000Z",
     "end": "2023-05-05T14:30:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Visualizing Inequity Reshapes the Narrative: Building Skills to Improve Equity Data Visualizations",
         "summary": null,
         "description": "Data can be meaningfully visualized to guide decisionmakers toward supporting equitable programming as well as highlight equity in public-facing reporting. In this session, Kaitlyn, a visual analytics specialist, will take the lessons and experiences Center for Sustainable Energy has encountered to recommend ways to better visualize equity gaps for business analytics and program evaluation dashboards.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "ACCESSIBILITY",
         "speakers": [
           {
             "firstName": "Kaitlyn",
             "lastName": "Bretz",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -1306,33 +1368,34 @@
     "type": "SPEAKER",
     "start": "2023-05-05T14:30:00.000Z",
     "end": "2023-05-05T15:00:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Uncovering Inequalities: Reframing the Queer Flag to Tell Data-Driven Stories",
         "summary": null,
         "description": "“Uncovering Inequalities: Reframing the Queer Flag to Tell Data-Driven Stories” discusses the Pudding Viz Cup 2022 winning project “Flags of Inequality”. It explores how the rainbow flag, one of the most recognizable symbols of the LGBTQ+ community, can be used as a tool for data storytelling.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
-            "firstName": "Rita",
-            "lastName": "Costa",
+            "firstName": "Beatriz",
+            "lastName": "Malveiro",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
           },
           {
-            "firstName": "Beatriz",
-            "lastName": "Malveiro",
+            "firstName": "Rita",
+            "lastName": "Costa",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -1345,23 +1408,24 @@
     "type": "SPEAKER",
     "start": "2023-05-05T15:00:00.000Z",
     "end": "2023-05-05T15:30:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "Visualizing the unimaginable: imagination and representation of a world in crisis",
         "summary": null,
         "description": "Data visualization is one of the main forms of communication used to raise ecological awareness. But, in the urgent context of the Anthropocene, is it enough to keep up with the scale of the challenges we face?  In this talk, I will delve into how dataviz can help us tackle large-scale and invisible phenomena like the climate crisis and reflect on ways of developing more informed and ecology-oriented approaches to visualizing our world.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "STORYTELLING",
         "speakers": [
           {
             "firstName": "Rodolfo",
             "lastName": "Almeida",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -1374,33 +1438,34 @@
     "type": "SPEAKER",
     "start": "2023-05-05T15:30:00.000Z",
     "end": "2023-05-05T16:00:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "A data-driven self-exploration. If you can count it, you can tell its story.",
         "summary": null,
         "description": "With the quest to practice dataviz with short projects, Alenka Gucek and Martina Zunica started the #journaldataviz challenge in January 2022, creating a community of practitioners. The challenge merges journaling and data visualization, to help speakers in improving their sketching and visualization skills and to look at our personal life from a data-driven point of view.",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "LITERACY",
         "speakers": [
           {
-            "firstName": "Martina",
-            "lastName": "Zunica",
+            "firstName": "Alenka",
+            "lastName": "Gucek",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
           },
           {
-            "firstName": "Alenka",
-            "lastName": "Gucek",
+            "firstName": "Martina",
+            "lastName": "Zunica",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -1413,36 +1478,37 @@
     "type": "ANNOUNCEMENT",
     "start": "2023-05-05T16:00:00.000Z",
     "end": "2023-05-05T16:15:00.000Z",
+    "edition": "2023",
     "events": [
       {
         "title": "",
         "summary": null,
         "description": "",
         "location": "MAIN",
-        "linkUrl": null,
-        "linkLabel": null,
         "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
         "category": "OTHER",
         "speakers": [
           {
-            "firstName": "Marília",
-            "lastName": "Cunha",
+            "firstName": "Gabrielle",
+            "lastName": "Merite",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
-            "imageUrl": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Gabrielle%20Merite.png",
             "bio": null
           },
           {
-            "firstName": "Amanda",
-            "lastName": "Makulec",
+            "firstName": "Sophie",
+            "lastName": "Sparks",
+            "title": null,
             "pronouns": null,
             "email": null,
-            "title": null,
             "organization": null,
-            "imageUrl": null,
-            "bio": null
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Sophie%20Sparkes.png",
+            "bio": "Sophie, an Information Designer, and former Tableau Public team member, bridges the illustration and data to bring information to life."
           }
         ]
       }
