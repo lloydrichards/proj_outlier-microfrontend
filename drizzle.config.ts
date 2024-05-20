@@ -5,9 +5,9 @@ import { env } from "@/env";
 export default {
   schema: "./src/server/db/schema",
   out: "./src/server/db/migrations",
-  driver: "pg",
+  dialect: "postgresql",
   dbCredentials: {
-    connectionString: env.DATABASE_URL,
+    url: env.DATABASE_URL,
   },
   verbose: true,
   strict: true,
