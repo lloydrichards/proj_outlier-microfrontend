@@ -12,6 +12,8 @@ jobs:
   lint:
     name: "Lint"
     runs-on: ubuntu-latest
+    env:
+      SKIP_ENV_VALIDATION: true
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v1
@@ -22,6 +24,8 @@ jobs:
   verify-types:
     name: "Types"
     runs-on: ubuntu-latest
+    env:
+      SKIP_ENV_VALIDATION: true
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v1
