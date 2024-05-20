@@ -22,7 +22,6 @@
     "jsx": "preserve",
     "plugins": [{ "name": "next" }],
     "incremental": true,
-    "types": ["bun-types"],
 
     /* Path Aliases */
     "baseUrl": ".",
