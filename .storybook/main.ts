@@ -17,7 +17,6 @@ const config: StorybookConfig = {
   },
   docs: {},
   staticDirs: [
-    "../public",
     {
       from: "../public/fonts",
       to: "/public/fonts",
