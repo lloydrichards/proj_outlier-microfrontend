@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.2.0...v0.2.1) (2024-05-25)
+
+
+### Bug Fixes
+
+* **forms:** :bug: change the value too ([d126096](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/d126096d47c1ff0101bf3cf733154033af02dade))
+
 # [0.2.0](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.1.0...v0.2.0) (2024-05-20)
 
 
