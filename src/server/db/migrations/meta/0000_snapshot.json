@@ -61,9 +61,7 @@
       "indexes": {
         "start_idx": {
           "name": "start_idx",
-          "columns": [
-            "start"
-          ],
+          "columns": ["start"],
           "isUnique": false
         }
       },
@@ -72,9 +70,7 @@
       "uniqueConstraints": {
         "blocks_start_unique": {
           "name": "blocks_start_unique",
-          "columns": [
-            "start"
-          ],
+          "columns": ["start"],
           "nullsNotDistinct": false
         }
       }
@@ -171,13 +167,9 @@
         "events_block_id_blocks_id_fk": {
           "name": "events_block_id_blocks_id_fk",
           "tableFrom": "events",
-          "columnsFrom": [
-            "block_id"
-          ],
+          "columnsFrom": ["block_id"],
           "tableTo": "blocks",
-          "columnsTo": [
-            "id"
-          ],
+          "columnsTo": ["id"],
           "onUpdate": "no action",
           "onDelete": "cascade"
         }
@@ -263,10 +255,7 @@
       "uniqueConstraints": {
         "speakers_first_name_last_name_unique": {
           "name": "speakers_first_name_last_name_unique",
-          "columns": [
-            "first_name",
-            "last_name"
-          ],
+          "columns": ["first_name", "last_name"],
           "nullsNotDistinct": false
         }
       }
@@ -293,26 +282,18 @@
         "speakers_to_events_event_id_events_id_fk": {
           "name": "speakers_to_events_event_id_events_id_fk",
           "tableFrom": "speakers_to_events",
-          "columnsFrom": [
-            "event_id"
-          ],
+          "columnsFrom": ["event_id"],
           "tableTo": "events",
-          "columnsTo": [
-            "id"
-          ],
+          "columnsTo": ["id"],
           "onUpdate": "no action",
           "onDelete": "cascade"
         },
         "speakers_to_events_speaker_id_speakers_id_fk": {
           "name": "speakers_to_events_speaker_id_speakers_id_fk",
           "tableFrom": "speakers_to_events",
-          "columnsFrom": [
-            "speaker_id"
-          ],
+          "columnsFrom": ["speaker_id"],
           "tableTo": "speakers",
-          "columnsTo": [
-            "id"
-          ],
+          "columnsTo": ["id"],
           "onUpdate": "no action",
           "onDelete": "cascade"
         }
@@ -320,10 +301,7 @@
       "compositePrimaryKeys": {
         "speakers_to_events_event_id_speaker_id_pk": {
           "name": "speakers_to_events_event_id_speaker_id_pk",
-          "columns": [
-            "event_id",
-            "speaker_id"
-          ]
+          "columns": ["event_id", "speaker_id"]
         }
       },
       "uniqueConstraints": {}
@@ -394,11 +372,7 @@
     "public.status": {
       "name": "status",
       "schema": "public",
-      "values": [
-        "PENDING",
-        "ACCEPTED",
-        "REJECTED"
-      ]
+      "values": ["PENDING", "ACCEPTED", "REJECTED"]
     }
   },
   "schemas": {},

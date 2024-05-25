@@ -7,7 +7,7 @@ import {
 import { Button } from "@/components/atom/button";
 import { Form } from "@/components/atom/form";
 import { Separator } from "@/components/atom/separator";
-import { Block, insertEventSchema } from "@/server/db/schema";
+import { type Block, insertEventSchema } from "@/server/db/schema";
 import { api } from "@/trpc/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CirclePlus, Trash } from "lucide-react";

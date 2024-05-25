@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { UnconfForm } from "./unconf_form";
+import { type Block } from "@/server/db/schema";
 
 /**
  * An image element with a fallback for representing the user.
@@ -11,7 +12,10 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {},
   args: {
-    blockId: 1,
+    block: {
+      id: 1,
+      start: new Date(),
+    } as Block,
   },
   parameters: {
     layout: "padded",
