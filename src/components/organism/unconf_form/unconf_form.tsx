@@ -7,7 +7,7 @@ import {
 import { Button } from "@/components/atom/button";
 import { Form } from "@/components/atom/form";
 import { Separator } from "@/components/atom/separator";
-import { insertEventSchema } from "@/server/db/schema";
+import { Block, insertEventSchema } from "@/server/db/schema";
 import { api } from "@/trpc/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CirclePlus, Trash } from "lucide-react";
@@ -22,6 +22,7 @@ import { EventCategorySelect } from "./event_category_select";
 import { OrganizerInput } from "./organizer_input";
 import { PronounsInput } from "./pronouns_input";
 import { TitleInput } from "./title_input";
+import { formatDate, formatTimeWithMeridiem } from "@/lib/utils";
 
 const unconfSchema = z.object({
   event: z.object({
@@ -44,16 +45,16 @@ const unconfSchema = z.object({
 export type UnconfSchema = z.infer<typeof unconfSchema>;
 
 type UnconfFormProps = {
-  blockId: number;
+  block: Block;
 };
 
-export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
+export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
   const [finished, setFinished] = useState(false);
   const form = useForm<UnconfSchema>({
     resolver: zodResolver(unconfSchema),
     defaultValues: {
       event: {
-        blockId,
+        blockId: block.id,
         description:
           "1. Best way to reach you during the conference\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\n\n3. Supplies or equipment needed (e.g., projector)\n\n",
       },
@@ -93,6 +94,10 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-2">
+        <h1 className={typefaceSubtitle("text-right opacity-30")}>
+          Unconf Submission [{formatDate(block.start)} -{" "}
+          {formatTimeWithMeridiem(block.start)}]
+        </h1>
         <h2 className={typefaceTitle()}>Organizer</h2>
         <OrganizerInput index={0} />
         <PronounsInput index={0} />
@@ -126,7 +131,7 @@ export const UnconfForm: FC<UnconfFormProps> = ({ blockId }) => {
           </Button>
         </div>
         <Separator className="my-4" />
-        <h2 className={typefaceTitle()}>Unconf Event</h2>
+        <h2 className={typefaceTitle()}>Event</h2>
         <TitleInput />
         <EventCategorySelect exclude={["KEYNOTE", "DVS"]} />
         <DescriptionTextarea />
