@@ -13,7 +13,8 @@
     "theme",
     "components",
     "routing",
-    "scripts"
+    "scripts",
+    "forms"
   ],
   "cSpell.words": ["Unconf"]
 }

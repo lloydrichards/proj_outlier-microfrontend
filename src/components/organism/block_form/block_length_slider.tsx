@@ -100,7 +100,7 @@ const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
                   ))}
                 </div>
                 <div className="flex w-1/2 flex-col overflow-scroll">
-                  {Array.from({ length: 6 }).map((_, i) => (
+                  {Array.from({ length: 12 }).map((_, i) => (
                     <PopoverClose key={i}>
                       <Button
                         key={i}
@@ -113,7 +113,7 @@ const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
                           field.onChange(value);
                         }}
                       >
-                        {i * 10} M
+                        {i * 5} M
                       </Button>
                     </PopoverClose>
                   ))}
