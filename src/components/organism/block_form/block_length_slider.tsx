@@ -85,7 +85,7 @@ const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
                     <PopoverClose key={i}>
                       <Button
                         key={i}
-                        className="px-2 hover:bg-foreground/10"
+                        className="p-2 hover:bg-foreground/10"
                         disabled={!field.value}
                         onClick={(e) => {
                           e.preventDefault();
@@ -104,12 +104,12 @@ const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
                     <PopoverClose key={i}>
                       <Button
                         key={i}
-                        className="px-2 hover:bg-foreground/10"
+                        className="p-2 hover:bg-foreground/10"
                         disabled={!field.value}
                         onClick={(e) => {
                           e.preventDefault();
                           const value = field.value;
-                          value.setMinutes(i * 10);
+                          value.setMinutes(i * 5);
                           field.onChange(value);
                         }}
                       >
