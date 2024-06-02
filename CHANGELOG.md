@@ -1,3 +1,15 @@
+# [0.3.0](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.2.1...v0.3.0) (2024-06-02)
+
+
+### Bug Fixes
+
+* **components:** :bug: align cards to top ([33e76c3](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/33e76c300412a2790dd3ec5800d5ef8801e1c8b6))
+
+
+### Features
+
+* **i18n:** :globe_with_meridians: add internationalization ([8654c46](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/8654c46b436ec71a44d6fca2423a55902cdb4ca8))
+
 ## [0.2.1](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.2.0...v0.2.1) (2024-05-25)
 
 ### Bug Fixes
