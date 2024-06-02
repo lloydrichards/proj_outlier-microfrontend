@@ -14,7 +14,8 @@
     "components",
     "routing",
     "scripts",
-    "forms"
+    "forms",
+    "i18n"
   ],
   "cSpell.words": ["Unconf"]
 }
