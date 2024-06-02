@@ -66,6 +66,7 @@
     "Unconf": {
       "title": "Unconf",
       "button_toLocation": "To Location",
+      "organizedBy": "Organized by",
       "empty_message": "Block saved for unconference sessions; check back during the conference to find out what they are!"
     },
     "Lightning": {

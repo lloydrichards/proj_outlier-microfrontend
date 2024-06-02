@@ -9,8 +9,11 @@ import type { AgendaEvent } from "../block_card/block_card";
 import { Badge } from "@/components/atom/badge";
 import { Popover, PopoverTrigger } from "@/components/atom/popover";
 import { UnconfPopoverContent } from "./unconf_popover_content";
+import { useTranslations } from "next-intl";
 
 export const UnconfCard: FC<{ event: AgendaEvent }> = ({ event }) => {
+  const t = useTranslations("Cards.Unconf");
+  const tCommon = useTranslations("Common");
   return (
     <Popover>
       <PopoverTrigger>
@@ -25,7 +28,7 @@ export const UnconfCard: FC<{ event: AgendaEvent }> = ({ event }) => {
               {event.summary}
             </CardDescription>
             <CardDescription>
-              Organized by:
+              {t("organizedBy")}:
               {event.speakers
                 .map(({ speaker }) =>
                   speaker.fullName + speaker.pronouns
@@ -41,7 +44,9 @@ export const UnconfCard: FC<{ event: AgendaEvent }> = ({ event }) => {
               variant="mustard"
               className={"absolute bottom-2 left-2 opacity-50"}
             >
-              {event.status == "PENDING" ? event.status : event.location}
+              {event.status == "PENDING"
+                ? event.status
+                : tCommon("location", { location: event.location })}
             </Badge>
           </CardHeader>
         </Card>
