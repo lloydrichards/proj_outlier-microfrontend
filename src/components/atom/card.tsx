@@ -15,7 +15,7 @@ const cardVariants = cva("relative flex rounded-lg", {
     },
     direction: {
       row: "flex-row",
-      column: "flex-col justify-center",
+      column: "flex-col",
     },
   },
   defaultVariants: {
