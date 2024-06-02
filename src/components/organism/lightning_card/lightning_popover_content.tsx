@@ -12,6 +12,7 @@ export const LightningPopoverContent: FC<{ event?: AgendaEvent }> = ({
   event,
 }) => {
   const t = useTranslations("Popover");
+  const tCommon = useTranslations("Common");
 
   return (
     <PopoverContent className="w-[var(--radix-popover-trigger-width)] border-none bg-turquoise text-turquoise-foreground shadow-2xl">
@@ -35,13 +36,17 @@ export const LightningPopoverContent: FC<{ event?: AgendaEvent }> = ({
           <TableRow>
             <TableCell className="flex items-center gap-2">
               <h2 className={typefaceSubtitle()}>{t("category_section")}</h2>
-              <Badge variant="turquoise">{event?.category}</Badge>
+              <Badge variant="turquoise">
+                {tCommon("category", { category: event?.category })}
+              </Badge>
             </TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="flex items-center gap-2">
               <h2 className={typefaceSubtitle()}>{t("location_section")}</h2>
-              <Badge variant="turquoise">{event?.location}</Badge>
+              <Badge variant="turquoise">
+                {tCommon("location", { location: event?.location })}
+              </Badge>
             </TableCell>
           </TableRow>
           {event?.linkLabel && event.linkUrl ? (

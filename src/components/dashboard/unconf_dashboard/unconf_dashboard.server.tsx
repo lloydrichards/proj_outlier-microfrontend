@@ -12,14 +12,15 @@ import {
 } from "@/components/atom/table";
 import { UnconfDropdownMenu } from "./unconf_dropdown_menu";
 import { cn } from "@/lib/utils";
-import type { FC } from "react";
-import { useFormatter } from "next-intl";
+import { type FC } from "react";
+import { useFormatter, useTranslations } from "next-intl";
 
 export const UnconfDashboard: FC<{ edition?: string }> = async ({
   edition,
 }) => {
   const session = await auth();
   const format = useFormatter();
+  const t = useTranslations("Common");
   const unconfEvents = await api.unconf.getUnconfEvents({ edition });
 
   return (
@@ -89,7 +90,7 @@ export const UnconfDashboard: FC<{ edition?: string }> = async ({
                       : "default"
                   }
                 >
-                  {event.location}
+                  {t("location", { location: event.location })}
                 </Badge>
               </TableCell>
               <TableCell>

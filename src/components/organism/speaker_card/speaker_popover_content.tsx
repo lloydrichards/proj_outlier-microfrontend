@@ -37,7 +37,9 @@ export const SpeakerPopoverContent: FC<{
               <h2 className={typefaceSubtitle()}>
                 {tCard("location_section")}
               </h2>
-              <Badge variant="plum">{event?.location}</Badge>
+              <Badge variant="plum">
+                {tCommon("location", { location: event?.location })}
+              </Badge>
             </TableCell>
           </TableRow>
           {event?.linkLabel && event.linkUrl ? (

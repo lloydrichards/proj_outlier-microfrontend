@@ -51,8 +51,11 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
               {event?.summary}
             </CardDescription>
           </CardHeader>
-          <Badge variant="plum" className={"absolute right-2 top-2 z-10"}>
-            {event?.category}
+          <Badge
+            variant="plum"
+            className={"absolute right-2 top-2 z-10 uppercase"}
+          >
+            {t("Common.category", { category: event?.category })}
           </Badge>
           <CardContent className="z-10 flex gap-2 after:*:[content:','] last:after:*:[content:'']">
             {event?.speakers.map(({ speaker }) => (

@@ -14,11 +14,13 @@ import {
   SelectValue,
 } from "@/components/atom/select";
 import { locationEnum, type InsertEventSchema } from "@/server/db/schema";
+import { useTranslations } from "next-intl";
 import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
 
 export const EventLocationSelect: FC = () => {
   const form = useFormContext<InsertEventSchema>();
+  const t = useTranslations("Common");
   return (
     <FormField
       control={form.control}
@@ -35,7 +37,7 @@ export const EventLocationSelect: FC = () => {
             <SelectContent>
               {locationEnum.enumValues.map((value) => (
                 <SelectItem key={value} value={value}>
-                  {value}
+                  {t("location", { location: value })}
                 </SelectItem>
               ))}
             </SelectContent>

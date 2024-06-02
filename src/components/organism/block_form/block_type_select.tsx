@@ -14,11 +14,13 @@ import {
   SelectValue,
 } from "@/components/atom/select";
 import { type InsertBlockSchema, blockEnum } from "@/server/db/schema";
+import { useTranslations } from "next-intl";
 import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
 
 export const BlockTypeSelect: FC = () => {
   const form = useFormContext<InsertBlockSchema>();
+  const t = useTranslations("Common");
   return (
     <FormField
       control={form.control}
@@ -35,7 +37,7 @@ export const BlockTypeSelect: FC = () => {
             <SelectContent>
               {blockEnum.enumValues.map((value) => (
                 <SelectItem key={value} value={value}>
-                  {value}
+                  {t("type", { type: value })}
                 </SelectItem>
               ))}
             </SelectContent>

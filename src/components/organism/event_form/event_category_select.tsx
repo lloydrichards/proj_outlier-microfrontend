@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from "@/components/atom/select";
 import { categoryEnum, type InsertEventSchema } from "@/server/db/schema";
+import { useTranslations } from "next-intl";
 import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
 
@@ -21,6 +22,7 @@ export const EventCategorySelect: FC<{
   exclude?: string[];
 }> = ({ exclude }) => {
   const form = useFormContext<InsertEventSchema>();
+  const t = useTranslations("Common");
   return (
     <FormField
       control={form.control}
@@ -39,7 +41,7 @@ export const EventCategorySelect: FC<{
                 .filter((e) => (exclude ? !exclude.includes(e) : true))
                 .map((value) => (
                   <SelectItem key={value} value={value}>
-                    {value}
+                    {t("category", { category: value })}
                   </SelectItem>
                 ))}
             </SelectContent>
