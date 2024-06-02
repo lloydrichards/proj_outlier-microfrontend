@@ -5,6 +5,7 @@ import type { AgendaSpeaker } from "@/components/organism/block_card/block_card"
 import { TableCell, TableRow } from "@/components/atom/table";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/atom/avatar";
 import { type VariantProps, cva } from "class-variance-authority";
+import { useTranslations } from "next-intl";
 
 const avatarVariants = cva("border-2", {
   variants: {
@@ -39,10 +40,11 @@ type SpeakerRowProps = {
   VariantProps<typeof avatarFallbackVariants>;
 
 export const SpeakerRow: FC<SpeakerRowProps> = ({ speaker, variant, size }) => {
+  const t = useTranslations("Popover");
   return (
     <TableRow>
       <TableCell className="flex flex-col gap-2">
-        <h2 className={typefaceSubtitle()}>Speaker</h2>
+        <h2 className={typefaceSubtitle()}>{t("speaker_section")}</h2>
         <div className="flex gap-2">
           <Avatar className={avatarVariants({ variant, size })}>
             <AvatarImage src={speaker?.imageUrl ?? undefined} />

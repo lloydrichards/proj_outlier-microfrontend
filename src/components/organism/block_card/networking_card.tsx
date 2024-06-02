@@ -7,17 +7,23 @@ import {
 } from "@/components/atom/card";
 import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "./block_card";
+import { useTranslations } from "next-intl";
 
 export const NetworkingCard: FC<BlockCardProps> = ({ block, className }) => {
+  const t = useTranslations();
   if (block.events.length == 0) {
     return (
       <Card className={className}>
         <CardHeader>
-          <span className={typefaceSubtitle()}>NETWORKING</span>
-          <CardDescription>Nothing scheduled</CardDescription>
+          <span className={typefaceSubtitle()}>
+            {t("Cards.Networking.title")}
+          </span>
+          <CardDescription>
+            {t("Cards.Networking.empty_message")}
+          </CardDescription>
         </CardHeader>
         <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>
-          {block.duration} min
+          {t("Common.timeInMin", { count: block.duration })}
         </p>
       </Card>
     );
@@ -26,12 +32,14 @@ export const NetworkingCard: FC<BlockCardProps> = ({ block, className }) => {
   return (
     <Card className={className}>
       <CardHeader>
-        <span className={typefaceSubtitle()}>NETWORKING</span>
+        <span className={typefaceSubtitle()}>
+          {t("Cards.Networking.title")}
+        </span>
         <CardTitle>{event?.title}</CardTitle>
         <CardDescription>{event?.summary}</CardDescription>
       </CardHeader>
       <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>
-        {block.duration} min
+        {t("Common.timeInMin", { count: block.duration })}
       </p>
     </Card>
   );

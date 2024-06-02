@@ -13,17 +13,19 @@ import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/atom/avatar";
 import { Popover, PopoverTrigger } from "@/components/atom/popover";
 import { SpeakerPopoverContent } from "./speaker_popover_content";
+import { useTranslations } from "next-intl";
 
 export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
+  const t = useTranslations();
   if (block.events.length == 0) {
     return (
       <Card variant="plum" className={className}>
         <CardHeader>
-          <span className={typefaceSubtitle()}>SPEAKER</span>
-          <CardDescription>Nothing scheduled</CardDescription>
+          <span className={typefaceSubtitle()}>{t("Cards.Speaker.title")}</span>
+          <CardDescription>{t("Cards.Speaker.empty_message")}</CardDescription>
         </CardHeader>
         <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>
-          {block.duration} min
+          {t("Common.timeInMin", { count: block.duration })}
         </p>
       </Card>
     );
@@ -36,7 +38,9 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
       <PopoverTrigger>
         <Card variant="plum" className={cn("text-left", className)}>
           <CardHeader className="z-10 grow">
-            <span className={typefaceSubtitle()}>SPEAKER</span>
+            <span className={typefaceSubtitle()}>
+              {t("Cards.Speaker.title")}
+            </span>
             <CardTitle>{event?.title}</CardTitle>
             <CardDescription
               className={cn(
@@ -73,7 +77,7 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
             ))}
           </div>
           <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>
-            {block.duration} min
+            {t("Common.timeInMin", { count: block.duration })}
           </p>
         </Card>
       </PopoverTrigger>

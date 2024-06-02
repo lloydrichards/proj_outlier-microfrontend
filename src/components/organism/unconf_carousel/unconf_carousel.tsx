@@ -4,17 +4,19 @@ import { typefaceMeta, typefaceSubtitle } from "../../typeface";
 import type { BlockCardProps } from "../block_card/block_card";
 import { cn } from "@/lib/utils";
 import { UnconfCard } from "./unconf_card";
+import { useTranslations } from "next-intl";
 
 export const UnconfCarousel: FC<BlockCardProps> = ({ block, className }) => {
+  const t = useTranslations();
   if (block.events.length == 0) {
     return (
       <Card variant="mustard" className={className}>
         <CardHeader>
-          <span className={typefaceSubtitle()}>UNCONF</span>
-          <CardDescription>Nothing scheduled</CardDescription>
+          <span className={typefaceSubtitle()}>{t("Cards.Unconf.title")}</span>
+          <CardDescription>{t("Cards.Unconf.empty_message")}</CardDescription>
         </CardHeader>
         <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>
-          {block.duration} min
+          {t("Common.timeInMin", { count: block.duration })}
         </p>
       </Card>
     );
@@ -28,7 +30,7 @@ export const UnconfCarousel: FC<BlockCardProps> = ({ block, className }) => {
       )}
     >
       <CardHeader className="ml-40">
-        <span className={typefaceSubtitle()}>UNCONF</span>
+        <span className={typefaceSubtitle()}>{t("Cards.Unconf.title")}</span>
       </CardHeader>
       <section className="flex h-full gap-2 overflow-x-scroll pl-40">
         {block.events.map((event) => (
@@ -36,7 +38,7 @@ export const UnconfCarousel: FC<BlockCardProps> = ({ block, className }) => {
         ))}
       </section>
       <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>
-        {block.duration} min
+        {t("Common.timeInMin", { count: block.duration })}
       </p>
     </Card>
   );

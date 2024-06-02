@@ -5,17 +5,21 @@ import type { BlockCardProps } from "../block_card/block_card";
 import { Popover, PopoverTrigger } from "@/components/atom/popover";
 import { cn } from "@/lib/utils";
 import { LightningPopoverContent } from "./lightning_popover_content";
+import { useTranslations } from "next-intl";
 
 export const LightningCard: FC<BlockCardProps> = ({ block, className }) => {
+  const t = useTranslations();
   if (block.events.length == 0) {
     return (
       <Card variant="turquoise" className={className}>
         <CardHeader>
-          <span className={typefaceSubtitle()}>LIGHTNING</span>
+          <span className={typefaceSubtitle()}>
+            {t("Cards.Lightning.title")}
+          </span>
           <CardDescription>Nothing scheduled</CardDescription>
         </CardHeader>
         <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>
-          {block.duration} min
+          {t("Common.timeInMin", { count: block.duration })}
         </p>
       </Card>
     );
@@ -37,7 +41,7 @@ export const LightningCard: FC<BlockCardProps> = ({ block, className }) => {
           </CardHeader>
 
           <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>
-            {block.duration} min
+            {t("Common.timeInMin", { count: block.duration })}
           </p>
         </Card>
       </PopoverTrigger>

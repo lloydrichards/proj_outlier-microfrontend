@@ -6,10 +6,13 @@ import { Table, TableBody, TableCell, TableRow } from "@/components/atom/table";
 import { Badge } from "@/components/atom/badge";
 import { PopoverContent } from "@/components/atom/popover";
 import { SpeakerRow } from "@/components/molecule/speaker_row/speaker_row";
+import { useTranslations } from "next-intl";
 
 export const LightningPopoverContent: FC<{ event?: AgendaEvent }> = ({
   event,
 }) => {
+  const t = useTranslations("Popover");
+
   return (
     <PopoverContent className="w-[var(--radix-popover-trigger-width)] border-none bg-turquoise text-turquoise-foreground shadow-2xl">
       <Table>
@@ -25,26 +28,26 @@ export const LightningPopoverContent: FC<{ event?: AgendaEvent }> = ({
             : null}
           <TableRow>
             <TableCell className="flex flex-col gap-2">
-              <h2 className={typefaceSubtitle()}>Description</h2>
+              <h2 className={typefaceSubtitle()}>{t("description_section")}</h2>
               <CardDescription>{event?.description}</CardDescription>
             </TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="flex items-center gap-2">
-              <h2 className={typefaceSubtitle()}>Category</h2>
+              <h2 className={typefaceSubtitle()}>{t("category_section")}</h2>
               <Badge variant="turquoise">{event?.category}</Badge>
             </TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="flex items-center gap-2">
-              <h2 className={typefaceSubtitle()}>Location</h2>
+              <h2 className={typefaceSubtitle()}>{t("location_section")}</h2>
               <Badge variant="turquoise">{event?.location}</Badge>
             </TableCell>
           </TableRow>
           {event?.linkLabel && event.linkUrl ? (
             <TableRow>
               <TableCell className="flex flex-col gap-2">
-                <h2 className={typefaceSubtitle()}>Link</h2>
+                <h2 className={typefaceSubtitle()}>{t("link_section")}</h2>
                 <CardDescription>
                   <a href={event.linkUrl} target="_blank">
                     {event.linkLabel}

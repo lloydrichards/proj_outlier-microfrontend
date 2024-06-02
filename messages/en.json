@@ -1,5 +1,85 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "Common": {
+    "category": "{category, select, ACADEMIA {BACK TO BASICS} ACCESSIBILITY {ACCESSIBILITY} CAREER {CAREER} DASHBOARD {DASHBOARD} ANALYTICS {ANALYTICS} ART {ART} SCIENCE {SCIENCE} KEYNOTE {KEYNOTE} LITERACY {LITERACY} DEMO {DEMO} DESIGN {DESIGN} HISTORICAL {HISTORICAL} JOURNALISM {JOURNALISM} MAPS {MAPS} PROCESS {PROCESS} PROGRAMMING {PROGRAMMING} PROJECT {PROJECT DEEP DIVE} RESEARCH {RESEARCH} SOCIAL {SOCIAL GOOD} SPORTS {SPORTS} STORYTELLING {STORYTELLING} THEORY {THEORY} TOOLING {TOOLING} INDUSTRY {DVS} UNCERTAINTY {UNCERTAINTY} UNUSUAL {UNUSUAL DATA VIZ} OTHER {OTHER} other {Unknown category.}}",
+    "location": "{location, select, UNASSIGNED {Please select location.} MAIN {MAIN STAGE} VIRTUAL {VIRTUAL} ROOM1 {ROOM1} ROOM2 {ROOM2} ROOM3 {ROOM3} ROOM4 {ROOM4} ROOM5 {ROOM5} ROOM6 {ROOM6} ZOOM {ZOOM} SLACK {SLACK} other {Unknown Location}}",
+    "timeInMin": "{count, plural, =0 {zero minutes} =1 {1 min} other {# min}}"
+  },
+  "i18n": {
+    "arabic": "Arabic",
+    "chinese": "Chinese",
+    "czech": "Czech",
+    "english": "English",
+    "french": "French",
+    "german": "German",
+    "italian": "Italian",
+    "polish": "Polish",
+    "portuguese": "Portuguese",
+    "russian": "Russian",
+    "spanish": "Spanish"
+  },
+  "Auth": {
+    "welcome_message": "Welcome, {name}",
+    "signIn": "Sign In",
+    "signOut": "Sign Out"
+  },
+  "Forms": {
+    "ImgInput": {
+      "title": "Image Url"
+    },
+    "Block": {
+      "speaker_section": "Speaker(s)",
+      "length_section": "Length",
+      "location_section": "Location",
+      "category_section": "Category",
+      "description_section": "Description"
+    },
+    "Event": {},
+    "Unconf": {
+      "common_organizer": "Organizer"
+    },
+    "Speaker": {
+      "pronouns": {
+        "title": "Pronouns",
+        "helper": "Please select your pronouns."
+      }
+    }
+  },
+  "Agenda": {
+    "empty_failure": "No Schedule"
+  },
+  "Popover": {
+    "description_section": "Description",
+    "speaker_section": "Speaker",
+    "category_section": "Category",
+    "location_section": "Location",
+    "link_section": "Link",
+    "date_section": "Date",
+    "time_section": "Time"
+  },
+  "Cards": {
+    "Speaker": {
+      "title": "Speaker",
+      "empty_message": "Nothing scheduled"
+    },
+    "Unconf": {
+      "title": "Unconf",
+      "button_toLocation": "To Location",
+      "empty_message": "Block saved for unconference sessions; check back during the conference to find out what they are!"
+    },
+    "Lightning": {
+      "title": "Lightning",
+      "empty_message": "A series of short presentations by some of the Outlier attendees on their favorite topics and projects."
+    },
+    "Announcement": {
+      "title": "Announcement",
+      "empty_message": "Nothing scheduled"
+    },
+    "Pause": {
+      "title": "Pause"
+    },
+    "Networking": {
+      "title": "Networking",
+      "empty_message": "Nothing scheduled"
+    }
   }
 }

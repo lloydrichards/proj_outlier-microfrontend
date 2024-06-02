@@ -4,10 +4,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/atom/avatar";
 import { Button } from "@/components/atom/button";
 import { auth } from "@/server/auth";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
 export const Header = async () => {
   const session = await auth();
-
+  const t = await getTranslations("Auth");
   return (
     <header className="sticky top-0 z-20 flex w-full items-center justify-end gap-4 bg-background px-2 py-6">
       {session ? (
@@ -17,10 +18,10 @@ export const Header = async () => {
             <AvatarFallback>{session.user.name?.[0] ?? "?"}</AvatarFallback>
           </Avatar>
           <p className={typefaceSubtitle("grow")}>
-            Welcome, {session.user.name}
+            {t("welcome_message", { name: session.user.name })}
           </p>
           <Button asChild>
-            <Link href="/api/auth/signout">Sign Out</Link>
+            <Link href="/api/auth/signout">{t("signOut")}</Link>
           </Button>
         </>
       ) : (
