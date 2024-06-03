@@ -11,10 +11,10 @@ import { cva, type VariantProps } from "class-variance-authority";
 const cardVariants = cva("", {
   variants: {
     size: {
-      10: "h-40",
-      15: "h-40",
-      20: "h-40",
-      25: "h-40",
+      10: "h-20",
+      15: "h-25",
+      20: "h-30",
+      25: "h-35",
       30: "h-40",
       35: "h-45",
       40: "h-50",
