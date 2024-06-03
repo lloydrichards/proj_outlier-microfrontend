@@ -11,15 +11,14 @@ import {
   TableRow,
 } from "@/components/atom/table";
 import { UnconfDropdownMenu } from "./unconf_dropdown_menu";
-import { cn } from "@/lib/utils";
+import { cn, formatDate } from "@/lib/utils";
 import { type FC } from "react";
-import { useFormatter, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 export const UnconfDashboard: FC<{ edition?: string }> = async ({
   edition,
 }) => {
   const session = await auth();
-  const format = useFormatter();
   const t = useTranslations("Common");
   const unconfEvents = await api.unconf.getUnconfEvents({ edition });
 
@@ -53,11 +52,7 @@ export const UnconfDashboard: FC<{ edition?: string }> = async ({
               )}
             >
               <TableCell className={typefaceSubtitle("w-40")}>
-                {format.dateTime(event.block.start, {
-                  month: "short",
-                  day: "numeric",
-                  year: "numeric",
-                })}
+                {formatDate(event.block.start)}
               </TableCell>
               <TableCell className="w-40">{event.title}</TableCell>
               <TableCell

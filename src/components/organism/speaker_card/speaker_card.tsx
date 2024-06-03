@@ -66,9 +66,9 @@ export const SpeakerCard: FC<BlockCardProps> = ({ block, className }) => {
             ))}
           </CardContent>
           <div className="absolute bottom-4 right-4 z-0 flex">
-            {event?.speakers.map(({ speaker }) => (
+            {event?.speakers.map(({ speaker }, idx) => (
               <Avatar
-                key={speaker.title}
+                key={idx}
                 className="size-20 opacity-20 saturate-0 md:size-32"
               >
                 <AvatarImage src={speaker.imageUrl ?? undefined} />

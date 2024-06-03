@@ -11,7 +11,7 @@ import { type InsertBlockSchema } from "@/server/db/schema";
 import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
 import { CalendarIcon, Clock } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn, formatDate, formatTime } from "@/lib/utils";
 import { Calendar } from "@/components/atom/calendar";
 import { Button } from "@/components/atom/button";
 import {
@@ -21,7 +21,6 @@ import {
 } from "@/components/atom/popover";
 
 import { PopoverClose } from "@radix-ui/react-popover";
-import { useFormatter } from "next-intl";
 
 export const BlockLengthSlider: FC = () => {
   const { setValue, getValues } = useFormContext<InsertBlockSchema>();
@@ -66,7 +65,6 @@ export const BlockLengthSlider: FC = () => {
 
 const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
   const form = useFormContext<InsertBlockSchema>();
-  const format = useFormatter();
   return (
     <FormField
       control={form.control}
@@ -78,12 +76,7 @@ const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
               <PopoverTrigger asChild>
                 <Button className="flex h-fit w-24 items-center gap-1 rounded border border-input bg-background p-2">
                   <Clock size={12} />
-                  {field.value
-                    ? format.dateTime(field.value, {
-                        hour: "numeric",
-                        minute: "numeric",
-                      })
-                    : "--:--"}
+                  {field.value ? formatTime(field.value) : "--:--"}
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="flex h-96 w-40 overflow-scroll p-0">
@@ -136,7 +129,6 @@ const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
 
 const CalendarInput: FC = () => {
   const form = useFormContext<InsertBlockSchema>();
-  const format = useFormatter();
   return (
     <FormField
       control={form.control}
@@ -155,11 +147,7 @@ const CalendarInput: FC = () => {
                   )}
                 >
                   {field.value ? (
-                    format.dateTime(field.value, {
-                      month: "short",
-                      day: "numeric",
-                      year: "numeric",
-                    })
+                    formatDate(field.value)
                   ) : (
                     <span>Pick a date</span>
                   )}

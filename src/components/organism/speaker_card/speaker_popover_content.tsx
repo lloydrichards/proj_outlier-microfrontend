@@ -6,13 +6,13 @@ import { Badge } from "@/components/atom/badge";
 import { Table, TableBody, TableCell, TableRow } from "@/components/atom/table";
 import { PopoverContent } from "@/components/atom/popover";
 import { SpeakerRow } from "@/components/molecule/speaker_row/speaker_row";
-import { useFormatter, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
+import { formatDate, formatTimeWithMeridiem } from "@/lib/utils";
 
 export const SpeakerPopoverContent: FC<{
   event?: AgendaEvent;
   block: AgendaBlock;
 }> = ({ event, block }) => {
-  const format = useFormatter();
   const tCard = useTranslations("Popover");
   const tCommon = useTranslations("Common");
   return (
@@ -57,29 +57,16 @@ export const SpeakerPopoverContent: FC<{
           <TableRow>
             <TableCell className="flex items-center gap-2">
               <h2 className={typefaceSubtitle()}>{tCard("date_section")}</h2>
-              <CardDescription>
-                {format.dateTime(block.start, {
-                  weekday: "short",
-                  month: "short",
-                  day: "numeric",
-                })}
-              </CardDescription>
+              <CardDescription>{formatDate(block.start)}</CardDescription>
             </TableCell>
           </TableRow>
           <TableRow>
             <TableCell className="flex items-center gap-2">
               <h2 className={typefaceSubtitle()}>{tCard("time_section")}</h2>
               <CardDescription>
-                {format.dateTime(block.start, {
-                  hour: "numeric",
-                  minute: "numeric",
-                })}{" "}
-                &#8594;{" "}
-                {format.dateTime(block.end, {
-                  hour: "numeric",
-                  minute: "numeric",
-                })}{" "}
-                ({tCommon("timeInMin", { count: block.duration })})
+                {formatTimeWithMeridiem(block.start)} &#8594;{" "}
+                {formatTimeWithMeridiem(block.end)} (
+                {tCommon("timeInMin", { count: block.duration })})
               </CardDescription>
             </TableCell>
           </TableRow>

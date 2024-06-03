@@ -22,7 +22,7 @@ import { EventCategorySelect } from "./event_category_select";
 import { OrganizerInput } from "./organizer_input";
 import { PronounsInput } from "./pronouns_input";
 import { TitleInput } from "./title_input";
-import { useFormatter } from "next-intl";
+import { formatDate, formatTime } from "@/lib/utils";
 
 const unconfSchema = z.object({
   event: z.object({
@@ -50,7 +50,6 @@ type UnconfFormProps = {
 
 export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
   const [finished, setFinished] = useState(false);
-  const format = useFormatter();
   const form = useForm<UnconfSchema>({
     resolver: zodResolver(unconfSchema),
     defaultValues: {
@@ -96,18 +95,8 @@ export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-2">
         <h1 className={typefaceSubtitle("text-right opacity-30")}>
-          Unconf Submission [
-          {format.dateTime(block.start, {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })}{" "}
-          -{" "}
-          {format.dateTime(block.start, {
-            hour: "numeric",
-            minute: "numeric",
-          })}
-          ]
+          Unconf Submission [{formatDate(block.start)} -{" "}
+          {formatTime(block.start)}]
         </h1>
         <h2 className={typefaceTitle()}>Organizer</h2>
         <OrganizerInput index={0} />
