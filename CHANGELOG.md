@@ -1,3 +1,15 @@
+## [0.3.1](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.3.0...v0.3.1) (2024-06-05)
+
+
+### Bug Fixes
+
+* **dashboard:** :bug: fix translation on unconf dashboard ([c5bdf0d](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/c5bdf0dc02104e4c2e718cab58c263eb2742c6ca))
+
+
+### Reverts
+
+* **i18n:** :rewind: use d3 formatter, not next-intl ([b5ab15c](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/b5ab15c95e49bc79c8f849b8bf8b4db9db1004bd))
+
 # [0.3.0](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.2.1...v0.3.0) (2024-06-02)
 
 
