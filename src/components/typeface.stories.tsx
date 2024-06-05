@@ -27,9 +27,9 @@ const meta: Meta<{
       <table>
         <thead>
           <tr>
-            <th className="min-w-36">Name</th>
-            <th className="min-w-36">Classes</th>
-            <th>Typeface</th>
+            <th className="min-w-36">{`Name`}</th>
+            <th className="min-w-36">{`Classes`}</th>
+            <th>{`Typeface`}</th>
           </tr>
         </thead>
         <tbody>

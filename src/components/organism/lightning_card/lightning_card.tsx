@@ -16,7 +16,9 @@ export const LightningCard: FC<BlockCardProps> = ({ block, className }) => {
           <span className={typefaceSubtitle()}>
             {t("Cards.Lightning.title")}
           </span>
-          <CardDescription>Nothing scheduled</CardDescription>
+          <CardDescription>
+            {t("Cards.Lightning.empty_message")}
+          </CardDescription>
         </CardHeader>
         <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>
           {t("Common.timeInMin", { count: block.duration })}
@@ -33,7 +35,9 @@ export const LightningCard: FC<BlockCardProps> = ({ block, className }) => {
       <PopoverTrigger>
         <Card variant="turquoise" className={cn("text-left", className)}>
           <CardHeader>
-            <span className={typefaceSubtitle()}>LIGHTNING</span>
+            <span className={typefaceSubtitle()}>
+              {t("Cards.Lightning.title")}
+            </span>
             <CardDescription className="line-clamp-1">
               <strong>{event?.title} -</strong> {speaker?.fullName}{" "}
               {speaker?.pronouns ? `(${speaker.pronouns})` : ""}

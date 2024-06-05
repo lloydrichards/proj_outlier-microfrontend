@@ -21,6 +21,10 @@ const config = {
     },
   },
   rules: {
+    "react/jsx-no-literals": [
+      "warn",
+      { allowedStrings: [":", "?", ")", "(", "[", "]", "-", "&#8594;"] },
+    ],
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/consistent-type-imports": [
