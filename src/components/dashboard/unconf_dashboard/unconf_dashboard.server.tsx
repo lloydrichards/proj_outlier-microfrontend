@@ -13,13 +13,13 @@ import {
 import { UnconfDropdownMenu } from "./unconf_dropdown_menu";
 import { cn, formatDate } from "@/lib/utils";
 import { type FC } from "react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 export const UnconfDashboard: FC<{ edition?: string }> = async ({
   edition,
 }) => {
   const session = await auth();
-  const t = useTranslations("Common");
+  const t = await getTranslations("Common");
   const unconfEvents = await api.unconf.getUnconfEvents({ edition });
 
   return (

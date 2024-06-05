@@ -15,7 +15,8 @@
     "routing",
     "scripts",
     "forms",
-    "i18n"
+    "i18n",
+    "dashboard"
   ],
   "cSpell.words": ["Unconf"],
   "i18n-ally.localesPaths": ["./messages"],
