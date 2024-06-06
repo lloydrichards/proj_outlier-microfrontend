@@ -7,7 +7,8 @@ import { Table, TableBody, TableCell, TableRow } from "@/components/atom/table";
 import { PopoverContent } from "@/components/atom/popover";
 import { SpeakerRow } from "@/components/molecule/speaker_row/speaker_row";
 import { useTranslations } from "next-intl";
-import { formatDate, formatTimeWithMeridiem } from "@/lib/utils";
+import { formatDate } from "@/lib/utils";
+import { LocalTime } from "@/components/molecule/local_time/local_time";
 
 export const SpeakerPopoverContent: FC<{
   event?: AgendaEvent;
@@ -64,8 +65,8 @@ export const SpeakerPopoverContent: FC<{
             <TableCell className="flex items-center gap-2">
               <h2 className={typefaceSubtitle()}>{tCard("time_section")}</h2>
               <CardDescription>
-                {formatTimeWithMeridiem(block.start)} &#8594;{" "}
-                {formatTimeWithMeridiem(block.end)} (
+                <LocalTime date={block.start} /> &#8594;{" "}
+                <LocalTime date={block.end} /> (
                 {tCommon("timeInMin", { count: block.duration })})
               </CardDescription>
             </TableCell>
