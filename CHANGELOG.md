@@ -1,3 +1,10 @@
+## [0.3.2](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.3.1...v0.3.2) (2024-06-06)
+
+
+### Bug Fixes
+
+* **components:** :bug: fix speaker popover with local time ([3e7407a](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/3e7407a97e2da8d80d8d8ea545e628bae6a66e87))
+
 ## [0.3.1](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.3.0...v0.3.1) (2024-06-05)
 
 
