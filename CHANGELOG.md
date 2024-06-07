@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.3.2...v0.3.3) (2024-06-07)
+
+
+### Bug Fixes
+
+* **components:** :bug: set LocalTime style outside of component ([57ddb8d](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/57ddb8da1a88f2dad3630c961fb7b108723f202d))
+
 ## [0.3.2](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.3.1...v0.3.2) (2024-06-06)
 
 
