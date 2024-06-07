@@ -34,7 +34,9 @@ export const Agenda: FC<AgendaProps> = async ({
               {idx === 0 && <TimeZone />}
               <AgendaBlockMenu block={block}>
                 <div className="grid grid-cols-[4rem_1fr] gap-2 sm:grid-cols-[8rem_1fr]">
-                  <LocalTime date={block.start} />
+                  <span className={typefaceTitle("text-sm sm:text-md")}>
+                    <LocalTime date={block.start} />
+                  </span>
                   <BlockCard block={block} />
                 </div>
               </AgendaBlockMenu>
