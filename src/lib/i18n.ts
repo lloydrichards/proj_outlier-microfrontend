@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { getRequestConfig } from "next-intl/server";
+import { notFound } from "next/navigation";
 
-export default getRequestConfig(async () => {
-  // Provide a static locale, fetch a user setting,
-  // read from `cookies()`, `headers()`, etc.
-  const locale = "en";
+export type Locale = "en";
 
+export const ALL_LOCALES: Locale[] = ["en"];
+
+export default getRequestConfig(async ({ locale }) => {
+  if (!ALL_LOCALES.includes(locale as Locale)) return notFound();
   return {
-    locale,
     messages: (await import(`../../messages/${locale}.json`))
       .default as IntlMessages,
   };

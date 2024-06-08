@@ -1,5 +1,5 @@
-import { Agenda } from "../components/organism/agenda/agenda";
-import { Header } from "../components/organism/header/header";
+import { Agenda } from "../../components/organism/agenda/agenda";
+import { Header } from "../../components/organism/header/header";
 
 export default async function Home({
   searchParams: { edition },

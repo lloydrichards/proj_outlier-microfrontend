@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "@/components/atom/card";
 import { Header } from "@/components/organism/header/header";
-import { UnconfDashboard } from "../../../components/dashboard/unconf_dashboard/unconf_dashboard.server";
+import { UnconfDashboard } from "../../../../components/dashboard/unconf_dashboard/unconf_dashboard.server";
 
 export const metadata = {
   title: "Unconf Dashboard",
