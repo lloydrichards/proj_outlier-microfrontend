@@ -1,3 +1,10 @@
+## [0.4.2](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.4.1...v0.4.2) (2024-06-08)
+
+
+### Bug Fixes
+
+* **routing:** :bug: allow all nested paths of PublicPages ([ccb429d](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/ccb429da16e5d75fd53e4e16a3ad6a92db743e08))
+
 ## [0.4.1](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.4.0...v0.4.1) (2024-06-08)
 
 
