@@ -2,7 +2,7 @@
   "Common": {
     "type": "{type, select, SPEAKER {Sprecher} UNCONF {Unconf} LIGHTNING {Lightning} ANNOUNCEMENT {Ankündigung} PAUSE {Pause} NETWORKING {Networking} other {Unbekannter Typ.}}",
     "category": "{category, select, DVS {DVS} ACADEMIA {Grundlagen} ACCESSIBILITY {Barrierefreiheit} CAREER {Karriere} DASHBOARD {Dashboard} ANALYTICS {Analytics} ART {Kunst} SCIENCE {Wissenschaft} KEYNOTE {Keynote} LITERACY {Lesefähigkeit} DEMO {Demo} DESIGN {Design} HISTORICAL {Historisch} JOURNALISM {Journalismus} MAPS {Karten} PROCESS {Prozess} PROGRAMMING {Programmierung} PROJECT {Projekt Deep Dive} RESEARCH {Forschung} SOCIAL {Soziales Engagement} SPORTS {Sport} STORYTELLING {Geschichtenerzählen} THEORY {Theorie} TOOLING {Werkzeuge} INDUSTRY {Industrie} UNCERTAINTY {Unsicherheit} UNUSUAL {Ungewöhnliche Datenvisualisierung} OTHER {Andere} other {Unbekannte Kategorie.}}",
-    "location": "{location, select, UNASSIGNED {Bitte wählen Sie einen Ort aus.} MAIN {Hauptbühne} VIRTUAL {Virtuell} ROOM1 {Lollipop Auditorium} ROOM2 {Matrix-Raum} ROOM3 {Waterfall-Raum} ROOM4 {Raum4} ROOM5 {Raum5} ROOM6 {Raum6} ZOOM {Zoom} SLACK {Slack} other {Unbekannter Ort}}",
+    "location": "{location, select, UNASSIGNED {Bitte wählen Sie einen Ort aus.} MAIN {Hauptbühne} VIRTUAL {Virtuell} ROOM1 {Lollipop Auditorium} ROOM2 {Matrix Raum} ROOM3 {Waterfall Raum} ROOM4 {Raum4} ROOM5 {Raum5} ROOM6 {Raum6} ZOOM {Zoom} SLACK {Slack} other {Unbekannter Ort}}",
     "timeInMin": "{count, plural, =0 {null Minuten} =1 {1 Minute} other {# Minuten}}"
   },
   "i18n": {
@@ -12,6 +12,10 @@
     "welcome_message": "Willkommen, {name}",
     "signIn": "Anmelden",
     "signOut": "Abmelden"
+  },
+  "NotFound": {
+    "title": "Nicht gefunden",
+    "message": "Die angeforderte Ressource konnte nicht gefunden werden"
   },
   "Forms": {
     "ImgInput": {
@@ -24,9 +28,41 @@
       "category_section": "Kategorie",
       "description_section": "Beschreibung"
     },
-    "Event": {},
+    "Event": {
+      "Title": {
+        "title": "Titel",
+        "placeholder": "Titel"
+      },
+      "Category": {
+        "title": "Kategorie",
+        "placeholder": "Kategorie des Events auswählen"
+      }
+    },
     "Unconf": {
-      "common_organizer": "Organisator"
+      "title": "Unconf Einreichung [{date} - {time}]",
+      "submit_btn": "Einreichen",
+      "submission_title": "Vielen Dank für Ihre Einreichung!",
+      "submission_message": "Ihr Event wurde eingereicht und wartet auf Genehmigung. Überprüfen Sie den Zeitplan, um zu sehen, ob Ihr Event akzeptiert wurde.",
+      "Organizer": {
+        "title": "Organisator",
+        "placeholder": "Organisator",
+        "add_organizer_btn": "Co-Sprecher hinzufügen",
+        "co-organizer_title": "Co-Organisator #{index}",
+        "Pronouns": {
+          "title": "Pronomen",
+          "placeholder": "Bitte wählen Sie Ihre Pronomen aus.",
+          "select": "{pronoun, select, she/her {Sie/Ihr} he/him {Er/Ihm} they/them {Sie/Ihnen} other {Andere}}"
+        },
+        "Name": {
+          "first_title": "Vorname",
+          "first_placeholder": "Giorgia",
+          "last_title": "Nachname",
+          "last_placeholder": "Lupi"
+        }
+      },
+      "Event": {
+        "title": "Event"
+      }
     },
     "Speaker": {
       "pronouns": {
@@ -36,7 +72,7 @@
     }
   },
   "Agenda": {
-    "empty_failure": "Kein Zeitplan"
+    "empty_failure": "Der Zeitplan wurde noch nicht veröffentlicht."
   },
   "Popover": {
     "description_section": "Beschreibung",
@@ -51,28 +87,45 @@
   "Cards": {
     "Speaker": {
       "title": "Sprecher",
-      "empty_message": "Keine Termine"
+      "empty_message": "Nichts geplant"
     },
     "Unconf": {
       "title": "Unconf",
       "button_toLocation": "Zum Ort",
       "organizedBy": "Organisiert von",
-      "empty_message": "Block für Unconference-Sitzungen gespeichert; schauen Sie während der Konferenz wieder vorbei, um herauszufinden, worum es geht!"
+      "empty_message": "Block für Unconference-Sessions gespeichert; schauen Sie während der Konferenz wieder vorbei, um herauszufinden, worum es geht!"
     },
     "Lightning": {
       "title": "Lightning",
-      "empty_message": "Eine Reihe von kurzen Präsentationen einiger Outlier-Teilnehmer zu ihren Lieblingsthemen und -projekten."
+      "empty_message": "Eine Reihe von kurzen Präsentationen einiger Outlier-Teilnehmer zu ihren Lieblingsthemen und Projekten."
     },
     "Announcement": {
       "title": "Ankündigung",
-      "empty_message": "Keine Termine"
+      "empty_message": "Nichts geplant"
     },
     "Pause": {
       "title": "Pause"
     },
     "Networking": {
       "title": "Networking",
-      "empty_message": "Keine Termine"
+      "empty_message": "Nichts geplant"
+    }
+  },
+  "Dashboard": {
+    "Unconf": {
+      "title": "Ausstehende Unconf-Einreichungen",
+      "description": "Verwalten Sie Ihre Produkte und sehen Sie sich deren Verkaufsleistung an.",
+      "Table": {
+        "block_time": "Block-Zeit",
+        "title": "Titel",
+        "summary": "Zusammenfassung",
+        "description": "Beschreibung",
+        "organizer": "Organisator",
+        "email": "E-Mail",
+        "location": "Ort",
+        "status": "Status",
+        "action": "Aktion"
+      }
     }
   }
 }
