@@ -1,3 +1,11 @@
+# [0.4.0](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.3.3...v0.4.0) (2024-06-08)
+
+
+### Features
+
+* **components:** :globe_with_meridians: add LocaleSwitcher and german locale ([51030c6](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/51030c686c25d602185f9dbfd34c4f548062613e))
+* **i18n:** :globe_with_meridians: add ability to switch locale ([89caf6e](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/89caf6ebc2a82d8c6eea4a45970145d24274a6ae))
+
 ## [0.3.3](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.3.2...v0.3.3) (2024-06-07)
 
 
