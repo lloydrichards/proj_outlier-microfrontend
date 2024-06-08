@@ -8,6 +8,7 @@ import { LocalTime } from "@/components/molecule/local_time/local_time";
 import { TimeZone } from "@/components/molecule/time_zone/time_zone";
 import { DateLine } from "@/components/molecule/date_line/date_line";
 import { cn } from "@/lib/utils";
+import { getTranslations } from "next-intl/server";
 
 type AgendaProps = {
   edition?: string;
@@ -20,7 +21,7 @@ export const Agenda: FC<AgendaProps> = async ({
   className,
 }) => {
   const agenda = await api.block.getAgenda({ edition, date });
-
+  const t = await getTranslations("Agenda");
   return (
     <article className={cn("grid w-full gap-2", className)}>
       {agenda.length > 0 ? (
@@ -44,7 +45,7 @@ export const Agenda: FC<AgendaProps> = async ({
           );
         })
       ) : (
-        <p className={typefaceTitle()}>Agenda has not be posted yet.</p>
+        <p className={typefaceTitle()}>{t("empty_failure")}</p>
       )}
       <AddBlockDialog lastTime={agenda.at(-1)?.end} />
     </article>

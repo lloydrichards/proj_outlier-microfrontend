@@ -17,22 +17,25 @@ import {
   SelectValue,
 } from "@/components/atom/select";
 import { type UnconfSchema } from "./unconf_form";
+import { useTranslations } from "next-intl";
 
 export const EventCategorySelect: FC<{
   exclude?: string[];
 }> = ({ exclude }) => {
   const form = useFormContext<UnconfSchema>();
+  const t = useTranslations("Forms.Event.Category");
+  const tCommon = useTranslations("Common");
   return (
     <FormField
       control={form.control}
       name="event.category"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Category</FormLabel>
+          <FormLabel>{t("title")}</FormLabel>
           <Select onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>
               <SelectTrigger>
-                <SelectValue placeholder="Select category of event" />
+                <SelectValue placeholder={t("placeholder")} />
               </SelectTrigger>
             </FormControl>
             <SelectContent>
@@ -40,7 +43,7 @@ export const EventCategorySelect: FC<{
                 .filter((e) => (exclude ? !exclude.includes(e) : true))
                 .map((value) => (
                   <SelectItem key={value} value={value}>
-                    {value}
+                    {tCommon("category", { category: value })}
                   </SelectItem>
                 ))}
             </SelectContent>

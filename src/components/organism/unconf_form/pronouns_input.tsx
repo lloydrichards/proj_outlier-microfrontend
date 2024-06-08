@@ -16,17 +16,20 @@ import {
   SelectValue,
 } from "@/components/atom/select";
 import { type UnconfSchema } from "./unconf_form";
+import { useTranslations } from "next-intl";
+
+const pronouns = ["she/her", "he/him", "they/them", "other"];
 
 export const PronounsInput: FC<{ index: number }> = ({ index }) => {
   const form = useFormContext<UnconfSchema>();
-
+  const t = useTranslations("Forms.Unconf.Organizer.Pronouns");
   return (
     <FormField
       control={form.control}
       name={`organizers.${index}.pronouns`}
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Pronouns</FormLabel>
+          <FormLabel>{t("title")}</FormLabel>
 
           <Select
             onValueChange={field.onChange}
@@ -34,14 +37,15 @@ export const PronounsInput: FC<{ index: number }> = ({ index }) => {
           >
             <FormControl>
               <SelectTrigger>
-                <SelectValue placeholder="Select preferred pronouns" />
+                <SelectValue placeholder={t("placeholder")} />
               </SelectTrigger>
             </FormControl>
             <SelectContent>
-              <SelectItem value="she/her">she/her</SelectItem>
-              <SelectItem value="he/him">he/him</SelectItem>
-              <SelectItem value="they/them">they/them</SelectItem>
-              <SelectItem value="other">other</SelectItem>
+              {pronouns.map((pronoun) => (
+                <SelectItem key={pronoun} value={pronoun}>
+                  {t("select", { pronoun })}
+                </SelectItem>
+              ))}
             </SelectContent>
           </Select>
           <FormMessage />

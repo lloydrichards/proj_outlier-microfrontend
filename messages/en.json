@@ -13,6 +13,10 @@
     "signIn": "Sign In",
     "signOut": "Sign Out"
   },
+  "NotFound": {
+    "title": "Not Found",
+    "message": "Could not find requested resource"
+  },
   "Forms": {
     "ImgInput": {
       "title": "Image Url"
@@ -24,9 +28,41 @@
       "category_section": "Category",
       "description_section": "Description"
     },
-    "Event": {},
+    "Event": {
+      "Title": {
+        "title": "Title",
+        "placeholder": "title"
+      },
+      "Category": {
+        "title": "Category",
+        "placeholder": "Select category of event"
+      }
+    },
     "Unconf": {
-      "common_organizer": "Organizer"
+      "title": "Unconf Submission [{date} - {time}]",
+      "submit_btn": "Submit",
+      "submission_title": "Thank you for your submission!",
+      "submission_message": "Your event has been submitted and is pending approval. Check the schedule to see if your event has been accepted.",
+      "Organizer": {
+        "title": "Organizer",
+        "placeholder": "organizer",
+        "add_organizer_btn": "Add Co-Speaker",
+        "co-organizer_title": "Co-Organizer #{index}",
+        "Pronouns": {
+          "title": "Pronouns",
+          "placeholder": "Please select your pronouns.",
+          "select": "{pronoun, select, she/her {She/Her} he/him {He/Him} they/them {They/Them} other {Other}}"
+        },
+        "Name": {
+          "first_title": "First Name",
+          "first_placeholder": "Giorgia",
+          "last_title": "Last Name",
+          "last_placeholder": "Lupi"
+        }
+      },
+      "Event": {
+        "title": "Event"
+      }
     },
     "Speaker": {
       "pronouns": {
@@ -36,7 +72,7 @@
     }
   },
   "Agenda": {
-    "empty_failure": "No Schedule"
+    "empty_failure": "Agenda has not be posted yet."
   },
   "Popover": {
     "description_section": "Description",
@@ -73,6 +109,23 @@
     "Networking": {
       "title": "Networking",
       "empty_message": "Nothing scheduled"
+    }
+  },
+  "Dashboard": {
+    "Unconf": {
+      "title": "Pending Unconf Submissions",
+      "description": "Manage your products and view their sales performance.",
+      "Table": {
+        "block_time": "Block_Time",
+        "title": "Title",
+        "summary": "Summary",
+        "description": "Description",
+        "organizer": "Organizer",
+        "email": "Email",
+        "location": "Location",
+        "status": "Status",
+        "action": "Action"
+      }
     }
   }
 }

@@ -19,23 +19,24 @@ export const UnconfDashboard: FC<{ edition?: string }> = async ({
   edition,
 }) => {
   const session = await auth();
-  const t = await getTranslations("Common");
+  const t = await getTranslations("Dashboard.Unconf.Table");
+  const tCommon = await getTranslations("Common");
   const unconfEvents = await api.unconf.getUnconfEvents({ edition });
 
   return (
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>Block Time</TableHead>
-          <TableHead>Title</TableHead>
-          <TableHead>Summary</TableHead>
-          <TableHead>Description</TableHead>
-          <TableHead>Organizer</TableHead>
-          <TableHead>Email</TableHead>
-          <TableHead>Location</TableHead>
-          <TableHead>Status</TableHead>
+          <TableHead>{t("block_time")}</TableHead>
+          <TableHead>{t("title")}</TableHead>
+          <TableHead>{t("summary")}</TableHead>
+          <TableHead>{t("description")}</TableHead>
+          <TableHead>{t("organizer")}</TableHead>
+          <TableHead>{t("email")}</TableHead>
+          <TableHead>{t("location")}</TableHead>
+          <TableHead>{t("status")}</TableHead>
           <TableHead>
-            <span className="sr-only">Actions</span>
+            <span className="sr-only">{t("action")}</span>
           </TableHead>
         </TableRow>
       </TableHeader>
@@ -85,7 +86,7 @@ export const UnconfDashboard: FC<{ edition?: string }> = async ({
                       : "default"
                   }
                 >
-                  {t("location", { location: event.location })}
+                  {tCommon("location", { location: event.location })}
                 </Badge>
               </TableCell>
               <TableCell>

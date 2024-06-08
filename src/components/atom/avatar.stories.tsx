@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-literals */
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";

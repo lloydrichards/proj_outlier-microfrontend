@@ -10,10 +10,11 @@ import { type FC } from "react";
 import { useFormContext } from "react-hook-form";
 import { Input } from "@/components/atom/input";
 import { type UnconfSchema } from "./unconf_form";
+import { useTranslations } from "next-intl";
 
 export const OrganizerInput: FC<{ index: number }> = ({ index }) => {
   const form = useFormContext<UnconfSchema>();
-
+  const t = useTranslations("Forms.Unconf.Organizer.Name");
   return (
     <div className="grid grid-cols-2 gap-2">
       <FormField
@@ -21,10 +22,10 @@ export const OrganizerInput: FC<{ index: number }> = ({ index }) => {
         name={`organizers.${index}.firstName`}
         render={({ field }) => (
           <FormItem>
-            <FormLabel>First Name</FormLabel>
+            <FormLabel>{t("first_title")}</FormLabel>
             <FormControl>
               <Input
-                placeholder="Giorgia"
+                placeholder={t("first_placeholder")}
                 {...field}
                 value={field.value ?? ""}
               />
@@ -38,9 +39,13 @@ export const OrganizerInput: FC<{ index: number }> = ({ index }) => {
         name={`organizers.${index}.lastName`}
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Last Name</FormLabel>
+            <FormLabel>{t("last_title")}</FormLabel>
             <FormControl>
-              <Input placeholder="Lupi" {...field} value={field.value ?? ""} />
+              <Input
+                placeholder={t("last_placeholder")}
+                {...field}
+                value={field.value ?? ""}
+              />
             </FormControl>
             <FormMessage />
           </FormItem>

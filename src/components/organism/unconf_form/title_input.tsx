@@ -9,19 +9,20 @@ import {
 import { useFormContext } from "react-hook-form";
 import { Input } from "@/components/atom/input";
 import { type UnconfSchema } from "./unconf_form";
+import { useTranslations } from "next-intl";
 
 export const TitleInput = () => {
   const form = useFormContext<UnconfSchema>();
-
+  const t = useTranslations("Forms.Event.Title");
   return (
     <FormField
       control={form.control}
       name="event.title"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Title</FormLabel>
+          <FormLabel>{t("title")}</FormLabel>
           <FormControl>
-            <Input placeholder="title" {...field} />
+            <Input placeholder={t("placeholder")} {...field} />
           </FormControl>
           <FormMessage />
         </FormItem>

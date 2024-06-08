@@ -94,7 +94,7 @@ const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
                           field.onChange(value);
                         }}
                       >
-                        {i.toString().padStart(2, "0")} H
+                        {i.toString().padStart(2, "0")} {"H"}
                       </Button>
                     </PopoverClose>
                   ))}
@@ -113,7 +113,7 @@ const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
                           field.onChange(value);
                         }}
                       >
-                        {i * 5} M
+                        {i * 5} {"M"}
                       </Button>
                     </PopoverClose>
                   ))}

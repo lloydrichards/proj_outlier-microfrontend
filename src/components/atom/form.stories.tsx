@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-literals */
 import { zodResolver } from "@hookform/resolvers/zod";
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";

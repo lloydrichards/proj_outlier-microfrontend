@@ -23,6 +23,7 @@ import { OrganizerInput } from "./organizer_input";
 import { PronounsInput } from "./pronouns_input";
 import { TitleInput } from "./title_input";
 import { formatDate, formatTime } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 const unconfSchema = z.object({
   event: z.object({
@@ -50,6 +51,7 @@ type UnconfFormProps = {
 
 export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
   const [finished, setFinished] = useState(false);
+  const t = useTranslations("Forms.Unconf");
   const form = useForm<UnconfSchema>({
     resolver: zodResolver(unconfSchema),
     defaultValues: {
@@ -82,11 +84,10 @@ export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
     return (
       <div className="grid gap-2">
         <h2 className={typefaceTitle("text-center")}>
-          Thank you for your submission!
+          {t("submission_title")}
         </h2>
         <p className={typefaceBody("text-balance text-center")}>
-          Your event has been submitted and is pending approval. Check the
-          schedule to see if your event has been accepted.
+          {t("submission_message")}
         </p>
       </div>
     );
@@ -95,10 +96,12 @@ export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-2">
         <h1 className={typefaceSubtitle("text-right opacity-30")}>
-          Unconf Submission [{formatDate(block.start)} -{" "}
-          {formatTime(block.start)}]
+          {t("title", {
+            date: formatDate(block.start),
+            time: formatTime(block.start),
+          })}
         </h1>
-        <h2 className={typefaceTitle()}>Organizer</h2>
+        <h2 className={typefaceTitle()}>{t("Organizer.title")}</h2>
         <OrganizerInput index={0} />
         <PronounsInput index={0} />
         <EmailInput index={0} />
@@ -127,11 +130,11 @@ export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
               });
             }}
           >
-            <CirclePlus /> Add Co-Speaker
+            <CirclePlus /> {t("Organizer.add_organizer_btn")}
           </Button>
         </div>
         <Separator className="my-4" />
-        <h2 className={typefaceTitle()}>Event</h2>
+        <h2 className={typefaceTitle()}>{t("Event.title")}</h2>
         <TitleInput />
         <EventCategorySelect exclude={["KEYNOTE", "DVS"]} />
         <DescriptionTextarea />
@@ -142,7 +145,7 @@ export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
           className="mt-2"
           type="submit"
         >
-          Submit
+          {t("submit_btn")}
         </Button>
       </form>
     </Form>
@@ -153,10 +156,11 @@ const CoOrganizerSection: FC<{
   index: number;
   onRemove: MouseEventHandler;
 }> = ({ index, onRemove }) => {
+  const t = useTranslations("Forms.Unconf.Organizer");
   return (
     <div className="grid w-full gap-2 rounded border-2 border-input p-2">
       <h3 className={typefaceSubtitle("flex items-center justify-between")}>
-        Co-Organizer #{index}
+        {t("co-organizer_title", { index })}
         <Button
           className="text-destructive hover:text-destructive/50"
           size="icon"
