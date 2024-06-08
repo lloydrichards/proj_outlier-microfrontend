@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.4.0...v0.4.1) (2024-06-08)
+
+
+### Bug Fixes
+
+* **routing:** :bug: allow embed forms as public ([cbc8d70](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/cbc8d707306fff26c6c6ccefc1809d012c578bee))
+
 # [0.4.0](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.3.3...v0.4.0) (2024-06-08)
 
 
