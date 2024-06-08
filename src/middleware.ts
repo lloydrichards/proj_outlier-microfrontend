@@ -3,7 +3,7 @@ import { auth, BASE_PATH } from "@/server/auth";
 import { ALL_LOCALES } from "./lib/i18n";
 import createIntlMiddleware from "next-intl/middleware";
 
-const publicPages = ["/", "/embed", "/embed/form/unconf"];
+const publicPages = ["/", "/embed"];
 
 export const config = {
   matcher: ["/((?!api|_next|.*\\..*).*)"],
@@ -20,9 +20,10 @@ export default auth((req) => {
   const publicPathnameRegex = RegExp(
     `^(/(${ALL_LOCALES.join("|")}))?(${publicPages
       .flatMap((p) => (p === "/" ? ["", "/"] : p))
-      .join("|")})/?$`,
+      .join("|")})/?`,
     "i",
   );
+  console.log(publicPathnameRegex);
   const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
 
   if (!req.auth && !isPublicPage) {
