@@ -6,17 +6,7 @@
     "timeInMin": "{count, plural, =0 {zero min} =1 {1 min} other {# min}}"
   },
   "i18n": {
-    "arabic": "Arabic",
-    "chinese": "Chinese",
-    "czech": "Czech",
-    "english": "English",
-    "french": "French",
-    "german": "German",
-    "italian": "Italian",
-    "polish": "Polish",
-    "portuguese": "Portuguese",
-    "russian": "Russian",
-    "spanish": "Spanish"
+    "languageSelect": "{locale, select, en {English} de {German} other {Unknown}}"
   },
   "Auth": {
     "welcome_message": "Welcome, {name}",

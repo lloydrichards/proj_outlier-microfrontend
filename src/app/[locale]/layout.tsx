@@ -1,7 +1,7 @@
 import { silka } from "@/styles/font";
 import "@/styles/globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 
 import { TRPCReactProvider } from "@/trpc/react";
 

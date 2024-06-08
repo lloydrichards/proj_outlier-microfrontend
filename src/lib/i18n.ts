@@ -2,9 +2,9 @@
 import { getRequestConfig } from "next-intl/server";
 import { notFound } from "next/navigation";
 
-export type Locale = "en";
+export type Locale = "en" | "de";
 
-export const ALL_LOCALES: Locale[] = ["en"];
+export const ALL_LOCALES: Locale[] = ["en", "de"];
 
 export default getRequestConfig(async ({ locale }) => {
   if (!ALL_LOCALES.includes(locale as Locale)) return notFound();

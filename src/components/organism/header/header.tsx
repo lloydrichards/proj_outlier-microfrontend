@@ -5,6 +5,7 @@ import { Button } from "@/components/atom/button";
 import { auth } from "@/server/auth";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import { LocaleSwitcher } from "@/components/molecule/locale_switcher/locale_switcher";
 
 export const Header = async () => {
   const session = await auth();
@@ -20,6 +21,7 @@ export const Header = async () => {
           <p className={typefaceSubtitle("grow")}>
             {t("welcome_message", { name: session.user.name })}
           </p>
+          <LocaleSwitcher />
           <Button asChild>
             <Link href="/api/auth/signout">{t("signOut")}</Link>
           </Button>
