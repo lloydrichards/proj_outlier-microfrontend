@@ -3,7 +3,7 @@ import { auth, BASE_PATH } from "@/server/auth";
 import { ALL_LOCALES } from "./lib/i18n";
 import createIntlMiddleware from "next-intl/middleware";
 
-const publicPages = ["/", "/embed"];
+const publicPages = ["/", "/embed", "/embed/form/unconf"];
 
 export const config = {
   matcher: ["/((?!api|_next|.*\\..*).*)"],
