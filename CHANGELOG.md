@@ -1,3 +1,10 @@
+## [0.5.1](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.0...v0.5.1) (2024-06-09)
+
+
+### Bug Fixes
+
+* **components:** :bug: use locale timezone ([fcaafcc](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/fcaafccafeba21a78fc0870909da049aec6e880d))
+
 # [0.5.0](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.4.2...v0.5.0) (2024-06-09)
 
 
