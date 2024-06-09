@@ -3,7 +3,7 @@ import { auth, BASE_PATH } from "@/server/auth";
 import { ALL_LOCALES } from "./lib/i18n";
 import createIntlMiddleware from "next-intl/middleware";
 
-const publicPages = ["/", "/embed"];
+const publicPages = ["/embed"];
 
 export const config = {
   matcher: ["/((?!api|_next|.*\\..*).*)"],
@@ -25,7 +25,7 @@ export default auth((req) => {
   );
   const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
 
-  if (!req.auth && !isPublicPage) {
+  if (!req.auth && !isPublicPage && req.nextUrl.pathname !== "/") {
     return NextResponse.redirect(
       new URL(
         `${BASE_PATH}/signin?callbackUrl=${encodeURIComponent(
