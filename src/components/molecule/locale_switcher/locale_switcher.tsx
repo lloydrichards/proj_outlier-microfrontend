@@ -8,20 +8,25 @@ import {
 } from "@/components/atom/select";
 import { ALL_LOCALES } from "@/lib/i18n";
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "@/navigation";
+import { useRouter, usePathname } from "@/navigation";
+import { cn } from "@/lib/utils";
+import { startTransition } from "react";
 
-export const LocaleSwitcher = () => {
+export const LocaleSwitcher = ({ className }: { className?: string }) => {
   const t = useTranslations("i18n");
   const locale = useLocale();
   const router = useRouter();
+  const pathname = usePathname();
   return (
     <Select
       value={locale}
       onValueChange={(e) => {
-        router.replace("/", { locale: e });
+        startTransition(() => {
+          router.replace(pathname, { locale: e });
+        });
       }}
     >
-      <SelectTrigger className="w-32">
+      <SelectTrigger className={cn("w-32", className)}>
         <SelectValue placeholder="Select locale" />
       </SelectTrigger>
       <SelectContent>
