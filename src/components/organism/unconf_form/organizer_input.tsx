@@ -22,7 +22,7 @@ export const OrganizerInput: FC<{ index: number }> = ({ index }) => {
         name={`organizers.${index}.firstName`}
         render={({ field }) => (
           <FormItem>
-            <FormLabel>{t("last_label")}</FormLabel>
+            <FormLabel>{t("first_label")}</FormLabel>
             <FormControl>
               <Input
                 placeholder={t("first_placeholder")}
