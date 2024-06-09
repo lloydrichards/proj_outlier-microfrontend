@@ -16,6 +16,7 @@ export function LocalTime({ date }: { date: Date | string | number }) {
             hour: "numeric",
             minute: "numeric",
             hour12: true,
+            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
           })}
       </time>
     </Suspense>
