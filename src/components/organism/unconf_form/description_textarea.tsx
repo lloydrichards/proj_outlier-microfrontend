@@ -10,30 +10,28 @@ import {
 import { useFormContext } from "react-hook-form";
 import { Textarea } from "@/components/atom/textarea";
 import { type UnconfSchema } from "./unconf_form";
+import { useTranslations } from "next-intl";
 
 export const DescriptionTextarea = () => {
   const form = useFormContext<UnconfSchema>();
-
+  const t = useTranslations("Forms.Unconf.Event.Summary");
   return (
     <FormField
       control={form.control}
       name="event.summary"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Description</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <FormControl>
             <Textarea
-              placeholder="description"
+              placeholder={t("placeholder")}
               className="resize-y"
               {...field}
               value={field.value ?? ""}
             />
           </FormControl>
           <FormMessage />
-          <FormDescription>
-            A short description of your event. This will be displayed in the
-            schedule.
-          </FormDescription>
+          <FormDescription>{t("helper")}</FormDescription>
         </FormItem>
       )}
     />

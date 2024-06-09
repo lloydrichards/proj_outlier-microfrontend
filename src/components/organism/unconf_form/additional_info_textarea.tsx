@@ -10,30 +10,28 @@ import {
 import { useFormContext } from "react-hook-form";
 import { Textarea } from "@/components/atom/textarea";
 import type { UnconfSchema } from "./unconf_form";
+import { useTranslations } from "next-intl";
 
 export const AdditionalInfoTextarea = () => {
   const form = useFormContext<UnconfSchema>();
-
+  const t = useTranslations("Forms.Unconf.Event.Description");
   return (
     <FormField
       control={form.control}
       name="event.description"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Additional Info</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <FormControl>
             <Textarea
-              placeholder="description"
+              placeholder={t("placeholder")}
               className="h-40 resize-y"
               {...field}
               value={field.value ?? ""}
             />
           </FormControl>
           <FormMessage />
-          <FormDescription>
-            Please provide us with details on setting up the event. This will be
-            used to evaluate your submission.
-          </FormDescription>
+          <FormDescription>{t("helper")}</FormDescription>
         </FormItem>
       )}
     />

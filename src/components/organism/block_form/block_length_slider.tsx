@@ -21,13 +21,15 @@ import {
 } from "@/components/atom/popover";
 
 import { PopoverClose } from "@radix-ui/react-popover";
+import { useTranslations } from "next-intl";
 
 export const BlockLengthSlider: FC = () => {
   const { setValue, getValues } = useFormContext<InsertBlockSchema>();
+  const t = useTranslations("Forms.Block.Length");
   return (
     <div className="grid gap-2">
       <CalendarInput />
-      <FormLabel>Block Length</FormLabel>
+      <FormLabel>{t("label")}</FormLabel>
       <div className="flex items-start gap-4">
         <TimeInput name="start" />
         <div className="grid w-full gap-2 pt-2">
@@ -65,6 +67,7 @@ export const BlockLengthSlider: FC = () => {
 
 const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
   const form = useFormContext<InsertBlockSchema>();
+  const t = useTranslations("Forms.Block.Length");
   return (
     <FormField
       control={form.control}
@@ -94,7 +97,7 @@ const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
                           field.onChange(value);
                         }}
                       >
-                        {i.toString().padStart(2, "0")} {"H"}
+                        {t("inHours", { count: i.toString().padStart(2, "0") })}
                       </Button>
                     </PopoverClose>
                   ))}
@@ -113,7 +116,7 @@ const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
                           field.onChange(value);
                         }}
                       >
-                        {i * 5} {"M"}
+                        {t("inMinutes", { count: i * 5 })}
                       </Button>
                     </PopoverClose>
                   ))}
@@ -129,13 +132,15 @@ const TimeInput: FC<{ name: "start" | "end" }> = ({ name }) => {
 
 const CalendarInput: FC = () => {
   const form = useFormContext<InsertBlockSchema>();
+  const t = useTranslations("Forms.Block.Date");
+
   return (
     <FormField
       control={form.control}
       name="start"
       render={({ field }) => (
         <FormItem className="flex flex-col">
-          <FormLabel>Block Date</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <Popover>
             <PopoverTrigger asChild>
               <FormControl>
@@ -149,7 +154,7 @@ const CalendarInput: FC = () => {
                   {field.value ? (
                     formatDate(field.value)
                   ) : (
-                    <span>Pick a date</span>
+                    <span>{t("helper")}</span>
                   )}
                   <CalendarIcon className="ml-auto size-4 opacity-50" />
                 </Button>

@@ -3,6 +3,7 @@
     "type": "{type, select, SPEAKER {Sprecher} UNCONF {Unconf} LIGHTNING {Lightning} ANNOUNCEMENT {Ankündigung} PAUSE {Pause} NETWORKING {Networking} other {Unbekannter Typ.}}",
     "category": "{category, select, DVS {DVS} ACADEMIA {Grundlagen} ACCESSIBILITY {Barrierefreiheit} CAREER {Karriere} DASHBOARD {Dashboard} ANALYTICS {Analytics} ART {Kunst} SCIENCE {Wissenschaft} KEYNOTE {Keynote} LITERACY {Lesefähigkeit} DEMO {Demo} DESIGN {Design} HISTORICAL {Historisch} JOURNALISM {Journalismus} MAPS {Karten} PROCESS {Prozess} PROGRAMMING {Programmierung} PROJECT {Projekt Deep Dive} RESEARCH {Forschung} SOCIAL {Soziales Engagement} SPORTS {Sport} STORYTELLING {Geschichtenerzählen} THEORY {Theorie} TOOLING {Werkzeuge} INDUSTRY {Industrie} UNCERTAINTY {Unsicherheit} UNUSUAL {Ungewöhnliche Datenvisualisierung} OTHER {Andere} other {Unbekannte Kategorie.}}",
     "location": "{location, select, UNASSIGNED {Bitte wählen Sie einen Ort aus.} MAIN {Hauptbühne} VIRTUAL {Virtuell} ROOM1 {Lollipop Auditorium} ROOM2 {Matrix Raum} ROOM3 {Waterfall Raum} ROOM4 {Raum4} ROOM5 {Raum5} ROOM6 {Raum6} ZOOM {Zoom} SLACK {Slack} other {Unbekannter Ort}}",
+    "status": "{status, select, PENDING {Ausstehend} ACCEPTED {Genehmigt} REJECTED {Abgelehnt} other {Unbekannt}}",
     "timeInMin": "{count, plural, =0 {null Minuten} =1 {1 Minute} other {# Minuten}}"
   },
   "i18n": {
@@ -18,56 +19,103 @@
     "message": "Die angeforderte Ressource konnte nicht gefunden werden"
   },
   "Forms": {
-    "ImgInput": {
-      "title": "Bild-URL"
-    },
+    "ImgInput": { "title": "Bild-URL" },
     "Block": {
-      "speaker_section": "Sprecher",
-      "length_section": "Dauer",
-      "location_section": "Ort",
-      "category_section": "Kategorie",
-      "description_section": "Beschreibung"
+      "Type": { "label": "Typ", "helper": "Wählen Sie den Blocktyp aus" },
+      "Length": {
+        "label": "Dauer",
+        "inHours": "{count} Std",
+        "inMinutes": "{count} Min"
+      },
+      "Date": { "label": "Blockdatum", "helper": "Wählen Sie ein Datum aus" }
     },
     "Event": {
       "Title": {
-        "title": "Titel",
-        "placeholder": "Titel"
+        "label": "Titel",
+        "placeholder": "z.B. Vielfalt in der Datenvisualisierung"
       },
       "Category": {
-        "title": "Kategorie",
-        "placeholder": "Kategorie des Events auswählen"
+        "label": "Kategorie",
+        "helper": "Wählen Sie die Kategorie der Veranstaltung aus"
+      },
+      "Location": {
+        "label": "Ort",
+        "helper": "Wählen Sie den Veranstaltungsort aus"
+      },
+      "Summary": {
+        "label": "Zusammenfassung (kurz)",
+        "helper": "Bitte geben Sie eine kurze Beschreibung (2-3 Sätze über den Vortrag) an"
+      },
+      "Description": {
+        "label": "Beschreibung (lang)",
+        "helper": "Bitte geben Sie eine ausführliche Beschreibung (5-8 Sätze über den Vortrag) an"
+      },
+      "Link": {
+        "link_label": "Link",
+        "link_placeholder": "z.B. Zoom-Link",
+        "url_label": "URL",
+        "url_placeholder": "https://"
       }
     },
     "Unconf": {
-      "title": "Unconf Einreichung [{date} - {time}]",
+      "label": "Unconf Einreichung [{date} - {time}]",
       "submit_btn": "Einreichen",
-      "submission_title": "Vielen Dank für Ihre Einreichung!",
-      "submission_message": "Ihr Event wurde eingereicht und wartet auf Genehmigung. Überprüfen Sie den Zeitplan, um zu sehen, ob Ihr Event akzeptiert wurde.",
+      "submission_label": "Vielen Dank für Ihre Einreichung!",
+      "submission_message": "Ihre Veranstaltung wurde eingereicht und wartet auf Genehmigung. Überprüfen Sie den Zeitplan, um zu sehen, ob Ihre Veranstaltung akzeptiert wurde.",
       "Organizer": {
-        "title": "Organisator",
-        "placeholder": "Organisator",
+        "label": "Organisator",
         "add_organizer_btn": "Co-Sprecher hinzufügen",
         "co-organizer_title": "Co-Organisator #{index}",
         "Pronouns": {
-          "title": "Pronomen",
-          "placeholder": "Bitte wählen Sie Ihre Pronomen aus.",
-          "select": "{pronoun, select, she/her {Sie/Ihr} he/him {Er/Ihm} they/them {Sie/Ihnen} other {Andere}}"
+          "label": "Pronomen",
+          "helper": "Bitte wählen Sie Ihre Pronomen aus.",
+          "select": "{pronoun, select, she {Sie/Ihr} he {Er/Ihm} they {Sie/Ihnen} other {Andere}}"
+        },
+        "Email": {
+          "label": "E-Mail",
+          "placeholder": "z.B. data@dvs.com",
+          "helper": "Stellen Sie sicher, dass Sie die E-Mail-Adresse verwenden, mit der Sie sich für die Konferenz registriert haben."
         },
         "Name": {
-          "first_title": "Vorname",
-          "first_placeholder": "Giorgia",
-          "last_title": "Nachname",
-          "last_placeholder": "Lupi"
+          "first_label": "Vorname",
+          "first_placeholder": "z.B. Giorgia",
+          "last_label": "Nachname",
+          "last_placeholder": "z.B. Lupi"
         }
       },
       "Event": {
-        "title": "Event"
+        "label": "Veranstaltung",
+        "Summary": {
+          "label": "Beschreibung",
+          "placeholder": "z.B. Bei dieser Veranstaltung werden wir...",
+          "helper": "Eine kurze Beschreibung Ihrer Veranstaltung. Diese wird im Zeitplan angezeigt."
+        },
+        "Description": {
+          "label": "Zusätzliche Informationen",
+          "placeholder": "z.B. Für diese Veranstaltung benötigen Sie...",
+          "helper": "Bitte geben Sie uns Details zur Durchführung der Veranstaltung. Diese werden zur Bewertung Ihrer Einreichung verwendet."
+        }
       }
     },
     "Speaker": {
-      "pronouns": {
-        "title": "Pronomen",
+      "Pronouns": {
+        "label": "Pronomen",
+        "placeholder": "z.B. sie/ihr",
         "helper": "Bitte wählen Sie Ihre Pronomen aus."
+      },
+      "Name": {
+        "first_label": "Vorname",
+        "first_placeholder": "z.B. John",
+        "last_label": "Nachname",
+        "last_placeholder": "z.B. Lennon"
+      },
+      "Email": { "label": "E-Mail", "placeholder": "z.B. data@dvs.com" },
+      "Bio": { "label": "Biografie", "placeholder": "z.B. Am Anfang..." },
+      "Title": {
+        "title_label": "Titel",
+        "title_placeholder": "z.B. Direktor",
+        "organization_label": "Organisation",
+        "organization_placeholder": "z.B. Data Visualization Society"
       }
     }
   },
@@ -82,42 +130,66 @@
     "location_section": "Ort",
     "link_section": "Link",
     "date_section": "Datum",
-    "time_section": "Uhrzeit"
+    "time_section": "Uhrzeit",
+    "speakers_section": "Sprecher",
+    "length_section": "Dauer"
+  },
+  "Dialog": {
+    "Speaker": {
+      "delete_message": "Sind Sie sicher, dass Sie {speaker} löschen möchten?",
+      "delete_cancel_btn": "Abbrechen",
+      "delete_confirm_btn": "Löschen"
+    },
+    "Event": {
+      "delete_message": "Sind Sie sicher, dass Sie {event} löschen möchten?",
+      "delete_cancel_btn": "Abbrechen",
+      "delete_confirm_btn": "Löschen"
+    },
+    "Block": {
+      "delete_message": "Sind Sie sicher, dass Sie den {type} Block um {time} löschen möchten?",
+      "delete_cancel_btn": "Abbrechen",
+      "delete_confirm_btn": "Löschen",
+      "add_btn": "Hinzufügen",
+      "add_title": "Block hinzufügen"
+    }
+  },
+  "Menu": {
+    "edit_btn": "Bearbeiten",
+    "delete_btn": "Löschen",
+    "add_btn": "Hinzufügen",
+    "Speaker": { "label": "Sprecher", "edit_section": "Sprecher bearbeiten" },
+    "Event": {
+      "label": "Veranstaltung",
+      "edit_section": "Veranstaltung bearbeiten"
+    },
+    "Block": { "label": "Block", "edit_section": "Block bearbeiten" }
   },
   "Cards": {
-    "Speaker": {
-      "title": "Sprecher",
-      "empty_message": "Nichts geplant"
-    },
+    "Speaker": { "title": "Sprecher", "empty_message": "Nichts geplant" },
     "Unconf": {
       "title": "Unconf",
       "button_toLocation": "Zum Ort",
       "organizedBy": "Organisiert von",
-      "empty_message": "Block für Unconference-Sessions gespeichert; schauen Sie während der Konferenz wieder vorbei, um herauszufinden, worum es geht!"
+      "empty_message": "Block für Unconference-Sitzungen gespeichert; schauen Sie während der Konferenz wieder vorbei, um herauszufinden, worum es geht!"
     },
     "Lightning": {
       "title": "Lightning",
-      "empty_message": "Eine Reihe von kurzen Präsentationen einiger Outlier-Teilnehmer zu ihren Lieblingsthemen und Projekten."
+      "empty_message": "Eine Reihe von kurzen Präsentationen einiger Outlier-Teilnehmer zu ihren Lieblingsthemen und -projekten."
     },
     "Announcement": {
       "title": "Ankündigung",
       "empty_message": "Nichts geplant"
     },
-    "Pause": {
-      "title": "Pause"
-    },
-    "Networking": {
-      "title": "Networking",
-      "empty_message": "Nichts geplant"
-    }
+    "Pause": { "title": "Pause" },
+    "Networking": { "title": "Networking", "empty_message": "Nichts geplant" }
   },
   "Dashboard": {
     "Unconf": {
       "title": "Ausstehende Unconf-Einreichungen",
-      "description": "Verwalten Sie Ihre Produkte und sehen Sie sich deren Verkaufsleistung an.",
+      "description": "Verwalten Sie Unconf-Einreichungen, die auf Genehmigung warten.",
       "Table": {
-        "block_time": "Block-Zeit",
-        "title": "Titel",
+        "block_time": "Blockzeit",
+        "label": "Titel",
         "summary": "Zusammenfassung",
         "description": "Beschreibung",
         "organizer": "Organisator",
@@ -125,6 +197,14 @@
         "location": "Ort",
         "status": "Status",
         "action": "Aktion"
+      },
+      "Menu": {
+        "label": "Aktionen",
+        "decision_section": "Entscheidung?",
+        "approve": "Genehmigen",
+        "reject": "Ablehnen",
+        "delete_btn": "Löschen",
+        "edit_btn": "Bearbeiten"
       }
     }
   }

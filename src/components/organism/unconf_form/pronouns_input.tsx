@@ -18,7 +18,12 @@ import {
 import { type UnconfSchema } from "./unconf_form";
 import { useTranslations } from "next-intl";
 
-const pronouns = ["she/her", "he/him", "they/them", "other"];
+const pronouns = [
+  { value: "she/her", key: "she" },
+  { value: "he/him", key: "he" },
+  { value: "they/them", key: "they" },
+  { value: "other", key: "other" },
+];
 
 export const PronounsInput: FC<{ index: number }> = ({ index }) => {
   const form = useFormContext<UnconfSchema>();
@@ -29,7 +34,7 @@ export const PronounsInput: FC<{ index: number }> = ({ index }) => {
       name={`organizers.${index}.pronouns`}
       render={({ field }) => (
         <FormItem>
-          <FormLabel>{t("title")}</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
 
           <Select
             onValueChange={field.onChange}
@@ -37,13 +42,13 @@ export const PronounsInput: FC<{ index: number }> = ({ index }) => {
           >
             <FormControl>
               <SelectTrigger>
-                <SelectValue placeholder={t("placeholder")} />
+                <SelectValue placeholder={t("helper")} />
               </SelectTrigger>
             </FormControl>
             <SelectContent>
-              {pronouns.map((pronoun) => (
-                <SelectItem key={pronoun} value={pronoun}>
-                  {t("select", { pronoun })}
+              {pronouns.map(({ key, value }) => (
+                <SelectItem key={key} value={value}>
+                  {t("select", { pronoun: key })}
                 </SelectItem>
               ))}
             </SelectContent>

@@ -28,7 +28,7 @@ export const UnconfDashboard: FC<{ edition?: string }> = async ({
       <TableHeader>
         <TableRow>
           <TableHead>{t("block_time")}</TableHead>
-          <TableHead>{t("title")}</TableHead>
+          <TableHead>{t("label")}</TableHead>
           <TableHead>{t("summary")}</TableHead>
           <TableHead>{t("description")}</TableHead>
           <TableHead>{t("organizer")}</TableHead>
@@ -99,7 +99,7 @@ export const UnconfDashboard: FC<{ edition?: string }> = async ({
                         : "default"
                   }
                 >
-                  {event.status}
+                  {tCommon("status", { status: event.status })}
                 </Badge>
               </TableCell>
 

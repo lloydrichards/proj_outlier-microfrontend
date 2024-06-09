@@ -31,11 +31,11 @@ export const EventCategorySelect: FC<{
       name="event.category"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>{t("title")}</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <Select onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>
               <SelectTrigger>
-                <SelectValue placeholder={t("placeholder")} />
+                <SelectValue placeholder={t("helper")} />
               </SelectTrigger>
             </FormControl>
             <SelectContent>

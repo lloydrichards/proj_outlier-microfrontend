@@ -84,7 +84,7 @@ export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
     return (
       <div className="grid gap-2">
         <h2 className={typefaceTitle("text-center")}>
-          {t("submission_title")}
+          {t("submission_label")}
         </h2>
         <p className={typefaceBody("text-balance text-center")}>
           {t("submission_message")}
@@ -96,12 +96,12 @@ export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-2">
         <h1 className={typefaceSubtitle("text-right opacity-30")}>
-          {t("title", {
+          {t("label", {
             date: formatDate(block.start),
             time: formatTime(block.start),
           })}
         </h1>
-        <h2 className={typefaceTitle()}>{t("Organizer.title")}</h2>
+        <h2 className={typefaceTitle()}>{t("Organizer.label")}</h2>
         <OrganizerInput index={0} />
         <PronounsInput index={0} />
         <EmailInput index={0} />
@@ -134,7 +134,7 @@ export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
           </Button>
         </div>
         <Separator className="my-4" />
-        <h2 className={typefaceTitle()}>{t("Event.title")}</h2>
+        <h2 className={typefaceTitle()}>{t("Event.label")}</h2>
         <TitleInput />
         <EventCategorySelect exclude={["KEYNOTE", "DVS"]} />
         <DescriptionTextarea />

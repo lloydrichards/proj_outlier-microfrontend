@@ -3,6 +3,7 @@
     "type": "{type, select, SPEAKER {Speaker} UNCONF {Unconf} LIGHTNING {Lightning} ANNOUNCEMENT {Announcement} PAUSE {Pause} NETWORKING {Networking} other {Unknown type.}}",
     "category": "{category, select, DVS {DVS} ACADEMIA {Back to Basics} ACCESSIBILITY {Accessibility} CAREER {Career} DASHBOARD {Dashboard} ANALYTICS {Analytics} ART {Art} SCIENCE {Science} KEYNOTE {Keynote} LITERACY {Literacy} DEMO {Demo} DESIGN {Design} HISTORICAL {Historical} JOURNALISM {Journalism} MAPS {Maps} PROCESS {Process} PROGRAMMING {Programming} PROJECT {Project Deep Dive} RESEARCH {Research} SOCIAL {Social Good} SPORTS {Sports} STORYTELLING {Storytelling} THEORY {Theory} TOOLING {Tooling} INDUSTRY {Industry} UNCERTAINTY {Uncertainty} UNUSUAL {Unusual Data Viz} OTHER {Other} other {Unknown category.}}",
     "location": "{location, select, UNASSIGNED {Please select location.} MAIN {Main Stage} VIRTUAL {Virtual} ROOM1 {Lollipop Auditorium} ROOM2 {Matrix Room} ROOM3 {Waterfall Room} ROOM4 {Room4} ROOM5 {Room5} ROOM6 {Room6} ZOOM {Zoom} SLACK {Slack} other {Unknown Location}}",
+    "status": "{status, select, PENDING {Pending} ACCEPTED {Approved} REJECTED {Rejected} other {Unknown}}",
     "timeInMin": "{count, plural, =0 {zero min} =1 {1 min} other {# min}}"
   },
   "i18n": {
@@ -22,52 +23,113 @@
       "title": "Image Url"
     },
     "Block": {
-      "speaker_section": "Speaker(s)",
-      "length_section": "Length",
-      "location_section": "Location",
-      "category_section": "Category",
-      "description_section": "Description"
+      "Type": {
+        "label": "Type",
+        "helper": "Select type of block"
+      },
+      "Length": {
+        "label": "Length",
+        "inHours": "{count} H",
+        "inMinutes": "{count} M"
+      },
+      "Date": {
+        "label": "Block Date",
+        "helper": "Pick a date"
+      }
     },
     "Event": {
       "Title": {
-        "title": "Title",
-        "placeholder": "title"
+        "label": "Title",
+        "placeholder": "eg. Diversity in Data Viz"
       },
       "Category": {
-        "title": "Category",
-        "placeholder": "Select category of event"
+        "label": "Category",
+        "helper": "Select category of event"
+      },
+      "Location": {
+        "label": "Location",
+        "helper": "Select location of event"
+      },
+      "Summary": {
+        "label": "Summary (short)",
+        "helper": "Please provide a short description (2-3 sentences about the talk)"
+      },
+      "Description": {
+        "label": "Description (Long)",
+        "helper": "Please provide a long description (5-8 sentences about the talk)"
+      },
+      "Link": {
+        "link_label": "Link",
+        "link_placeholder": "eg. Zoom link",
+        "url_label": "URL",
+        "url_placeholder": "https://"
       }
     },
     "Unconf": {
-      "title": "Unconf Submission [{date} - {time}]",
+      "label": "Unconf Submission [{date} - {time}]",
       "submit_btn": "Submit",
-      "submission_title": "Thank you for your submission!",
+      "submission_label": "Thank you for your submission!",
       "submission_message": "Your event has been submitted and is pending approval. Check the schedule to see if your event has been accepted.",
       "Organizer": {
-        "title": "Organizer",
-        "placeholder": "organizer",
+        "label": "Organizer",
         "add_organizer_btn": "Add Co-Speaker",
         "co-organizer_title": "Co-Organizer #{index}",
         "Pronouns": {
-          "title": "Pronouns",
-          "placeholder": "Please select your pronouns.",
-          "select": "{pronoun, select, she/her {She/Her} he/him {He/Him} they/them {They/Them} other {Other}}"
+          "label": "Pronouns",
+          "helper": "Please select your pronouns.",
+          "select": "{pronoun, select, she {She/Her} he {He/Him} they {They/Them} other {Other}}"
+        },
+        "Email": {
+          "label": "Email",
+          "placeholder": "eg. data@dvs.com",
+          "helper": "Make sure to use the email address you used to register for the conference."
         },
         "Name": {
-          "first_title": "First Name",
-          "first_placeholder": "Giorgia",
-          "last_title": "Last Name",
-          "last_placeholder": "Lupi"
+          "first_label": "First Name",
+          "first_placeholder": "eg. Giorgia",
+          "last_label": "Last Name",
+          "last_placeholder": "eg. Lupi"
         }
       },
       "Event": {
-        "title": "Event"
+        "label": "Event",
+        "Summary": {
+          "label": "Description",
+          "placeholder": "eg. During this event we will...",
+          "helper": "A short description of your event. This will be displayed in the schedule."
+        },
+        "Description": {
+          "label": "Additional Info",
+          "placeholder": "eg. For this event you will need...",
+          "helper": "Please provide us with details on setting up the event. This will be used to evaluate your submission."
+        }
       }
     },
     "Speaker": {
-      "pronouns": {
-        "title": "Pronouns",
+      "Pronouns": {
+        "label": "Pronouns",
+        "placeholder": "eg. she/her",
         "helper": "Please select your pronouns."
+      },
+      "Name": {
+        "first_label": "First Name",
+        "first_placeholder": "eg. John",
+        "last_label": "Last Name",
+        "last_placeholder": "eg. Lennon"
+      },
+      "Email": {
+        "label": "Email",
+        "placeholder": "eg. data@dvs.com"
+      },
+      "Bio": {
+        "label": "Bio",
+        "placeholder": "eg. In the beginning..."
+      },
+      "Title": {
+        "title_label": "Title",
+        "title_placeholder": "eg. director",
+        "organization_label": "Organization",
+        "organization_placeholder": "eg. Data Visualization Society"
       }
     }
   },
@@ -82,7 +144,45 @@
     "location_section": "Location",
     "link_section": "Link",
     "date_section": "Date",
-    "time_section": "Time"
+    "time_section": "Time",
+    "speakers_section": "Speaker(s)",
+    "length_section": "Length"
+  },
+  "Dialog": {
+    "Speaker": {
+      "delete_message": "Are you sure you want to delete {speaker}?",
+      "delete_cancel_btn": "Cancel",
+      "delete_confirm_btn": "Delete"
+    },
+    "Event": {
+      "delete_message": "Are you sure you want to delete {event}?",
+      "delete_cancel_btn": "Cancel",
+      "delete_confirm_btn": "Delete"
+    },
+    "Block": {
+      "delete_message": "Are you sure you want to delete {type} block at {time}?",
+      "delete_cancel_btn": "Cancel",
+      "delete_confirm_btn": "Delete",
+      "add_btn": "Add",
+      "add_title": "Add Block"
+    }
+  },
+  "Menu": {
+    "edit_btn": "Edit",
+    "delete_btn": "Delete",
+    "add_btn": "Add",
+    "Speaker": {
+      "label": "Speaker",
+      "edit_section": "Edit Speaker"
+    },
+    "Event": {
+      "label": "Event",
+      "edit_section": "Edit Event"
+    },
+    "Block": {
+      "label": "Block",
+      "edit_section": "Edit Block"
+    }
   },
   "Cards": {
     "Speaker": {
@@ -114,10 +214,10 @@
   "Dashboard": {
     "Unconf": {
       "title": "Pending Unconf Submissions",
-      "description": "Manage your products and view their sales performance.",
+      "description": "Manage unconf submissions that are pending approval.",
       "Table": {
         "block_time": "Block_Time",
-        "title": "Title",
+        "label": "Title",
         "summary": "Summary",
         "description": "Description",
         "organizer": "Organizer",
@@ -125,6 +225,14 @@
         "location": "Location",
         "status": "Status",
         "action": "Action"
+      },
+      "Menu": {
+        "label": "Actions",
+        "decision_section": "Decision?",
+        "approve": "Approve",
+        "reject": "Reject",
+        "delete_btn": "Delete",
+        "edit_btn": "Edit"
       }
     }
   }

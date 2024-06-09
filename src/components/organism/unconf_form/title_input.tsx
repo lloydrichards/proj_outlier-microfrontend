@@ -20,7 +20,7 @@ export const TitleInput = () => {
       name="event.title"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>{t("title")}</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <FormControl>
             <Input placeholder={t("placeholder")} {...field} />
           </FormControl>

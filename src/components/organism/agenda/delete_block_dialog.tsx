@@ -7,9 +7,11 @@ import { useRouter } from "next/navigation";
 import { DialogClose } from "@/components/atom/dialog";
 import { typefaceBody } from "@/components/typeface";
 import { timeFormat } from "d3-time-format";
+import { useTranslations } from "next-intl";
 
 export const DeleteBlockDialog: FC<{ block: Block }> = ({ block }) => {
   const router = useRouter();
+  const t = useTranslations("Dialog.Block");
   const deleteBlock = api.block.delete.useMutation({
     onSuccess: () => {
       router.refresh();
@@ -19,15 +21,14 @@ export const DeleteBlockDialog: FC<{ block: Block }> = ({ block }) => {
   return (
     <div className="grid gap-4">
       <p className={typefaceBody()}>
-        Are you sure you want to delete {block.type} block at{" "}
-        {format(block.start)}?
+        {t("delete_message", { type: block.type, time: format(block.start) })}
       </p>
       <div className="flex justify-between">
         <DialogClose asChild>
-          <Button>Cancel</Button>
+          <Button>{t("delete_cancel_btn")}</Button>
         </DialogClose>
         <Button variant="mustard" onClick={() => deleteBlock.mutate(block)}>
-          Delete
+          {t("delete_confirm_btn")}
         </Button>
       </div>
     </div>

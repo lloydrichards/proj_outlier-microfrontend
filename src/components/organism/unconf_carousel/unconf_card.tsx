@@ -45,7 +45,7 @@ export const UnconfCard: FC<{ event: AgendaEvent }> = ({ event }) => {
               className={"absolute bottom-2 left-2 opacity-50"}
             >
               {event.status == "PENDING"
-                ? event.status
+                ? tCommon("status", { status: event.status })
                 : tCommon("location", { location: event.location })}
             </Badge>
           </CardHeader>

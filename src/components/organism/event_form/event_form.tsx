@@ -23,6 +23,7 @@ import { Textarea } from "@/components/atom/textarea";
 import { EventLocationSelect } from "./event_location_select";
 import { ImgInput } from "../../molecule/img_input/img_input";
 import { SubmitButton } from "@/components/molecule/submit_button/submit_button";
+import { useTranslations } from "next-intl";
 
 type EventFormProps = {
   blockId: number;
@@ -74,16 +75,16 @@ export const EventForm: FC<EventFormProps> = ({ blockId, edit }) => {
 
 const TitleInput = () => {
   const form = useFormContext<InsertEventSchema>();
-
+  const t = useTranslations("Forms.Event.Title");
   return (
     <FormField
       control={form.control}
       name="title"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Title</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <FormControl>
-            <Input placeholder="title" {...field} />
+            <Input placeholder={t("placeholder")} {...field} />
           </FormControl>
           <FormMessage />
         </FormItem>
@@ -94,6 +95,7 @@ const TitleInput = () => {
 
 const SummaryTextarea = () => {
   const form = useFormContext<InsertEventSchema>();
+  const t = useTranslations("Forms.Event.Summary");
 
   return (
     <FormField
@@ -101,10 +103,10 @@ const SummaryTextarea = () => {
       name="summary"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Summary (short)</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <FormControl>
             <Textarea
-              placeholder="Please provide a short description (2-3 sentences about the talk)"
+              placeholder={t("helper")}
               className="resize-y"
               {...field}
               value={field.value ?? ""}
@@ -119,6 +121,7 @@ const SummaryTextarea = () => {
 
 const DescriptionTextarea = () => {
   const form = useFormContext<InsertEventSchema>();
+  const t = useTranslations("Forms.Event.Description");
 
   return (
     <FormField
@@ -126,10 +129,10 @@ const DescriptionTextarea = () => {
       name="description"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Description (Long)</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <FormControl>
             <Textarea
-              placeholder="Please provide a long description (5-8 sentences about the talk)"
+              placeholder={t("helper")}
               className="resize-y"
               {...field}
               value={field.value ?? ""}
@@ -144,6 +147,7 @@ const DescriptionTextarea = () => {
 
 const LinkInput = () => {
   const form = useFormContext<InsertEventSchema>();
+  const t = useTranslations("Forms.Event.Link");
 
   return (
     <div className="grid grid-cols-3 gap-2">
@@ -152,9 +156,13 @@ const LinkInput = () => {
         name="linkLabel"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Link</FormLabel>
+            <FormLabel>{t("link_label")}</FormLabel>
             <FormControl>
-              <Input placeholder="Label" {...field} value={field.value ?? ""} />
+              <Input
+                placeholder={t("link_placeholder")}
+                {...field}
+                value={field.value ?? ""}
+              />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -165,10 +173,10 @@ const LinkInput = () => {
         name="linkUrl"
         render={({ field }) => (
           <FormItem className="col-span-2">
-            <FormLabel>URL</FormLabel>
+            <FormLabel>{t("url_label")}</FormLabel>
             <FormControl>
               <Input
-                placeholder="https://"
+                placeholder={t("url_placeholder")}
                 type="url"
                 {...field}
                 value={field.value ?? ""}

@@ -14,12 +14,14 @@ import { type FC } from "react";
 import { type RouterOutput, api } from "@/trpc/react";
 import { useRouter } from "next/navigation";
 import { EventForm } from "@/components/organism/event_form/event_form";
+import { useTranslations } from "next-intl";
 
 export const UnconfDropdownMenu: FC<{
   event: RouterOutput["unconf"]["getUnconfEvents"][number];
   isAdmin: boolean;
 }> = ({ event, isAdmin }) => {
   const router = useRouter();
+  const t = useTranslations("Dashboard.Unconf.Menu");
   const accept = api.unconf.accept.useMutation({
     onSuccess: () => {
       router.refresh();
@@ -41,19 +43,19 @@ export const UnconfDropdownMenu: FC<{
       <DropdownMenuTrigger asChild>
         <Button aria-haspopup="true" size="icon" variant="ghost">
           <MoreHorizontal className="size-4" />
-          <span className="sr-only">Toggle menu</span>
+          <span className="sr-only">{t("label")}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuLabel>Decision?</DropdownMenuLabel>
+        <DropdownMenuLabel>{t("decision_section")}</DropdownMenuLabel>
         <DropdownMenuItem onClick={() => accept.mutate(event)}>
-          Accept
+          {t("approve")}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => reject.mutate(event)}>
-          Reject
+          {t("reject")}
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuDialogItem triggerChildren="Edit">
+        <DropdownMenuDialogItem triggerChildren={t("edit_btn")}>
           <EventForm blockId={event.blockId} edit={event} />
         </DropdownMenuDialogItem>
         <DropdownMenuSeparator />
@@ -62,7 +64,7 @@ export const UnconfDropdownMenu: FC<{
           className="text-destructive"
           onClick={() => deleteEvent.mutate(event)}
         >
-          Delete
+          {t("delete_btn")}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

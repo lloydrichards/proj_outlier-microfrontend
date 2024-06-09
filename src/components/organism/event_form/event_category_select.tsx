@@ -22,18 +22,19 @@ export const EventCategorySelect: FC<{
   exclude?: string[];
 }> = ({ exclude }) => {
   const form = useFormContext<InsertEventSchema>();
-  const t = useTranslations("Common");
+  const tCommon = useTranslations("Common");
+  const t = useTranslations("Forms.Event.Category");
   return (
     <FormField
       control={form.control}
       name="category"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Category</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <Select onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>
               <SelectTrigger>
-                <SelectValue placeholder="Select category of event" />
+                <SelectValue placeholder={t("helper")} />
               </SelectTrigger>
             </FormControl>
             <SelectContent>
@@ -41,7 +42,7 @@ export const EventCategorySelect: FC<{
                 .filter((e) => (exclude ? !exclude.includes(e) : true))
                 .map((value) => (
                   <SelectItem key={value} value={value}>
-                    {t("category", { category: value })}
+                    {tCommon("category", { category: value })}
                   </SelectItem>
                 ))}
             </SelectContent>

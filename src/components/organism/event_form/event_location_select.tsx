@@ -20,24 +20,25 @@ import { useFormContext } from "react-hook-form";
 
 export const EventLocationSelect: FC = () => {
   const form = useFormContext<InsertEventSchema>();
-  const t = useTranslations("Common");
+  const tCommon = useTranslations("Common");
+  const t = useTranslations("Forms.Event.Location");
   return (
     <FormField
       control={form.control}
       name="location"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Location</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <Select onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>
               <SelectTrigger>
-                <SelectValue placeholder="Select category of event" />
+                <SelectValue placeholder={t("helper")} />
               </SelectTrigger>
             </FormControl>
             <SelectContent>
               {locationEnum.enumValues.map((value) => (
                 <SelectItem key={value} value={value}>
-                  {t("location", { location: value })}
+                  {tCommon("location", { location: value })}
                 </SelectItem>
               ))}
             </SelectContent>

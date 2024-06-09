@@ -21,6 +21,7 @@ import { Input } from "@/components/atom/input";
 import { Textarea } from "@/components/atom/textarea";
 import { ImgInput } from "@/components/molecule/img_input/img_input";
 import { SubmitButton } from "@/components/molecule/submit_button/submit_button";
+import { useTranslations } from "next-intl";
 
 type SpeakerFormProps = {
   eventId: number;
@@ -73,7 +74,7 @@ export const SpeakerForm: FC<SpeakerFormProps> = ({ eventId, edit }) => {
 
 const NameInput = () => {
   const form = useFormContext<InsertSpeakerSchema>();
-
+  const t = useTranslations("Forms.Speaker.Name");
   return (
     <div className="grid grid-cols-2 gap-2">
       <FormField
@@ -81,9 +82,9 @@ const NameInput = () => {
         name="firstName"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>First Name</FormLabel>
+            <FormLabel>{t("first_label")}</FormLabel>
             <FormControl>
-              <Input placeholder="John" {...field} />
+              <Input placeholder={t("first_placeholder")} {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -94,9 +95,9 @@ const NameInput = () => {
         name="lastName"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Last Name</FormLabel>
+            <FormLabel>{t("last_label")}</FormLabel>
             <FormControl>
-              <Input placeholder="Lennon" {...field} />
+              <Input placeholder={t("last_placeholder")} {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -108,6 +109,7 @@ const NameInput = () => {
 
 const TitleInput = () => {
   const form = useFormContext<InsertSpeakerSchema>();
+  const t = useTranslations("Forms.Speaker.Title");
 
   return (
     <div className="grid grid-cols-2 gap-2">
@@ -116,10 +118,10 @@ const TitleInput = () => {
         name="title"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Title</FormLabel>
+            <FormLabel>{t("title_label")}</FormLabel>
             <FormControl>
               <Input
-                placeholder="director"
+                placeholder={t("title_placeholder")}
                 {...field}
                 value={field.value ?? ""}
               />
@@ -133,10 +135,10 @@ const TitleInput = () => {
         name="organization"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Organization</FormLabel>
+            <FormLabel>{t("organization_label")}</FormLabel>
             <FormControl>
               <Input
-                placeholder="Acme Co"
+                placeholder={t("organization_placeholder")}
                 {...field}
                 value={field.value ?? ""}
               />
@@ -151,6 +153,7 @@ const TitleInput = () => {
 
 const PronounsInput = () => {
   const form = useFormContext<InsertSpeakerSchema>();
+  const t = useTranslations("Forms.Speaker.Pronouns");
 
   return (
     <FormField
@@ -158,9 +161,13 @@ const PronounsInput = () => {
       name="pronouns"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Pronouns</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <FormControl>
-            <Input placeholder="he/him" {...field} value={field.value ?? ""} />
+            <Input
+              placeholder={t("placeholder")}
+              {...field}
+              value={field.value ?? ""}
+            />
           </FormControl>
           <FormMessage />
         </FormItem>
@@ -170,6 +177,7 @@ const PronounsInput = () => {
 };
 const EmailInput = () => {
   const form = useFormContext<InsertSpeakerSchema>();
+  const t = useTranslations("Forms.Speaker.Email");
 
   return (
     <FormField
@@ -177,10 +185,10 @@ const EmailInput = () => {
       name="email"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Email</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <FormControl>
             <Input
-              placeholder="jl@acme.com"
+              placeholder={t("placeholder")}
               {...field}
               value={field.value ?? ""}
             />
@@ -194,6 +202,7 @@ const EmailInput = () => {
 
 const BioTextarea = () => {
   const form = useFormContext<InsertSpeakerSchema>();
+  const t = useTranslations("Forms.Speaker.Bio");
 
   return (
     <FormField
@@ -201,10 +210,10 @@ const BioTextarea = () => {
       name="bio"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Bio</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <FormControl>
             <Textarea
-              placeholder="biography"
+              placeholder={t("placeholder")}
               className="resize-y"
               {...field}
               value={field.value ?? ""}

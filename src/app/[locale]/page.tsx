@@ -1,4 +1,3 @@
-import { ALL_LOCALES } from "@/lib/i18n";
 import { Agenda } from "../../components/organism/agenda/agenda";
 import { Header } from "../../components/organism/header/header";
 

@@ -20,24 +20,25 @@ import { useFormContext } from "react-hook-form";
 
 export const BlockTypeSelect: FC = () => {
   const form = useFormContext<InsertBlockSchema>();
-  const t = useTranslations("Common");
+  const tCommon = useTranslations("Common");
+  const t = useTranslations("Forms.Block.Type");
   return (
     <FormField
       control={form.control}
       name="type"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Type</FormLabel>
+          <FormLabel>{t("label")}</FormLabel>
           <Select onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>
               <SelectTrigger>
-                <SelectValue placeholder="Select type of block" />
+                <SelectValue placeholder={t("helper")} />
               </SelectTrigger>
             </FormControl>
             <SelectContent>
               {blockEnum.enumValues.map((value) => (
                 <SelectItem key={value} value={value}>
-                  {t("type", { type: value })}
+                  {tCommon("type", { type: value })}
                 </SelectItem>
               ))}
             </SelectContent>
