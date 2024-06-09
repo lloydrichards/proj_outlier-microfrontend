@@ -1,3 +1,10 @@
+## [0.5.3](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.2...v0.5.3) (2024-06-09)
+
+
+### Bug Fixes
+
+* **forms:** :bug: tweaks to the UnconfForm ([b09ad92](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/b09ad92605a74efd1539201366ab325646d70ca1))
+
 ## [0.5.2](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.1...v0.5.2) (2024-06-09)
 
 
