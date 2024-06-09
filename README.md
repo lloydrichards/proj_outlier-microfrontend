@@ -97,3 +97,35 @@ The relationships between the entities are:
 - `Blocks` have **one** `Event`
 - `Events` have **many** `Speaker`
 - `Speakers` have **many** `Event`
+
+## Internationalization
+
+The application is internationalized using
+[`next-intl`](https://next-intl-docs.vercel.app/). With the translation files
+located in the `/messages` folder. The translation files are in JSON format and
+are named according to the locale they represent. For example, the English
+translation file is named `en.json`.
+
+Currently, the application supports the following locales:
+
+- English (`en`)
+- Spanish (`es`)
+- French (`fr`)
+- German (`de`)
+- Italian (`it`)
+- Portuguese (`pt`)
+- Japanese (`ja`)
+- Chinese (`zh`)
+
+### Adding a new locale
+
+To add a new locale, create a new JSON file in the `/messages` folder with the
+locale name as the file name and update the `i18n.ts` config.
+
+For example, to add a Dutch translation:
+
+1. create a file named `nl.json`
+1. add the translations for each key in the file.
+1. add the locale to the i18n.languageSelect key for all the other locales
+1. add the locale to the `Locale` type and the `ALL_LOCALES` array in the
+   `/src/lib/i18n.ts` file.
