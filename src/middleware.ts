@@ -23,7 +23,6 @@ export default auth((req) => {
       .join("|")})/?`,
     "i",
   );
-  console.log(publicPathnameRegex);
   const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
 
   if (!req.auth && !isPublicPage) {
