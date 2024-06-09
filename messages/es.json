@@ -1,0 +1,239 @@
+{
+  "Common": {
+    "type": "{type, select, SPEAKER {Ponente} UNCONF {No Confirmado} LIGHTNING {Relámpago} ANNOUNCEMENT {Anuncio} PAUSE {Pausa} NETWORKING {Networking} other {Tipo desconocido.}}",
+    "category": "{category, select, DVS {DVS} ACADEMIA {Volver a lo básico} ACCESSIBILITY {Accesibilidad} CAREER {Carrera} DASHBOARD {Panel de control} ANALYTICS {Analítica} ART {Arte} SCIENCE {Ciencia} KEYNOTE {Discurso principal} LITERACY {Literacidad} DEMO {Demostración} DESIGN {Diseño} HISTORICAL {Histórico} JOURNALISM {Periodismo} MAPS {Mapas} PROCESS {Proceso} PROGRAMMING {Programación} PROJECT {Profundización en el proyecto} RESEARCH {Investigación} SOCIAL {Bien social} SPORTS {Deportes} STORYTELLING {Narración de historias} THEORY {Teoría} TOOLING {Herramientas} INDUSTRY {Industria} UNCERTAINTY {Incertidumbre} UNUSUAL {Visualización de datos inusual} OTHER {Otro} other {Categoría desconocida.}}",
+    "location": "{location, select, UNASSIGNED {Seleccione una ubicación.} MAIN {Escenario principal} VIRTUAL {Virtual} ROOM1 {Auditorio Lollipop} ROOM2 {Sala Matrix} ROOM3 {Sala Waterfall} ROOM4 {Sala 4} ROOM5 {Sala 5} ROOM6 {Sala 6} ZOOM {Zoom} SLACK {Slack} other {Ubicación desconocida}}",
+    "status": "{status, select, PENDING {Pendiente} ACCEPTED {Aprobado} REJECTED {Rechazado} other {Desconocido}}",
+    "timeInMin": "{count, plural, =0 {0 min} =1 {1 min} other {# min}}"
+  },
+  "i18n": {
+    "languageSelect": "{locale, select, en {Inglés} de {Alemán} fr {Francés} it {Italiano} es {Español} ja {Japonés} pt {Portugués} zh {Chino} other {Desconocido}}"
+  },
+  "Auth": {
+    "welcome_message": "Bienvenido, {name}",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión"
+  },
+  "NotFound": {
+    "title": "No encontrado",
+    "message": "No se pudo encontrar el recurso solicitado"
+  },
+  "Forms": {
+    "ImgInput": {
+      "title": "URL de la imagen"
+    },
+    "Block": {
+      "Type": {
+        "label": "Tipo",
+        "helper": "Seleccione el tipo de bloque"
+      },
+      "Length": {
+        "label": "Duración",
+        "inHours": "{count} H",
+        "inMinutes": "{count} M"
+      },
+      "Date": {
+        "label": "Fecha del bloque",
+        "helper": "Seleccione una fecha"
+      }
+    },
+    "Event": {
+      "Title": {
+        "label": "Título",
+        "placeholder": "por ejemplo, Diversidad en la visualización de datos"
+      },
+      "Category": {
+        "label": "Categoría",
+        "helper": "Seleccione la categoría del evento"
+      },
+      "Location": {
+        "label": "Ubicación",
+        "helper": "Seleccione la ubicación del evento"
+      },
+      "Summary": {
+        "label": "Resumen (corto)",
+        "helper": "Proporcione una breve descripción (2-3 frases sobre la charla)"
+      },
+      "Description": {
+        "label": "Descripción (larga)",
+        "helper": "Proporcione una descripción detallada (5-8 frases sobre la charla)"
+      },
+      "Link": {
+        "link_label": "Enlace",
+        "link_placeholder": "por ejemplo, enlace de Zoom",
+        "url_label": "URL",
+        "url_placeholder": "https://"
+      }
+    },
+    "Unconf": {
+      "label": "Envío de No Confirmado [{date} - {time}]",
+      "submit_btn": "Enviar",
+      "submission_label": "¡Gracias por su envío!",
+      "submission_message": "Su evento ha sido enviado y está pendiente de aprobación. Consulte el programa para ver si su evento ha sido aceptado.",
+      "Organizer": {
+        "label": "Organizador",
+        "add_organizer_btn": "Agregar co-ponente",
+        "co-organizer_title": "Co-ponente #{index}",
+        "Pronouns": {
+          "label": "Pronombres",
+          "helper": "Seleccione sus pronombres.",
+          "select": "{pronoun, select, she {Ella} he {Él} they {Ellos} other {Otro}}"
+        },
+        "Email": {
+          "label": "Correo electrónico",
+          "placeholder": "por ejemplo, data@dvs.com",
+          "helper": "Asegúrese de utilizar la dirección de correo electrónico que utilizó para registrarse en la conferencia."
+        },
+        "Name": {
+          "first_label": "Nombre",
+          "first_placeholder": "por ejemplo, Giorgia",
+          "last_label": "Apellido",
+          "last_placeholder": "por ejemplo, Lupi"
+        }
+      },
+      "Event": {
+        "label": "Evento",
+        "Summary": {
+          "label": "Descripción",
+          "placeholder": "por ejemplo, Durante este evento...",
+          "helper": "Una breve descripción de su evento. Esto se mostrará en el programa."
+        },
+        "Description": {
+          "label": "Información adicional",
+          "placeholder": "por ejemplo, Para este evento necesitará...",
+          "helper": "Proporcione detalles sobre la configuración del evento. Esto se utilizará para evaluar su envío."
+        }
+      }
+    },
+    "Speaker": {
+      "Pronouns": {
+        "label": "Pronombres",
+        "placeholder": "por ejemplo, ella/ella",
+        "helper": "Seleccione sus pronombres."
+      },
+      "Name": {
+        "first_label": "Nombre",
+        "first_placeholder": "por ejemplo, John",
+        "last_label": "Apellido",
+        "last_placeholder": "por ejemplo, Lennon"
+      },
+      "Email": {
+        "label": "Correo electrónico",
+        "placeholder": "por ejemplo, data@dvs.com"
+      },
+      "Bio": {
+        "label": "Biografía",
+        "placeholder": "por ejemplo, En el principio..."
+      },
+      "Title": {
+        "title_label": "Título",
+        "title_placeholder": "por ejemplo, director",
+        "organization_label": "Organización",
+        "organization_placeholder": "por ejemplo, Data Visualization Society"
+      }
+    }
+  },
+  "Agenda": {
+    "empty_failure": "La agenda aún no se ha publicado."
+  },
+  "Popover": {
+    "description_section": "Descripción",
+    "summary_section": "Resumen",
+    "speaker_section": "Ponente",
+    "category_section": "Categoría",
+    "location_section": "Ubicación",
+    "link_section": "Enlace",
+    "date_section": "Fecha",
+    "time_section": "Hora",
+    "speakers_section": "Ponente(s)",
+    "length_section": "Duración"
+  },
+  "Dialog": {
+    "Speaker": {
+      "delete_message": "¿Está seguro de que desea eliminar a {speaker}?",
+      "delete_cancel_btn": "Cancelar",
+      "delete_confirm_btn": "Eliminar"
+    },
+    "Event": {
+      "delete_message": "¿Está seguro de que desea eliminar {event}?",
+      "delete_cancel_btn": "Cancelar",
+      "delete_confirm_btn": "Eliminar"
+    },
+    "Block": {
+      "delete_message": "¿Está seguro de que desea eliminar el bloque de tipo {type} a las {time}?",
+      "delete_cancel_btn": "Cancelar",
+      "delete_confirm_btn": "Eliminar",
+      "add_btn": "Agregar",
+      "add_title": "Agregar bloque"
+    }
+  },
+  "Menu": {
+    "edit_btn": "Editar",
+    "delete_btn": "Eliminar",
+    "add_btn": "Agregar",
+    "Speaker": {
+      "label": "Ponente",
+      "edit_section": "Editar ponente"
+    },
+    "Event": {
+      "label": "Evento",
+      "edit_section": "Editar evento"
+    },
+    "Block": {
+      "label": "Bloque",
+      "edit_section": "Editar bloque"
+    }
+  },
+  "Cards": {
+    "Speaker": {
+      "title": "Ponente",
+      "empty_message": "Nada programado"
+    },
+    "Unconf": {
+      "title": "No Confirmado",
+      "button_toLocation": "Ir a la ubicación",
+      "organizedBy": "Organizado por",
+      "empty_message": "Bloque guardado para sesiones no confirmadas; ¡vuelva durante la conferencia para descubrir cuáles son!"
+    },
+    "Lightning": {
+      "title": "Relámpago",
+      "empty_message": "Una serie de presentaciones cortas de algunos de los asistentes de Outlier sobre sus temas y proyectos favoritos."
+    },
+    "Announcement": {
+      "title": "Anuncio",
+      "empty_message": "Nada programado"
+    },
+    "Pause": {
+      "title": "Pausa"
+    },
+    "Networking": {
+      "title": "Networking",
+      "empty_message": "Nada programado"
+    }
+  },
+  "Dashboard": {
+    "Unconf": {
+      "title": "Envíos de No Confirmado pendientes",
+      "description": "Administre los envíos de No Confirmado que están pendientes de aprobación.",
+      "Table": {
+        "block_time": "Hora del bloque",
+        "label": "Título",
+        "summary": "Resumen",
+        "description": "Descripción",
+        "organizer": "Organizador",
+        "email": "Correo electrónico",
+        "location": "Ubicación",
+        "status": "Estado",
+        "action": "Acción"
+      },
+      "Menu": {
+        "label": "Acciones",
+        "decision_section": "¿Decisión?",
+        "approve": "Aprobar",
+        "reject": "Rechazar",
+        "delete_btn": "Eliminar",
+        "edit_btn": "Editar"
+      }
+    }
+  }
+}

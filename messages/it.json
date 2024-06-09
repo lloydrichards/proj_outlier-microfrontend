@@ -1,0 +1,212 @@
+{
+  "Common": {
+    "type": "{type, select, SPEAKER {Relatore} UNCONF {Non confermato} LIGHTNING {Lightning} ANNOUNCEMENT {Annuncio} PAUSE {Pausa} NETWORKING {Networking} other {Tipo sconosciuto.}}",
+    "category": "{category, select, DVS {DVS} ACADEMIA {Ritorno alle basi} ACCESSIBILITY {Accessibilità} CAREER {Carriera} DASHBOARD {Dashboard} ANALYTICS {Analytics} ART {Arte} SCIENCE {Scienza} KEYNOTE {Keynote} LITERACY {Alfabetizzazione} DEMO {Demo} DESIGN {Design} HISTORICAL {Storico} JOURNALISM {Giornalismo} MAPS {Mappe} PROCESS {Processo} PROGRAMMING {Programmazione} PROJECT {Approfondimento del progetto} RESEARCH {Ricerca} SOCIAL {Beneficenza} SPORTS {Sport} STORYTELLING {Storytelling} THEORY {Teoria} TOOLING {Strumenti} INDUSTRY {Industria} UNCERTAINTY {Incertezza} UNUSUAL {Visualizzazione dati insolita} OTHER {Altro} other {Categoria sconosciuta.}}",
+    "location": "{location, select, UNASSIGNED {Seleziona la posizione.} MAIN {Palco principale} VIRTUAL {Virtuale} ROOM1 {Auditorium Lollipop} ROOM2 {Sala Matrix} ROOM3 {Sala Waterfall} ROOM4 {Sala4} ROOM5 {Sala5} ROOM6 {Sala6} ZOOM {Zoom} SLACK {Slack} other {Posizione sconosciuta}}",
+    "status": "{status, select, PENDING {In attesa} ACCEPTED {Approvato} REJECTED {Respinto} other {Sconosciuto}}",
+    "timeInMin": "{count, plural, =0 {zero min} =1 {1 min} other {# min}}"
+  },
+  "i18n": {
+    "languageSelect": "{locale, select, en {Inglese} de {Tedesco} fr {Francese} it {Italiano} es {Spagnolo} ja {Giapponese} pt {Portoghese} zh {Cinese} other {Sconosciuto}}"
+  },
+  "Auth": {
+    "welcome_message": "Benvenuto, {name}",
+    "signIn": "Accedi",
+    "signOut": "Esci"
+  },
+  "NotFound": {
+    "title": "Non trovato",
+    "message": "Impossibile trovare la risorsa richiesta"
+  },
+  "Forms": {
+    "ImgInput": { "title": "URL immagine" },
+    "Block": {
+      "Type": { "label": "Tipo", "helper": "Seleziona il tipo di blocco" },
+      "Length": {
+        "label": "Durata",
+        "inHours": "{count} H",
+        "inMinutes": "{count} M"
+      },
+      "Date": { "label": "Data blocco", "helper": "Seleziona una data" }
+    },
+    "Event": {
+      "Title": {
+        "label": "Titolo",
+        "placeholder": "es. Diversità nella visualizzazione dei dati"
+      },
+      "Category": {
+        "label": "Categoria",
+        "helper": "Seleziona la categoria dell'evento"
+      },
+      "Location": {
+        "label": "Posizione",
+        "helper": "Seleziona la posizione dell'evento"
+      },
+      "Summary": {
+        "label": "Sommario (breve)",
+        "helper": "Fornisci una breve descrizione (2-3 frasi sull'intervento)"
+      },
+      "Description": {
+        "label": "Descrizione (lunga)",
+        "helper": "Fornisci una descrizione dettagliata (5-8 frasi sull'intervento)"
+      },
+      "Link": {
+        "link_label": "Link",
+        "link_placeholder": "es. Link Zoom",
+        "url_label": "URL",
+        "url_placeholder": "https://"
+      }
+    },
+    "Unconf": {
+      "label": "Sottomissione Unconf [{date} - {time}]",
+      "submit_btn": "Invia",
+      "submission_label": "Grazie per la tua sottomissione!",
+      "submission_message": "Il tuo evento è stato inviato ed è in attesa di approvazione. Controlla il programma per vedere se il tuo evento è stato accettato.",
+      "Organizer": {
+        "label": "Organizzatore",
+        "add_organizer_btn": "Aggiungi co-relatore",
+        "co-organizer_title": "Co-Organizzatore #{index}",
+        "Pronouns": {
+          "label": "Pronomi",
+          "helper": "Seleziona i tuoi pronomi.",
+          "select": "{pronoun, select, she {Lei} he {Lui} they {Loro} other {Altro}}"
+        },
+        "Email": {
+          "label": "Email",
+          "placeholder": "es. data@dvs.com",
+          "helper": "Assicurati di utilizzare l'indirizzo email con cui ti sei registrato alla conferenza."
+        },
+        "Name": {
+          "first_label": "Nome",
+          "first_placeholder": "es. Giorgia",
+          "last_label": "Cognome",
+          "last_placeholder": "es. Lupi"
+        }
+      },
+      "Event": {
+        "label": "Evento",
+        "Summary": {
+          "label": "Descrizione",
+          "placeholder": "es. Durante questo evento parleremo di...",
+          "helper": "Una breve descrizione del tuo evento. Verrà visualizzata nel programma."
+        },
+        "Description": {
+          "label": "Informazioni aggiuntive",
+          "placeholder": "es. Per questo evento avrai bisogno di...",
+          "helper": "Fornisci dettagli sull'organizzazione dell'evento. Questo verrà utilizzato per valutare la tua sottomissione."
+        }
+      }
+    },
+    "Speaker": {
+      "Pronouns": {
+        "label": "Pronomi",
+        "placeholder": "es. lei/lei",
+        "helper": "Seleziona i tuoi pronomi."
+      },
+      "Name": {
+        "first_label": "Nome",
+        "first_placeholder": "es. John",
+        "last_label": "Cognome",
+        "last_placeholder": "es. Lennon"
+      },
+      "Email": { "label": "Email", "placeholder": "es. data@dvs.com" },
+      "Bio": { "label": "Biografia", "placeholder": "es. All'inizio..." },
+      "Title": {
+        "title_label": "Titolo",
+        "title_placeholder": "es. direttore",
+        "organization_label": "Organizzazione",
+        "organization_placeholder": "es. Data Visualization Society"
+      }
+    }
+  },
+  "Agenda": { "empty_failure": "L'agenda non è ancora stata pubblicata." },
+  "Popover": {
+    "description_section": "Descrizione",
+    "summary_section": "Sommario",
+    "speaker_section": "Relatore",
+    "category_section": "Categoria",
+    "location_section": "Posizione",
+    "link_section": "Link",
+    "date_section": "Data",
+    "time_section": "Orario",
+    "speakers_section": "Relatore(i)",
+    "length_section": "Durata"
+  },
+  "Dialog": {
+    "Speaker": {
+      "delete_message": "Sei sicuro di voler eliminare {speaker}?",
+      "delete_cancel_btn": "Annulla",
+      "delete_confirm_btn": "Elimina"
+    },
+    "Event": {
+      "delete_message": "Sei sicuro di voler eliminare {event}?",
+      "delete_cancel_btn": "Annulla",
+      "delete_confirm_btn": "Elimina"
+    },
+    "Block": {
+      "delete_message": "Sei sicuro di voler eliminare il blocco {type} alle {time}?",
+      "delete_cancel_btn": "Annulla",
+      "delete_confirm_btn": "Elimina",
+      "add_btn": "Aggiungi",
+      "add_title": "Aggiungi blocco"
+    }
+  },
+  "Menu": {
+    "edit_btn": "Modifica",
+    "delete_btn": "Elimina",
+    "add_btn": "Aggiungi",
+    "Speaker": { "label": "Relatore", "edit_section": "Modifica relatore" },
+    "Event": { "label": "Evento", "edit_section": "Modifica evento" },
+    "Block": { "label": "Blocco", "edit_section": "Modifica blocco" }
+  },
+  "Cards": {
+    "Speaker": {
+      "title": "Relatore",
+      "empty_message": "Nessun evento programmato"
+    },
+    "Unconf": {
+      "title": "Unconf",
+      "button_toLocation": "Alla posizione",
+      "organizedBy": "Organizzato da",
+      "empty_message": "Blocco salvato per le sessioni non confermate; torna durante la conferenza per scoprire quali sono!"
+    },
+    "Lightning": {
+      "title": "Lightning",
+      "empty_message": "Una serie di brevi presentazioni di alcuni partecipanti di Outlier sui loro argomenti e progetti preferiti."
+    },
+    "Announcement": {
+      "title": "Annuncio",
+      "empty_message": "Nessun evento programmato"
+    },
+    "Pause": { "title": "Pausa" },
+    "Networking": {
+      "title": "Networking",
+      "empty_message": "Nessun evento programmato"
+    }
+  },
+  "Dashboard": {
+    "Unconf": {
+      "title": "Sottomissioni Unconf in sospeso",
+      "description": "Gestisci le sottomissioni Unconf in attesa di approvazione.",
+      "Table": {
+        "block_time": "Orario blocco",
+        "label": "Titolo",
+        "summary": "Sommario",
+        "description": "Descrizione",
+        "organizer": "Organizzatore",
+        "email": "Email",
+        "location": "Posizione",
+        "status": "Stato",
+        "action": "Azione"
+      },
+      "Menu": {
+        "label": "Azioni",
+        "decision_section": "Decisione?",
+        "approve": "Approva",
+        "reject": "Rifiuta",
+        "delete_btn": "Elimina",
+        "edit_btn": "Modifica"
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "Common": {
+    "type": "{type, select, SPEAKER {スピーカー} UNCONF {アンカンファレンス} LIGHTNING {ライトニング} ANNOUNCEMENT {アナウンス} PAUSE {休憩} NETWORKING {ネットワーキング} other {不明なタイプ。}}",
+    "category": "{category, select, DVS {DVS} ACADEMIA {基礎に戻る} ACCESSIBILITY {アクセシビリティ} CAREER {キャリア} DASHBOARD {ダッシュボード} ANALYTICS {アナリティクス} ART {アート} SCIENCE {科学} KEYNOTE {基調講演} LITERACY {リテラシー} DEMO {デモ} DESIGN {デザイン} HISTORICAL {歴史} JOURNALISM {ジャーナリズム} MAPS {地図} PROCESS {プロセス} PROGRAMMING {プログラミング} PROJECT {プロジェクトの詳細} RESEARCH {研究} SOCIAL {社会貢献} SPORTS {スポーツ} STORYTELLING {ストーリーテリング} THEORY {理論} TOOLING {ツール} INDUSTRY {業界} UNCERTAINTY {不確実性} UNUSUAL {異常なデータビジュアライゼーション} OTHER {その他} other {不明なカテゴリ。}}",
+    "location": "{location, select, UNASSIGNED {場所を選択してください。} MAIN {メインステージ} VIRTUAL {バーチャル} ROOM1 {ロリポップオーディトリウム} ROOM2 {マトリックスルーム} ROOM3 {ウォーターフォールルーム} ROOM4 {ルーム4} ROOM5 {ルーム5} ROOM6 {ルーム6} ZOOM {Zoom} SLACK {Slack} other {不明な場所}}",
+    "status": "{status, select, PENDING {保留中} ACCEPTED {承認済み} REJECTED {拒否済み} other {不明}}",
+    "timeInMin": "{count, plural, =0 {0分} =1 {1分} other {#分}}"
+  },
+  "i18n": {
+    "languageSelect": "{locale, select, en {英語} de {ドイツ語} fr {フランス語} it {イタリア語} es {スペイン語} ja {日本語} pt {ポルトガル語} zh {中国語} other {不明}}"
+  },
+  "Auth": {
+    "welcome_message": "ようこそ、{name}さん",
+    "signIn": "サインイン",
+    "signOut": "サインアウト"
+  },
+  "NotFound": {
+    "title": "見つかりません",
+    "message": "リクエストされたリソースが見つかりませんでした"
+  },
+  "Forms": {
+    "ImgInput": { "title": "画像のURL" },
+    "Block": {
+      "Type": {
+        "label": "タイプ",
+        "helper": "ブロックのタイプを選択してください"
+      },
+      "Length": {
+        "label": "長さ",
+        "inHours": "{count}時間",
+        "inMinutes": "{count}分"
+      },
+      "Date": { "label": "ブロックの日付", "helper": "日付を選択してください" }
+    },
+    "Event": {
+      "Title": {
+        "label": "タイトル",
+        "placeholder": "例：データビジュアライゼーションの多様性"
+      },
+      "Category": {
+        "label": "カテゴリ",
+        "helper": "イベントのカテゴリを選択してください"
+      },
+      "Location": {
+        "label": "場所",
+        "helper": "イベントの場所を選択してください"
+      },
+      "Summary": {
+        "label": "概要（短い）",
+        "helper": "イベントについての短い説明（2〜3文）を提供してください"
+      },
+      "Description": {
+        "label": "説明（長い）",
+        "helper": "イベントについての詳細な説明（5〜8文）を提供してください"
+      },
+      "Link": {
+        "link_label": "リンク",
+        "link_placeholder": "例：Zoomリンク",
+        "url_label": "URL",
+        "url_placeholder": "https://"
+      }
+    },
+    "Unconf": {
+      "label": "アンカンファレンスの提出 [{date} - {time}]",
+      "submit_btn": "提出",
+      "submission_label": "提出ありがとうございます！",
+      "submission_message": "イベントは提出され、承認待ちです。スケジュールを確認して、イベントが承認されたかどうかを確認してください。",
+      "Organizer": {
+        "label": "主催者",
+        "add_organizer_btn": "共同スピーカーを追加",
+        "co-organizer_title": "共同主催者 #{index}",
+        "Pronouns": {
+          "label": "代名詞",
+          "helper": "代名詞を選択してください",
+          "select": "{pronoun, select, she {彼女/彼女} he {彼/彼} they {彼ら/彼女ら} other {その他}}"
+        },
+        "Email": {
+          "label": "メール",
+          "placeholder": "例：data@dvs.com",
+          "helper": "カンファレンスに登録したメールアドレスを使用してください"
+        },
+        "Name": {
+          "first_label": "名",
+          "first_placeholder": "例：太郎",
+          "last_label": "姓",
+          "last_placeholder": "例：山田"
+        }
+      },
+      "Event": {
+        "label": "イベント",
+        "Summary": {
+          "label": "説明",
+          "placeholder": "例：このイベントでは...",
+          "helper": "イベントの短い説明。スケジュールに表示されます"
+        },
+        "Description": {
+          "label": "追加情報",
+          "placeholder": "例：このイベントでは...",
+          "helper": "イベントの設定に関する詳細を提供してください。これは提出を評価するために使用されます"
+        }
+      }
+    },
+    "Speaker": {
+      "Pronouns": {
+        "label": "代名詞",
+        "placeholder": "例：彼女/彼女",
+        "helper": "代名詞を選択してください"
+      },
+      "Name": {
+        "first_label": "名",
+        "first_placeholder": "例：太郎",
+        "last_label": "姓",
+        "last_placeholder": "例：山田"
+      },
+      "Email": { "label": "メール", "placeholder": "例：data@dvs.com" },
+      "Bio": { "label": "バイオ", "placeholder": "例：はじめに..." },
+      "Title": {
+        "title_label": "役職",
+        "title_placeholder": "例：ディレクター",
+        "organization_label": "組織",
+        "organization_placeholder": "例：データビジュアライゼーション協会"
+      }
+    }
+  },
+  "Agenda": { "empty_failure": "アジェンダはまだ投稿されていません。" },
+  "Popover": {
+    "description_section": "説明",
+    "summary_section": "概要",
+    "speaker_section": "スピーカー",
+    "category_section": "カテゴリ",
+    "location_section": "場所",
+    "link_section": "リンク",
+    "date_section": "日付",
+    "time_section": "時間",
+    "speakers_section": "スピーカー",
+    "length_section": "長さ"
+  },
+  "Dialog": {
+    "Speaker": {
+      "delete_message": "{speaker}を削除してもよろしいですか？",
+      "delete_cancel_btn": "キャンセル",
+      "delete_confirm_btn": "削除"
+    },
+    "Event": {
+      "delete_message": "{event}を削除してもよろしいですか？",
+      "delete_cancel_btn": "キャンセル",
+      "delete_confirm_btn": "削除"
+    },
+    "Block": {
+      "delete_message": "{time}の{type}ブロックを削除してもよろしいですか？",
+      "delete_cancel_btn": "キャンセル",
+      "delete_confirm_btn": "削除",
+      "add_btn": "追加",
+      "add_title": "ブロックを追加"
+    }
+  },
+  "Menu": {
+    "edit_btn": "編集",
+    "delete_btn": "削除",
+    "add_btn": "追加",
+    "Speaker": { "label": "スピーカー", "edit_section": "スピーカーを編集" },
+    "Event": { "label": "イベント", "edit_section": "イベントを編集" },
+    "Block": { "label": "ブロック", "edit_section": "ブロックを編集" }
+  },
+  "Cards": {
+    "Speaker": {
+      "title": "スピーカー",
+      "empty_message": "予定されているものはありません"
+    },
+    "Unconf": {
+      "title": "アンカンファレンス",
+      "button_toLocation": "場所へ",
+      "organizedBy": "主催者",
+      "empty_message": "アンカンファレンスセッションのためにブロックが保存されています。カンファレンス中に何が行われるかを確認してください！"
+    },
+    "Lightning": {
+      "title": "ライトニング",
+      "empty_message": "アウトライアの参加者によるお気に入りのトピックやプロジェクトについての短いプレゼンテーションのシリーズです。"
+    },
+    "Announcement": {
+      "title": "アナウンス",
+      "empty_message": "予定されているものはありません"
+    },
+    "Pause": { "title": "休憩" },
+    "Networking": {
+      "title": "ネットワーキング",
+      "empty_message": "予定されているものはありません"
+    }
+  },
+  "Dashboard": {
+    "Unconf": {
+      "title": "保留中のアンカンファレンスの提出",
+      "description": "承認待ちのアンカンファレンスの提出を管理します。",
+      "Table": {
+        "block_time": "ブロック時間",
+        "label": "タイトル",
+        "summary": "概要",
+        "description": "説明",
+        "organizer": "主催者",
+        "email": "メール",
+        "location": "場所",
+        "status": "ステータス",
+        "action": "アクション"
+      },
+      "Menu": {
+        "label": "アクション",
+        "decision_section": "決定？",
+        "approve": "承認",
+        "reject": "拒否",
+        "delete_btn": "削除",
+        "edit_btn": "編集"
+      }
+    }
+  }
+}

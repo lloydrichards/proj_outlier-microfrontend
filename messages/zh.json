@@ -1,0 +1,191 @@
+{
+  "Common": {
+    "type": "{type, select, SPEAKER {演讲者} UNCONF {非正式会议} LIGHTNING {闪电演讲} ANNOUNCEMENT {公告} PAUSE {暂停} NETWORKING {社交} other {未知类型}}",
+    "category": "{category, select, DVS {DVS} ACADEMIA {基础知识} ACCESSIBILITY {可访问性} CAREER {职业} DASHBOARD {仪表盘} ANALYTICS {分析} ART {艺术} SCIENCE {科学} KEYNOTE {主题演讲} LITERACY {文化素养} DEMO {演示} DESIGN {设计} HISTORICAL {历史} JOURNALISM {新闻学} MAPS {地图} PROCESS {过程} PROGRAMMING {编程} PROJECT {项目深入} RESEARCH {研究} SOCIAL {社会公益} SPORTS {体育} STORYTELLING {讲故事} THEORY {理论} TOOLING {工具} INDUSTRY {行业} UNCERTAINTY {不确定性} UNUSUAL {非常规数据可视化} OTHER {其他} other {未知类别}}",
+    "location": "{location, select, UNASSIGNED {请选择地点} MAIN {主舞台} VIRTUAL {虚拟} ROOM1 {棒棒糖礼堂} ROOM2 {矩阵房间} ROOM3 {瀑布房间} ROOM4 {房间4} ROOM5 {房间5} ROOM6 {房间6} ZOOM {Zoom} SLACK {Slack} other {未知地点}}",
+    "status": "{status, select, PENDING {待定} ACCEPTED {已批准} REJECTED {已拒绝} other {未知}}",
+    "timeInMin": "{count, plural, =0 {0分钟} =1 {1分钟} other {#分钟}}"
+  },
+  "i18n": {
+    "languageSelect": "{locale, select, en {英语} de {德语} fr {法语} it {意大利语} es {西班牙语} ja {日语} pt {葡萄牙语} zh {中文} other {未知}}"
+  },
+  "Auth": {
+    "welcome_message": "欢迎，{name}",
+    "signIn": "登录",
+    "signOut": "退出"
+  },
+  "NotFound": { "title": "未找到", "message": "无法找到请求的资源" },
+  "Forms": {
+    "ImgInput": { "title": "图片链接" },
+    "Block": {
+      "Type": { "label": "类型", "helper": "选择块的类型" },
+      "Length": {
+        "label": "时长",
+        "inHours": "{count}小时",
+        "inMinutes": "{count}分钟"
+      },
+      "Date": { "label": "块日期", "helper": "选择日期" }
+    },
+    "Event": {
+      "Title": { "label": "标题", "placeholder": "例如：数据可视化中的多样性" },
+      "Category": { "label": "类别", "helper": "选择事件的类别" },
+      "Location": { "label": "地点", "helper": "选择事件的地点" },
+      "Summary": {
+        "label": "摘要（简短）",
+        "helper": "请提供一个简短描述（2-3句话）关于演讲的内容"
+      },
+      "Description": {
+        "label": "描述（长）",
+        "helper": "请提供一个详细描述（5-8句话）关于演讲的内容"
+      },
+      "Link": {
+        "link_label": "链接",
+        "link_placeholder": "例如：Zoom链接",
+        "url_label": "URL",
+        "url_placeholder": "https://"
+      }
+    },
+    "Unconf": {
+      "label": "非正式会议提交 [{date} - {time}]",
+      "submit_btn": "提交",
+      "submission_label": "感谢您的提交！",
+      "submission_message": "您的事件已提交，正在等待批准。请查看日程表以查看您的事件是否已被接受。",
+      "Organizer": {
+        "label": "组织者",
+        "add_organizer_btn": "添加共同演讲者",
+        "co-organizer_title": "共同组织者 #{index}",
+        "Pronouns": {
+          "label": "代词",
+          "helper": "请选择您的代词。",
+          "select": "{pronoun, select, she {她/她的} he {他/他的} they {他们/他们的} other {其他}}"
+        },
+        "Email": {
+          "label": "电子邮件",
+          "placeholder": "例如：data@dvs.com",
+          "helper": "请确保使用您在会议注册时使用的电子邮件地址。"
+        },
+        "Name": {
+          "first_label": "名字",
+          "first_placeholder": "例如：Giorgia",
+          "last_label": "姓氏",
+          "last_placeholder": "例如：Lupi"
+        }
+      },
+      "Event": {
+        "label": "事件",
+        "Summary": {
+          "label": "描述",
+          "placeholder": "例如：在此事件中，我们将...",
+          "helper": "您事件的简短描述。这将显示在日程表中。"
+        },
+        "Description": {
+          "label": "附加信息",
+          "placeholder": "例如：对于此事件，您将需要...",
+          "helper": "请提供有关设置事件的详细信息。这将用于评估您的提交。"
+        }
+      }
+    },
+    "Speaker": {
+      "Pronouns": {
+        "label": "代词",
+        "placeholder": "例如：她/她的",
+        "helper": "请选择您的代词。"
+      },
+      "Name": {
+        "first_label": "名字",
+        "first_placeholder": "例如：John",
+        "last_label": "姓氏",
+        "last_placeholder": "例如：Lennon"
+      },
+      "Email": { "label": "电子邮件", "placeholder": "例如：data@dvs.com" },
+      "Bio": { "label": "个人简介", "placeholder": "例如：在开始之初..." },
+      "Title": {
+        "title_label": "职称",
+        "title_placeholder": "例如：主任",
+        "organization_label": "组织",
+        "organization_placeholder": "例如：数据可视化协会"
+      }
+    }
+  },
+  "Agenda": { "empty_failure": "日程表尚未发布。" },
+  "Popover": {
+    "description_section": "描述",
+    "summary_section": "摘要",
+    "speaker_section": "演讲者",
+    "category_section": "类别",
+    "location_section": "地点",
+    "link_section": "链接",
+    "date_section": "日期",
+    "time_section": "时间",
+    "speakers_section": "演讲者",
+    "length_section": "时长"
+  },
+  "Dialog": {
+    "Speaker": {
+      "delete_message": "您确定要删除{speaker}吗？",
+      "delete_cancel_btn": "取消",
+      "delete_confirm_btn": "删除"
+    },
+    "Event": {
+      "delete_message": "您确定要删除{event}吗？",
+      "delete_cancel_btn": "取消",
+      "delete_confirm_btn": "删除"
+    },
+    "Block": {
+      "delete_message": "您确定要删除{time}的{type}块吗？",
+      "delete_cancel_btn": "取消",
+      "delete_confirm_btn": "删除",
+      "add_btn": "添加",
+      "add_title": "添加块"
+    }
+  },
+  "Menu": {
+    "edit_btn": "编辑",
+    "delete_btn": "删除",
+    "add_btn": "添加",
+    "Speaker": { "label": "演讲者", "edit_section": "编辑演讲者" },
+    "Event": { "label": "事件", "edit_section": "编辑事件" },
+    "Block": { "label": "块", "edit_section": "编辑块" }
+  },
+  "Cards": {
+    "Speaker": { "title": "演讲者", "empty_message": "暂无安排" },
+    "Unconf": {
+      "title": "非正式会议",
+      "button_toLocation": "前往地点",
+      "organizedBy": "组织者",
+      "empty_message": "为非正式会议保留的块；在会议期间回来查看它们的内容！"
+    },
+    "Lightning": {
+      "title": "闪电演讲",
+      "empty_message": "一系列由Outlier与会者关于他们最喜欢的主题和项目的短时间演讲。"
+    },
+    "Announcement": { "title": "公告", "empty_message": "暂无安排" },
+    "Pause": { "title": "暂停" },
+    "Networking": { "title": "社交", "empty_message": "暂无安排" }
+  },
+  "Dashboard": {
+    "Unconf": {
+      "title": "待定非正式会议提交",
+      "description": "管理待批准的非正式会议提交。",
+      "Table": {
+        "block_time": "块时间",
+        "label": "标题",
+        "summary": "摘要",
+        "description": "描述",
+        "organizer": "组织者",
+        "email": "电子邮件",
+        "location": "地点",
+        "status": "状态",
+        "action": "操作"
+      },
+      "Menu": {
+        "label": "操作",
+        "decision_section": "决定？",
+        "approve": "批准",
+        "reject": "拒绝",
+        "delete_btn": "删除",
+        "edit_btn": "编辑"
+      }
+    }
+  }
+}
