@@ -58,7 +58,7 @@ export const UnconfForm: FC<UnconfFormProps> = ({ block }) => {
       event: {
         blockId: block.id,
         description:
-          "1. Best way to reach you during the conference\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\n\n3. Supplies or equipment needed (e.g., projector)\n\n4. Anything else you'd like us to know?\n\n",
+          "1. Best way to reach you during the conference\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\n\n3. Supplies or support needed (e.g., projector)\n\n4. Anything else you'd like us to know?\n\n",
       },
     },
   });
