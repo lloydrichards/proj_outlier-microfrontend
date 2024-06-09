@@ -1,3 +1,16 @@
+# [0.5.0](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.4.2...v0.5.0) (2024-06-09)
+
+
+### Bug Fixes
+
+* **i18n:** :globe_with_meridians: localize the local time ([4a25739](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/4a2573919ead16e3f1f6313ac38a44b26f8c9301))
+
+
+### Features
+
+* **components:** :globe_with_meridians: add locale switcher to embed page ([6b6620f](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/6b6620f53c8393c3f725f908f0b208ea6340161b))
+* **i18n:** :globe_with_meridians: add support for fr, es, it, pt, ja, and zh ([1b1ac28](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/1b1ac28057a8574b6ba09a969a42ce9f876db060))
+
 ## [0.4.2](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.4.1...v0.4.2) (2024-06-08)
 
 
