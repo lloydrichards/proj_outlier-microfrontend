@@ -1,3 +1,10 @@
+## [0.5.2](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.1...v0.5.2) (2024-06-09)
+
+
+### Bug Fixes
+
+* **auth:** :bug: allow correct public pages ([48e2c51](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/48e2c51844ec9024b92131a48c38468ef1976696))
+
 ## [0.5.1](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.0...v0.5.1) (2024-06-09)
 
 
