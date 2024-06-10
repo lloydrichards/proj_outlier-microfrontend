@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import {
   Card,
+  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -35,9 +36,16 @@ export const NetworkingCard: FC<BlockCardProps> = ({ block, className }) => {
         <span className={typefaceSubtitle()}>
           {t("Cards.Networking.title")}
         </span>
-        <CardTitle>{event?.title}</CardTitle>
+        <CardTitle className="line-clamp-2">{event?.title}</CardTitle>
         <CardDescription>{event?.summary}</CardDescription>
       </CardHeader>
+      <CardContent className="z-10 flex gap-2 after:*:[content:','] last:after:*:[content:'']">
+        {event?.speakers.map(({ speaker }) => (
+          <CardDescription key={speaker.title}>
+            {speaker.fullName} {speaker.pronouns ? `(${speaker.pronouns})` : ""}
+          </CardDescription>
+        ))}
+      </CardContent>
       <p className={typefaceMeta("absolute bottom-4 right-4 opacity-40")}>
         {t("Common.timeInMin", { count: block.duration })}
       </p>
