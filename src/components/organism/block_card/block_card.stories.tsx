@@ -7,7 +7,7 @@ import type { RouterOutput } from "@/trpc/react";
  * An image element with a fallback for representing the user.
  */
 const meta = {
-  title: "molecule/BlockCard",
+  title: "organism/BlockCard",
   component: BlockCard,
   tags: ["autodocs"],
   argTypes: {},
@@ -44,6 +44,8 @@ export const Speaker: Story = {
     block: {
       type: "SPEAKER",
       duration: 30,
+      start: new Date("2021-10-10T10:00:00Z"),
+      end: new Date("2021-10-10T10:30:00Z"),
       events: [
         {
           title: "Title",
@@ -100,6 +102,18 @@ export const Networking: Story = {
         {
           title: "Title",
           description: "Description",
+          category: "CAREER",
+          location: "MAIN",
+          speakers: [
+            {
+              speaker: {
+                fullName: "First Last",
+                firstName: "First",
+                pronouns: "they/them",
+                lastName: "Last",
+              },
+            },
+          ],
         },
       ],
     } as MockBlock,
