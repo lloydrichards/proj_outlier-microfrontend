@@ -30,14 +30,13 @@ export const UnconfCard: FC<{ event: AgendaEvent }> = ({ event }) => {
             <CardDescription>
               {t("organizedBy")}:
               {event.speakers
-                .map(({ speaker }) =>
-                  speaker.fullName + speaker.pronouns
-                    ? ` (${speaker.pronouns})`
-                    : "",
+                .map(
+                  ({ speaker }) =>
+                    `${speaker.fullName} ${speaker.pronouns ? `(${speaker.pronouns})` : ""}`,
                 )
                 .join(", ")}
             </CardDescription>
-            <Badge variant="mustard" className={"absolute right-2 top-2"}>
+            <Badge variant="mustard" className={"absolute right-2 top-2 opacity-60"}>
               {event.category}
             </Badge>
             <Badge
