@@ -35,7 +35,7 @@ export const UnconfPopoverContent: FC<{
             : null}
           <TableRow>
             <TableCell className="flex flex-col gap-2">
-              <h2 className={typefaceSubtitle()}>{t("summary_section")}</h2>
+              <h2 className={typefaceSubtitle("whitespace-pre-wrap")}>{t("summary_section")}</h2>
               <CardDescription>{event?.summary}</CardDescription>
             </TableCell>
           </TableRow>

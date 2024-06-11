@@ -35,7 +35,9 @@ export const LightningPopoverContent: FC<{ event?: AgendaEvent }> = ({
             : null}
           <TableRow>
             <TableCell className="flex flex-col gap-2">
-              <h2 className={typefaceSubtitle()}>{t("description_section")}</h2>
+              <h2 className={typefaceSubtitle("whitespace-pre-wrap")}>
+                {t("description_section")}
+              </h2>
               <CardDescription>{event?.description}</CardDescription>
             </TableCell>
           </TableRow>

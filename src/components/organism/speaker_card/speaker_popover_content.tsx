@@ -33,7 +33,7 @@ export const SpeakerPopoverContent: FC<{
             : null}
           <TableRow>
             <TableCell className="flex flex-col gap-2">
-              <h2 className={typefaceSubtitle()}>
+              <h2 className={typefaceSubtitle("whitespace-pre-wrap")}>
                 {tCard("description_section")}
               </h2>
               <CardDescription>{event?.description}</CardDescription>
