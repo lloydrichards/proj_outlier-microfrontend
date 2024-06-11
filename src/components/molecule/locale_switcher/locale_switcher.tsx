@@ -6,7 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/atom/select";
-import { ALL_LOCALES } from "@/lib/i18n";
+import { ALL_LOCALES, type Locale } from "@/lib/i18n";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "@/navigation";
 import { cn } from "@/lib/utils";
@@ -22,7 +22,7 @@ export const LocaleSwitcher = ({ className }: { className?: string }) => {
       value={locale}
       onValueChange={(e) => {
         startTransition(() => {
-          router.replace(pathname, { locale: e });
+          router.replace(pathname, { locale: e as Locale });
         });
       }}
     >
