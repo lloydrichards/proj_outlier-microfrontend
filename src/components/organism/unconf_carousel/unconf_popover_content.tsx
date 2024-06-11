@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { CardDescription } from "@/components/atom/card";
+import { CardDescription, CardTitle } from "@/components/atom/card";
 import { typefaceSubtitle } from "../../typeface";
 import type { AgendaEvent } from "../block_card/block_card";
 import { Badge } from "@/components/atom/badge";
@@ -17,6 +17,12 @@ export const UnconfPopoverContent: FC<{
     <PopoverContent className="w-[var(--radix-popover-trigger-width)] border-none bg-mustard text-mustard-foreground shadow-2xl">
       <Table>
         <TableBody className="[&_tr]:border-mustard-foreground [&_tr]:hover:bg-mustard [&_tr_td]:px-2 [&_tr_td]:py-3">
+          <TableRow>
+            <TableCell className="flex flex-col gap-2">
+              <h2 className={typefaceSubtitle()}>{t("title_section")}</h2>
+              <CardTitle className="line-clamp-none">{event?.title}</CardTitle>
+            </TableCell>
+          </TableRow>
           {event?.speakers && event.speakers.length > 0
             ? event?.speakers.map(({ speaker }) => (
                 <SpeakerRow

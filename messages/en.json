@@ -137,6 +137,7 @@
     "empty_failure": "Agenda has not be posted yet."
   },
   "Popover": {
+    "title_section": "Title",
     "description_section": "Description",
     "summary_section": "Summary",
     "speaker_section": "Speaker",

@@ -123,6 +123,7 @@
     "empty_failure": "Der Zeitplan wurde noch nicht veröffentlicht."
   },
   "Popover": {
+    "title_section": "Titel",
     "description_section": "Beschreibung",
     "summary_section": "Zusammenfassung",
     "speaker_section": "Sprecher",

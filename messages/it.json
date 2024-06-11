@@ -121,6 +121,7 @@
   },
   "Agenda": { "empty_failure": "L'agenda non è ancora stata pubblicata." },
   "Popover": {
+    "title_section": "Titolo",
     "description_section": "Descrizione",
     "summary_section": "Sommario",
     "speaker_section": "Relatore",

@@ -137,6 +137,7 @@
     "empty_failure": "La agenda aún no se ha publicado."
   },
   "Popover": {
+    "title_section": "Título",
     "description_section": "Descripción",
     "summary_section": "Resumen",
     "speaker_section": "Ponente",

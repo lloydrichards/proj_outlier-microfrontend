@@ -124,6 +124,7 @@
   },
   "Agenda": { "empty_failure": "アジェンダはまだ投稿されていません。" },
   "Popover": {
+    "title_section": "タイトル",
     "description_section": "説明",
     "summary_section": "概要",
     "speaker_section": "スピーカー",

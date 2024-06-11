@@ -109,6 +109,7 @@
   },
   "Agenda": { "empty_failure": "日程表尚未发布。" },
   "Popover": {
+    "title_section": "标题",
     "description_section": "描述",
     "summary_section": "摘要",
     "speaker_section": "演讲者",
