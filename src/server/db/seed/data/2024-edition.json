@@ -52,7 +52,18 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "DVS",
-        "speakers": []
+        "speakers": [
+          {
+            "firstName": "Amanda",
+            "lastName": "Makulec",
+            "title": null,
+            "pronouns": "she/her",
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Amanda%20Makulec.png",
+            "bio": null
+          }
+        ]
       }
     ]
   },
@@ -73,16 +84,6 @@
         "category": "KEYNOTE",
         "speakers": [
           {
-            "firstName": "Gabrielle",
-            "lastName": "Merite",
-            "title": null,
-            "pronouns": null,
-            "email": null,
-            "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Gabrielle%20Merite.png",
-            "bio": null
-          },
-          {
             "firstName": "Eli",
             "lastName": "Holder",
             "title": null,
@@ -90,6 +91,16 @@
             "email": null,
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Eli%20Holder.png",
+            "bio": null
+          },
+          {
+            "firstName": "Gabrielle",
+            "lastName": "Merite",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Gabrielle%20Merite.png",
             "bio": null
           }
         ]
@@ -277,6 +288,16 @@
         "category": "UNUSUAL",
         "speakers": [
           {
+            "firstName": "Regine",
+            "lastName": "Abos",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Regine%20Abos.png",
+            "bio": null
+          },
+          {
             "firstName": "Gulrez",
             "lastName": "Khan",
             "title": null,
@@ -294,16 +315,6 @@
             "email": null,
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Tatiana%20Kalainoff.png",
-            "bio": null
-          },
-          {
-            "firstName": "Regine",
-            "lastName": "Abos",
-            "title": null,
-            "pronouns": null,
-            "email": null,
-            "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Regine%20Abos.png",
             "bio": null
           }
         ]
@@ -424,16 +435,6 @@
         "category": "ART",
         "speakers": [
           {
-            "firstName": "Taha",
-            "lastName": "Ebrahimi",
-            "title": null,
-            "pronouns": "she/her",
-            "email": null,
-            "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Taha%20Ebrahimi.png",
-            "bio": "Taha, author of \"Street Trees of Seattle: An Illustrated Walking Guide\" and Director of Tableau Public, explores data through hand-drawn narratives."
-          },
-          {
             "firstName": "Sophie",
             "lastName": "Sparks",
             "title": null,
@@ -442,6 +443,16 @@
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Sophie%20Sparkes.png",
             "bio": "Sophie, an Information Designer, and former Tableau Public team member, bridges the illustration and data to bring information to life."
+          },
+          {
+            "firstName": "Taha",
+            "lastName": "Ebrahimi",
+            "title": null,
+            "pronouns": "she/her",
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Taha%20Ebrahimi.png",
+            "bio": "Taha, author of \"Street Trees of Seattle: An Illustrated Walking Guide\" and Director of Tableau Public, explores data through hand-drawn narratives."
           }
         ]
       }
@@ -450,7 +461,7 @@
   {
     "type": "LIGHTNING",
     "start": "2024-06-12T21:50:00.000Z",
-    "end": "2024-06-12T22:05:00.000Z",
+    "end": "2024-06-12T22:00:00.000Z",
     "edition": "2024",
     "events": [
       {
@@ -482,7 +493,73 @@
     "start": "2024-06-12T22:05:00.000Z",
     "end": "2024-06-12T22:50:00.000Z",
     "edition": "2024",
-    "events": []
+    "events": [
+      {
+        "title": "Data Viz Career Panel: Insights & Q&A",
+        "summary": "Join us for an engaging early career unconference panel featuring industry leaders Matthias Stahl, Taj Carson, Agata Ketterick, and Kevin Wee. This unique event will kick off with a brief, mediated discussion where our distinguished panelists will share insights from their diverse experiences in data visualization, journalism, business intelligence, and non-profit sectors. Following the discussion, we’ll open the floor to the audience for an interactive Q&A session. \n\nDon't miss this opportunity to gain valuable advice, ask your burning questions, and connect with experts who have navigated and excelled in their respective fields. Whether you're just starting your career or looking to pivot, this unconference is designed to provide you with the inspiration and knowledge to advance your professional journey. Mark your calendar and be part of this dynamic and informative event!",
+        "description": "1. Best way to reach you during the conference\nearlycareer@datavisualizationsociety.org\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\nPanel\n\n3. Supplies or support needed (e.g., projector)\nMics, streaming services\n\n4. Anything else you'd like us to know?\n\n",
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "CAREER",
+        "speakers": [
+          {
+            "firstName": "Zane",
+            "lastName": "Wolf",
+            "title": null,
+            "pronouns": "she/her",
+            "email": "rzanewolf@gmail.com",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          }
+        ]
+      },
+      {
+        "title": "Which Asian snack are you?",
+        "summary": "Just bring your favourite Asian snack (or any snack!) and come hang out with us! ",
+        "description": "1. Best way to reach you during the conference\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\n\n3. Supplies or support needed (e.g., projector)\n\n4. Anything else you'd like us to know?\n\n",
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "OTHER",
+        "speakers": []
+      },
+      {
+        "title": "Creating Data Viz Community within your Organization",
+        "summary": "Inspired by Outlier 2022 and Cole Nussbaumer Knaflic's book Storytelling with Data we created the Data Viz Disco at our organization two years ago.  The Data Viz Disco is a dedicated space to learn, practice and be inspired by Data Viz with other analysts.  We would like to share some of our experiences, both successes and challenges, and hear from others creating data viz community.",
+        "description": "1. via text or call to 513-484-8290 (Dallas) or 513-828-2402 (Christina)\n\n2. Session Type (Discussion)\n\n3. Supplies or support needed (white board or projector)\n\n\n",
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "OTHER",
+        "speakers": [
+          {
+            "firstName": "Dallas",
+            "lastName": "Mount",
+            "title": null,
+            "pronouns": "he/him",
+            "email": "dallas_mount@cinfin.com",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          },
+          {
+            "firstName": "Christina",
+            "lastName": "Koutroubas",
+            "title": null,
+            "pronouns": "she/her",
+            "email": "christina_koutroubas@cinfin.com",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          }
+        ]
+      }
+    ]
   },
   {
     "type": "NETWORKING",
@@ -745,16 +822,6 @@
         "category": "LITERACY",
         "speakers": [
           {
-            "firstName": "Leticia",
-            "lastName": "Pozza",
-            "title": null,
-            "pronouns": "she/her",
-            "email": null,
-            "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Leticia%20Pozza.png",
-            "bio": "Leticia, co-founder of Odd, hails from the vibrant landscapes of Brazil. With a keen eye for innovation and a deep love for data, she leads her diverse team in exploring cutting-edge technologies to communicate scientific breakthroughs and deliver impactful data projects for organizations worldwide. Passionate about challenging industry norms, Leticia actively advocates for inclusivity and diversity, striving to create a better workspace for all in the tech realm."
-          },
-          {
             "firstName": "Pei Ying",
             "lastName": "Loh",
             "title": null,
@@ -763,6 +830,46 @@
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Pei%20Ying%20Loh.png",
             "bio": "Pei Ying, the driving force behind Kontinentalist, brings her unique perspective from the dynamic streets of Singapore. Leading with a mission to empower voices through compelling storytelling, she endeavors to reshape perceptions of Asia and its rich tapestry of cultures. As a co-founder and underrepresented minority in the industry, Pei Ying uses her platform to champion cause-driven narratives and foster a workspace that embraces diversity, striving for positive change within the tech and data visualization spheres."
+          },
+          {
+            "firstName": "Leticia",
+            "lastName": "Pozza",
+            "title": null,
+            "pronouns": "she/her",
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Leticia%20Pozza.png",
+            "bio": "Leticia, co-founder of Odd, hails from the vibrant landscapes of Brazil. With a keen eye for innovation and a deep love for data, she leads her diverse team in exploring cutting-edge technologies to communicate scientific breakthroughs and deliver impactful data projects for organizations worldwide. Passionate about challenging industry norms, Leticia actively advocates for inclusivity and diversity, striving to create a better workspace for all in the tech realm."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "UNCONF",
+    "start": "2024-06-13T17:45:00.000Z",
+    "end": "2024-06-13T18:45:00.000Z",
+    "edition": "2024",
+    "events": [
+      {
+        "title": "Visualization in the Healthcare Industry",
+        "summary": "Connect on ideas to encourage data culture & advanced viz in the healthcare industry.",
+        "description": "1. Ping on Outlier Slack or via email.\n\n2. Discussion\n\n3. Virtual configuration please\n\n4. Anything else you'd like us to know?\n\n",
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "INDUSTRY",
+        "speakers": [
+          {
+            "firstName": "Priya",
+            "lastName": "Dugad",
+            "title": null,
+            "pronouns": "she/her",
+            "email": "priya.dugad@gmail.com",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
           }
         ]
       }
@@ -770,7 +877,7 @@
   },
   {
     "type": "PAUSE",
-    "start": "2024-06-13T17:40:00.000Z",
+    "start": "2024-06-13T18:45:00.000Z",
     "end": "2024-06-13T19:10:00.000Z",
     "edition": "2024",
     "events": []
@@ -792,26 +899,6 @@
         "category": "UNUSUAL",
         "speakers": [
           {
-            "firstName": "Rutuja",
-            "lastName": "Pawar",
-            "title": null,
-            "pronouns": "she/her",
-            "email": null,
-            "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Rutuja%20Pawar.png",
-            "bio": null
-          },
-          {
-            "firstName": "Tiange",
-            "lastName": "Wang",
-            "title": null,
-            "pronouns": "she/her",
-            "email": null,
-            "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Wang_Tiange.png",
-            "bio": null
-          },
-          {
             "firstName": "Nikita",
             "lastName": "Rokotyan",
             "title": null,
@@ -829,6 +916,26 @@
             "email": null,
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/huang%20i-yang.png",
+            "bio": null
+          },
+          {
+            "firstName": "Rutuja",
+            "lastName": "Pawar",
+            "title": null,
+            "pronouns": "she/her",
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Rutuja%20Pawar.png",
+            "bio": null
+          },
+          {
+            "firstName": "Tiange",
+            "lastName": "Wang",
+            "title": null,
+            "pronouns": "she/her",
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Wang_Tiange.png",
             "bio": null
           }
         ]
@@ -1001,7 +1108,30 @@
     "start": "2024-06-14T14:10:00.000Z",
     "end": "2024-06-14T14:50:00.000Z",
     "edition": "2024",
-    "events": []
+    "events": [
+      {
+        "title": "The Evolution of Journalism: Empowering Communities through Data and Storytelling",
+        "summary": "Journalist Maudlyne Ihejirika will share how community engagement and the art of storytelling disrupt and transform the way we perceive information.",
+        "description": "As journalism adapts to the digital age, the news industry faces a battleground where the internet and social media vie for audience attention. In this polarized landscape, audiences seek content that resonates with their local communities, including diverse perspectives and inclusive narratives. They are drawn to investigative journalism that unveils the hidden realities of systemic injustices, translating complex data into digestible insights. Journalist Maudlyne Ihejirika will share how community engagement and the art of storytelling disrupt and transform the way we perceive information.",
+        "location": "MAIN",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "KEYNOTE",
+        "speakers": [
+          {
+            "firstName": "Maudlyne",
+            "lastName": "Ihejirika",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          }
+        ]
+      }
+    ]
   },
   {
     "type": "LIGHTNING",
@@ -1050,16 +1180,6 @@
         "category": "ACCESSIBILITY",
         "speakers": [
           {
-            "firstName": "Jordan",
-            "lastName": "Wirfs-Brock",
-            "title": null,
-            "pronouns": "she/her",
-            "email": null,
-            "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Jordan%20Wirfs-Brock.png",
-            "bio": "Jordan Wirfs-Brock is a human-computer interaction researcher, educator, and designer. She develops tools and techniques for helping people engage all of their senses to use data as a creative material. She also loves trail running, board games, and baking."
-          },
-          {
             "firstName": "Jamie",
             "lastName": "Perera",
             "title": null,
@@ -1068,6 +1188,16 @@
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Jamie%20Perera.png",
             "bio": "Jamie Perera is an Asian mixed heritage composer, sound artist and producer born and living in East London. His work is inspired by transformation in the Anthropocene, with themes that juxtapose nature, people, places and timescales. He combines electronic production and contemporary orchestration with field recordings, data, and video."
+          },
+          {
+            "firstName": "Jordan",
+            "lastName": "Wirfs-Brock",
+            "title": null,
+            "pronouns": "she/her",
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Jordan%20Wirfs-Brock.png",
+            "bio": "Jordan Wirfs-Brock is a human-computer interaction researcher, educator, and designer. She develops tools and techniques for helping people engage all of their senses to use data as a creative material. She also loves trail running, board games, and baking."
           },
           {
             "firstName": "Duncan",
@@ -1147,16 +1277,6 @@
             "bio": null
           },
           {
-            "firstName": "Jacqueline",
-            "lastName": "Wernimont",
-            "title": null,
-            "pronouns": "she/her",
-            "email": null,
-            "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Jacqueline%20Wernimont.png",
-            "bio": null
-          },
-          {
             "firstName": "Carly",
             "lastName": "Bobak",
             "title": null,
@@ -1164,6 +1284,16 @@
             "email": null,
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Carly-Bobak.png",
+            "bio": null
+          },
+          {
+            "firstName": "Jacqueline",
+            "lastName": "Wernimont",
+            "title": null,
+            "pronouns": "she/her",
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Jacqueline%20Wernimont.png",
             "bio": null
           }
         ]
@@ -1231,8 +1361,15 @@
     ]
   },
   {
+    "type": "UNCONF",
+    "start": "2024-06-14T17:45:00.000Z",
+    "end": "2024-06-14T18:45:00.000Z",
+    "edition": "2024",
+    "events": []
+  },
+  {
     "type": "PAUSE",
-    "start": "2024-06-14T17:30:00.000Z",
+    "start": "2024-06-14T18:45:00.000Z",
     "end": "2024-06-14T19:00:00.000Z",
     "edition": "2024",
     "events": []
@@ -1244,7 +1381,7 @@
     "edition": "2024",
     "events": [
       {
-        "title": "Future Fridays",
+        "title": "Charting Truths: Why Correlation implies Causation Luminary",
         "summary": null,
         "description": null,
         "location": "UNASSIGNED",

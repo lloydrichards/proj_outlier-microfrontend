@@ -28,7 +28,8 @@ export const UnconfCard: FC<{ event: AgendaEvent }> = ({ event }) => {
               {event.summary}
             </CardDescription>
             <CardDescription>
-              {t("organizedBy")}:
+              {t("organizedBy")}
+              {": "}
               {event.speakers
                 .map(
                   ({ speaker }) =>
@@ -36,13 +37,13 @@ export const UnconfCard: FC<{ event: AgendaEvent }> = ({ event }) => {
                 )
                 .join(", ")}
             </CardDescription>
-            <Badge variant="mustard" className={"absolute right-2 top-2 opacity-60"}>
-              {event.category}
-            </Badge>
             <Badge
               variant="mustard"
-              className={"absolute bottom-2 left-2 opacity-50"}
+              className={"absolute right-2 top-2 opacity-60"}
             >
+              {event.category}
+            </Badge>
+            <Badge variant="mustard" className={"absolute bottom-2 left-2"}>
               {event.status == "PENDING"
                 ? tCommon("status", { status: event.status })
                 : tCommon("location", { location: event.location })}
