@@ -27,7 +27,7 @@ export const UnconfCard: FC<{ event: AgendaEvent }> = ({ event }) => {
             <CardDescription className="line-clamp-3">
               {event.summary}
             </CardDescription>
-            <CardDescription>
+            <CardDescription className="line-clamp-1">
               {t("organizedBy")}
               {": "}
               {event.speakers
@@ -37,10 +37,7 @@ export const UnconfCard: FC<{ event: AgendaEvent }> = ({ event }) => {
                 )
                 .join(", ")}
             </CardDescription>
-            <Badge
-              variant="mustard"
-              className={"absolute right-2 top-2 opacity-60"}
-            >
+            <Badge variant="mustard" className={"absolute bottom-2 right-2"}>
               {event.category}
             </Badge>
             <Badge variant="mustard" className={"absolute bottom-2 left-2"}>
