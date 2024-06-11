@@ -1,3 +1,10 @@
+## [0.5.4](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.3...v0.5.4) (2024-06-11)
+
+
+### Bug Fixes
+
+* **components:** :bug: fix unconf speaker name ([2d90d0e](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/2d90d0e1c39d9f6168f9b5151e672f68fbc6ebff))
+
 ## [0.5.3](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.2...v0.5.3) (2024-06-09)
 
 
