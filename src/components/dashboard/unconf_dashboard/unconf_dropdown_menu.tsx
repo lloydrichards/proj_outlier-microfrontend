@@ -15,6 +15,7 @@ import { type RouterOutput, api } from "@/trpc/react";
 import { useRouter } from "next/navigation";
 import { EventForm } from "@/components/organism/event_form/event_form";
 import { useTranslations } from "next-intl";
+import { DeleteEventDialog } from "@/components/organism/agenda/delete_event_dialog";
 
 export const UnconfDropdownMenu: FC<{
   event: RouterOutput["unconf"]["getUnconfEvents"][number];
@@ -28,11 +29,6 @@ export const UnconfDropdownMenu: FC<{
     },
   });
   const reject = api.unconf.reject.useMutation({
-    onSuccess: () => {
-      router.refresh();
-    },
-  });
-  const deleteEvent = api.event.delete.useMutation({
     onSuccess: () => {
       router.refresh();
     },
@@ -59,13 +55,13 @@ export const UnconfDropdownMenu: FC<{
           <EventForm blockId={event.blockId} edit={event} />
         </DropdownMenuDialogItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem
-          disabled={!isAdmin}
+        <DropdownMenuDialogItem
           className="text-destructive"
-          onClick={() => deleteEvent.mutate(event)}
+          disabled={!isAdmin}
+          triggerChildren={t("delete_btn")}
         >
-          {t("delete_btn")}
-        </DropdownMenuItem>
+          <DeleteEventDialog event={event} />
+        </DropdownMenuDialogItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

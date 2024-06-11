@@ -11,7 +11,7 @@ import {
   TableRow,
 } from "@/components/atom/table";
 import { UnconfDropdownMenu } from "./unconf_dropdown_menu";
-import { cn, formatDate } from "@/lib/utils";
+import { cn, formatDate, formatTime } from "@/lib/utils";
 import { type FC } from "react";
 import { getTranslations } from "next-intl/server";
 
@@ -54,6 +54,8 @@ export const UnconfDashboard: FC<{ edition?: string }> = async ({
             >
               <TableCell className={typefaceSubtitle("w-40")}>
                 {formatDate(event.block.start)}
+                <br />
+                {formatTime(event.block.start)}
               </TableCell>
               <TableCell className="w-40">{event.title}</TableCell>
               <TableCell
