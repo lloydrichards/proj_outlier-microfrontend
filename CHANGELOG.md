@@ -1,3 +1,10 @@
+## [0.5.5](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.4...v0.5.5) (2024-06-11)
+
+
+### Bug Fixes
+
+* :rotating_light: types complaining in vercel ([bbf66d5](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/bbf66d5ef2fdae6f18fd3258ec27adb3ecf3defa))
+
 ## [0.5.4](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.3...v0.5.4) (2024-06-11)
 
 
