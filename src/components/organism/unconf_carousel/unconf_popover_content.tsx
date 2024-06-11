@@ -14,7 +14,7 @@ export const UnconfPopoverContent: FC<{
   const t = useTranslations("Popover");
   const tCommon = useTranslations("Common");
   return (
-    <PopoverContent className="w-[var(--radix-popover-trigger-width)] border-none bg-mustard text-mustard-foreground shadow-2xl">
+    <PopoverContent className="w-[calc(var(--radix-popover-trigger-width)*1.5)] border-none bg-mustard text-mustard-foreground shadow-2xl">
       <Table>
         <TableBody className="[&_tr]:border-mustard-foreground [&_tr]:hover:bg-mustard [&_tr_td]:px-2 [&_tr_td]:py-3">
           <TableRow>
