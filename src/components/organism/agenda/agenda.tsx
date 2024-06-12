@@ -46,7 +46,6 @@ export const Agenda: FC<AgendaProps> = async ({
           const isStartOfDay =
             block.start.getDay() !== lastBlock?.start.getDay();
           const isUpcoming = block.end.getTime() > new Date().getTime();
-          console.log(isUpcoming, block.start, new Date());
           return (
             <Fragment key={block.id}>
               {isStartOfDay && <DateLine date={block.start} />}
