@@ -1,3 +1,10 @@
+## [0.5.6](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.5...v0.5.6) (2024-06-12)
+
+
+### Bug Fixes
+
+* **routing:** :bug: fix bug where speakers arent added to unconf event ([09ce0cd](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/09ce0cd16bd90e7015ad67ecef26513dbb8ed484))
+
 ## [0.5.5](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.4...v0.5.5) (2024-06-11)
 
 
