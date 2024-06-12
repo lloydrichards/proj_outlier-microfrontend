@@ -9,6 +9,22 @@ import { TimeZone } from "@/components/molecule/time_zone/time_zone";
 import { DateLine } from "@/components/molecule/date_line/date_line";
 import { cn } from "@/lib/utils";
 import { getTranslations } from "next-intl/server";
+import { cva } from "class-variance-authority";
+
+const agendaBlockVariants = cva(
+  "grid grid-cols-[4rem_1fr] gap-2 sm:grid-cols-[8rem_1fr]",
+  {
+    variants: {
+      active: {
+        true: "",
+        false: "opacity-60 saturate-50",
+      },
+    },
+    defaultVariants: {
+      active: true,
+    },
+  },
+);
 
 type AgendaProps = {
   edition?: string;
@@ -29,12 +45,18 @@ export const Agenda: FC<AgendaProps> = async ({
           const lastBlock = agenda.at(idx - 1);
           const isStartOfDay =
             block.start.getDay() !== lastBlock?.start.getDay();
+          const isUpcoming = block.end.getTime() > new Date().getTime();
+          console.log(isUpcoming, block.start, new Date());
           return (
             <Fragment key={block.id}>
               {isStartOfDay && <DateLine date={block.start} />}
               {idx === 0 && <TimeZone />}
               <AgendaBlockMenu block={block}>
-                <div className="grid grid-cols-[4rem_1fr] gap-2 sm:grid-cols-[8rem_1fr]">
+                <div
+                  className={agendaBlockVariants({
+                    active: isUpcoming,
+                  })}
+                >
                   <span className={typefaceTitle("text-sm sm:text-md")}>
                     <LocalTime date={block.start} />
                   </span>
