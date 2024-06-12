@@ -31,6 +31,10 @@ export const unconfRouter = createTRPCRouter({
         const [insertedOrganizer] = await ctx.db
           .insert(speakers)
           .values(organizer)
+          .onConflictDoUpdate({
+            target: [speakers.firstName, speakers.lastName],
+            set: { ...organizer, updatedAt: new Date() },
+          })
           .returning();
 
         await ctx.db.insert(speakersToEvents).values({
