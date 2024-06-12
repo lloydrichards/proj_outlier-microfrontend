@@ -9,7 +9,7 @@ const DateEmbedded = async ({
   const queryDate = searchParams.date ? new Date(searchParams.date) : undefined;
   return (
     <>
-      <Agenda date={queryDate} />
+      <Agenda date={queryDate} showOngoing />
       <LocaleSwitcher className="sticky bottom-2 left-1 opacity-80" />
     </>
   );

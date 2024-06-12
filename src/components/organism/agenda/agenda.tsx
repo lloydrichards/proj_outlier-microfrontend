@@ -29,11 +29,13 @@ const agendaBlockVariants = cva(
 type AgendaProps = {
   edition?: string;
   date?: Date;
+  showOngoing?: boolean;
   className?: string;
 };
 export const Agenda: FC<AgendaProps> = async ({
   edition = null,
   date = null,
+  showOngoing = false,
   className,
 }) => {
   const agenda = await api.block.getAgenda({ edition, date });
@@ -53,7 +55,7 @@ export const Agenda: FC<AgendaProps> = async ({
               <AgendaBlockMenu block={block}>
                 <div
                   className={agendaBlockVariants({
-                    active: isUpcoming,
+                    active: showOngoing == true ? isUpcoming : true,
                   })}
                 >
                   <span className={typefaceTitle("text-sm sm:text-md")}>
