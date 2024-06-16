@@ -1,3 +1,10 @@
+## [0.5.7](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.6...v0.5.7) (2024-06-16)
+
+
+### Bug Fixes
+
+* **dashboard:** :bug: remove line clamp on rejected ([9cea4c9](https://github.com/lloydrichards/proj_outlier-microfrontend/commit/9cea4c96a71805e6ea3393966201692625e30464))
+
 ## [0.5.6](https://github.com/lloydrichards/proj_outlier-microfrontend/compare/v0.5.5...v0.5.6) (2024-06-12)
 
 
