@@ -58,7 +58,7 @@
             "lastName": "Makulec",
             "title": null,
             "pronouns": "she/her",
-            "email": null,
+            "email": "executive@datavisualizationsociety.com",
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Amanda%20Makulec.png",
             "bio": null
@@ -435,16 +435,6 @@
         "category": "ART",
         "speakers": [
           {
-            "firstName": "Sophie",
-            "lastName": "Sparks",
-            "title": null,
-            "pronouns": null,
-            "email": null,
-            "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Sophie%20Sparkes.png",
-            "bio": "Sophie, an Information Designer, and former Tableau Public team member, bridges the illustration and data to bring information to life."
-          },
-          {
             "firstName": "Taha",
             "lastName": "Ebrahimi",
             "title": null,
@@ -453,6 +443,16 @@
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Taha%20Ebrahimi.png",
             "bio": "Taha, author of \"Street Trees of Seattle: An Illustrated Walking Guide\" and Director of Tableau Public, explores data through hand-drawn narratives."
+          },
+          {
+            "firstName": "Sophie",
+            "lastName": "Sparks",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Sophie%20Sparkes.png",
+            "bio": "Sophie, an Information Designer, and former Tableau Public team member, bridges the illustration and data to bring information to life."
           }
         ]
       }
@@ -479,7 +479,7 @@
             "lastName": "Gurvich",
             "title": null,
             "pronouns": "he/him",
-            "email": null,
+            "email": "alexander.b.gurvich@nasa.gov",
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Alex%20Gurvich.png",
             "bio": "In his former life, Alex Gurvich studied the formation of distant galaxies like the Milky Way using supercomputer simulations of the universe and received a Ph.D. in Computational Astrophysics from Northwestern University. During his Ph.D., he had the opportunity as an NSF Graduate Fellow to develop an interactive browser-based point cloud visualization tool, Firefly, which led him to realize he was more interested in building software to visualize data than he was remaining in academia. Now he creates interactive web visualizations of climate data as a member of NASA Goddard's Scientific Visualization Studio and serves as the technical lead of Earth.gov, the virtual home of NASA's Earth Information Center."
@@ -498,7 +498,7 @@
         "title": "Data Viz Career Panel: Insights & Q&A",
         "summary": "Join us for an engaging early career unconference panel featuring industry leaders Matthias Stahl, Taj Carson, Agata Ketterick, and Kevin Wee. This unique event will kick off with a brief, mediated discussion where our distinguished panelists will share insights from their diverse experiences in data visualization, journalism, business intelligence, and non-profit sectors. Following the discussion, we’ll open the floor to the audience for an interactive Q&A session. \n\nDon't miss this opportunity to gain valuable advice, ask your burning questions, and connect with experts who have navigated and excelled in their respective fields. Whether you're just starting your career or looking to pivot, this unconference is designed to provide you with the inspiration and knowledge to advance your professional journey. Mark your calendar and be part of this dynamic and informative event!",
         "description": "1. Best way to reach you during the conference\nearlycareer@datavisualizationsociety.org\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\nPanel\n\n3. Supplies or support needed (e.g., projector)\nMics, streaming services\n\n4. Anything else you'd like us to know?\n\n",
-        "location": "UNASSIGNED",
+        "location": "ROOM1",
         "imageUrl": null,
         "linkLabel": null,
         "linkUrl": null,
@@ -517,36 +517,15 @@
         ]
       },
       {
-        "title": "Which Asian snack are you?",
-        "summary": "Just bring your favourite Asian snack (or any snack!) and come hang out with us! ",
-        "description": "1. Best way to reach you during the conference\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\n\n3. Supplies or support needed (e.g., projector)\n\n4. Anything else you'd like us to know?\n\n",
-        "location": "UNASSIGNED",
-        "imageUrl": null,
-        "linkLabel": null,
-        "linkUrl": null,
-        "category": "OTHER",
-        "speakers": []
-      },
-      {
         "title": "Creating Data Viz Community within your Organization",
-        "summary": "Inspired by Outlier 2022 and Cole Nussbaumer Knaflic's book Storytelling with Data we created the Data Viz Disco at our organization two years ago.  The Data Viz Disco is a dedicated space to learn, practice and be inspired by Data Viz with other analysts.  We would like to share some of our experiences, both successes and challenges, and hear from others creating data viz community.",
-        "description": "1. via text or call to 513-484-8290 (Dallas) or 513-828-2402 (Christina)\n\n2. Session Type (Discussion)\n\n3. Supplies or support needed (white board or projector)\n\n\n",
-        "location": "UNASSIGNED",
+        "summary": "Inspired by Outlier 2022 and Cole Nussbaumer Knaflic's book Storytelling with Data we created the Data Viz Disco at our organization two years ago. The Data Viz Disco is a dedicated space to learn, practice and be inspired by Data Viz with other analysts. We would like to share some of our experiences, both successes and challendges, and Head from others creating data viz community.",
+        "description": "1. via text or call to 513-484-8290 (Dallas) or 513-828-2402 (Christina)\n\n2. Session Type (Discussion)\n\n3. Supplies or support needed (white board or projector)",
+        "location": "ROOM2",
         "imageUrl": null,
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
         "speakers": [
-          {
-            "firstName": "Dallas",
-            "lastName": "Mount",
-            "title": null,
-            "pronouns": "he/him",
-            "email": "dallas_mount@cinfin.com",
-            "organization": null,
-            "imageUrl": null,
-            "bio": null
-          },
           {
             "firstName": "Christina",
             "lastName": "Koutroubas",
@@ -556,6 +535,38 @@
             "organization": null,
             "imageUrl": null,
             "bio": null
+          },
+          {
+            "firstName": "Dallas",
+            "lastName": "Mount",
+            "title": null,
+            "pronouns": "he/him",
+            "email": "dallas_mount@cinfin.com",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          }
+        ]
+      },
+      {
+        "title": "Climate Data Visualizers Unite",
+        "summary": "Let’s discuss challenges and strategies for communicating data relating to Earth’s climate. What goals do each of us have in making climate data visualizations? How do we accomplish those goals? How do we measure success? What tools do we use and what speedbumps do we encounter?",
+        "description": "1. Best way to reach you during the conference\nAlex.b.gmail.com\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\nDiscussion\n3. Supplies or support needed (e.g., projector)\nSpace to meet in?\n4. Anything else you'd like us to know?\nI like turtles \n",
+        "location": "ROOM3",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "SCIENCE",
+        "speakers": [
+          {
+            "firstName": "Alex",
+            "lastName": "Gurvich",
+            "title": null,
+            "pronouns": "he/him",
+            "email": "alexander.b.gurvich@nasa.gov",
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Alex%20Gurvich.png",
+            "bio": "In his former life, Alex Gurvich studied the formation of distant galaxies like the Milky Way using supercomputer simulations of the universe and received a Ph.D. in Computational Astrophysics from Northwestern University. During his Ph.D., he had the opportunity as an NSF Graduate Fellow to develop an interactive browser-based point cloud visualization tool, Firefly, which led him to realize he was more interested in building software to visualize data than he was remaining in academia. Now he creates interactive web visualizations of climate data as a member of NASA Goddard's Scientific Visualization Studio and serves as the technical lead of Earth.gov, the virtual home of NASA's Earth Information Center."
           }
         ]
       }
@@ -826,7 +837,7 @@
             "lastName": "Loh",
             "title": null,
             "pronouns": null,
-            "email": null,
+            "email": "peiying@kontinentalist.com",
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Pei%20Ying%20Loh.png",
             "bio": "Pei Ying, the driving force behind Kontinentalist, brings her unique perspective from the dynamic streets of Singapore. Leading with a mission to empower voices through compelling storytelling, she endeavors to reshape perceptions of Asia and its rich tapestry of cultures. As a co-founder and underrepresented minority in the industry, Pei Ying uses her platform to champion cause-driven narratives and foster a workspace that embraces diversity, striving for positive change within the tech and data visualization spheres."
@@ -855,10 +866,10 @@
         "title": "Visualization in the Healthcare Industry",
         "summary": "Connect on ideas to encourage data culture & advanced viz in the healthcare industry.",
         "description": "1. Ping on Outlier Slack or via email.\n\n2. Discussion\n\n3. Virtual configuration please\n\n4. Anything else you'd like us to know?\n\n",
-        "location": "UNASSIGNED",
+        "location": "VIRTUAL",
         "imageUrl": null,
-        "linkLabel": null,
-        "linkUrl": null,
+        "linkLabel": "Zoom link",
+        "linkUrl": "https://us06web.zoom.us/j/84917335474?pwd=mKe0ybePFz6OvVl5WFruaNaNMBAPDq.1",
         "category": "INDUSTRY",
         "speakers": [
           {
@@ -867,6 +878,28 @@
             "title": null,
             "pronouns": "she/her",
             "email": "priya.dugad@gmail.com",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          }
+        ]
+      },
+      {
+        "title": "Viz for Social Good",
+        "summary": "We will introduce the non profit Viz for Social Good and discuss other initiatives to share and learn data viz for social good.",
+        "description": "1. Best way to reach you during the conference\nSlack channel\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\nOpen discussion\n\n3. Supplies or support needed (e.g., projector)\n\n4. Anything else you'd like us to know?\n\n",
+        "location": "VIRTUAL",
+        "imageUrl": null,
+        "linkLabel": "Zoom link",
+        "linkUrl": "https://us06web.zoom.us/j/84389391403?pwd=NreUxOfYJb2xs8kO2VCbbs1EQcyDcY.1#success",
+        "category": "SOCIAL",
+        "speakers": [
+          {
+            "firstName": "Aida",
+            "lastName": "Horaniet",
+            "title": null,
+            "pronouns": "she/her",
+            "email": "aida.horanietibanez@uni.lu",
             "organization": null,
             "imageUrl": null,
             "bio": null
@@ -899,16 +932,6 @@
         "category": "UNUSUAL",
         "speakers": [
           {
-            "firstName": "Nikita",
-            "lastName": "Rokotyan",
-            "title": null,
-            "pronouns": null,
-            "email": null,
-            "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Nikita%20Rokotyan.png",
-            "bio": null
-          },
-          {
             "firstName": "I-yang",
             "lastName": "Huang",
             "title": null,
@@ -936,6 +959,16 @@
             "email": null,
             "organization": null,
             "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Wang_Tiange.png",
+            "bio": null
+          },
+          {
+            "firstName": "Nikita",
+            "lastName": "Rokotyan",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Nikita%20Rokotyan.png",
             "bio": null
           }
         ]
@@ -1044,7 +1077,106 @@
     "start": "2024-06-13T22:05:00.000Z",
     "end": "2024-06-13T22:50:00.000Z",
     "edition": "2024",
-    "events": []
+    "events": [
+      {
+        "title": "Which Asian snack are you?",
+        "summary": "Just bring your favourite Asian snack (or any snack!) and come hang out with us in the Atrium!",
+        "description": "1. Best way to reach you during the conference\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\n\n3. Supplies or support needed (e.g., projector)\n\n4. Anything else you'd like us to know?\n\n",
+        "location": "UNASSIGNED",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "OTHER",
+        "speakers": [
+          {
+            "firstName": "Pei Ying",
+            "lastName": "Loh",
+            "title": null,
+            "pronouns": null,
+            "email": "peiying@kontinentalist.com",
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Pei%20Ying%20Loh.png",
+            "bio": "Pei Ying, the driving force behind Kontinentalist, brings her unique perspective from the dynamic streets of Singapore. Leading with a mission to empower voices through compelling storytelling, she endeavors to reshape perceptions of Asia and its rich tapestry of cultures. As a co-founder and underrepresented minority in the industry, Pei Ying uses her platform to champion cause-driven narratives and foster a workspace that embraces diversity, striving for positive change within the tech and data visualization spheres."
+          }
+        ]
+      },
+      {
+        "title": "Svelte + D3 for beginners",
+        "summary": "D3.js is an incredibly powerful but tricky language for data visualisation, whereas Svelte is a frontend compiler which is known for its simplicity. Together, they are greater than the sum of their parts. Join us for a live coding session where we will introduce Svelte + D3 and create some simple charts.",
+        "description": "1. Best way to reach you during the conference: In-person or slack\n\n2. Session Type: Live coding\n\n3. Supplies or support needed: Projector\n\n4. Anything else you'd like us to know? N/A\n\n",
+        "location": "ROOM3",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "PROGRAMMING",
+        "speakers": [
+          {
+            "firstName": "Matthias",
+            "lastName": "Stahl",
+            "title": null,
+            "pronouns": "he/him",
+            "email": "matthias.stahl@spiegel.de",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          },
+          {
+            "firstName": "Rudi",
+            "lastName": "O'Reilly Meehan",
+            "title": null,
+            "pronouns": "he/him",
+            "email": "rudi@dataanddesign.ie",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          }
+        ]
+      },
+      {
+        "title": "Viz for Social Good",
+        "summary": "We will introduce Viz for Social Good and present a volunteer's experience in a recent proyect.",
+        "description": "1. Best way to reach you during the conference\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\n\n3. Supplies or support needed (e.g., projector)\n\n4. Anything else you'd like us to know?\n\n",
+        "location": "ROOM2",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "SOCIAL",
+        "speakers": [
+          {
+            "firstName": "Aida",
+            "lastName": "Horaniet",
+            "title": null,
+            "pronouns": "she/her",
+            "email": "aida.horanietibanez@uni.lu",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          }
+        ]
+      },
+      {
+        "title": "Imagining the Next Five Years of the Data Visualization Society",
+        "summary": "Join board members from DVS to chat candidly about the DVS as a community, as a professional association, and as a company. How can we continue to build community and nurture, celebrate, and advance the field? What roles is DVS uniquely positioned to play as our field evolves? We want to hear from you, whether this is your first experience with DVS or if you've been with us from the early days in 2019.\n\nWe will host virtual conversations on this same topic outside of Outlier with our larger DVS community to make sure we hear from those joining us virtually or part of DVS but not attending Outlier this year.",
+        "description": "1. Best way to reach you during the conference\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)\n\n3. Supplies or support needed (e.g., projector)\n\n4. Anything else you'd like us to know?\n\n",
+        "location": "ROOM1",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "OTHER",
+        "speakers": [
+          {
+            "firstName": "Amanda",
+            "lastName": "Makulec",
+            "title": null,
+            "pronouns": "she/her",
+            "email": "executive@datavisualizationsociety.com",
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Amanda%20Makulec.png",
+            "bio": null
+          }
+        ]
+      }
+    ]
   },
   {
     "type": "ANNOUNCEMENT",
@@ -1365,7 +1497,72 @@
     "start": "2024-06-14T17:45:00.000Z",
     "end": "2024-06-14T18:45:00.000Z",
     "edition": "2024",
-    "events": []
+    "events": [
+      {
+        "title": "Pain and gain of dataviz in scientific research",
+        "summary": "A session dedicated to  dataviz practitioners working with science and research communication.\nFree-flow discussion about the peculiarities of this niche. We might end up discussing for example:\n- on how to break silos between research community and design principles?\n-the sciart freelance life?\n-the scientific journal publishing practices?\n-the many different types of tools and styles?\n\nLet's chat.",
+        "description": "1. Best way to reach you during the conference   slack channel  or  nuria.altimir@gmail.com  Europe timetables\n\n2. Session Type (Talk, Panel, Discussion, Q&A/AMA, Hands On, Fun/Misc)  Discussion\n\n3. Supplies or support needed (e.g., projector) none\n\n4. Anything else you'd like us to know?\n\n",
+        "location": "VIRTUAL",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "SCIENCE",
+        "speakers": [
+          {
+            "firstName": "Nuria",
+            "lastName": "Altimir",
+            "title": null,
+            "pronouns": "she/her",
+            "email": "nuria.altimir@gmail.com",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          }
+        ]
+      },
+      {
+        "title": "Stitching Stories: Data Visualization through Knitting, Crochet, and Weaving",
+        "summary": "Discuss data physicalization through crafts and textiles. We’ll show favourite examples, discuss the cultural significance of representative mediums for data physicalization, or just work on your yarn projects. ",
+        "description": "An in person room and projection to show cool projects! ",
+        "location": "VIRTUAL",
+        "imageUrl": null,
+        "linkLabel": null,
+        "linkUrl": null,
+        "category": "DESIGN",
+        "speakers": [
+          {
+            "firstName": "Carly",
+            "lastName": "Bobak ",
+            "title": null,
+            "pronouns": "she/her",
+            "email": "Carly.A.Bobak@dartmouth.edu",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          },
+          {
+            "firstName": "Courtney ",
+            "lastName": "Schiebout",
+            "title": null,
+            "pronouns": "she/her",
+            "email": "Courtney.Schiebout@cuanschutz.edu",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          },
+          {
+            "firstName": "Jacqueline",
+            "lastName": "Wernimont ",
+            "title": null,
+            "pronouns": "she/her",
+            "email": "Jacqueline.D.Wernimont@dartmouth.edu",
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          }
+        ]
+      }
+    ]
   },
   {
     "type": "PAUSE",

@@ -53,14 +53,14 @@
         "category": "OTHER",
         "speakers": [
           {
-            "firstName": "Amanda",
-            "lastName": "Makulec",
+            "firstName": "Emilia",
+            "lastName": "Ruzicka",
             "title": null,
-            "pronouns": null,
+            "pronouns": "they/them",
             "email": null,
             "organization": null,
-            "imageUrl": null,
-            "bio": null
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Emilia%20Ruzicka.png",
+            "bio": "Emilia Ruzicka is a freelance data journalist and technology and society researcher. They currently attend University of Virginia, where they are pursing an MA in media, culture, and technology, a certificate in digital humanities, and a PhD in data science. In addition to their studies, Emilia writes their own blog and pursues personal visualization projects. Check out Emilia's work at emiliaruzicka.com."
           }
         ]
       }
@@ -407,14 +407,14 @@
         "category": "OTHER",
         "speakers": [
           {
-            "firstName": "Alex",
-            "lastName": "Gurvich",
+            "firstName": "Regine",
+            "lastName": "Abos",
             "title": null,
-            "pronouns": "he/him",
+            "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Alex%20Gurvich.png",
-            "bio": "In his former life, Alex Gurvich studied the formation of distant galaxies like the Milky Way using supercomputer simulations of the universe and received a Ph.D. in Computational Astrophysics from Northwestern University. During his Ph.D., he had the opportunity as an NSF Graduate Fellow to develop an interactive browser-based point cloud visualization tool, Firefly, which led him to realize he was more interested in building software to visualize data than he was remaining in academia. Now he creates interactive web visualizations of climate data as a member of NASA Goddard's Scientific Visualization Studio and serves as the technical lead of Earth.gov, the virtual home of NASA's Earth Information Center."
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Regine%20Abos.png",
+            "bio": null
           }
         ]
       }
@@ -465,20 +465,20 @@
         "category": "STORYTELLING",
         "speakers": [
           {
-            "firstName": "Qingyue",
-            "lastName": "Li",
+            "firstName": "Enrique",
+            "lastName": "Mendoza",
             "title": null,
-            "pronouns": "she/her",
+            "pronouns": "he/him",
             "email": null,
             "organization": null,
             "imageUrl": null,
             "bio": null
           },
           {
-            "firstName": "Enrique",
-            "lastName": "Mendoza",
+            "firstName": "Qingyue",
+            "lastName": "Li",
             "title": null,
-            "pronouns": "he/him",
+            "pronouns": "she/her",
             "email": null,
             "organization": null,
             "imageUrl": null,
@@ -579,13 +579,13 @@
         "category": "OTHER",
         "speakers": [
           {
-            "firstName": "Regine",
-            "lastName": "Abos",
+            "firstName": "Tatiana Laher",
+            "lastName": "Kalainoff",
             "title": null,
-            "pronouns": null,
+            "pronouns": "she/her",
             "email": null,
             "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Regine%20Abos.png",
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Tatiana%20Kalainoff.png",
             "bio": null
           }
         ]
@@ -736,16 +736,6 @@
         "category": "LITERACY",
         "speakers": [
           {
-            "firstName": "Julie",
-            "lastName": "Brunet",
-            "title": null,
-            "pronouns": null,
-            "email": null,
-            "organization": null,
-            "imageUrl": null,
-            "bio": null
-          },
-          {
             "firstName": "Claire",
             "lastName": "Santoro",
             "title": null,
@@ -756,8 +746,8 @@
             "bio": null
           },
           {
-            "firstName": "Andy",
-            "lastName": "Kirk",
+            "firstName": "Julie",
+            "lastName": "Brunet",
             "title": null,
             "pronouns": null,
             "email": null,
@@ -768,6 +758,16 @@
           {
             "firstName": "Emily",
             "lastName": "Barone",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": null,
+            "bio": null
+          },
+          {
+            "firstName": "Andy",
+            "lastName": "Kirk",
             "title": null,
             "pronouns": null,
             "email": null,
@@ -836,14 +836,14 @@
         "category": "STORYTELLING",
         "speakers": [
           {
-            "firstName": "Hyeok",
-            "lastName": "Kim",
+            "firstName": "Amanda",
+            "lastName": "Makulec",
             "title": null,
-            "pronouns": "he/him",
-            "email": null,
+            "pronouns": "she/her",
+            "email": "executive@datavisualizationsociety.com",
             "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Hyeok%20Kim.png",
-            "bio": "Hyeok Kim is a human-computer interaction and visualization researcher. His research aims to support visualization authors to produce data visualizations for multiple audiences with different characteristics. He completed his Ph.D. in Computer Science at Northwestern University and has published his work in ACM CHI, CSCW, IEEE VIS, and EuroVis."
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Amanda%20Makulec.png",
+            "bio": null
           },
           {
             "firstName": "Natalie",
@@ -906,13 +906,13 @@
         "category": "OTHER",
         "speakers": [
           {
-            "firstName": "Eli",
-            "lastName": "Holder",
+            "firstName": "Kevin",
+            "lastName": "Ford",
             "title": null,
-            "pronouns": null,
+            "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Eli%20Holder.png",
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Kevin%20Ford.png",
             "bio": null
           }
         ]
@@ -936,23 +936,23 @@
         "category": "ART",
         "speakers": [
           {
-            "firstName": "Michael",
-            "lastName": "Gethers",
+            "firstName": "Youyou",
+            "lastName": "Zhou",
+            "title": null,
+            "pronouns": null,
+            "email": null,
+            "organization": null,
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Youyou%20Zhou.png",
+            "bio": "I’m a data journalist working with graphics and code. I produce data-driven, visual, interactive, and experimental journalism that breaks free of words-based formats. I'm currently working at the Opinion desk of The Washington Post as a graphics reporter. "
+          },
+          {
+            "firstName": "Joshua",
+            "lastName": "Smith",
             "title": null,
             "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Michael%20Gethers.png",
-            "bio": "Michael is a data scientist and data visualization designer currently based in Indianapolis, IN.  After working for nearly 10 years as a data scientist in tech and cybersecurity, he now leads data strategy for McLaren Racing’s IndyCar Team, Arrow McLaren, where he is working to transform the way the team stores, analyzes, presents, and understands the large volume of data that is produced every time one of its cars is on track.  Michael studied Statistics at UC Berkeley before working at Mercer and Salesforce in San Francisco, HUMAN Security in London, and now McLaren in Indianapolis."
-          },
-          {
-            "firstName": "Tatiana Laher",
-            "lastName": "Kalainoff",
-            "title": null,
-            "pronouns": "she/her",
-            "email": null,
-            "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Tatiana%20Kalainoff.png",
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Jashua%20Smith.png",
             "bio": null
           }
         ]
@@ -1164,14 +1164,14 @@
         "category": "OTHER",
         "speakers": [
           {
-            "firstName": "Taha",
-            "lastName": "Ebrahimi",
+            "firstName": "Sam",
+            "lastName": "Hart",
             "title": null,
-            "pronouns": "she/her",
+            "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Taha%20Ebrahimi.png",
-            "bio": "Taha, author of \"Street Trees of Seattle: An Illustrated Walking Guide\" and Director of Tableau Public, explores data through hand-drawn narratives."
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Sam%20Hart.png",
+            "bio": "Sam is a data visualization developer at Reuters, working for the Special Reports team."
           }
         ]
       }
@@ -1451,8 +1451,8 @@
         "category": "LITERACY",
         "speakers": [
           {
-            "firstName": "Alenka",
-            "lastName": "Gucek",
+            "firstName": "Martina",
+            "lastName": "Zunica",
             "title": null,
             "pronouns": null,
             "email": null,
@@ -1461,8 +1461,8 @@
             "bio": null
           },
           {
-            "firstName": "Martina",
-            "lastName": "Zunica",
+            "firstName": "Alenka",
+            "lastName": "Gucek",
             "title": null,
             "pronouns": null,
             "email": null,
@@ -1491,24 +1491,24 @@
         "category": "OTHER",
         "speakers": [
           {
-            "firstName": "Gabrielle",
-            "lastName": "Merite",
+            "firstName": "Michael",
+            "lastName": "Gethers",
             "title": null,
-            "pronouns": null,
+            "pronouns": "he/him",
             "email": null,
             "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Gabrielle%20Merite.png",
-            "bio": null
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Michael%20Gethers.png",
+            "bio": "Michael is a data scientist and data visualization designer currently based in Indianapolis, IN.  After working for nearly 10 years as a data scientist in tech and cybersecurity, he now leads data strategy for McLaren Racing’s IndyCar Team, Arrow McLaren, where he is working to transform the way the team stores, analyzes, presents, and understands the large volume of data that is produced every time one of its cars is on track.  Michael studied Statistics at UC Berkeley before working at Mercer and Salesforce in San Francisco, HUMAN Security in London, and now McLaren in Indianapolis."
           },
           {
-            "firstName": "Sophie",
-            "lastName": "Sparks",
+            "firstName": "Eli",
+            "lastName": "Holder",
             "title": null,
             "pronouns": null,
             "email": null,
             "organization": null,
-            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Sophie%20Sparkes.png",
-            "bio": "Sophie, an Information Designer, and former Tableau Public team member, bridges the illustration and data to bring information to life."
+            "imageUrl": "https://jhetjbuwacppktsrggwi.supabase.co/storage/v1/object/public/outlier-bucket/2024/Eli%20Holder.png",
+            "bio": null
           }
         ]
       }
