@@ -66,12 +66,7 @@ export const UnconfDashboard: FC<{ edition?: string }> = async ({
               >
                 {event.summary}
               </TableCell>
-              <TableCell
-                className={cn(
-                  "w-80 whitespace-pre-wrap",
-                  event.status == "REJECTED" ? "line-clamp-1" : "",
-                )}
-              >
+              <TableCell className={cn("w-80 whitespace-pre-wrap")}>
                 {event.description}
               </TableCell>
               <TableCell>
