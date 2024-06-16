@@ -21,6 +21,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Marília",
@@ -51,6 +52,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Emilia",
@@ -81,6 +83,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "KEYNOTE",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Shirley",
@@ -111,6 +114,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Nina",
@@ -141,6 +145,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "LITERACY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Henrietta",
@@ -178,6 +183,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ANALYTICS",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Gomathy",
@@ -208,6 +214,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ART",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Pedro",
@@ -238,6 +245,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ANALYTICS",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Lukas",
@@ -268,6 +276,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Cláudio Fischer",
@@ -315,6 +324,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Anne-Sophie Pereira De",
@@ -345,6 +355,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ART",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Bruno",
@@ -375,6 +386,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "LITERACY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Will Stahl",
@@ -405,6 +417,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Regine",
@@ -463,6 +476,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Enrique",
@@ -503,6 +517,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "LITERACY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Gulrez",
@@ -533,6 +548,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "LITERACY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Danne",
@@ -577,6 +593,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Tatiana Laher",
@@ -607,6 +624,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ART",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Nadieh",
@@ -637,6 +655,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ART",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Dr. Kirell",
@@ -667,6 +686,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ART",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "James",
@@ -697,6 +717,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "LITERACY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Jeremy",
@@ -734,6 +755,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "LITERACY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Claire",
@@ -804,6 +826,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Alli",
@@ -834,6 +857,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Amanda",
@@ -874,6 +898,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Rudi O'Reilly",
@@ -904,6 +929,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Kevin",
@@ -934,6 +960,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ART",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Youyou",
@@ -1009,6 +1036,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Matt",
@@ -1039,6 +1067,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ANALYTICS",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Ana",
@@ -1083,6 +1112,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ACCESSIBILITY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Kent",
@@ -1162,6 +1192,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Sam",
@@ -1192,6 +1223,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ANALYTICS",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Johnson",
@@ -1222,6 +1254,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "LITERACY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Dr. Nicola",
@@ -1252,6 +1285,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Sakina",
@@ -1282,6 +1316,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Ksenia",
@@ -1319,6 +1354,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "John Burn",
@@ -1349,6 +1385,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ACCESSIBILITY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Kaitlyn",
@@ -1379,6 +1416,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Beatriz",
@@ -1419,6 +1457,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Rodolfo",
@@ -1449,6 +1488,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "LITERACY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Martina",
@@ -1489,6 +1529,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Michael",

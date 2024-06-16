@@ -14,6 +14,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": []
       }
     ]
@@ -33,6 +34,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": []
       }
     ]
@@ -52,6 +54,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "DVS",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Amanda",
@@ -82,6 +85,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "KEYNOTE",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Eli",
@@ -129,6 +133,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ACCESSIBILITY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Joshua",
@@ -159,6 +164,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Youyou",
@@ -189,6 +195,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Emilia",
@@ -219,6 +226,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Kevin",
@@ -249,6 +257,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Sam",
@@ -286,6 +295,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "UNUSUAL",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Regine",
@@ -336,6 +346,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ANALYTICS",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Michael",
@@ -373,6 +384,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ANALYTICS",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Nick",
@@ -403,6 +415,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ACCESSIBILITY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Hyeok",
@@ -433,6 +446,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ART",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Taha",
@@ -473,6 +487,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Alex",
@@ -503,6 +518,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "CAREER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Zane",
@@ -525,6 +541,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Christina",
@@ -557,6 +574,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "SCIENCE",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Alex",
@@ -587,6 +605,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": []
       }
     ]
@@ -606,6 +625,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": []
       }
     ]
@@ -625,6 +645,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": []
       }
     ]
@@ -644,6 +665,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "KEYNOTE",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Steve",
@@ -674,6 +696,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "DASHBOARD",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Kuhu",
@@ -704,6 +727,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "DASHBOARD",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Martynas",
@@ -741,6 +765,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ANALYTICS",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Saloni",
@@ -771,6 +796,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Kenneth",
@@ -801,6 +827,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Valentina",
@@ -831,6 +858,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "LITERACY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Pei Ying",
@@ -871,6 +899,7 @@
         "linkLabel": "Zoom link",
         "linkUrl": "https://us06web.zoom.us/j/84917335474?pwd=mKe0ybePFz6OvVl5WFruaNaNMBAPDq.1",
         "category": "INDUSTRY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Priya",
@@ -893,6 +922,7 @@
         "linkLabel": "Zoom link",
         "linkUrl": "https://us06web.zoom.us/j/84389391403?pwd=NreUxOfYJb2xs8kO2VCbbs1EQcyDcY.1#success",
         "category": "SOCIAL",
+        "status": "REJECTED",
         "speakers": [
           {
             "firstName": "Aida",
@@ -930,6 +960,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "UNUSUAL",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "I-yang",
@@ -990,6 +1021,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ACCESSIBILITY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Lisa",
@@ -1027,6 +1059,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Catalina",
@@ -1057,6 +1090,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ANALYTICS",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Gaelan",
@@ -1087,6 +1121,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Pei Ying",
@@ -1109,6 +1144,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "PROGRAMMING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Matthias",
@@ -1141,6 +1177,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "SOCIAL",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Aida",
@@ -1163,6 +1200,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Amanda",
@@ -1193,6 +1231,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": []
       }
     ]
@@ -1212,6 +1251,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": []
       }
     ]
@@ -1231,6 +1271,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": []
       }
     ]
@@ -1250,6 +1291,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "KEYNOTE",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Maudlyne",
@@ -1280,6 +1322,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "LITERACY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Janina",
@@ -1310,6 +1353,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ACCESSIBILITY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Jamie",
@@ -1367,6 +1411,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ART",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Hermann",
@@ -1397,6 +1442,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "STORYTELLING",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Jane",
@@ -1447,6 +1493,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "LITERACY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Aleszu",
@@ -1477,6 +1524,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "ACCESSIBILITY",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Mikael",
@@ -1507,6 +1555,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "SCIENCE",
+        "status": "ACCEPTED",
         "speakers": [
           {
             "firstName": "Nuria",
@@ -1529,6 +1578,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "DESIGN",
+        "status": "REJECTED",
         "speakers": [
           {
             "firstName": "Carly",
@@ -1586,6 +1636,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": []
       }
     ]
@@ -1605,6 +1656,7 @@
         "linkLabel": null,
         "linkUrl": null,
         "category": "OTHER",
+        "status": "ACCEPTED",
         "speakers": []
       }
     ]

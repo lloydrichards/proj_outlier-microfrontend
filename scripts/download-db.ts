@@ -43,6 +43,7 @@ const main = async () => {
       linkLabel: event.linkLabel,
       linkUrl: event.linkUrl,
       category: event.category,
+      status: event.status,
       speakers: event.speakers.map(({ speaker }) => ({
         firstName: speaker.firstName,
         lastName: speaker.lastName,
