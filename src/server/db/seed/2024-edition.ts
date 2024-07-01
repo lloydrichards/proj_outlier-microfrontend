@@ -29,6 +29,7 @@ export const seed2024Edition = async (db: db) => {
             .insert(events)
             .values({
               ...event,
+              status: "ACCEPTED",
               blockId: insertedBlock?.id,
             } as InsertEventSchema)
             .returning();
@@ -38,6 +39,7 @@ export const seed2024Edition = async (db: db) => {
               const [insertedSpeaker] = await db
                 .insert(speakers)
                 .values(speaker)
+                .onConflictDoNothing()
                 .returning();
 
               await db.insert(speakersToEvents).values({

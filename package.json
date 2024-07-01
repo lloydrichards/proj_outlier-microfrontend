@@ -6,8 +6,8 @@
   "scripts": {
     "build": "next build",
     "build:storybook": "storybook build -o public/storybook",
-    "db:generate": "drizzle-kit generate:pg",
-    "db:push": "drizzle-kit push:pg",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
     "db:drop": "drizzle-kit drop",
     "db:studio": "drizzle-kit studio",
     "db:seed": "bun ./src/server/db/seed.ts",
